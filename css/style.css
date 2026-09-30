@@ -1448,3 +1448,22 @@ textarea.form-control { resize: vertical; min-height: 110px; }
 }
 .lang-item:hover { color: var(--ink); background: var(--canvas); }
 .lang-item.on { color: var(--accent); background: var(--accent-tint); font-weight: 600; }
+
+/* ---------------- 分组页 / 小类落地页（老板 2026-09-30：每个小类都要有独立页面） ---------------- */
+.cat-title a { color: inherit; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.cat-title a:hover { color: var(--accent); }
+.cat-title .go { font-size: 13px; font-weight: 600; color: var(--accent); white-space: nowrap; }
+.cat-title .go svg { vertical-align: -2px; }
+.cat-group a { color: inherit; text-decoration: none; display: inline-flex; align-items: center; gap: 9px; flex-wrap: wrap; }
+.cat-group a:hover { color: var(--accent); }
+.cat-group .cg-num { font-weight: 600; color: var(--ink-3); letter-spacing: 0; }
+.grp-sec { margin-top: 46px; }
+.grp-sec .cat-title { margin-top: 0; }
+.grp-sec .cat-lead { margin-bottom: 14px; }
+.breadcrumb a { color: var(--ink-3); text-decoration: none; }
+.breadcrumb a:hover { color: var(--accent); }
+@media (max-width: 640px) {
+  .cat-title a { gap: 6px; }
+  .cat-title .go { font-size: 12px; }
+  .cat-group a { gap: 6px; }
+}

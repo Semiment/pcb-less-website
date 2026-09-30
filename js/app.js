@@ -1,35 +1,34 @@
 /* 柏达官网原型交互脚本 */
 
-/* ---------- 产品数据（来自 Notion 产品库实际导入，原型示例 12 款） ----------
-   原定义在 sensors.html 内联；首页 Hero 选型台也要用，故提到公共脚本。
-   未核实的参数一律空字符串（页面渲染为 "—"），禁止编造。 */
+/* ---------- 产品数据（脚本生成，勿手改） ----------
+   来源：Notion 产品库「汽车锁存霍尔（AEC-Q100）/ 低成本锁存霍尔 / 锁存双路霍尔效应输出」
+   由 .workbuddy/cache/misc/build_products_js.py 生成 —— 与传感器品类页同源同值。
+   首页 Hero 选型台与传感器页快检表都用它；改数据请改 Notion 后重跑脚本。 */
 window.PRODUCTS = [
-  { model: "SC2498T", type: t("2D 平面/垂直"), typeNorm: "2D", series: t("汽车锁存霍尔"), feature: t("2D 平面感应"), voltage: "2.7~40", current: "4.1mA", output: t("开漏输出"), bop: "30", brp: "-80", pkg: "SOT23", temp: "-40~150°C" },
-  { model: "SC25898", type: t("1D 垂直"), typeNorm: "1D", series: t("汽车锁存霍尔"), feature: t("2 线 PCB-Less 电流输出，工厂编程，集成电容"), voltage: "4.0~24", current: "4.1mA", output: t("电流输出"), bop: "80", brp: "-80", pkg: "SIP3 / TS2", temp: "-40~150°C" },
-  { model: "SC25896", type: t("1D 垂直"), typeNorm: "1D", series: t("汽车锁存霍尔"), feature: t("2 线 PCB-Less 电流输出，工厂编程"), voltage: "4.0~24", current: "6.0mA", output: t("电流输出"), bop: "80", brp: "-80", pkg: "SIP3 / TS2", temp: "-40~150°C" },
-  { model: "SC2943", type: t("1D 垂直"), typeNorm: "1D", series: t("汽车锁存霍尔"), feature: t("60V 耐压，高灵敏度，限流保护 40mA"), voltage: "2.7~40", current: "1.2mA", output: t("开漏输出"), bop: "30", brp: "-30", pkg: "SOT23 / SIP3", temp: "-40~150°C" },
-  { model: "SC2919", type: t("1D 垂直"), typeNorm: "1D", series: t("汽车锁存霍尔"), feature: t("250V 超高耐压，车用 48V 系统直供电"), voltage: "4.0~125", current: "1.5mA", output: t("开漏输出"), bop: "70", brp: "-70", pkg: "SOT23 / SIP3", temp: "-40~150°C" },
-  { model: "SC2948", type: t("1D 垂直"), typeNorm: "1D", series: t("汽车锁存霍尔"), feature: t("60V 耐压，低灵敏度，限流保护 40mA"), voltage: "2.7~40", current: "1.2mA", output: t("开漏输出"), bop: "80", brp: "-80", pkg: "SOT23 / SIP3", temp: "-40~150°C" },
+  { model: "SC2943", type: t("1D 垂直"), typeNorm: "1D", series: t("汽车锁存霍尔"), feature: t("高灵敏度，60V耐压，限流保护40mA"), voltage: "2.7~40", current: "1.2mA", output: t("开漏输出"), bop: "30", brp: "-30", pkg: "SOT23 / SIP3", temp: "-40~150°C" },
+  { model: "SC2948", type: t("1D 垂直"), typeNorm: "1D", series: t("汽车锁存霍尔"), feature: t("低灵敏度，60V耐压，限流保护40mA"), voltage: "2.7~40", current: "1.2mA", output: t("开漏输出"), bop: "80", brp: "-80", pkg: "SOT23 / SIP3", temp: "-40~150°C" },
+  { model: "SC2919", type: t("1D 垂直"), typeNorm: "1D", series: t("汽车锁存霍尔"), feature: t("250V超高耐压，车用48V系统直供电"), voltage: "4.0~125", current: "1.5mA", output: t("开漏输出"), bop: "70", brp: "-70", pkg: "SOT23 / SIP3", temp: "-40~150°C" },
+  { model: "SC25898", type: t("1D 垂直"), typeNorm: "1D", series: t("汽车锁存霍尔"), feature: t("2线 PCB-Less 电流输出，工厂编程，集成电容"), voltage: "4.0~24", current: "4.1mA", output: t("电流输出"), bop: "80", brp: "-80", pkg: "SIP3 / TS2", temp: "-40~150°C" },
+  { model: "SC25896", type: t("1D 垂直"), typeNorm: "1D", series: t("汽车锁存霍尔"), feature: t("2线 PCB-Less 电流输出，工厂编程"), voltage: "4.0~24", current: "6.0mA", output: t("电流输出"), bop: "80", brp: "-80", pkg: "SIP3 / TS2", temp: "-40~150°C" },
+  { model: "SC2498T", type: t("2D 平面/垂直"), typeNorm: "2D", series: t("汽车锁存霍尔"), feature: t("2D平面感应"), voltage: "2.7~40", current: "4.1mA", output: t("开漏输出"), bop: "30", brp: "30", pkg: "SOT23", temp: "-40~150°C" },
+  { model: "SC2943T", type: t("2D 平面/垂直"), typeNorm: "2D", series: t("汽车锁存霍尔"), feature: t("2D平面感应，高灵敏度"), voltage: "2.7~40", current: "4.1mA", output: t("开漏输出"), bop: "30", brp: "-30", pkg: "SOT23 / SIP3", temp: "-40~150°C" },
+  { model: "SC2498", type: t("1D 垂直"), typeNorm: "1D", series: t("汽车锁存霍尔"), feature: t("60V耐压，低灵敏度"), voltage: "2.7~40", current: "4.1mA", output: t("开漏输出"), bop: "80", brp: "-80", pkg: "SOT23 / SIP3", temp: "-40~150°C" },
+  { model: "SC2403", type: t("1D 垂直"), typeNorm: "1D", series: t("低成本锁存霍尔"), feature: t("高可靠性"), voltage: "2.8~40", current: "1.2mA", output: t("开漏输出"), bop: "30", brp: "-30", pkg: "SOT23 / SIP3", temp: "-40~125°C" },
+  { model: "SC2403T", type: t("2D 平面/垂直"), typeNorm: "2D", series: t("低成本锁存霍尔"), feature: t("平面感应"), voltage: "2.8~40", current: "1.2mA", output: t("开漏输出"), bop: "30", brp: "-30", pkg: "SOT23 / SIP3", temp: "-40~125°C" },
+  { model: "SC2402", type: t("1D 垂直"), typeNorm: "1D", series: t("低成本锁存霍尔"), feature: t("低成本锁存霍尔"), voltage: "2.5~18", current: "3.8mA", output: t("开漏输出"), bop: "-20", brp: "20", pkg: "SOT23 / SPI3", temp: "-40~125°C" },
+  { model: "SC2401", type: t("1D 垂直"), typeNorm: "1D", series: t("低成本锁存霍尔"), feature: t("超高灵敏度，低成本"), voltage: "2.5~18", current: "3.8mA", output: t("开漏输出"), bop: "-9", brp: "9", pkg: "SOT23 / SPI3", temp: "-40~125°C" },
+  { model: "SC1245", type: t("1D 垂直"), typeNorm: "1D", series: t("低成本锁存霍尔"), feature: t("高压低成本，适用于大功率电机"), voltage: "3.8~40", current: "4.0mA", output: t("开漏输出"), bop: "-50", brp: "50", pkg: "SOT23 / SIP3", temp: "-40~125°C" },
   { model: "SC2002", type: t("1D 垂直"), typeNorm: "1D", series: t("低成本锁存霍尔"), feature: t("带微功耗模式，电池级的启动电压"), voltage: "1.8~5.5", current: "1.2mA", output: t("开漏输出"), bop: "20", brp: "-20", pkg: "SOT23-3L / SOT23-5L", temp: "-40~125°C" },
-  { model: "SC2401", type: t("1D 垂直"), typeNorm: "1D", series: t("低成本锁存霍尔"), feature: t("超高灵敏度"), voltage: "", current: "", output: t("开漏输出"), bop: "-9", brp: "9", pkg: "SOT23 / SIP3", temp: "" },
-  { model: "SC2402", type: t("1D 垂直"), typeNorm: "1D", series: t("低成本锁存霍尔"), feature: t("高灵敏度，适合对成本有极致要求的场景"), voltage: "", current: "", output: t("开漏输出"), bop: "-20", brp: "20", pkg: "SOT23 / SIP3", temp: "" },
-  { model: "SC2403", type: t("2D 平面/垂直"), typeNorm: "2D", series: t("低成本锁存霍尔"), feature: t("高可靠性"), voltage: "", current: "", output: t("开漏输出"), bop: "30", brp: "-30", pkg: "SOT23 / SIP3", temp: "" },
-  { model: "SC2202", type: "1D", typeNorm: "1D", series: t("低成本锁存霍尔"), feature: t("内置 10k 上拉；开漏输出；高斩波频率；抗振动/噪声"), voltage: "2.5~24", current: "1.6mA", output: t("内置上拉"), bop: "-20", brp: "20", pkg: "SIP3 / SOT23", temp: "-40~125°C" },
-  { model: "SC1245", type: t("1D 垂直"), typeNorm: "1D", series: t("低成本锁存霍尔"), feature: t("高压低成本，适用于大功率电机"), voltage: "", current: "", output: t("开漏输出"), bop: "-50", brp: "50", pkg: "SIP3", temp: "-40~125°C" },
+  { model: "SC2202", type: t("1D 垂直"), typeNorm: "1D", series: t("低成本锁存霍尔"), feature: t("内置10k上拉"), voltage: "2.5~24", current: "1.6mA", output: t("内置上拉"), bop: "-20", brp: "20", pkg: "SIP3 / SOT23", temp: "-40~125°C" },
 
-  /* ---- 双路输出霍尔 ----
-     数据来源：Notion「双路霍尔效应输出 / 锁存双路霍尔效应输出」数据库，2026-09-30 同步。
-     Bop / Brp 记两通道值（如 30/30），磁环宽度并入特性列：型号表无独立磁环列，
-     而磁环宽度是双路霍尔的选型关键参数，不可丢弃。耐压 -28~60V 为全系列共同值，
-     写在页面系列说明里，不在每行重复。 */
-  { model: "SC2526-AB", type: t("1D 垂直"), typeNorm: "1D", series: t("双路输出霍尔"), feature: t("输出模式：速度+速度；磁环宽度 2.3~2.9mm"), voltage: "2.8~40", current: "2.0mA", output: t("开漏输出"), bop: "30/30", brp: "-30/-30", pkg: "TO94", temp: "-40~150°C" },
-  { model: "SC2526-SD", type: t("1D 垂直"), typeNorm: "1D", series: t("双路输出霍尔"), feature: t("输出模式：速度+方向；磁环宽度 2.3~2.9mm"), voltage: "2.8~40", current: "2.0mA", output: t("开漏输出"), bop: "30/30", brp: "-30/-30", pkg: "TO94", temp: "-40~150°C" },
-  { model: "SC2526-AB-CT", type: t("1D 垂直"), typeNorm: "1D", series: t("双路输出霍尔"), feature: t("PCB-Less，集成 TVS 和电容，ESD ±15kV；磁环宽度 2.3~2.9mm"), voltage: "2.8~40", current: "2.0mA", output: t("开漏输出"), bop: "30/30", brp: "-30/-30", pkg: "TO94", temp: "-40~150°C" },
-  { model: "SC2527-AB", type: t("1D 垂直"), typeNorm: "1D", series: t("双路输出霍尔"), feature: t("输出模式：速度+速度；磁环宽度 2.3~2.9mm"), voltage: "2.8~40", current: "2.0mA", output: t("开漏输出"), bop: "30/30", brp: "-30/-30", pkg: "SOT23W-6L", temp: "-40~150°C" },
-  { model: "SC2527-SD", type: t("1D 垂直"), typeNorm: "1D", series: t("双路输出霍尔"), feature: t("输出模式：速度+方向；磁环宽度 2.3~2.9mm"), voltage: "2.8~40", current: "2.0mA", output: t("开漏输出"), bop: "30/30", brp: "-30/-30", pkg: "SOT23W-6L", temp: "-40~150°C" },
-  { model: "SC2528-AB", type: t("2D 平面/垂直"), typeNorm: "2D", series: t("双路输出霍尔"), feature: t("平面感应，PCB-Less，集成 TVS 和电容，ESD ±15kV，可实现功能安全；磁环宽度自适应"), voltage: "2.8~40", current: "6.0mA", output: t("开漏输出"), bop: "30/30", brp: "-30/-30", pkg: "TO94", temp: "-40~150°C" },
-  { model: "SC2528-SD", type: t("2D 平面/垂直"), typeNorm: "2D", series: t("双路输出霍尔"), feature: t("平面感应；磁环宽度自适应"), voltage: "2.8~40", current: "2.0mA", output: t("开漏输出"), bop: "30/30", brp: "-30/-30", pkg: "SOT23W-6L", temp: "-40~150°C" },
-  { model: "SC2546-AB", type: t("1D 垂直"), typeNorm: "1D", series: t("双路输出霍尔"), feature: t("输出模式：速度+速度；磁环宽度 2.0mm"), voltage: "2.8~40", current: "1.6mA", output: t("开漏输出"), bop: "20/20", brp: "-20/-20", pkg: "TO94", temp: "-40~150°C" }
+  { model: "SC2528-AB", type: t("2D 平面/垂直"), typeNorm: "2D", series: t("双路输出霍尔"), feature: t("平面感应，PCB-Less，集成TVS和电容，ESD ±15KV，可实现功能安全"), voltage: "2.8~40", current: "6.0mA", output: t("开漏输出"), bop: "30/30", brp: "-30/-30", pkg: "TO94", temp: "-40~150°C" },
+  { model: "SC2528-SD", type: t("2D 平面/垂直"), typeNorm: "2D", series: t("双路输出霍尔"), feature: t("平面感应，速度+方向"), voltage: "2.8~40", current: "2.0mA", output: t("开漏输出"), bop: "30/30", brp: "-30/-30", pkg: "SOT23W-6L", temp: "-40~150°C" },
+  { model: "SC2527-SD", type: t("1D 垂直"), typeNorm: "1D", series: t("双路输出霍尔"), feature: t("输出模式：速度+方向"), voltage: "2.8~40", current: "2.0mA", output: t("开漏输出"), bop: "30/30", brp: "-30/-30", pkg: "SOT23W-6L", temp: "-40~150°C" },
+  { model: "SC2527-AB", type: t("1D 垂直"), typeNorm: "1D", series: t("双路输出霍尔"), feature: t("输出模式：速度+速度"), voltage: "2.8~40", current: "2.0mA", output: t("开漏输出"), bop: "30/30", brp: "-30/-30", pkg: "SOT23W-6L", temp: "-40~150°C" },
+  { model: "SC2526-SD", type: t("1D 垂直"), typeNorm: "1D", series: t("双路输出霍尔"), feature: t("输出模式：速度+方向"), voltage: "2.8~40", current: "2.0mA", output: t("开漏输出"), bop: "30/30", brp: "-30/-30", pkg: "TO94", temp: "-40~150°C" },
+  { model: "SC2526-AB", type: t("1D 垂直"), typeNorm: "1D", series: t("双路输出霍尔"), feature: t("输出模式：速度+速度"), voltage: "2.8~40", current: "2.0mA", output: t("开漏输出"), bop: "30/30", brp: "-30/-30", pkg: "TO94", temp: "-40~150°C" },
+  { model: "SC2526-AB-CT", type: t("1D 垂直"), typeNorm: "1D", series: t("双路输出霍尔"), feature: t("PCB-Less，集成TVS和电容，ESD ±15KV"), voltage: "2.8~40", current: "2.0mA", output: t("开漏输出"), bop: "30/30", brp: "-30/-30", pkg: "TO94", temp: "-40~150°C" },
+  { model: "SC2546-AB", type: t("1D 垂直"), typeNorm: "1D", series: t("双路输出霍尔"), feature: t("输出模式：速度+速度"), voltage: "2.8~40", current: "1.6mA", output: t("开漏输出"), bop: "20/20", brp: "-20/-20", pkg: "TO94", temp: "-40~150°C" },
 ];
 
 /* ---------- 移动端菜单 ---------- */

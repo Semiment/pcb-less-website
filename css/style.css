@@ -972,6 +972,61 @@ select:focus-visible, textarea:focus-visible, .subcat:focus-visible,
 .quick-pick .phone-line {
   font-family: var(--mono); font-size: 15px; color: var(--accent); font-weight: 700;
 }
+
+/* ---------------- 传感器品类下沉：总览页品类卡片 ---------------- */
+.cat-title { font-size: 22px; font-weight: 700; margin: 44px 0 8px; }
+.cat-lead { color: var(--ink-2); font-size: 14.5px; max-width: 68ch; margin-bottom: 18px; }
+.cat-group {
+  font-size: 13px; font-weight: 700; letter-spacing: .06em; color: var(--accent-2-ink);
+  margin: 26px 0 12px; padding-left: 11px; position: relative;
+}
+.cat-group::before {
+  content: ""; position: absolute; left: 0; top: 50%; transform: translateY(-50%);
+  width: 3px; height: 13px; background: var(--accent); border-radius: 2px;
+}
+.cat-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.cat-card {
+  display: block; background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 18px 20px; transition: all .18s;
+}
+.cat-card:hover { border-color: var(--accent); box-shadow: var(--shadow); transform: translateY(-2px); }
+.cat-card .cc-name { display: block; font-size: 15px; font-weight: 600; color: var(--ink); }
+.cat-card .cc-num {
+  display: inline-block; margin-top: 6px; font-size: 12px; font-weight: 600;
+  color: var(--accent-2-ink); font-family: var(--mono);
+}
+.cat-card .cc-intro { display: block; margin-top: 10px; font-size: 12.5px; line-height: 1.62; color: var(--ink-2); }
+
+/* ---------------- 传感器品类下沉：品类页 ---------------- */
+.cat-switch { margin-top: 30px; }
+.cat-switch .subcat { text-decoration: none; font-size: 13px; padding: 7px 15px; }
+.cat-stat {
+  display: flex; flex-wrap: wrap; gap: 8px 22px; align-items: center;
+  font-size: 13px; color: var(--ink-2); margin: 0 0 16px;
+}
+.cat-stat b { color: var(--accent); font-family: var(--mono); }
+.cat-list {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 12px; list-style: none; margin: 0 0 8px; padding: 0;
+}
+.cat-list li {
+  background: var(--accent-tint); border-radius: 8px; padding: 14px 16px;
+  font-size: 13.5px; color: var(--ink-2);
+}
+.product-table .star { color: var(--accent-2-ink); font-weight: 700; margin-left: 2px; }
+.product-table .plink { color: var(--accent); text-decoration: none; border-bottom: 1px solid rgba(61,102,174,.35); }
+.product-table .plink:hover { border-bottom-color: var(--accent); }
+.product-table tbody tr.row-more td { background: var(--canvas); }
+.product-table tbody tr.row-more:hover td { background: var(--accent-tint); }
+
+@media (max-width: 1200px) {
+  .cat-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
+  .cat-cards { grid-template-columns: 1fr; }
+  .quick-pick { padding: 24px 18px; }
+  .cat-title { margin-top: 34px; }
+}
 .qp-list { display: flex; flex-direction: column; gap: 0; }
 .qp-item {
   display: flex; gap: 16px; padding: 15px 0;

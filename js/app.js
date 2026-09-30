@@ -15,7 +15,21 @@ window.PRODUCTS = [
   { model: "SC2402", type: t("1D 垂直"), typeNorm: "1D", series: t("低成本锁存霍尔"), feature: t("高灵敏度，适合对成本有极致要求的场景"), voltage: "", current: "", output: t("开漏输出"), bop: "-20", brp: "20", pkg: "SOT23 / SIP3", temp: "" },
   { model: "SC2403", type: t("2D 平面/垂直"), typeNorm: "2D", series: t("低成本锁存霍尔"), feature: t("高可靠性"), voltage: "", current: "", output: t("开漏输出"), bop: "30", brp: "-30", pkg: "SOT23 / SIP3", temp: "" },
   { model: "SC2202", type: "1D", typeNorm: "1D", series: t("低成本锁存霍尔"), feature: t("内置 10k 上拉；开漏输出；高斩波频率；抗振动/噪声"), voltage: "2.5~24", current: "1.6mA", output: t("内置上拉"), bop: "-20", brp: "20", pkg: "SIP3 / SOT23", temp: "-40~125°C" },
-  { model: "SC1245", type: t("1D 垂直"), typeNorm: "1D", series: t("低成本锁存霍尔"), feature: t("高压低成本，适用于大功率电机"), voltage: "", current: "", output: t("开漏输出"), bop: "-50", brp: "50", pkg: "SIP3", temp: "-40~125°C" }
+  { model: "SC1245", type: t("1D 垂直"), typeNorm: "1D", series: t("低成本锁存霍尔"), feature: t("高压低成本，适用于大功率电机"), voltage: "", current: "", output: t("开漏输出"), bop: "-50", brp: "50", pkg: "SIP3", temp: "-40~125°C" },
+
+  /* ---- 双路输出霍尔 ----
+     数据来源：Notion「双路霍尔效应输出 / 锁存双路霍尔效应输出」数据库，2026-09-30 同步。
+     Bop / Brp 记两通道值（如 30/30），磁环宽度并入特性列：型号表无独立磁环列，
+     而磁环宽度是双路霍尔的选型关键参数，不可丢弃。耐压 -28~60V 为全系列共同值，
+     写在页面系列说明里，不在每行重复。 */
+  { model: "SC2526-AB", type: t("1D 垂直"), typeNorm: "1D", series: t("双路输出霍尔"), feature: t("输出模式：速度+速度；磁环宽度 2.3~2.9mm"), voltage: "2.8~40", current: "2.0mA", output: t("开漏输出"), bop: "30/30", brp: "-30/-30", pkg: "TO94", temp: "-40~150°C" },
+  { model: "SC2526-SD", type: t("1D 垂直"), typeNorm: "1D", series: t("双路输出霍尔"), feature: t("输出模式：速度+方向；磁环宽度 2.3~2.9mm"), voltage: "2.8~40", current: "2.0mA", output: t("开漏输出"), bop: "30/30", brp: "-30/-30", pkg: "TO94", temp: "-40~150°C" },
+  { model: "SC2526-AB-CT", type: t("1D 垂直"), typeNorm: "1D", series: t("双路输出霍尔"), feature: t("PCB-Less，集成 TVS 和电容，ESD ±15kV；磁环宽度 2.3~2.9mm"), voltage: "2.8~40", current: "2.0mA", output: t("开漏输出"), bop: "30/30", brp: "-30/-30", pkg: "TO94", temp: "-40~150°C" },
+  { model: "SC2527-AB", type: t("1D 垂直"), typeNorm: "1D", series: t("双路输出霍尔"), feature: t("输出模式：速度+速度；磁环宽度 2.3~2.9mm"), voltage: "2.8~40", current: "2.0mA", output: t("开漏输出"), bop: "30/30", brp: "-30/-30", pkg: "SOT23W-6L", temp: "-40~150°C" },
+  { model: "SC2527-SD", type: t("1D 垂直"), typeNorm: "1D", series: t("双路输出霍尔"), feature: t("输出模式：速度+方向；磁环宽度 2.3~2.9mm"), voltage: "2.8~40", current: "2.0mA", output: t("开漏输出"), bop: "30/30", brp: "-30/-30", pkg: "SOT23W-6L", temp: "-40~150°C" },
+  { model: "SC2528-AB", type: t("2D 平面/垂直"), typeNorm: "2D", series: t("双路输出霍尔"), feature: t("平面感应，PCB-Less，集成 TVS 和电容，ESD ±15kV，可实现功能安全；磁环宽度自适应"), voltage: "2.8~40", current: "6.0mA", output: t("开漏输出"), bop: "30/30", brp: "-30/-30", pkg: "TO94", temp: "-40~150°C" },
+  { model: "SC2528-SD", type: t("2D 平面/垂直"), typeNorm: "2D", series: t("双路输出霍尔"), feature: t("平面感应；磁环宽度自适应"), voltage: "2.8~40", current: "2.0mA", output: t("开漏输出"), bop: "30/30", brp: "-30/-30", pkg: "SOT23W-6L", temp: "-40~150°C" },
+  { model: "SC2546-AB", type: t("1D 垂直"), typeNorm: "1D", series: t("双路输出霍尔"), feature: t("输出模式：速度+速度；磁环宽度 2.0mm"), voltage: "2.8~40", current: "1.6mA", output: t("开漏输出"), bop: "20/20", brp: "-20/-20", pkg: "TO94", temp: "-40~150°C" }
 ];
 
 /* ---------- 移动端菜单 ---------- */
@@ -157,7 +171,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   /* ---------- 联系表单：邮件通道（无后端也能真实送达） ----------
      背景：站点是纯静态托管，没有服务端可写库。改为构造 mailto 把内容送到业务邮箱，
-     保证"客户填完 → 老板收得到"这条链今天就能跑通；等云数据库开通后再换成落库 + 后台。
+     保证「客户填完 → 老板收得到」这条链今天就能跑通；等云数据库开通后再换成落库 + 后台。
      ⚠️ 不伪造成功：mailto 是否真的唤起客户端前端无法判定，故同时明文展示内容供复制。 */
   var form = document.getElementById('inquiryForm');
   if (form) {
@@ -196,7 +210,7 @@ document.addEventListener('DOMContentLoaded', function () {
         '—— ' + (location.href || '')
       ];
       var body = lines.join('\n');
-      var subject = '[PCB-LESS 询价] ' + (get('company') || get('name')) + ' · ' + get('category');
+      var subject = t('[PCB-LESS 询价] ') + (get('company') || get('name')) + ' · ' + get('category');
 
       // 明文兜底：无论 mailto 是否唤起，都把内容摊开，客户可复制走
       if (fallback && fallbackBox) {
@@ -206,7 +220,7 @@ document.addEventListener('DOMContentLoaded', function () {
       window.location.href = 'mailto:' + MAIL_TO +
         '?subject=' + encodeURIComponent(subject) +
         '&body=' + encodeURIComponent(body);
-      showToast(msg('i18nToastSent', '已打开邮件客户端，请直接发送'));
+      showToast(msg('i18nToastSent', t('已打开邮件客户端，请直接发送')));
     });
 
     if (copyBtn && fallbackBox) {
@@ -222,7 +236,7 @@ document.addEventListener('DOMContentLoaded', function () {
           navigator.clipboard.writeText(fallbackBox.value);
           ok = true;
         }
-        showToast(ok ? msg('i18nToastCopied', '已复制') : msg('i18nToastManual', '请手动全选复制'));
+        showToast(ok ? msg('i18nToastCopied', t('已复制')) : msg('i18nToastManual', t('请手动全选复制')));
       });
     }
   }

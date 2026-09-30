@@ -688,7 +688,8 @@ function renderSubs() {
 /* 文章卡片 */
 /* 提示文案独立成变量：它被拼进 onclick 属性，若直接内联，多语言构建器的字符串
    扫描会把整个属性值当成一个字符串而漏掉（2026-09-29 发现英文站 toasts 仍是中文） */
-var TIP_CARD = '该方案详情页整理中；示例详情页可从「车门锁 2 线 PCB-Less」文章进入';
+/* 注意：本页 i18n.js 在下方才加载，这里不能立即调用 t()，必须延迟到运行时求值 */
+var TIP_CARD = function () { return t('Case study page in progress; see the “2-wire PCB-Less Door Lock” article for a sample detail page'); };
 
 function renderCards() {
   var sec = getSector();
@@ -713,7 +714,7 @@ function renderCards() {
       return '<a class="article-card is-link" href="' + c.detail + '" style="animation-delay:' + (i * 45) + 'ms">' + inner + '</a>';
     }
     return '<div class="article-card" role="button" tabindex="0" style="animation-delay:' + (i * 45) + 'ms" '
-      + 'onclick="showToast(\'' + TIP_CARD + '\')" '
+      + 'onclick="showToast(\'' + TIP_CARD() + '\')" '
       + 'onkeydown="if(event.key===\'Enter\')this.click()">' + inner + '</div>';
   }).join('');
 }

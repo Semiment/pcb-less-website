@@ -1,0 +1,34 @@
+# www.pcb-less.com
+# 策略：全部放行。产品型号与参数是公开的选型信息，被 AI 引用即为曝光。
+# 若只想出现在 AI 搜索结果、不参与模型训练，把下面 GPTBot/ClaudeBot 段改为 Disallow 即可。
+
+User-agent: *
+Allow: /
+
+# --- AI 检索爬虫（决定能否出现在 AI 答案里，必须放行）---
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# --- AI 训练爬虫（决定模型是否记住你的品牌）---
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+Sitemap: https://www.pcb-less.com/sitemap.xml

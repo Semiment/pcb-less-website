@@ -1,0 +1,23 @@
+# WorkBuddy 项目数据与构建脚本 —— 内部产物，不进公开仓库
+.workbuddy/
+
+# 图片原始稿与未处理素材
+images/raw/
+
+# 视觉校对稿（调色板 / 布局图），非站点内容
+palette-proof-*.png
+
+# 系统与编辑器
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
+
+# 日志与临时文件
+*.log
+*.tmp
+
+# 依赖（品牌数据构建脚本偶尔使用）
+node_modules/

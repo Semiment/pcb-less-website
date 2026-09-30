@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>アプリケーション：車載 / ロボティクス / 産業機器 / 民生エレクトロニクス | 柏達電子</title>
+<meta name="description" content="柏達電子のアプリケーション事例集：車載、ロボティクス、産業機器、民生エレクトロニクスの 4 分野について、センサ、モータドライバ、電源保護デバイスの適用事例と選定ノウハウを継続的に更新しています。">
+<!-- i18n:head -->
+  <meta name="language" content="ja">
+  <link rel="alternate" hreflang="zh-CN" href="https://www.pcb-less.com/cases.html">
+  <link rel="alternate" hreflang="en" href="https://www.pcb-less.com/en/cases.html">
+  <link rel="alternate" hreflang="ja" href="https://www.pcb-less.com/ja/cases.html">
+  <link rel="alternate" hreflang="de" href="https://www.pcb-less.com/de/cases.html">
+  <link rel="alternate" hreflang="x-default" href="https://www.pcb-less.com/cases.html">
+  <link rel="canonical" href="https://www.pcb-less.com/ja/cases.html">
+<!-- /i18n:head -->
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round">
+          <path d="M4 16V8l8-4 8 4v8l-8 4z"/><path d="M9 13.5l2 2 4-4.5"/>
+        </svg>
+      </span>
+      <span class="brand-text">
+        <span class="cn">柏達電子</span>
+        <span class="en"><span class="dm-a">PCB</span><span class="dm-s">-</span><span class="dm-b">LESS</span><span class="dm-s">.COM</span></span>
+      </span>
+    </a>
+        <nav class="main-nav">
+      <a class="nav-link" href="index.html">ホーム</a>
+      <div class="nav-item has-mega">
+        <button type="button" class="nav-btn" aria-expanded="false" aria-haspopup="true" aria-controls="mega-products">
+          製品 <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="mega" id="mega-products">
+          <div class="mega-inner">
+            <div class="mega-rail" aria-label="製品ライン">
+              <button type="button" class="mega-rail-item" data-panel="p-sensors">センサ</button>
+              <button type="button" class="mega-rail-item" data-panel="p-power">電源管理</button>
+              <button type="button" class="mega-rail-item" data-panel="p-motor">モータドライバ</button>
+            </div>
+            <div class="mega-body">
+              <div class="mega-panel" data-panel="p-sensors">
+                <a class="mega-title" href="sensors.html">センサ <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                <div class="mega-grid">
+                <div class="mega-col">
+                  <a class="mega-cat" href="sensors.html">スイッチ・ラッチ型ホール <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="sensors.html">ラッチ型ホールスイッチ</a>
+                    <a class="mega-sub" href="sensors.html">単極ホールスイッチ</a>
+                    <a class="mega-sub" href="sensors.html">両極ホールスイッチ</a>
+                    <a class="mega-sub" href="sensors.html">2 出力ホールスイッチ</a>
+                  </div>
+                </div>
+                <div class="mega-col">
+                  <a class="mega-cat" href="sensors.html">位置センサ <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="sensors.html">リニアホール（1D）</a>
+                    <a class="mega-sub" href="sensors.html">プログラマブルリニアホール</a>
+                    <a class="mega-sub" href="sensors.html">角度センサ（単軸 / 多軸）</a>
+                  </div>
+                </div>
+                <div class="mega-col">
+                  <a class="mega-cat" href="sensors.html">速度センサ <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="sensors.html">車輪速センサ</a>
+                    <a class="mega-sub" href="sensors.html">トランスミッションセンサ</a>
+                    <a class="mega-sub" href="sensors.html">カムシャフトセンサ</a>
+                    <a class="mega-sub" href="sensors.html">クランクシャフトセンサ</a>
+                    <a class="mega-sub" href="sensors.html">ギヤセンサ</a>
+                  </div>
+                </div>
+                <div class="mega-col">
+                  <a class="mega-cat" href="sensors.html">エンコーダ <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="sensors.html">磁気式モータエンコーダ</a>
+                    <a class="mega-sub" href="sensors.html">誘導式モータエンコーダ</a>
+                  </div>
+                </div>
+                <div class="mega-col">
+                  <a class="mega-cat" href="sensors.html">電流・保護 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="sensors.html">モノリシック電流センサ</a>
+                    <a class="mega-sub" href="sensors.html">漏電保護</a>
+                  </div>
+                </div>
+                </div>
+                <div class="mega-foot"><a href="sensors.html">センサの全型番を見る <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a></div>
+              </div>
+              <div class="mega-panel" data-panel="p-power">
+                <a class="mega-title" href="power.html">電源管理 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                <div class="mega-grid">
+                <div class="mega-col">
+                  <a class="mega-cat" href="power.html">DC-DC コンバータ <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="power.html">スイッチングコンバータ</a>
+                    <a class="mega-sub" href="power.html">昇降圧コントローラ</a>
+                    <a class="mega-sub" href="power.html">昇圧 / 降圧コントローラ</a>
+                  </div>
+                </div>
+                <div class="mega-col">
+                  <a class="mega-cat" href="power.html">レギュレータと多出力 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="power.html">リニアレギュレータ（LDO）</a>
+                    <a class="mega-sub" href="power.html">多出力 DC-DC</a>
+                  </div>
+                </div>
+                </div>
+                <div class="mega-foot"><a href="power.html">電源管理の全型番を見る <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a></div>
+              </div>
+              <div class="mega-panel" data-panel="p-motor">
+                <a class="mega-title" href="motor.html">モータドライバ <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                <div class="mega-grid">
+                <div class="mega-col">
+                  <a class="mega-cat" href="motor.html">ブラシレス DC ドライバ <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="motor.html">三相 BLDC ドライバ</a>
+                    <a class="mega-sub" href="motor.html">単相 BLDC ドライバ</a>
+                    <a class="mega-sub" href="motor.html">MOSFET 内蔵 ASIC</a>
+                  </div>
+                </div>
+                <div class="mega-col">
+                  <a class="mega-cat" href="motor.html">ブラシ付き DC ドライバ <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="motor.html">制御内蔵 DC ドライバ</a>
+                    <a class="mega-sub" href="motor.html">低電圧ブラシ付きドライバ</a>
+                  </div>
+                </div>
+                <div class="mega-col">
+                  <a class="mega-cat" href="motor.html">ステッピングモータドライバ <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="motor.html">ステッピングモータドライバ</a>
+                  </div>
+                </div>
+                <div class="mega-col">
+                  <a class="mega-cat" href="motor.html">ゲートドライバ・プリドライバ <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="motor.html">三相 NN ゲートドライバ</a>
+                    <a class="mega-sub" href="motor.html">PN ゲートドライバ</a>
+                    <a class="mega-sub" href="motor.html">高耐圧ゲートドライバ</a>
+                  </div>
+                </div>
+                <div class="mega-col">
+                  <a class="mega-cat" href="motor.html">パワー段 MOSFET <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="motor.html">N チャネル MOSFET</a>
+                    <a class="mega-sub" href="motor.html">P+N デュアルチャネル MOSFET</a>
+                    <a class="mega-sub" href="motor.html">デュアル N チャネル MOSFET</a>
+                  </div>
+                </div>
+                <div class="mega-col">
+                  <a class="mega-cat" href="motor.html">車載・専用 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="motor.html">車載グレードデバイス</a>
+                    <a class="mega-sub" href="motor.html">モータ制御 MCU</a>
+                    <a class="mega-sub" href="motor.html">専用機能 IC</a>
+                  </div>
+                </div>
+                </div>
+                <div class="mega-foot"><a href="motor.html">モータドライバの全型番を見る <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nav-item has-mega">
+        <button type="button" class="nav-btn active" aria-expanded="false" aria-haspopup="true" aria-controls="mega-apps">
+          アプリケーション <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="mega" id="mega-apps">
+          <div class="mega-inner">
+            <div class="mega-rail" aria-label="アプリケーション分野">
+              <button type="button" class="mega-rail-item on" data-panel="p-auto">車載</button>
+              <button type="button" class="mega-rail-item" data-panel="p-robot">ロボティクス</button>
+              <button type="button" class="mega-rail-item" data-panel="p-industry">産業機器</button>
+              <button type="button" class="mega-rail-item" data-panel="p-consumer">民生エレクトロニクス</button>
+            </div>
+            <div class="mega-body">
+              <div class="mega-panel on" data-panel="p-auto">
+                <a class="mega-title" href="cases.html?sector=auto">車載 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                <div class="mega-grid">
+                <div class="mega-col">
+                  <a class="mega-cat" href="cases.html?sector=auto">ボディと乗降 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="cases.html?sector=auto&sub=%E5%B0%BE%E9%97%A8">パワーバックドア</a>
+                    <a class="mega-sub" href="cases.html?sector=auto&sub=%E9%97%A8%E9%94%81">ドアロック</a>
+                    <a class="mega-sub" href="cases.html?sector=auto&sub=%E6%91%87%E7%AA%97">パワーウィンドウ</a>
+                  </div>
+                </div>
+                <div class="mega-col">
+                  <a class="mega-cat" href="cases.html?sector=auto">キャビンと快適装備 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="cases.html?sector=auto&sub=%E5%BA%A7%E6%A4%85">シート</a>
+                    <a class="mega-sub" href="cases.html?sector=auto&sub=%E5%A4%A9%E7%AA%97">サンルーフ</a>
+                    <a class="mega-sub" href="cases.html?sector=auto&sub=%E5%BA%A7%E8%88%B1%E7%85%A7%E6%98%8E">キャビン照明</a>
+                  </div>
+                </div>
+                <div class="mega-col">
+                  <a class="mega-cat" href="cases.html?sector=auto">熱マネジメント <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="cases.html?sector=auto&sub=%E6%B0%B4%E6%B3%B5">ウォータポンプ</a>
+                  </div>
+                </div>
+                </div>
+                <div class="mega-foot"><a href="cases.html?sector=auto">アプリケーション事例をすべて見る <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a></div>
+              </div>
+              <div class="mega-panel" data-panel="p-robot">
+                <a class="mega-title" href="cases.html?sector=robot">ロボティクス <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                <div class="mega-grid">
+                <div class="mega-col">
+                  <a class="mega-cat" href="cases.html?sector=robot">運動とフィードバック <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="cases.html?sector=robot&sub=%E5%85%B3%E8%8A%82%E7%94%B5%E6%9C%BA">関節モータ</a>
+                    <a class="mega-sub" href="cases.html?sector=robot&sub=%E4%BD%8D%E7%BD%AE%E5%8F%8D%E9%A6%88">位置フィードバック</a>
+                  </div>
+                </div>
+                <div class="mega-col">
+                  <a class="mega-cat" href="cases.html?sector=robot&sub=%E7%94%B5%E6%B5%81%E6%A3%80%E6%B5%8B">電流検出 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                </div>
+                </div>
+                <div class="mega-foot"><a href="cases.html?sector=robot">アプリケーション事例をすべて見る <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a></div>
+              </div>
+              <div class="mega-panel" data-panel="p-industry">
+                <a class="mega-title" href="cases.html?sector=industry">産業機器 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                <div class="mega-grid">
+                <div class="mega-col">
+                  <a class="mega-cat" href="cases.html?sector=industry">モータと運動 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="cases.html?sector=industry&sub=%E9%80%9A%E7%94%A8%E6%8D%A2%E7%9B%B8">汎用転流</a>
+                    <a class="mega-sub" href="cases.html?sector=industry&sub=%E7%94%B5%E5%8A%A8%E5%B7%A5%E5%85%B7%20/%20AGV">電動工具 / AGV</a>
+                  </div>
+                </div>
+                <div class="mega-col">
+                  <a class="mega-cat" href="cases.html?sector=industry">過酷な使用環境 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="cases.html?sector=industry&sub=%E6%81%B6%E5%8A%A3%E7%8E%AF%E5%A2%83">過酷環境</a>
+                  </div>
+                </div>
+                </div>
+                <div class="mega-foot"><a href="cases.html?sector=industry">アプリケーション事例をすべて見る <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a></div>
+              </div>
+              <div class="mega-panel" data-panel="p-consumer">
+                <a class="mega-title" href="cases.html?sector=consumer">民生エレクトロニクス <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                <div class="mega-grid">
+                <div class="mega-col">
+                  <a class="mega-cat" href="cases.html?sector=consumer">家電と電池駆動 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="cases.html?sector=consumer&sub=%E6%99%BA%E8%83%BD%E5%AE%B6%E5%B1%85">スマートホーム</a>
+                  </div>
+                </div>
+                <div class="mega-col">
+                  <a class="mega-cat" href="cases.html?sector=consumer">放熱と照明 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="cases.html?sector=consumer&sub=%E6%95%A3%E7%83%AD%E9%A3%8E%E6%89%87">冷却ファン</a>
+                    <a class="mega-sub" href="cases.html?sector=consumer&sub=%E4%B8%AA%E6%8A%A4%E7%85%A7%E6%98%8E">パーソナルケア照明</a>
+                  </div>
+                </div>
+                </div>
+                <div class="mega-foot"><a href="cases.html?sector=consumer">アプリケーション事例をすべて見る <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nav-item has-mega">
+        <button type="button" class="nav-btn" aria-expanded="false" aria-haspopup="true" aria-controls="mega-brands">
+          ブランド <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="mega" id="mega-brands">
+          <div class="mega-inner">
+            <div class="mega-rail" aria-label="代理ブランド">
+              <button type="button" class="mega-rail-item" data-panel="br-all">全ブランド</button>
+              <button type="button" class="mega-rail-item" data-panel="br-semiment">セイジュオ電子</button>
+              <button type="button" class="mega-rail-item" data-panel="br-enpower">インノン科技</button>
+            </div>
+            <div class="mega-body">
+              <div class="mega-panel" data-panel="br-all">
+                <a class="mega-title" href="brands.html">代理ブランド <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                <p class="mb-intro">メーカー別に在庫型番を閲覧：セイジュオ電子、インノン科技 ほか 2 ブランド、全 179 型番。仕様はメーカー公開データシートに基づきます。</p>
+                <div class="mega-brands">
+                  <a class="mb-card" href="brand-semiment.html">
+                    <span class="b-logo b-logo-text">Semiment</span>
+                    <span class="mb-name">セイジュオ電子</span>
+                    <span class="mb-meta"><b>137</b>モデル · <b>11</b>シリーズ</span>
+                  </a>
+                  <a class="mb-card" href="brand-enpower.html">
+                    <span class="b-logo b-logo-text">Enpower Micro</span>
+                    <span class="mb-name">インノン科技</span>
+                    <span class="mb-meta"><b>42</b>モデル · <b>5</b>シリーズ</span>
+                  </a>
+                </div>
+                <div class="mega-foot"><a href="brands.html">代理ブランドをすべて見る <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a></div>
+              </div>
+              <div class="mega-panel" data-panel="br-semiment">
+                <a class="mega-title" href="brand-semiment.html">セイジュオ電子 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                <div class="mega-grid">
+                  <div class="mega-col">
+                    <a class="mega-cat" href="sensors.html">スイッチホール <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  </div>
+                  <div class="mega-col">
+                    <a class="mega-cat" href="sensors.html">速度センサ <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  </div>
+                  <div class="mega-col">
+                    <a class="mega-cat" href="sensors.html">リニアホール <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  </div>
+                  <div class="mega-col">
+                    <a class="mega-cat" href="sensors.html">モーターエンコーダ <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  </div>
+                  <div class="mega-col">
+                    <a class="mega-cat" href="sensors.html">角度センサ <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  </div>
+                  <div class="mega-col">
+                    <a class="mega-cat" href="sensors.html">電流・保護 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  </div>
+                  <div class="mega-col">
+                    <a class="mega-cat" href="power.html?cat=%E5%BC%80%E5%85%B3%E8%BD%AC%E6%8D%A2%E5%99%A8DC/DC">スイッチングコンバータ DC/DC <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                    <div class="mega-subs">
+                      <a class="mega-sub" href="power.html?q=VE2220">VE2220</a>
+                      <a class="mega-sub" href="power.html?q=VE2226">VE2226</a>
+                      <a class="mega-sub" href="power.html?q=VE2266">VE2266</a>
+                    </div>
+                  </div>
+                  <div class="mega-col">
+                    <a class="mega-cat" href="power.html?cat=%E5%8D%87%E9%99%8D%E5%8E%8B%E6%8E%A7%E5%88%B6%E5%99%A8DC/DC">昇降圧コントローラ DC/DC <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                    <div class="mega-subs">
+                      <a class="mega-sub" href="power.html?q=VE8620">VE8620</a>
+                      <a class="mega-sub" href="power.html?q=VE8622">VE8622</a>
+                      <a class="mega-sub" href="power.html?q=VE8624">VE8624</a>
+                    </div>
+                  </div>
+                  <div class="mega-col">
+                    <a class="mega-cat" href="power.html?cat=%E5%8D%87%E5%8E%8B/%E9%99%8D%E5%8E%8B%E6%8E%A7%E5%88%B6%E5%99%A8DC/DC">昇圧/降圧コントローラ DC/DC <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                    <div class="mega-subs">
+                      <a class="mega-sub" href="power.html?q=VE8600Q">VE8600Q</a>
+                      <a class="mega-sub" href="power.html?q=VE8602Q">VE8602Q</a>
+                    </div>
+                  </div>
+                  <div class="mega-col">
+                    <a class="mega-cat" href="power.html?cat=%E5%A4%9A%E8%B7%AF%E8%BE%93%E5%87%BADC/DC">多出力 DC/DC <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                    <div class="mega-subs">
+                      <a class="mega-sub" href="power.html?q=VE6200Q">VE6200Q</a>
+                    </div>
+                  </div>
+                  <div class="mega-col">
+                    <a class="mega-cat" href="power.html?cat=%E7%BA%BF%E6%80%A7%E7%A8%B3%E5%8E%8B%E5%99%A8LDO">リニアレギュレータ LDO <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                    <div class="mega-subs">
+                      <a class="mega-sub" href="power.html?q=VE1430Q">VE1430Q</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="mega-foot"><a href="brand-semiment.html">セイジュオ電子 の全 137 型番を見る <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a></div>
+              </div>
+              <div class="mega-panel" data-panel="br-enpower">
+                <a class="mega-title" href="brand-enpower.html">インノン科技 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                <div class="mega-grid">
+                  <div class="mega-col">
+                    <a class="mega-cat" href="motor.html">パワーデバイス・MOSFET <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  </div>
+                  <div class="mega-col">
+                    <a class="mega-cat" href="motor.html">スマート ASIC ドライバ <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  </div>
+                  <div class="mega-col">
+                    <a class="mega-cat" href="motor.html">ドライバ / プリドライバ <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  </div>
+                  <div class="mega-col">
+                    <a class="mega-cat" href="motor.html">車載グレード <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  </div>
+                  <div class="mega-col">
+                    <a class="mega-cat" href="motor.html">モータ制御 MCU <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  </div>
+                </div>
+                <div class="mega-foot"><a href="brand-enpower.html">インノン科技 の全 42 型番を見る <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="nav-link" href="contact.html">お問い合わせ</a>
+    </nav>
+    <div class="header-actions">
+      <form class="header-search" onsubmit="return siteSearch(event)">
+        <input type="search" class="hs-input" placeholder="型番 / 特長で検索" aria-label="サイト内検索">
+        <button type="submit" class="hs-btn" aria-label="検索">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        </button>
+      </form>
+      <button class="btn-login cart-btn" onclick="showToast('選定リストはこの端末に保存されました。続けて追加できます。お見積りはご要望と併せて送信してください。')">
+        選定リスト
+        <span class="cart-badge">0</span>
+      </button>
+      <button class="btn-login" onclick="showToast('選定・お見積りにログインは不要です。一括お見積りはご要望をそのまま送信ください。当日中にご返信します。')">ログイン / 新規登録</button>
+<!-- i18n:switch -->
+      <div class="lang-switch">
+        <button type="button" class="lang-btn" aria-haspopup="true" aria-label="Language">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.4 2.7 2.4 15.3 0 18M12 3c-2.4 2.7-2.4 15.3 0 18"/></svg>
+          <span class="lang-cur">日本語</span>
+          <svg class="lang-caret" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="lang-menu">
+          <a class="lang-item" href="../cases.html" hreflang="zh-CN" lang="zh-CN">中文</a>
+          <a class="lang-item" href="../en/cases.html" hreflang="en" lang="en">EN</a>
+          <a class="lang-item on" href="../ja/cases.html" hreflang="ja" lang="ja">日本語</a>
+          <a class="lang-item" href="../de/cases.html" hreflang="de" lang="de">DE</a>
+        </div>
+      </div>
+<!-- /i18n:switch -->
+      <button class="menu-toggle" aria-label="メニュー">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#222222" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero img-bg">
+  <div class="container">
+    <div class="eyebrow">アプリケーション</div>
+    <h1>アプリケーション事例集</h1>
+    <p>車載、ロボティクス、産業機器、民生エレクトロニクスの 4 分野を対象に、デバイスの適用事例と選定ノウハウを提供。各記事では現場の課題、推奨デバイス構成、導入のポイントを明確に解説し、継続的に更新しています。</p>
+  </div>
+</section>
+
+<div class="container">
+
+  <!-- 两级筛选：应用领域 + 细分应用 -->
+  <div class="app-filter">
+    <div class="sector-tabs" id="sectorTabs" role="tablist" aria-label="アプリケーション分野">
+      <button class="sector-tab on" data-sector="auto" role="tab" aria-selected="true"><span class="t-no">01</span>車載</button>
+      <button class="sector-tab" data-sector="robot" role="tab" aria-selected="false"><span class="t-no">02</span>ロボティクス</button>
+      <button class="sector-tab" data-sector="industry" role="tab" aria-selected="false"><span class="t-no">03</span>産業機器</button>
+      <button class="sector-tab" data-sector="consumer" role="tab" aria-selected="false"><span class="t-no">04</span>民生エレクトロニクス</button>
+    </div>
+    <div class="sub-row" id="subRow" aria-label="細分類アプリケーション"></div>
+  </div>
+
+  <!-- 板块定位描述 -->
+  <p class="panel-desc" id="panelDesc"></p>
+
+  <!-- 文章卡片流 -->
+  <div class="article-grid" id="articleGrid"></div>
+
+</div>
+
+<!-- 选型 FAQ -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">よくあるご質問</div>
+      <h2>選定 FAQ</h2>
+    </div>
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-q">ラッチ型ホールと両極／単極ホールの違いは。どう選ぶか。
+          <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">
+          <b>ラッチ型</b>N / S 極が交互に感応面を通過し、磁極に応じて出力が反転します。次の用途に適します：<b>連続パルス、転流、方向判別</b>が必要なシーン（BLDC 転流、ストローク計数）；
+          <b>単極型</b>単一の磁極のみに応答し、近接／離隔でスイッチします。位置検出系の用途に適します。簡単な見分け方：パルス列が必要ならラッチ型、スイッチ信号が必要なら単極型です。
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">Bop / Brp とは？磁気回路設計での使い方
+          <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">
+          <b>Bop（動作点）</b>は出力を反転させる磁束密度、<b>Brp（解放点）</b>は出力が戻る磁束密度で、その差がヒステリシス幅です。磁気回路設計では、動作ギャップでの磁束密度が次を満たす必要があります：
+          近接時 <b>Bop より大きい</b>（確実に動作）を満たし、離れたときは <b>|Brp| より小さい</b>（確実に解放）を満たすようにし、温度による劣化と磁石の公差分の余裕を見込む必要があります。磁気回路とデバイスのマッチング支援が必要な場合はお電話ください。当社が計算をお手伝いします。
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">PCB-Less 2 線式とは。どんなシーンに適するか。
+          <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">
+          従来方式は「ホール + ローカル PCB + 3 本以上のハーネス」；<b>PCB-Less 電流出力</b>デバイス（例： <span class="mono">SC25898 / SC25896</span>）電源と信号を 2 本の線に統合し、
+          電流値で磁界の状態を符号化し、アクチュエータ内の PCB と余分なハーネスを不要にして、ECU の電流検出入力に直接接続します——<b>ドアロック、パワーウィンドウなど、長距離ハーネスやスペース制約のあるアクチュエータ</b>コスト削減効果が最も大きくなります。
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">48V 系統のホール選定で注意すべき点は。
+          <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">
+          48V 母線のロードダンプ過渡は 48V を大きく超えるため、システム仕様に沿った耐圧評価が必要です。<b>降圧回路を省いて直接給電</b>を選ぶ場合は、超高耐圧デバイスが有効です——例えば
+          <span class="mono">SC2919</span>：動作電圧 <span class="mono">4.0~125V</span>、耐圧 <span class="mono">250V</span>は車載 48V システムからの直接給電を前提に設計されています。LDO／DC-DC による降圧方式との比較も、お客様の電気アーキテクチャに沿ってご提案します。
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">BLDC の転流には通常いくつのホールが必要か。
+          <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">
+          通常 <b>ラッチ型ホール 3 個を電気角 120° で配置</b>三相転流を実現します。同時に必要な場合<b>方向判別</b>。2 出力の位相信号で方向が判別でき、パルス計数は回転数／ストローク測定に兼用できます。
+          単相ブラシレス（ファンなど）では転流用ホールは 1 個で済みます。ファン系では、チョッピング周波数が騒音に与える影響にも注意が必要です。
+        </div></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section alt" style="border-bottom:none;">
+  <div class="container">
+    <div class="cta-banner">
+      <div>
+        <h3>該当する用途が見つかりませんか？</h3>
+        <p>モータの諸元と使用シーンをお知らせください。最適な選定をご提案します。</p>
+        <span class="phone">138 1181 0805（王）</span>
+      </div>
+      <div class="actions">
+        <a class="btn btn-primary" href="contact.html">ご要望をご記入ください</a>
+        <a class="btn btn-ghost" href="sensors.html">製品を見る</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round">
+              <path d="M4 16V8l8-4 8 4v8l-8 4z"/><path d="M9 13.5l2 2 4-4.5"/>
+            </svg>
+          </span>
+          <span class="brand-text"><span class="cn">柏達電子</span><span class="en"><span class="dm-a">PCB</span><span class="dm-s">-</span><span class="dm-b">LESS</span><span class="dm-s">.COM</span></span></span>
+        </a>
+        <p class="brand-tagline">的確な選定で、基板の手戻りを削減</p>
+            <p>蘇州柏達電子有限公司——センサ、モータ制御、電源および保護デバイスの代理販売と選定サービス。</p>
+      </div>
+      <div class="footer-col">
+        <h5>製品</h5>
+        <a href="sensors.html">センサ</a>
+        <a href="motor.html">モータドライバ</a>
+        <a href="power.html">電源管理</a>
+      </div>
+      <div class="footer-col">
+        <h5>会社情報</h5>
+        <a href="cases.html">アプリケーション</a>
+        <a href="contact.html">お問い合わせ</a>
+      </div>
+      <div class="footer-col">
+        <h5>連絡先</h5>
+        <span>王 · 138 1181 0805</span>
+        <span>中国 江蘇省蘇州市呉中区木涜鎮劉庄路6号</span>
+        <a href="mailto:2099166018@qq.com">2099166018@qq.com</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 蘇州柏達電子有限公司</span>
+      <span>www.pcb-less.com · 苏ICP备XXXXXXXX号（备案后替换）</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ================= 应用方案文库数据 ================= */
+var SECTORS = [
+  { id: 'auto', no: '01', name: '車載', cover: 'images/hero-apps.jpg',
+    desc: 'ボディのアクチュエータとセンシング——パワーバックドア、サンルーフ、パワーウィンドウ、ドアロック、シート、熱マネジメント、キャビン照明。車載グレードの温度範囲は -40~150°C。' },
+  { id: 'robot', no: '02', name: 'ロボティクス', cover: 'images/cover-robot.jpg',
+    desc: '関節サーボとモーション Feedback——ロボット関節モータは転流精度、位置フィードバック分解能、電流保護の要求が高く、磁気エンコーダと電流センサが中核の組み合わせになります。' },
+  { id: 'industry', no: '03', name: '産業機器', cover: 'images/cover-industry.jpg',
+    desc: '産業用モータと過酷環境——高圧母線や油汚れ・粉塵環境での位置検出と駆動には、誘導式エンコーダと高耐圧デバイスが差別化のポイントになります。' },
+  { id: 'consumer', no: '04', name: '民生エレクトロニクス', cover: 'images/cover-consumer.jpg',
+    desc: '電池駆動とコスト重視——民生向けアプリケーションの鍵は低消費電力と徹底したコスト最適化。電池レベルの起動電圧をもつホールデバイスと低コストパッケージが要になります。' }
+];
+
+var CASES = [
+  /* ---- 汽车电子 ---- */
+  { sector: 'auto', sub: 'パワーバックドア', title: 'パワーバックドア 2 本ストラットのストローク記憶とソフトストップ',
+    summary: 'パワーバックドアのストラット用ブラシ付きモータは、ラッチ型ホールのパルス計数でストローク記憶とソフトストップを実現。2 本のストラットの位置を同期させて偏りを防ぎ、振動に強い設計で衝撃工况に対応します。',
+    date: '2026-09-21', read: '4 min',
+    chips: ['ラッチ型ホールのパルス計数', 'ブラシ付きモータドライバ', '振動 / ノイズに強い'] },
+  { sector: 'auto', sub: 'ドアロック', title: 'ドアロック 2 線式 PCB-Less 電流出力ソリューション',
+    summary: 'ドアロックアクチュエータの位置検出から基板上のローカル PCB と余分なハーネスを排除：SC25898／SC25896 は 2 線式電流出力で ECU に直接接続し、工場でのプログラミングがロット内の均一性を保証します。',
+    date: '2026-09-14', read: '5 min', detail: 'article-lock.html',
+    chips: ['SC25898 / SC25896', 'PCB-Less 2 線式', '-40~150°C 車載'] },
+  { sector: 'auto', sub: 'ウォータポンプ', title: '電動ウォータポンプ 48V 直接給電・三相駆動',
+    summary: '熱マネジメント向けウォータポンプの三相ブラシレス：超高耐圧ホール SC2919 が 48V 母線から直接給電され、降圧回路を省略。転流と回転数フィードバックを 1 つの磁気回路で共用します。',
+    date: '2026-09-07', read: '4 min',
+    chips: ['SC2919（耐圧 250V）', '三相ブラシレスドライバ', '48V プリドライバ'] },
+  { sector: 'auto', sub: 'シート', title: 'シート送風ファンの単相ブラシレス転流',
+    summary: '単相ブラシレスドライバとラッチ型ホールの転流を組み合わせ、キャビンの NVH と省スペースの要求に対応。低消費電力モードはシートのスリープ電流規格に適合します。',
+    date: '2026-08-31', read: '3 min',
+    chips: ['単相ブラシレスドライバ', '低消費電力モード', '低ノイズ'] },
+  { sector: 'auto', sub: 'サンルーフ', title: 'サンルーフのストローク検出と挟み込み防止制御',
+    summary: 'サンルーフのブラシ付きモータは、ホールのパルス計数でストローク測定とリミット制御を行います。挟み込み防止はパルス精度に依存するため、高チョッピング周波数のデバイスで機械振動による誤計数を抑えます。',
+    date: '2026-08-24', read: '4 min',
+    chips: ['ストローク計数', 'ブラシ付きモータドライバ', '高チョッピング周波数'] },
+  { sector: 'auto', sub: 'パワーウィンドウ', title: 'パワーウィンドウの反転制御と挟み込み検出',
+    summary: 'ホールパルスでガラス位置とストールを検出して挟み込みを防止。磁気回路の配置に制約があるパワーウィンドウ構造には、2D 平面検知の SC2498T が使え、取り付け方向の自由度が高まります。',
+    date: '2026-08-17', read: '4 min',
+    chips: ['SC2498T（2D 検知）', '位置 / ストール検出', 'ブラシ付きモータドライバ'] },
+  { sector: 'auto', sub: 'キャビン照明', title: 'サンバイザーミラーの開閉検出と定電流照明',
+    summary: 'ホールスイッチでミラーカバーの開閉を検出して照明を点灯し、LED 定電流ドライバが電圧変動時も明るさを一定に保ちます。コスト重視の内装部品には統合ソリューションが最適です。',
+    date: '2026-08-10', read: '3 min',
+    chips: ['ホールスイッチ', 'LED 定電流ドライバ', '低コストパッケージ'] },
+
+  /* ---- 机器人 ---- */
+  { sector: 'robot', sub: '関節モータ', title: 'ロボット関節 BLDC の転流と回転数フィードバック',
+    summary: 'ラッチ型ホール ×3 を 120° 配置し、関節モータの三相転流と初期位置決めを実現。2 出力信号を回転数・方向フィードバックに兼用し、FOC 起動時の位置基準を提供します。',
+    date: '2026-09-18', read: '5 min',
+    chips: ['ラッチ型ホール ×3', '2 出力ホール', '三相ブラシレスドライバ'] },
+  { sector: 'robot', sub: '位置フィードバック', title: 'ロボット関節の磁気エンコーダ角度フィードバック',
+    summary: '関節の絶対角度フィードバックには磁気エンコーダ IC を採用。非接触検知で摩耗がなく、高いサイクル寿命の要求に対応します。分解能違いの製品で各種の精度クラスをカバーします。',
+    date: '2026-08-28', read: '4 min',
+    chips: ['磁気エンコーダ IC（ABZ）', '非接触検知'] },
+  { sector: 'robot', sub: '電流検出', title: 'サーボドライブの相電流検出と過電流保護',
+    summary: '母線・相電流の検出には電流センサを採用。力制御とストール保護にリアルタイム信号を提供し、シャント抵抗方式を置き換えて絶縁設計を簡素化します。',
+    date: '2026-08-08', read: '4 min',
+    chips: ['電流センサ', '力制御 / ストール保護'] },
+
+  /* ---- 工业 ---- */
+  { sector: 'industry', sub: '汎用転流', title: '産業用 BLDC 三相転流の汎用ソリューション',
+    summary: 'ファンやポンプなどの産業用 BLDC は、ラッチ型ホール 3 個で転流を行い、2 出力の位相信号で方向判別と速度測定を同時に実現。1 つの磁気回路で転流とフィードバックの両方をカバーします。',
+    date: '2026-09-11', read: '4 min',
+    chips: ['ラッチ型ホール ×3', '2 出力ホール', '三相ブラシレスドライバ'] },
+  { sector: 'industry', sub: '電動工具 / AGV', title: '電動工具・AGV の高圧モータ検出',
+    summary: '高圧・大出力の母線シーンでは、高耐圧・低コストのホール SC1245 で転流と回転数検出を行い、パワーデバイスのスイッチングノイズを抑えます。',
+    date: '2026-08-21', read: '3 min',
+    chips: ['SC1245（高耐圧・低コスト）', '耐ノイズ性'] },
+  { sector: 'industry', sub: '過酷環境', title: '油汚れ・粉塵環境向け誘導式エンコーダ',
+    summary: '金属粉や油汚れのある環境では磁気エンコーダが外乱を受けやすくなります。誘導式エンコーダは磁気汚染に強く油汚れにも耐えるため、産業オートメーションの位置フィードバックに適します。',
+    date: '2026-07-31', read: '4 min',
+    chips: ['誘導式エンコーダ', '磁界外乱に強い', '油汚れ・粉塵に強い'] },
+
+  /* ---- 消费电子 ---- */
+  { sector: 'consumer', sub: 'スマートホーム', title: 'スマートロック・ロボット掃除機の電池駆動検出',
+    summary: 'スマートロックのクラッチ位置やロボット掃除機のダストボックス検出など電池駆動のシーンで、低消費電力ラッチ型ホール SC2002 が 1.8V から起動し、機器の待機時間を延ばします。',
+    date: '2026-09-04', read: '3 min',
+    chips: ['SC2002（1.8V 起動）', '低消費電力', '電池駆動'] },
+  { sector: 'consumer', sub: '冷却ファン', title: 'ノート PC・家電の冷却ファン転流',
+    summary: '単相ブラシレスドライバとホール転流による冷却ファン。チョッピング周波数と駆動ノイズが使い勝手に直結するため、低ノイズのデバイス選定が必要です。',
+    date: '2026-08-14', read: '3 min',
+    chips: ['単相ブラシレスドライバ', 'ラッチ型ホール', '低ノイズ'] },
+  { sector: 'consumer', sub: 'パーソナルケア照明', title: 'ミラー開閉検出と定電流照明',
+    summary: 'ホールスイッチで点灯をトリガし、LED 定電流ドライバで明るさを一定に保ちます。コスト重視のパーソナルケア製品には統合ソリューションが最適です。',
+    date: '2026-07-24', read: '3 min',
+    chips: ['ホールスイッチ', 'LED 定電流ドライバ', '徹底したコスト最適化'] }
+];
+
+/* ================= 两级筛选 + 文章卡渲染 ================= */
+var state = { sector: 'auto', sub: '' };
+
+function escHtml(s) {
+  return String(s).replace(/[&<>"']/g, function (c) {
+    return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+  });
+}
+
+var sectorTabs = document.getElementById('sectorTabs');
+var subRow = document.getElementById('subRow');
+var panelDesc = document.getElementById('panelDesc');
+var articleGrid = document.getElementById('articleGrid');
+
+function getSector() {
+  return SECTORS.filter(function (s) { return s.id === state.sector; })[0];
+}
+
+/* 细分应用按钮（按当前板块从数据派生） */
+function renderSubs() {
+  var subs = [];
+  CASES.forEach(function (c) {
+    if (c.sector === state.sector && subs.indexOf(c.sub) === -1) subs.push(c.sub);
+  });
+  var html = '<span class="sub-label">細分類アプリケーション</span>'
+    + '<button type="button" class="sub-tab' + (state.sub === '' ? ' on' : '') + '" data-sub="">すべて</button>';
+  html += subs.map(function (s) {
+    return '<button type="button" class="sub-tab' + (state.sub === s ? ' on' : '')
+      + '" data-sub="' + escHtml(s) + '">' + escHtml(s) + '</button>';
+  }).join('');
+  subRow.innerHTML = html;
+}
+
+/* 文章卡片 */
+/* 提示文案独立成变量：它被拼进 onclick 属性，若直接内联，多语言构建器的字符串
+   扫描会把整个属性值当成一个字符串而漏掉（2026-09-29 发现英文站 toasts 仍是中文） */
+var TIP_CARD = '该方案详情页整理中；示例详情页可从「车门锁 2 线 PCB-Less」文章进入';
+
+function renderCards() {
+  var sec = getSector();
+  var list = CASES.filter(function (c) {
+    return c.sector === state.sector && (!state.sub || c.sub === state.sub);
+  });
+  articleGrid.innerHTML = list.map(function (c, i) {
+    var chips = c.chips.map(function (ch, idx) {
+      return '<span class="case-chip' + (idx === 0 ? ' hot' : '') + '">' + escHtml(ch) + '</span>';
+    }).join('');
+    var inner = '<div class="cover"><img src="' + sec.cover + '" alt="' + escHtml(c.title) + '" loading="lazy">'
+      + '<span class="cover-tag">' + escHtml(sec.name) + '</span></div>'
+      + '<div class="ac-body">'
+      + '<span class="ac-sub">' + escHtml(c.sub) + '</span>'
+      + '<h3>' + escHtml(c.title) + '</h3>'
+      + '<p class="ac-summary">' + escHtml(c.summary) + '</p>'
+      + '<div class="case-chips">' + chips + '</div>'
+      + '<div class="ac-meta"><span>' + escHtml(c.date) + '</span><span>·</span><span>' + escHtml(c.read) + '</span>'
+      + '<span class="read-more">' + (c.detail ? '全文を読む' : '詳細ページは正式版で公開') + '</span></div>'
+      + '</div>';
+    if (c.detail) {
+      return '<a class="article-card is-link" href="' + c.detail + '" style="animation-delay:' + (i * 45) + 'ms">' + inner + '</a>';
+    }
+    return '<div class="article-card" role="button" tabindex="0" style="animation-delay:' + (i * 45) + 'ms" '
+      + 'onclick="showToast(\'' + TIP_CARD + '\')" '
+      + 'onkeydown="if(event.key===\'Enter\')this.click()">' + inner + '</div>';
+  }).join('');
+}
+
+/* 板块描述 + 计数 */
+function renderDesc() {
+  var sec = getSector();
+  var n = CASES.filter(function (c) {
+    return c.sector === state.sector && (!state.sub || c.sub === state.sub);
+  }).length;
+  panelDesc.innerHTML = escHtml(sec.desc) + '<span class="case-count">' + n + ' 篇方案</span>';
+}
+
+function renderAll() { renderSubs(); renderDesc(); renderCards(); }
+
+/* 应用领域切换 */
+sectorTabs.addEventListener('click', function (e) {
+  var btn = e.target.closest('.sector-tab');
+  if (!btn || btn.getAttribute('data-sector') === state.sector) return;
+  this.querySelectorAll('.sector-tab').forEach(function (b) {
+    b.classList.remove('on');
+    b.setAttribute('aria-selected', 'false');
+  });
+  btn.classList.add('on');
+  btn.setAttribute('aria-selected', 'true');
+  state.sector = btn.getAttribute('data-sector');
+  state.sub = '';
+  renderAll();
+});
+
+/* 细分应用切换（事件委托） */
+subRow.addEventListener('click', function (e) {
+  var btn = e.target.closest('.sub-tab');
+  if (!btn) return;
+  state.sub = btn.getAttribute('data-sub');
+  renderSubs(); renderDesc(); renderCards();
+});
+
+/* 深链入口：cases.html?sector=auto&sub=门锁（顶部「应用案例」大菜单的落地点）
+   参数一律先按真实数据校验，命中不了就退回默认，避免点进空白列表。 */
+(function () {
+  if (!window.URLSearchParams) return;
+  var p = new URLSearchParams(location.search);
+  var s = p.get('sector'), sb = p.get('sub');
+  if (s && SECTORS.some(function (x) { return x.id === s; })) state.sector = s;
+  if (sb) {
+    var allow = CASES.filter(function (c) { return c.sector === state.sector; })
+      .map(function (c) { return c.sub; });
+    state.sub = allow.indexOf(sb) !== -1 ? sb : '';
+  }
+  sectorTabs.querySelectorAll('.sector-tab').forEach(function (b) {
+    var on = b.getAttribute('data-sector') === state.sector;
+    b.classList.toggle('on', on);
+    b.setAttribute('aria-selected', on ? 'true' : 'false');
+  });
+})();
+
+renderAll();
+
+/* FAQ 手风琴 */
+document.querySelectorAll('.faq-q').forEach(function (q) {
+  q.addEventListener('click', function () {
+    var item = q.closest('.faq-item');
+    var wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(function (it) { it.classList.remove('open'); });
+    if (!wasOpen) item.classList.add('open');
+  });
+});
+</script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/nav.js"></script>
+</body>
+</html>

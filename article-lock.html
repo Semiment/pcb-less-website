@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>车门锁 2 线 PCB-Less 电流输出方案 | 应用案例 | 柏达电子</title>
+<meta name="description" content="车门锁执行器位置检测方案：SC25898/SC25896 两线制 PCB-Less 电流输出霍尔，省掉执行器内 PCB 与多余线束，直连 ECU 电流检测端，车规 -40~150°C。">
+<!-- i18n:head -->
+  <meta name="language" content="zh-CN">
+  <link rel="alternate" hreflang="zh-CN" href="https://www.pcb-less.com/article-lock.html">
+  <link rel="alternate" hreflang="en" href="https://www.pcb-less.com/en/article-lock.html">
+  <link rel="alternate" hreflang="ja" href="https://www.pcb-less.com/ja/article-lock.html">
+  <link rel="alternate" hreflang="de" href="https://www.pcb-less.com/de/article-lock.html">
+  <link rel="alternate" hreflang="x-default" href="https://www.pcb-less.com/article-lock.html">
+  <link rel="canonical" href="https://www.pcb-less.com/article-lock.html">
+<!-- /i18n:head -->
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round">
+          <path d="M4 16V8l8-4 8 4v8l-8 4z"/><path d="M9 13.5l2 2 4-4.5"/>
+        </svg>
+      </span>
+      <span class="brand-text">
+        <span class="cn">柏达电子</span>
+        <span class="en"><span class="dm-a">PCB</span><span class="dm-s">-</span><span class="dm-b">LESS</span><span class="dm-s">.COM</span></span>
+      </span>
+    </a>
+        <nav class="main-nav">
+      <a class="nav-link" href="index.html">首页</a>
+      <div class="nav-item has-mega">
+        <button type="button" class="nav-btn" aria-expanded="false" aria-haspopup="true" aria-controls="mega-products">
+          产品 <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="mega" id="mega-products">
+          <div class="mega-inner">
+            <div class="mega-rail" aria-label="产品线">
+              <button type="button" class="mega-rail-item" data-panel="p-sensors">传感器</button>
+              <button type="button" class="mega-rail-item" data-panel="p-power">电源管理</button>
+              <button type="button" class="mega-rail-item" data-panel="p-motor">电机驱动</button>
+            </div>
+            <div class="mega-body">
+              <div class="mega-panel" data-panel="p-sensors">
+                <a class="mega-title" href="sensors.html">传感器 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                <div class="mega-grid">
+                <div class="mega-col">
+                  <a class="mega-cat" href="sensors.html">开关与锁存霍尔 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="sensors.html">锁存开关霍尔</a>
+                    <a class="mega-sub" href="sensors.html">单极开关霍尔</a>
+                    <a class="mega-sub" href="sensors.html">全极开关霍尔</a>
+                    <a class="mega-sub" href="sensors.html">双路输出开关霍尔</a>
+                  </div>
+                </div>
+                <div class="mega-col">
+                  <a class="mega-cat" href="sensors.html">位置传感器 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="sensors.html">线性霍尔（1D）</a>
+                    <a class="mega-sub" href="sensors.html">可编程线性霍尔</a>
+                    <a class="mega-sub" href="sensors.html">角度传感器（单轴 / 多轴）</a>
+                  </div>
+                </div>
+                <div class="mega-col">
+                  <a class="mega-cat" href="sensors.html">速度传感器 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="sensors.html">轮速传感器</a>
+                    <a class="mega-sub" href="sensors.html">变速箱传感器</a>
+                    <a class="mega-sub" href="sensors.html">凸轮轴传感器</a>
+                    <a class="mega-sub" href="sensors.html">曲轴传感器</a>
+                    <a class="mega-sub" href="sensors.html">齿轮传感器</a>
+                  </div>
+                </div>
+                <div class="mega-col">
+                  <a class="mega-cat" href="sensors.html">编码器 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="sensors.html">磁性电机编码器</a>
+                    <a class="mega-sub" href="sensors.html">电感式电机编码器</a>
+                  </div>
+                </div>
+                <div class="mega-col">
+                  <a class="mega-cat" href="sensors.html">电流与保护 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="sensors.html">单片式电流传感器</a>
+                    <a class="mega-sub" href="sensors.html">漏电保护</a>
+                  </div>
+                </div>
+                </div>
+                <div class="mega-foot"><a href="sensors.html">查看传感器全部型号 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a></div>
+              </div>
+              <div class="mega-panel" data-panel="p-power">
+                <a class="mega-title" href="power.html">电源管理 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                <div class="mega-grid">
+                <div class="mega-col">
+                  <a class="mega-cat" href="power.html">DC-DC 转换器 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="power.html">开关转换器</a>
+                    <a class="mega-sub" href="power.html">升降压控制器</a>
+                    <a class="mega-sub" href="power.html">升压 / 降压控制器</a>
+                  </div>
+                </div>
+                <div class="mega-col">
+                  <a class="mega-cat" href="power.html">稳压器与多路输出 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="power.html">线性稳压器（LDO）</a>
+                    <a class="mega-sub" href="power.html">多路输出 DC-DC</a>
+                  </div>
+                </div>
+                </div>
+                <div class="mega-foot"><a href="power.html">查看电源管理全部型号 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a></div>
+              </div>
+              <div class="mega-panel" data-panel="p-motor">
+                <a class="mega-title" href="motor.html">电机驱动 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                <div class="mega-grid">
+                <div class="mega-col">
+                  <a class="mega-cat" href="motor.html">直流无刷驱动 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="motor.html">三相 BLDC 驱动器</a>
+                    <a class="mega-sub" href="motor.html">单相 BLDC 驱动器</a>
+                    <a class="mega-sub" href="motor.html">集成 MOSFET 的 ASIC</a>
+                  </div>
+                </div>
+                <div class="mega-col">
+                  <a class="mega-cat" href="motor.html">直流有刷驱动 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="motor.html">集成控制 DC 驱动器</a>
+                    <a class="mega-sub" href="motor.html">低压有刷驱动</a>
+                  </div>
+                </div>
+                <div class="mega-col">
+                  <a class="mega-cat" href="motor.html">步进电机驱动 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="motor.html">步进电机驱动器</a>
+                  </div>
+                </div>
+                <div class="mega-col">
+                  <a class="mega-cat" href="motor.html">栅极驱动与预驱 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="motor.html">三相 NN 栅极驱动</a>
+                    <a class="mega-sub" href="motor.html">PN 栅极驱动</a>
+                    <a class="mega-sub" href="motor.html">高压栅极驱动</a>
+                  </div>
+                </div>
+                <div class="mega-col">
+                  <a class="mega-cat" href="motor.html">功率级 MOSFET <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="motor.html">N 沟道 MOSFET</a>
+                    <a class="mega-sub" href="motor.html">P+N 双沟道 MOSFET</a>
+                    <a class="mega-sub" href="motor.html">双 N 沟道 MOSFET</a>
+                  </div>
+                </div>
+                <div class="mega-col">
+                  <a class="mega-cat" href="motor.html">车规与专用 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="motor.html">车规级器件</a>
+                    <a class="mega-sub" href="motor.html">电机驱动 MCU</a>
+                    <a class="mega-sub" href="motor.html">专用功能芯片</a>
+                  </div>
+                </div>
+                </div>
+                <div class="mega-foot"><a href="motor.html">查看电机驱动全部型号 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nav-item has-mega">
+        <button type="button" class="nav-btn active" aria-expanded="false" aria-haspopup="true" aria-controls="mega-apps">
+          应用案例 <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="mega" id="mega-apps">
+          <div class="mega-inner">
+            <div class="mega-rail" aria-label="应用领域">
+              <button type="button" class="mega-rail-item on" data-panel="p-auto">汽车电子</button>
+              <button type="button" class="mega-rail-item" data-panel="p-robot">机器人</button>
+              <button type="button" class="mega-rail-item" data-panel="p-industry">工业</button>
+              <button type="button" class="mega-rail-item" data-panel="p-consumer">消费电子</button>
+            </div>
+            <div class="mega-body">
+              <div class="mega-panel on" data-panel="p-auto">
+                <a class="mega-title" href="cases.html?sector=auto">汽车电子 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                <div class="mega-grid">
+                <div class="mega-col">
+                  <a class="mega-cat" href="cases.html?sector=auto">车身与进出 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="cases.html?sector=auto&sub=%E5%B0%BE%E9%97%A8">尾门</a>
+                    <a class="mega-sub" href="cases.html?sector=auto&sub=%E9%97%A8%E9%94%81">门锁</a>
+                    <a class="mega-sub" href="cases.html?sector=auto&sub=%E6%91%87%E7%AA%97">摇窗</a>
+                  </div>
+                </div>
+                <div class="mega-col">
+                  <a class="mega-cat" href="cases.html?sector=auto">座舱与舒适 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="cases.html?sector=auto&sub=%E5%BA%A7%E6%A4%85">座椅</a>
+                    <a class="mega-sub" href="cases.html?sector=auto&sub=%E5%A4%A9%E7%AA%97">天窗</a>
+                    <a class="mega-sub" href="cases.html?sector=auto&sub=%E5%BA%A7%E8%88%B1%E7%85%A7%E6%98%8E">座舱照明</a>
+                  </div>
+                </div>
+                <div class="mega-col">
+                  <a class="mega-cat" href="cases.html?sector=auto">热管理 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="cases.html?sector=auto&sub=%E6%B0%B4%E6%B3%B5">水泵</a>
+                  </div>
+                </div>
+                </div>
+                <div class="mega-foot"><a href="cases.html?sector=auto">查看全部应用方案 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a></div>
+              </div>
+              <div class="mega-panel" data-panel="p-robot">
+                <a class="mega-title" href="cases.html?sector=robot">机器人 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                <div class="mega-grid">
+                <div class="mega-col">
+                  <a class="mega-cat" href="cases.html?sector=robot">运动与反馈 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="cases.html?sector=robot&sub=%E5%85%B3%E8%8A%82%E7%94%B5%E6%9C%BA">关节电机</a>
+                    <a class="mega-sub" href="cases.html?sector=robot&sub=%E4%BD%8D%E7%BD%AE%E5%8F%8D%E9%A6%88">位置反馈</a>
+                  </div>
+                </div>
+                <div class="mega-col">
+                  <a class="mega-cat" href="cases.html?sector=robot&sub=%E7%94%B5%E6%B5%81%E6%A3%80%E6%B5%8B">电流检测 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                </div>
+                </div>
+                <div class="mega-foot"><a href="cases.html?sector=robot">查看全部应用方案 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a></div>
+              </div>
+              <div class="mega-panel" data-panel="p-industry">
+                <a class="mega-title" href="cases.html?sector=industry">工业 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                <div class="mega-grid">
+                <div class="mega-col">
+                  <a class="mega-cat" href="cases.html?sector=industry">电机与运动 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="cases.html?sector=industry&sub=%E9%80%9A%E7%94%A8%E6%8D%A2%E7%9B%B8">通用换相</a>
+                    <a class="mega-sub" href="cases.html?sector=industry&sub=%E7%94%B5%E5%8A%A8%E5%B7%A5%E5%85%B7%20/%20AGV">电动工具 / AGV</a>
+                  </div>
+                </div>
+                <div class="mega-col">
+                  <a class="mega-cat" href="cases.html?sector=industry">恶劣环境工况 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="cases.html?sector=industry&sub=%E6%81%B6%E5%8A%A3%E7%8E%AF%E5%A2%83">恶劣环境</a>
+                  </div>
+                </div>
+                </div>
+                <div class="mega-foot"><a href="cases.html?sector=industry">查看全部应用方案 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a></div>
+              </div>
+              <div class="mega-panel" data-panel="p-consumer">
+                <a class="mega-title" href="cases.html?sector=consumer">消费电子 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                <div class="mega-grid">
+                <div class="mega-col">
+                  <a class="mega-cat" href="cases.html?sector=consumer">家居与电池供电 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="cases.html?sector=consumer&sub=%E6%99%BA%E8%83%BD%E5%AE%B6%E5%B1%85">智能家居</a>
+                  </div>
+                </div>
+                <div class="mega-col">
+                  <a class="mega-cat" href="cases.html?sector=consumer">散热与照明 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="cases.html?sector=consumer&sub=%E6%95%A3%E7%83%AD%E9%A3%8E%E6%89%87">散热风扇</a>
+                    <a class="mega-sub" href="cases.html?sector=consumer&sub=%E4%B8%AA%E6%8A%A4%E7%85%A7%E6%98%8E">个护照明</a>
+                  </div>
+                </div>
+                </div>
+                <div class="mega-foot"><a href="cases.html?sector=consumer">查看全部应用方案 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nav-item has-mega">
+        <button type="button" class="nav-btn" aria-expanded="false" aria-haspopup="true" aria-controls="mega-brands">
+          品牌代理 <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="mega" id="mega-brands">
+          <div class="mega-inner">
+            <div class="mega-rail" aria-label="代理品牌">
+              <button type="button" class="mega-rail-item" data-panel="br-all">全部品牌</button>
+              <button type="button" class="mega-rail-item" data-panel="br-semiment">赛卓电子</button>
+              <button type="button" class="mega-rail-item" data-panel="br-enpower">英能科技</button>
+            </div>
+            <div class="mega-body">
+              <div class="mega-panel" data-panel="br-all">
+                <a class="mega-title" href="brands.html">代理品牌 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                <p class="mb-intro">按原厂浏览在库型号：赛卓电子、英能科技等 2 个品牌，共 179 款型号，参数取自原厂公开规格书。</p>
+                <div class="mega-brands">
+                  <a class="mb-card" href="brand-semiment.html">
+                    <span class="b-logo b-logo-text">Semiment</span>
+                    <span class="mb-name">赛卓电子</span>
+                    <span class="mb-meta"><b>137</b>款型号 · <b>11</b>个系列</span>
+                  </a>
+                  <a class="mb-card" href="brand-enpower.html">
+                    <span class="b-logo b-logo-text">Enpower Micro</span>
+                    <span class="mb-name">英能科技</span>
+                    <span class="mb-meta"><b>42</b>款型号 · <b>5</b>个系列</span>
+                  </a>
+                </div>
+                <div class="mega-foot"><a href="brands.html">查看全部代理品牌 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a></div>
+              </div>
+              <div class="mega-panel" data-panel="br-semiment">
+                <a class="mega-title" href="brand-semiment.html">赛卓电子 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                <div class="mega-grid">
+                  <div class="mega-col">
+                    <a class="mega-cat" href="sensors.html">开关霍尔 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  </div>
+                  <div class="mega-col">
+                    <a class="mega-cat" href="sensors.html">速度传感器 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  </div>
+                  <div class="mega-col">
+                    <a class="mega-cat" href="sensors.html">线性霍尔 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  </div>
+                  <div class="mega-col">
+                    <a class="mega-cat" href="sensors.html">电机编码器 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  </div>
+                  <div class="mega-col">
+                    <a class="mega-cat" href="sensors.html">角度传感器 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  </div>
+                  <div class="mega-col">
+                    <a class="mega-cat" href="sensors.html">电流与保护 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  </div>
+                  <div class="mega-col">
+                    <a class="mega-cat" href="power.html?cat=%E5%BC%80%E5%85%B3%E8%BD%AC%E6%8D%A2%E5%99%A8DC/DC">开关转换器DC/DC <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                    <div class="mega-subs">
+                      <a class="mega-sub" href="power.html?q=VE2220">VE2220</a>
+                      <a class="mega-sub" href="power.html?q=VE2226">VE2226</a>
+                      <a class="mega-sub" href="power.html?q=VE2266">VE2266</a>
+                    </div>
+                  </div>
+                  <div class="mega-col">
+                    <a class="mega-cat" href="power.html?cat=%E5%8D%87%E9%99%8D%E5%8E%8B%E6%8E%A7%E5%88%B6%E5%99%A8DC/DC">升降压控制器DC/DC <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                    <div class="mega-subs">
+                      <a class="mega-sub" href="power.html?q=VE8620">VE8620</a>
+                      <a class="mega-sub" href="power.html?q=VE8622">VE8622</a>
+                      <a class="mega-sub" href="power.html?q=VE8624">VE8624</a>
+                    </div>
+                  </div>
+                  <div class="mega-col">
+                    <a class="mega-cat" href="power.html?cat=%E5%8D%87%E5%8E%8B/%E9%99%8D%E5%8E%8B%E6%8E%A7%E5%88%B6%E5%99%A8DC/DC">升压/降压控制器DC/DC <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                    <div class="mega-subs">
+                      <a class="mega-sub" href="power.html?q=VE8600Q">VE8600Q</a>
+                      <a class="mega-sub" href="power.html?q=VE8602Q">VE8602Q</a>
+                    </div>
+                  </div>
+                  <div class="mega-col">
+                    <a class="mega-cat" href="power.html?cat=%E5%A4%9A%E8%B7%AF%E8%BE%93%E5%87%BADC/DC">多路输出DC/DC <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                    <div class="mega-subs">
+                      <a class="mega-sub" href="power.html?q=VE6200Q">VE6200Q</a>
+                    </div>
+                  </div>
+                  <div class="mega-col">
+                    <a class="mega-cat" href="power.html?cat=%E7%BA%BF%E6%80%A7%E7%A8%B3%E5%8E%8B%E5%99%A8LDO">线性稳压器LDO <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                    <div class="mega-subs">
+                      <a class="mega-sub" href="power.html?q=VE1430Q">VE1430Q</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="mega-foot"><a href="brand-semiment.html">查看 赛卓电子 全部 137 款型号 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a></div>
+              </div>
+              <div class="mega-panel" data-panel="br-enpower">
+                <a class="mega-title" href="brand-enpower.html">英能科技 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                <div class="mega-grid">
+                  <div class="mega-col">
+                    <a class="mega-cat" href="motor.html">功率器件 · MOSFET <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  </div>
+                  <div class="mega-col">
+                    <a class="mega-cat" href="motor.html">智能 ASIC 驱动 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  </div>
+                  <div class="mega-col">
+                    <a class="mega-cat" href="motor.html">驱动器 / 预驱 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  </div>
+                  <div class="mega-col">
+                    <a class="mega-cat" href="motor.html">车规产品 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  </div>
+                  <div class="mega-col">
+                    <a class="mega-cat" href="motor.html">电机驱动 MCU <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  </div>
+                </div>
+                <div class="mega-foot"><a href="brand-enpower.html">查看 英能科技 全部 42 款型号 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="nav-link" href="contact.html">联系我们</a>
+    </nav>
+    <div class="header-actions">
+      <form class="header-search" onsubmit="return siteSearch(event)">
+        <input type="search" class="hs-input" placeholder="搜索型号 / 特性" aria-label="站内搜索">
+        <button type="submit" class="hs-btn" aria-label="搜索">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        </button>
+      </form>
+      <button class="btn-login cart-btn" onclick="showToast('选型清单已保存在本机，可继续添加；需要报价请随需求一并提交')">
+        选型清单
+        <span class="cart-badge">0</span>
+      </button>
+      <button class="btn-login" onclick="showToast('选型与报价无需登录；批量询价请直接提交需求，我们当日回复')">登录 / 注册</button>
+<!-- i18n:switch -->
+      <div class="lang-switch">
+        <button type="button" class="lang-btn" aria-haspopup="true" aria-label="Language">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.4 2.7 2.4 15.3 0 18M12 3c-2.4 2.7-2.4 15.3 0 18"/></svg>
+          <span class="lang-cur">中文</span>
+          <svg class="lang-caret" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="lang-menu">
+          <a class="lang-item on" href="article-lock.html" hreflang="zh-CN" lang="zh-CN">中文</a>
+          <a class="lang-item" href="en/article-lock.html" hreflang="en" lang="en">EN</a>
+          <a class="lang-item" href="ja/article-lock.html" hreflang="ja" lang="ja">日本語</a>
+          <a class="lang-item" href="de/article-lock.html" hreflang="de" lang="de">DE</a>
+        </div>
+      </div>
+<!-- /i18n:switch -->
+      <button class="menu-toggle" aria-label="菜单">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#222222" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <nav class="breadcrumb" aria-label="面包屑">
+    <a href="index.html">首页</a><span class="sep">/</span>
+    <a href="cases.html">应用案例</a><span class="sep">/</span>
+    <a href="cases.html">汽车电子</a><span class="sep">/</span>
+    <span>车门锁 2 线 PCB-Less 电流输出方案</span>
+  </nav>
+
+  <div class="article-layout">
+    <main>
+      <div class="article-head">
+        <div class="ac-tags">
+          <span class="tag">汽车电子</span>
+          <span class="tag">门锁执行器</span>
+          <span class="tag">PCB-Less</span>
+        </div>
+        <h1>车门锁执行器 2 线 PCB-Less 电流输出位置检测方案</h1>
+        <div class="ac-meta">
+          <span>2026-09-14</span><span>·</span><span>5 min 阅读</span><span>·</span><span>应用方案</span>
+        </div>
+      </div>
+
+      <div class="article-cover">
+        <img src="images/hero-apps.jpg" alt="车门锁执行器 PCB-Less 方案封面">
+      </div>
+
+      <div class="article-body">
+        <h2>场景与痛点</h2>
+        <p>车门锁执行器（中央门锁电机）需要检测锁舌的<b>上锁 / 解锁位置</b>，传统方案是在执行器内部放一颗霍尔开关，配一块本地小 PCB 做信号调理，再通过 3 根以上线束（供电、地、信号）回连到门控 ECU。这套结构在成本与可靠性上有三个痛点：</p>
+        <ul>
+          <li><b>本地 PCB 成本</b>——每只执行器一块小板，元器件、贴装、测试都是钱；</li>
+          <li><b>线束成本</b>——车门铰链处走线空间极其紧张，每多一根线，线径与接插件成本都在涨；</li>
+          <li><b>可靠性</b>——PCB 焊点与接插件插针是执行器寿命内的常见失效点，门锁属于安全件，客诉代价高。</li>
+        </ul>
+
+        <h2>方案原理：2 线电流输出</h2>
+        <p>PCB-Less 方案把「供电」与「信号」合并到同一对线上。霍尔 IC 根据磁场状态改变<b>自身工作电流的大小</b>——磁场高于工作点（Bop）时输出一个电流水平，低于释放点（Brp）时回到另一个水平。ECU 侧在回路中串一个采样电阻，通过检测压差即可判读位置信号：</p>
+        <div class="callout">
+          <b>2 线制的本质：</b>器件不再需要独立的地线与信号线——电流本身就是信号。执行器内只剩「霍尔 IC + 磁铁」，没有 PCB、没有多余线束。
+        </div>
+        <p>磁铁随锁舌运动，霍尔 IC 感应磁场变化，ECU 通过回路电流的阶跃判断上锁 / 解锁到位。锁存型输出特性保证信号在磁铁停留期间保持稳定，不抖动、不复位。</p>
+
+        <h2>推荐器件与参数</h2>
+        <p>本方案推荐 <b>SC25898 / SC25896</b> 车规级 2 线电流输出锁存霍尔，参数如下（来源于产品规格数据）：）</p>
+        <table>
+          <thead>
+            <tr><th>参数</th><th>SC25898</th><th>SC25896</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>感应类型</td><td>1D 垂直感应</td><td>1D 垂直感应</td></tr>
+            <tr><td>工作电压</td><td class="mono">4.0 ~ 24 V</td><td class="mono">4.0 ~ 24 V</td></tr>
+            <tr><td>工作电流</td><td class="mono">4.1 mA</td><td class="mono">6.0 mA</td></tr>
+            <tr><td>输出形式</td><td>电流输出（2 线制）</td><td>电流输出（2 线制）</td></tr>
+            <tr><td>典型 Bop / Brp</td><td class="mono">+80 / -80 Gs</td><td class="mono">+80 / -80 Gs</td></tr>
+            <tr><td>封装</td><td class="mono">SIP3 / TS2</td><td class="mono">SIP3 / TS2</td></tr>
+            <tr><td>工作温度</td><td class="mono">-40 ~ 150°C</td><td class="mono">-40 ~ 150°C</td></tr>
+            <tr><td>特性</td><td>工厂编程，集成电容</td><td>工厂编程，集成电容</td></tr>
+          </tbody>
+        </table>
+        <p>两颗器件的差别在工作电流档位——配合不同的 ECU 采样电阻与判读门限选型。±80Gs 的对称触发点适配锁舌磁铁的常规磁路设计，磁极交替经过时输出可靠翻转。</p>
+
+        <h2>应用要点</h2>
+        <h3>1. 工厂编程保证批次一致性</h3>
+        <p>2 线制方案对电流档位的精度敏感，SC25898 / SC25896 出厂前逐颗编程校准电流窗口，避免批次间漂移导致 ECU 误判——这是车规门锁批量落地的关键保障。</p>
+        <h3>2. 集成电容简化外围</h3>
+        <p>器件内置电容，对线束上的耦合噪声有一定抑制能力，进一步减少外围元件数量，与「执行器内无 PCB」的目标一致。</p>
+        <h3>3. 磁路匹配建议</h3>
+        <p>磁铁选型时保证锁舌运动到感应位时气隙磁场 <b>大于 +80Gs（Bop）</b>，离开后 <b>小于 -80Gs（|Brp|）</b>，并按 -40~150°C 全温区预留磁钢温度退化的余量。需要磁路与气隙核算支持，直接来电，我们协助计算。</p>
+
+        <h2>方案收益</h2>
+        <ul>
+          <li>执行器内<b>去掉本地 PCB</b> 与贴装工序，直接降物料与制造成本；</li>
+          <li>线束从 3 线以上降到 <b>2 线</b>，铰链走线与接插件成本同步下降；</li>
+          <li>焊点与插针数量减少，失效模式更少，<b>可靠性提升</b>；</li>
+          <li>电流信号抗共模干扰能力强，门板内长线束传输稳定。</li>
+        </ul>
+
+        <h2>延伸阅读方向</h2>
+        <p>同类 PCB-Less 电流输出架构也适用于<b>摇窗、加油口盖、充电口盖执行器</b>等远距离线束、空间受限的场景；正式版文库将补充选型对比与应用笔记。</p>
+      </div>
+
+      <nav class="article-nav">
+        <a href="cases.html">
+          <span>← 返回列表</span>
+          <span class="nav-title">应用方案文库 · 汽车电子</span>
+        </a>
+        <a class="next" href="sensors.html">
+          <span>查看产品 →</span>
+          <span class="nav-title">锁存霍尔产品选型表</span>
+        </a>
+      </nav>
+    </main>
+
+    <aside class="article-side">
+      <div class="side-card">
+        <h4>热门方案</h4>
+        <a class="side-item" href="cases.html">
+          <span class="si-no">01</span>
+          <span><span class="si-title">电子水泵 48V 直供电三相驱动方案</span><span class="si-sub">汽车电子 · 水泵</span></span>
+        </a>
+        <a class="side-item" href="cases.html">
+          <span class="si-no">02</span>
+          <span><span class="si-title">摇窗机换向与防夹检测方案</span><span class="si-sub">汽车电子 · 摇窗</span></span>
+        </a>
+        <a class="side-item" href="cases.html">
+          <span class="si-no">03</span>
+          <span><span class="si-title">机器人关节磁编码器角度反馈方案</span><span class="si-sub">机器人 · 位置反馈</span></span>
+        </a>
+        <a class="side-item" href="cases.html">
+          <span class="si-no">04</span>
+          <span><span class="si-title">智能锁与扫地机电池供电检测方案</span><span class="si-sub">消费电子 · 智能家居</span></span>
+        </a>
+      </div>
+      <div class="side-card side-contact">
+        <h4>获取方案支持</h4>
+        <p>告诉我您的执行器参数与磁路条件，我们提供器件选型、样品与磁路核算支持。</p>
+        <span class="phone">138 1181 0805</span>
+        <p style="margin-top:14px; margin-bottom:0;">王先生 · 苏州柏达电子</p>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round">
+              <path d="M4 16V8l8-4 8 4v8l-8 4z"/><path d="M9 13.5l2 2 4-4.5"/>
+            </svg>
+          </span>
+          <span class="brand-text"><span class="cn">柏达电子</span><span class="en"><span class="dm-a">PCB</span><span class="dm-s">-</span><span class="dm-b">LESS</span><span class="dm-s">.COM</span></span></span>
+        </a>
+        <p class="brand-tagline">选型准，少改一次板</p>
+            <p>苏州柏达电子有限公司——传感器、电机控制、电源与保护器件代理与选型服务。</p>
+      </div>
+      <div class="footer-col">
+        <h5>产品</h5>
+        <a href="sensors.html">传感器</a>
+        <a href="motor.html">电机驱动</a>
+        <a href="power.html">电源管理</a>
+      </div>
+      <div class="footer-col">
+        <h5>公司</h5>
+        <a href="cases.html">应用案例</a>
+        <a href="contact.html">联系我们</a>
+      </div>
+      <div class="footer-col">
+        <h5>联系方式</h5>
+        <span>王先生 · 138 1181 0805</span>
+        <span>苏州市吴中区木渎镇刘庄路6号</span>
+        <a href="mailto:2099166018@qq.com">2099166018@qq.com</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 苏州柏达电子有限公司</span>
+      <span>www.pcb-less.com · 苏ICP备XXXXXXXX号（备案后替换）</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/nav.js"></script>
+</body>
+</html>

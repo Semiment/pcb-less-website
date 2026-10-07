@@ -85,8 +85,8 @@
 .g-body tr.hl td{background:transparent}
 .g-body tr.hl td.nm{box-shadow:inset 2px 0 0 var(--accent);padding-left:12px;color:var(--ink);font-weight:700}
 
-/* 说明条：小字、左侧细线，不做虚线框 */
-.g-note{font-size:12.5px;line-height:1.75;color:var(--ink-2);max-width:44em;
+/* 表下说明：小字、左侧细线，不做虚线框、不做编号堆砌 */
+p.g-note{font-size:12.5px;line-height:1.75;color:var(--ink-2);max-width:44em;
         border-left:2px solid var(--border);padding:2px 0 2px 14px;margin:12px 0 0}
 
 /* 表格内的次级信息（国家 / 上市代码）：降为辅助层级 */
@@ -717,13 +717,7 @@
   </table>
   </div>
 
-  <div class="g-note">
-    <b>数据口径：</b>本页为公开信息整理，用于选型方向判断，<b>不构成参数承诺</b>，量产请以各家最新规格书为准；
-    「—」表示未取得公开信息，不推测补全。<br>
-    <b>两点说明：</b>① Allegro 于 2020 年 10 月在纳斯达克独立上市（ALGM），截至 2024 年 4 月 Sanken Electric 持股约 51%，
-    <b>并非 TDK 旗下</b>；TDK 持有的是 Micronas（2016 年收购）。
-    ② 赛卓为本页重点推荐对象 —— 苏州柏达电子是赛卓官方授权代理商，详见后文专章。
-  </div>
+  <p class="g-note">表内「—」是尚未取得公开信息，未做推测补全；量产以各家最新规格书为准。<br>Allegro 为纳斯达克独立上市（ALGM），并非 TDK 旗下，TDK 持有的是 Micronas。</p>
 
   <h2>国产霍尔为什么会失效？先看 EOS 这条链</h2>
 
@@ -757,13 +751,7 @@
   </table>
   </div>
 
-  <div class="g-note">
-    <b>三点补充：</b>① 上表仅为选型余量的对比参考，整车瞬态的波形与幅值应按
-    <b>ISO 7637-2 / ISO 16750-2</b> 等整车电气测试标准实测确认。
-    ② EOS 造成的损伤通常是永久性的；现场出现失效时建议保留失效件，按失效分析（FA）流程定位过电应力点，
-    不宜直接归因为批次质量问题。
-    ③ 耐压余量只是可靠性的一环，还需同时核对<b>反向电压保护</b>、<b>ESD 等级</b>与<b>全温区磁阈值稳定性</b>。
-  </div>
+  <p class="g-note">上表只比耐压余量，整车瞬态的真实波形与幅值要按 ISO 7637-2 / ISO 16750-2 实测确认。EOS 损伤多为永久性，现场失效建议先留件做 FA 定位过电应力点，不宜直接归因为批次质量。余量之外，反向电压保护、ESD 等级与全温区磁阈值稳定性同样要一并核对。</p>
 
   <h2>重点推荐：赛卓电子 Semiment</h2>
 

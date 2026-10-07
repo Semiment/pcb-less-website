@@ -85,8 +85,8 @@
 .g-body tr.hl td{background:transparent}
 .g-body tr.hl td.nm{box-shadow:inset 2px 0 0 var(--accent);padding-left:12px;color:var(--ink);font-weight:700}
 
-/* 说明条: 小字, 左侧细线, 不做虚线框 */
-.g-note{font-size:12.5px;line-height:1.75;color:var(--ink-2);max-width:44em;
+/* 表下说明: 小字, 左侧细线, 不做虚线框, 不做编号堆砌 */
+p.g-note{font-size:12.5px;line-height:1.75;color:var(--ink-2);max-width:44em;
         border-left:2px solid var(--border);padding:2px 0 2px 14px;margin:12px 0 0}
 
 /* 表格内的次级信息(国家 / 上市代码): 降为辅助层级 */
@@ -717,13 +717,7 @@
   </table>
   </div>
 
-  <div class="g-note">
-    <b>Data basis:</b>This page compiles public information to support selection decisions;<b>does not constitute a parameter commitment</b>; for production, refer to the latest datasheet of each manufacturer;
-    A dash means no public information was obtained; no values are inferred.<br>
-    <b>Two notes:</b>(1) Allegro listed independently on Nasdaq in October 2020 (ALGM); as of April 2024 Sanken Electric held about 51%,
-    <b>not part of the TDK group</b>; what TDK holds is Micronas (acquired in 2016).
-    (2) Semiment is the focus of this page - Suzhou Boda Electronic is an officially authorized Semiment distributor; see the dedicated section below.
-  </div>
+  <p class="g-note">A dash means no public figure is available and nothing has been inferred; for production, refer to the latest datasheet of each vendor.<br>Allegro is listed independently on Nasdaq (ALGM) and is not part of TDK; TDK owns Micronas.</p>
 
   <h2>Why do domestic Hall devices fail? Start with the EOS chain</h2>
 
@@ -757,13 +751,7 @@
   </table>
   </div>
 
-  <div class="g-note">
-    <b>Three additional points:</b>(1) The table above is only a comparative reference for selection margin; the waveform and amplitude of vehicle transients should be confirmed by measurement according to
-    <b>ISO 7637-2 / ISO 16750-2</b> and other vehicle electrical test standards.
-    (2) EOS damage is usually permanent; when a field failure occurs, keep the failed part and follow the failure analysis (FA) flow to locate the overstress point,
-    and should not be attributed directly to a batch quality problem.
-    (3) Voltage margin is only one aspect of reliability; also verify<b>reverse voltage protection</b>, <b>ESD rating</b>and<b>magnetic threshold stability across the full temperature range</b>. 
-  </div>
+  <p class="g-note">The table compares withstand margin only; the actual waveform and amplitude of vehicle transients must be verified against ISO 7637-2 / ISO 16750-2 in testing. EOS damage is usually permanent; for field failures, keep the failed part and locate the overstress point through FA rather than attributing it directly to batch quality. Beyond margin, reverse-voltage protection, ESD rating and magnetic-threshold stability over the full temperature range must also be checked.</p>
 
   <h2>In Focus: Semiment</h2>
 

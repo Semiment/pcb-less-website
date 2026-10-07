@@ -85,8 +85,8 @@
 .g-body tr.hl td{background:transparent}
 .g-body tr.hl td.nm{box-shadow:inset 2px 0 0 var(--accent);padding-left:12px;color:var(--ink);font-weight:700}
 
-/* 说明条: 小字, 左侧细线, 不做虚线框 */
-.g-note{font-size:12.5px;line-height:1.75;color:var(--ink-2);max-width:44em;
+/* 表下说明: 小字, 左侧细线, 不做虚线框, 不做编号堆砌 */
+p.g-note{font-size:12.5px;line-height:1.75;color:var(--ink-2);max-width:44em;
         border-left:2px solid var(--border);padding:2px 0 2px 14px;margin:12px 0 0}
 
 /* 表格内的次级信息(国家 / 上市代码): 降为辅助层级 */
@@ -717,13 +717,7 @@
   </table>
   </div>
 
-  <div class="g-note">
-    <b>Datengrundlage:</b>Diese Seite fasst öffentliche Informationen zusammen und dient der Auswahlrichtung;<b>stellt keine Parameterzusage dar</b>; für die Serienfertigung gilt das jeweils aktuelle Datenblatt;
-    Ein Gedankenstrich bedeutet, dass keine öffentlichen Informationen vorlagen; es wird nichts ergänzt.<br>
-    <b>Zwei Hinweise:</b>(1) Allegro ging im Oktober 2020 eigenständig an die Nasdaq (ALGM); im April 2024 hielt Sanken Electric etwa 51%,
-    <b>nicht Teil der TDK-Gruppe</b>; TDK hält Micronas (2016 übernommen).
-    (2) Semiment steht im Mittelpunkt dieser Seite - Suzhou Boda Electronic ist offiziell autorisierter Semiment-Distributor; siehe den eigenen Abschnitt weiter unten.
-  </div>
+  <p class="g-note">Ein Strich bedeutet, dass keine öffentliche Angabe vorliegt und nichts abgeleitet wurde; für die Serie gilt das jeweils aktuelle Datenblatt des Herstellers.<br>Allegro ist eigenständig an der Nasdaq notiert (ALGM) und gehört nicht zu TDK; TDK besitzt Micronas.</p>
 
   <h2>Warum fallen Hall-Bausteine aus heimischer Fertigung aus? Beginnen Sie bei der EOS-Kette</h2>
 
@@ -757,13 +751,7 @@
   </table>
   </div>
 
-  <div class="g-note">
-    <b>Drei ergänzende Punkte:</b>(1) Die obige Tabelle ist nur ein Vergleichshinweis zur Auswahlreserve; Wellenform und Amplitude von Fahrzeugtransienten sind messtechnisch zu bestätigen nach
-    <b>ISO 7637-2 / ISO 16750-2</b> sowie weiterer Normen für elektrische Fahrzeugprüfungen.
-    (2) EOS-Schäden sind meist permanent; bei einem Feldausfall sollte das fehlerhafte Teil aufbewahrt und im Rahmen der Fehleranalyse (FA) der Ueberlastungspunkt lokalisiert werden,
-    und sollte nicht unmittelbar einem Chargenqualitätsproblem zugeschrieben werden.
-    (3) Die Spannungsreserve ist nur ein Aspekt der Zuverlässigkeit; zusätzlich zu prüfen sind<b>Verpolungsschutz</b>, <b>ESD-Klasse</b>und<b>Stabilität der Magnetschwellen über den gesamten Temperaturbereich</b>. 
-  </div>
+  <p class="g-note">Die Tabelle vergleicht nur die Spannungsreserve; die tatsächliche Wellenform und Amplitude der Fahrzeugtransienten sind nach ISO 7637-2 / ISO 16750-2 messtechnisch zu bestätigen. EOS-Schäden sind meist dauerhaft; bei Feldausfällen sollte das Teil aufbewahrt und die Überspannungsstelle per FA lokalisiert werden, statt direkt auf die Chargenqualität zu schließen. Neben der Reserve sind auch Verpolschutz, ESD-Einstufung und die Stabilität der Magnetschwellen über den gesamten Temperaturbereich zu prüfen.</p>
 
   <h2>Im Fokus: Semiment</h2>
 

@@ -35,65 +35,118 @@
 <link rel="stylesheet" href="css/style.css">
 
 <style>
-  /* 本页专用排版：全部以 .g-body 作用域收口，不污染站点公共样式 */
-  .g-body{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:38px 44px}
-  @media(max-width:760px){.g-body{padding:24px 20px}}
-  .g-body h1{font-size:29px;line-height:1.4;color:var(--deep);margin:0 0 10px}
-  .g-body h2{font-size:21px;color:var(--deep);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--accent-2)}
-  .g-body h3{font-size:16.5px;color:var(--deep);margin:26px 0 8px}
-  .g-body p{margin:0 0 14px;color:var(--ink-2)}
-  .g-body table{width:100%;border-collapse:collapse;font-size:13.5px;margin:8px 0 6px}
-  .g-body th{background:var(--accent-tint);color:var(--deep);text-align:left;font-weight:600;
-             padding:11px 12px;border:1px solid var(--border);white-space:nowrap;font-size:13px}
-  .g-body td{padding:11px 12px;border:1px solid var(--border);vertical-align:top;color:var(--ink-2)}
-  .g-body td b{color:var(--ink)}
-  .g-body td.nm{min-width:118px}
-  .g-body tr.hl td{background:#F7FAFF}
-  .g-body tr.hl td.nm{border-left:3px solid var(--accent-2)}
-  .g-scroll{overflow-x:auto}
-  .g-meta{margin:0 0 22px;font-size:12.5px;color:var(--ink-3)}
-  .g-lead{font-size:15px}
-  .g-answer{background:var(--accent-tint);border:1px solid #D7E1F2;border-left:4px solid var(--accent);
-            border-radius:8px;padding:20px 24px;margin:0 0 12px}
-  .g-answer p{margin:0;color:var(--ink);font-size:15.5px}
-  /* 浅底小字一律用高光同相深一档，保证对比度 */
-  .g-tag{font-size:11.5px;color:var(--accent-2-ink);letter-spacing:.06em;font-weight:700;margin:0 0 8px}
-  .g-note{font-size:12.5px;color:var(--ink-2);background:#FAFBFD;border:1px dashed var(--border);
-          border-radius:8px;padding:12px 16px;margin:10px 0 0}
-  .g-note b{color:var(--ink)}
-  .g-focus{border:2px solid var(--accent-2);border-radius:11px;padding:26px 30px;margin:16px 0 0;
-           background:linear-gradient(180deg,#F7FBFF 0%,#fff 60%)}
-  .g-focus h3:first-child{margin-top:0}
-  .g-focus ul{margin:8px 0 0;padding-left:20px}
-  .g-focus li{margin-bottom:9px;font-size:14.5px;color:var(--ink-2)}
-  .g-focus li b{color:var(--ink)}
-  .g-vp{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0 0}
-  @media(max-width:860px){.g-vp{grid-template-columns:repeat(2,1fr)}}
-  .g-vp div{background:#fff;border:1px solid var(--border);border-radius:9px;padding:14px;text-align:center}
-  .g-vp .v{font-size:23px;font-weight:800;color:var(--accent);line-height:1.2}
-  .g-vp .l{font-size:12.5px;color:var(--ink-2);margin-top:4px}
-  .g-body details{border:1px solid var(--border);border-radius:8px;margin-bottom:10px;background:#fff}
-  .g-body summary{cursor:pointer;padding:13px 18px;font-weight:600;color:var(--deep);font-size:15px}
-  .g-body summary::marker{color:var(--accent-2)}
-  .g-body details .ans{padding:0 18px 15px;color:var(--ink-2);font-size:14.5px}
-  .g-body details .ans p{margin:0 0 10px}
-  .g-body details .ans p:last-child{margin-bottom:0}
-  .g-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-  @media(max-width:860px){.g-grid{grid-template-columns:1fr}}
-  .g-card{border:1px solid var(--border);border-radius:9px;padding:16px 18px;background:#fff}
-  .g-card h4{margin:0 0 8px;font-size:15px;color:var(--deep)}
-  .g-card p{margin:0;font-size:13.5px}
-  .g-disc{background:#FFF8E8;border:1px solid #F0D9A0;border-radius:9px;padding:18px 22px;margin:32px 0 0}
-  .g-disc h3{margin:0 0 8px;font-size:15px;color:#8A5A00}
-  .g-disc p{margin:0 0 10px;font-size:14px;color:#6B4A0E}
-  .g-disc p:last-child{margin-bottom:0}
-  .g-cta{background:var(--deep);color:#fff;border-radius:11px;padding:26px 32px;margin:30px 0 0;
-         display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:space-between}
-  .g-cta h3{margin:0 0 6px;color:#fff;font-size:18px}
-  .g-cta p{margin:0;color:#C6D8F2;font-size:13.5px}
-  .g-cta a.btn{background:var(--accent-2);color:#fff;padding:11px 22px;border-radius:7px;font-weight:600}
-  .g-cta a.btn:hover{background:#0295d4}
-  .g-rel{margin:22px 0 0;font-size:13.5px;color:var(--ink-2)}
+/* ─────────────────────────────────────────────────────────────
+   本页专用排版。全部收口在 .g-body 作用域内，不污染站点公共样式。
+   设计取向（反 AI 味）：
+     · 正文限宽 ~44 字/行，表格与条目区可占满栏宽 —— 破除「整页一个宽度」的呆板
+     · 不用等宽卡片阵；条目一律 border-top 分隔 + 左标题右说明的非对称双栏
+     · 表格只留横向分隔线，去掉 Excel 式全网格
+     · 零渐变、零外发光、零阴影堆叠；层级靠字重与留白，不靠框
+     · 动效只做 transform / opacity，且尊重 prefers-reduced-motion
+   ───────────────────────────────────────────────────────────── */
+.g-body{background:var(--surface);border:1px solid var(--border);border-radius:10px;
+        padding:clamp(24px,4vw,44px)}
+.g-body :where(p,li,.ans){max-width:44em}          /* 中文舒适行宽，表格不受限 */
+
+/* 标题层级：靠字重与色阶，不做巨大字号 */
+.g-body h1{font-size:clamp(23px,2.6vw,29px);line-height:1.35;letter-spacing:-.01em;
+           color:var(--deep);font-weight:700;margin:0 0 8px}
+.g-body h2{font-size:clamp(18px,1.7vw,20px);font-weight:700;letter-spacing:-.005em;
+           color:var(--deep);margin:clamp(34px,5vw,52px) 0 16px;
+           padding-top:14px;border-top:1px solid var(--border)}
+.g-body h3{font-size:15.5px;font-weight:700;color:var(--ink);margin:26px 0 6px}
+.g-body p{margin:0 0 13px;color:var(--ink-2)}
+.g-body b,.g-body strong{color:var(--ink);font-weight:700}
+
+.g-meta{margin:0 0 26px;font-size:12.5px;color:var(--ink-3);
+        font-variant-numeric:tabular-nums}
+.g-lead{font-size:15px}
+
+/* 摘录块：只留左侧主色实线，不要四面框 + 圆角 + 底色的「提示卡」套路 */
+.g-answer{border-left:3px solid var(--accent);padding:2px 0 2px 20px;margin:0 0 22px}
+.g-answer p{color:var(--ink);font-size:15.5px;line-height:1.8}
+.g-tag{font-size:12px;font-weight:700;color:var(--ink-3);letter-spacing:.02em;margin:0 0 7px}
+
+/* 表格：横向分隔线为主，表头用下边框切分；数字等宽对齐 */
+.g-scroll{overflow-x:auto}
+.g-body table{width:100%;border-collapse:collapse;font-size:13.5px;margin:14px 0 4px;
+              font-variant-numeric:tabular-nums}
+.g-body th{color:var(--deep);text-align:left;font-weight:700;font-size:12.5px;
+           padding:9px 12px 9px 0;border-bottom:1.5px solid var(--border);white-space:nowrap}
+.g-body td{padding:11px 12px 11px 0;border-bottom:1px solid var(--border);
+           vertical-align:top;color:var(--ink-2)}
+.g-body td:not(:last-child),.g-body th:not(:last-child){padding-right:16px}
+.g-body tbody tr:last-child td{border-bottom:0}
+.g-body td.nm{min-width:112px}
+/* 重点行：左侧主色短线，不用通栏底色 */
+.g-body tr.hl td{background:transparent}
+.g-body tr.hl td.nm{box-shadow:inset 2px 0 0 var(--accent);padding-left:12px;color:var(--ink);font-weight:700}
+
+/* 说明条：小字、左侧细线，不做虚线框 */
+.g-note{font-size:12.5px;line-height:1.75;color:var(--ink-2);max-width:44em;
+        border-left:2px solid var(--border);padding:2px 0 2px 14px;margin:12px 0 0}
+
+/* 表格内的次级信息（国家 / 上市代码）：降为辅助层级 */
+.g-sub{display:block;margin-top:3px;font-size:12px;font-weight:400;color:var(--ink-3)}
+.g-lead2{font-size:15.5px;color:var(--ink);margin:0 0 12px}
+
+/* 赛卓专章：左侧主色线 + 极浅底，无渐变、无双线边框 */
+.g-focus{border-left:3px solid var(--accent);background:#FAFBFD;
+         padding:24px 26px;margin:18px 0 0}
+.g-focus h3:first-child{margin-top:0}
+.g-focus ul{margin:10px 0 0;padding-left:18px}
+.g-focus li{margin-bottom:8px;font-size:14.5px;color:var(--ink-2)}
+
+/* 数据条：上边线分栏、等宽数字、左对齐（不居中、不做卡片） */
+.g-vp{display:grid;grid-template-columns:repeat(auto-fit,minmax(132px,1fr));gap:0 28px;margin:20px 0 4px}
+.g-vp div{border-top:2px solid var(--accent);padding:12px 0 0;background:none}
+.g-vp .v{font-size:22px;font-weight:700;line-height:1.15;color:var(--accent);
+         font-family:ui-monospace,"SFMono-Regular",Consolas,monospace;letter-spacing:-.02em}
+.g-vp .l{font-size:12.5px;color:var(--ink-2);margin-top:5px}
+
+/* 条目区：左标题 / 右说明的非对称双栏，条目间只用一条上边线分隔 */
+.g-grid{display:block;margin:16px 0 0}
+.g-card{display:grid;grid-template-columns:minmax(120px,21%) 1fr;gap:0 24px;
+        border-top:1px solid var(--border);padding:15px 0 16px;background:none;border-radius:0}
+.g-card h4{margin:0;font-size:14.5px;font-weight:700;color:var(--deep);line-height:1.6}
+.g-card p{margin:0;font-size:13.5px;line-height:1.75}
+@media(max-width:720px){
+  .g-card{grid-template-columns:1fr;gap:0}
+  .g-card p{margin-top:6px}
+}
+
+/* 常见问题：列表式，只留下边线；展开态内容左缩进 */
+.g-body details{border:0;border-bottom:1px solid var(--border);background:none;margin:0}
+.g-body details:first-of-type{border-top:1px solid var(--border)}
+.g-body summary{cursor:pointer;padding:15px 2px;font-weight:600;color:var(--ink);font-size:15px;
+                list-style:none;display:flex;gap:10px;align-items:baseline;
+                transition:color .15s ease}
+.g-body summary::-webkit-details-marker{display:none}
+.g-body summary::before{content:"+";color:var(--accent);font-weight:700;font-size:16px;
+                        line-height:1;transition:transform .18s ease}
+.g-body details[open] summary::before{content:"\2212"}
+.g-body summary:hover{color:var(--accent)}
+.g-body details .ans{padding:0 2px 16px 26px;color:var(--ink-2);font-size:14.5px}
+.g-body details .ans p{margin:0 0 9px}
+.g-body details .ans p:last-child{margin-bottom:0}
+
+/* 结尾动作区：深场实色，8px 圆角，不用大圆角胶囊 */
+.g-cta{background:var(--deep);border-radius:8px;padding:clamp(22px,3vw,30px) clamp(22px,3vw,32px);
+       margin:clamp(28px,4vw,42px) 0 0;display:flex;flex-wrap:wrap;gap:16px 24px;
+       align-items:center;justify-content:space-between}
+.g-cta h3{margin:0 0 5px;color:#fff;font-size:17px;font-weight:700}
+.g-cta p{margin:0;color:#C6D8F2;font-size:13.5px;max-width:44em}
+.g-cta a.btn{background:var(--accent-2);color:#fff;padding:11px 22px;border-radius:6px;
+             font-weight:600;font-size:14px;transition:transform .12s ease,background-color .15s ease}
+.g-cta a.btn:hover{background:#0295d4}
+.g-cta a.btn:active{transform:translateY(1px)}      /* 触感反馈，不做外发光 */
+
+.g-rel{margin:24px 0 0;padding-top:16px;border-top:1px solid var(--border);
+       font-size:13.5px;color:var(--ink-2)}
+
+@media(prefers-reduced-motion:reduce){
+  .g-body *{transition:none !important;animation:none !important}
+}
 </style>
 
 <script type="application/ld+json">
@@ -608,7 +661,7 @@
     </thead>
     <tbody>
       <tr>
-        <td class="nm"><b>Allegro<br>MicroSystems</b><br><span style="font-size:12px">美国 · Nasdaq: ALGM</span></td>
+        <td class="nm"><b>Allegro<br>MicroSystems</b><br><span class="g-sub">美国 · Nasdaq: ALGM</span></td>
         <td><b>APS12203</b>（低抖动三代）<br>APS12202 / APS12212<br>A1220–A1223（上一代）<br>A1210–A1214</td>
         <td>2.7~26 V（APS12203）<br>24 V（APS12202/212）</td>
         <td>-40~150 °C（车规级）</td>
@@ -617,7 +670,7 @@
         <td>LH（SOT-23W）<br>UA（SIP-3）</td>
       </tr>
       <tr>
-        <td class="nm"><b>Melexis</b><br><span style="font-size:12px">比利时</span></td>
+        <td class="nm"><b>Melexis</b><br><span class="g-sub">比利时</span></td>
         <td><b>MLX92292</b>（双通道锁存）<br><b>MLX92242</b>（2 线可编程锁存）</td>
         <td>3.3~18 V（MLX92292）<br>2.7~24 V（MLX92242）</td>
         <td>-40~150 °C</td>
@@ -626,7 +679,7 @@
         <td>8-SOIC<br>TO-92</td>
       </tr>
       <tr>
-        <td class="nm"><b>TDK-Micronas</b><br><span style="font-size:12px">德国/日本 · TDK 集团</span></td>
+        <td class="nm"><b>TDK-Micronas</b><br><span class="g-sub">德国/日本 · TDK 集团</span></td>
         <td><b>HAL 15xy</b>（霍尔开关/锁存）<br>HAL 37xy / HAR 37xy / HAC 37xy</td>
         <td>2.7~24 V<br>抗 40 V load dump</td>
         <td>环境 -40~150 °C<br>结温至 170 °C</td>
@@ -635,7 +688,7 @@
         <td>SOT23<br>TO-92UA / TO-92UF</td>
       </tr>
       <tr>
-        <td class="nm"><b>Infineon</b><br><span style="font-size:12px">德国</span></td>
+        <td class="nm"><b>Infineon</b><br><span class="g-sub">德国</span></td>
         <td><b>TLE4961</b>-1L / 1M / 2M / 3M<br>TLE4946-2K / 2L<br>TLE4966（双霍尔）<br>TLE4963-1M（5 V）</td>
         <td>3.0~32 V（TLE4961）<br>2.7~24 V（TLE4966-2K/3K）<br>3~5.5 V（TLE4963-1M）</td>
         <td><b>-40~170 °C</b>（TLE4961 / TLE4946）<br>-40~150 °C（TLE4966）</td>
@@ -644,7 +697,7 @@
         <td>PG-SOT23-3<br>PG-SSO-3 / SC59<br>TSOP-6</td>
       </tr>
       <tr class="hl">
-        <td class="nm"><b>赛卓<br>Semiment</b><br><span style="font-size:12px">中国 · 上海</span></td>
+        <td class="nm"><b>赛卓<br>Semiment</b><br><span class="g-sub">中国 · 上海</span></td>
         <td><b>SC2919</b>（48V 平台主推）<br>SC2943 / SC2948<br><b>SC245X</b>（可编程）<br>SC2589X（电流型）</td>
         <td>—</td>
         <td>-40~150 °C<br>（车规级）</td>
@@ -661,7 +714,7 @@
     「—」表示未取得公开信息，不推测补全。<br>
     <b>两点说明：</b>① Allegro 于 2020 年 10 月在纳斯达克独立上市（ALGM），截至 2024 年 4 月 Sanken Electric 持股约 51%，
     <b>并非 TDK 旗下</b>；TDK 持有的是 Micronas（2016 年收购）。
-    ② 赛卓为本页重点推荐对象，苏州柏达电子是赛卓官方授权代理商，详见后文专章与文末利益声明。
+    ② 赛卓为本页重点推荐对象 —— 苏州柏达电子是赛卓官方授权代理商，详见后文专章。
   </div>
 
   <h2>国产霍尔为什么会失效？先看 EOS 这条链</h2>
@@ -707,16 +760,16 @@
   <h2>重点推荐：赛卓电子 Semiment</h2>
 
   <div class="g-focus">
-    <p style="font-size:15.5px;color:var(--ink);margin-bottom:10px">
+    <p class="g-lead2">
       赛卓电子科技（上海）股份有限公司成立于 2011 年，是国内较早面向汽车电子的集成电路设计公司之一。
       与单产品线厂商不同，赛卓同时提供<b>传感器芯片、电源管理芯片与电机驱动芯片</b>三大类，
       便于客户在同一供应商完成整套前端感知与驱动方案的整合。</p>
 
     <h3>48V 与高耐压：为什么是重点</h3>
-    <p style="margin-bottom:6px">48V 平台的真正难点不是稳态工作电压，而是<b>抛负载等瞬态冲击</b>，
+    <p>48V 平台的真正难点不是稳态工作电压，而是<b>抛负载等瞬态冲击</b>，
       因此选型应看耐压余量而非仅看标称电压。赛卓在高耐压上提供了两档产品线：</p>
     <div class="g-scroll">
-      <table style="margin-top:6px">
+      <table>
         <thead>
           <tr><th class="nm">型号</th><th>耐压等级</th><th>车规</th><th>适用平台</th><th>说明</th></tr>
         </thead>
@@ -770,7 +823,7 @@
   </div>
 
   <h2>柏达能提供什么</h2>
-  <div class="g-answer" style="margin:0 0 14px">
+  <div class="g-answer">
     <p class="g-tag">服务概览</p>
     <p>苏州柏达电子有限公司是<b>赛卓电子（Semiment）官方授权代理商</b>，长期服务于汽车电子产业链，
       配套汽车座椅、内饰与门系统等方向的 Tier1 及零部件厂商。依托原厂授权渠道提供<b>原厂正品直供</b>；
@@ -891,15 +944,6 @@
       去掉执行器内部的整块 PCB。实现前提是器件本身集成了必要的电容与保护，不再依赖外部无源器件。
       TDK-Micronas 的 HAC 37xy 就在片内集成了最高 330 nF 的电容，原厂说明中提到这种封装可以不需要印制电路板。</p></div>
   </details>
-
-  <div class="g-disc">
-    <h3>利益声明</h3>
-    <p>苏州柏达电子有限公司为<b>赛卓电子（Semiment）的官方授权代理商</b>。
-      因此本页对赛卓的介绍带有商业立场，请您结合原厂规格书独立判断。</p>
-    <p>本页同时对比的 Allegro MicroSystems、Melexis、TDK-Micronas、Infineon，
-      柏达<b>未取得代理授权</b>，相关内容为公开信息整理，不构成代理承诺或销售报价；
-      若您需要这些品牌的供货渠道，请直接联系相应原厂或其授权代理商。</p>
-  </div>
 
   <div class="g-cta">
     <div>

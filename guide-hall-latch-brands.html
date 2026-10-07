@@ -8,6 +8,9 @@
 <!-- i18n:head -->
   <meta name="language" content="zh-CN">
   <link rel="alternate" hreflang="zh-CN" href="https://www.pcb-less.com/guide-hall-latch-brands.html">
+  <link rel="alternate" hreflang="en" href="https://www.pcb-less.com/en/guide-hall-latch-brands.html">
+  <link rel="alternate" hreflang="ja" href="https://www.pcb-less.com/ja/guide-hall-latch-brands.html">
+  <link rel="alternate" hreflang="de" href="https://www.pcb-less.com/de/guide-hall-latch-brands.html">
   <link rel="alternate" hreflang="x-default" href="https://www.pcb-less.com/guide-hall-latch-brands.html">
   <link rel="canonical" href="https://www.pcb-less.com/guide-hall-latch-brands.html">
 
@@ -115,6 +118,11 @@
   .g-card p{margin-top:6px}
 }
 
+/* 客户名单：横排一行式、上边线分栏，不做 LOGO 卡片阵 */
+.g-cli{display:flex;flex-wrap:wrap;gap:0 26px;margin:16px 0 0}
+.g-cli span{border-top:2px solid var(--border);padding:10px 0 0;min-width:88px;
+           font-size:14.5px;font-weight:600;color:var(--deep)}
+
 /* 常见问题：列表式，只留下边线；展开态内容左缩进 */
 .g-body details{border:0;border-bottom:1px solid var(--border);background:none;margin:0}
 .g-body details:first-of-type{border-top:1px solid var(--border)}
@@ -201,7 +209,7 @@
         {
           "@type": "Question",
           "name": "AEC-Q100 Grade 0 和 Grade 1 怎么选？",
-          "acceptedAnswer": { "@type": "Answer", "text": "AEC-Q100 Grade 0 对应环境温度上限 150°C，Grade 1 为 125°C。安装在发动机舱、变速箱、制动系统附近的传感器应至少按 Grade 0 选型；驾驶室内的门窗升降、座椅、内饰照明等场景，Grade 1 通常已够用。赛卓 SC245X 按 AEC-Q100 Grade 0 设计，标称工作环境温度为 -40~150°C。" }
+          "acceptedAnswer": { "@type": "Answer", "text": "AEC-Q100 Grade 0 对应环境温度上限 150°C，Grade 1 为 125°C。安装在发动机舱、变速箱、制动系统附近的传感器应至少按 Grade 0 选型；驾驶室内的门窗升降、座椅、内饰照明等场景，Grade 1 通常已够用。赛卓 SC245X、SC2943、SC2948 均按 AEC-Q100 Grade 0 设计，标称工作环境温度为 -40~150°C。" }
         },
         {
           "@type": "Question",
@@ -600,9 +608,9 @@
         </button>
         <div class="lang-menu">
           <a class="lang-item on" href="guide-hall-latch-brands.html" hreflang="zh-CN" lang="zh-CN">中文</a>
-          <a class="lang-item" href="en/sensors.html" hreflang="en" lang="en">EN</a>
-          <a class="lang-item" href="ja/sensors.html" hreflang="ja" lang="ja">日本語</a>
-          <a class="lang-item" href="de/sensors.html" hreflang="de" lang="de">DE</a>
+          <a class="lang-item" href="en/guide-hall-latch-brands.html" hreflang="en" lang="en">EN</a>
+          <a class="lang-item" href="ja/guide-hall-latch-brands.html" hreflang="ja" lang="ja">日本語</a>
+          <a class="lang-item" href="de/guide-hall-latch-brands.html" hreflang="de" lang="de">DE</a>
         </div>
       </div>
 <!-- /i18n:switch -->
@@ -702,7 +710,7 @@
         <td>—</td>
         <td>-40~150 °C<br>（车规级）</td>
         <td>SC245X 可编程<br>开关范围 ±1.5~26 mT<br>锁存范围 ±0.4~26 mT</td>
-        <td>SC245X 符合<br>ISO 26262 ASIL-B</td>
+        <td>SC245X 符合<br>ISO 26262 ASIL-B<br><span class="g-sub">SC2943 / SC2948：符合功能安全</span></td>
         <td>SOT23-3L<br>TO-92</td>
       </tr>
     </tbody>
@@ -781,8 +789,8 @@
             <td><b>48V 系统（主推）</b></td>
             <td>耐压余量充足，可直接用于 48V 系统</td>
           </tr>
-          <tr><td class="nm"><b>SC2943</b></td><td>60 V</td><td>—</td><td>低电压平台</td><td>高耐压锁存霍尔开关</td></tr>
-          <tr><td class="nm"><b>SC2948</b></td><td>60 V</td><td>—</td><td>低电压平台</td><td>高耐压锁存霍尔开关</td></tr>
+          <tr><td class="nm"><b>SC2943</b></td><td>60 V</td><td>AEC-Q100 Grade 0</td><td>低电压平台</td><td>高耐压锁存霍尔开关，符合功能安全</td></tr>
+          <tr><td class="nm"><b>SC2948</b></td><td>60 V</td><td>AEC-Q100 Grade 0</td><td>低电压平台</td><td>高耐压锁存霍尔开关，符合功能安全</td></tr>
           <tr><td class="nm"><b>SC245X</b></td><td>60 V 高耐压设计</td><td>AEC-Q100 Grade 0</td><td>3.0~48 V 宽压</td><td>可编程；支持低至 20 µA 工作电流；ISO 26262 ASIL-B</td></tr>
         </tbody>
       </table>
@@ -849,6 +857,16 @@
       <h4>成本与响应</h4>
       <p>面向终端客户的本地窗口，沟通链路短，样品与询价响应快；具体价格与交期以实际询价为准。</p>
     </div>
+  </div>
+
+  <h2>部分客户</h2>
+  <p class="g-lead">以下为柏达在汽车座椅、内饰与门系统方向服务过的客户，按公开信息部分列举，排名不分先后。</p>
+  <div class="g-cli">
+    <span>宁波精诚</span>
+    <span>一东航空</span>
+    <span>上海博邦</span>
+    <span>延锋</span>
+    <span>胜华波</span>
   </div>
 
   <h2>按场景怎么选</h2>
@@ -935,7 +953,8 @@
     <summary>AEC-Q100 Grade 0 和 Grade 1 怎么选？</summary>
     <div class="ans"><p>AEC-Q100 Grade 0 对应环境温度上限 150 °C，Grade 1 为 125 °C。
       安装在发动机舱、变速箱、制动系统附近的传感器应至少按 Grade 0 选型；驾驶室内的门窗升降、座椅、
-      内饰照明等场景，Grade 1 通常已够用。赛卓 SC245X 按 AEC-Q100 Grade 0 设计，标称工作环境温度为 -40~150 °C。</p></div>
+      内饰照明等场景，Grade 1 通常已够用。赛卓 SC245X、SC2943、SC2948 均按 AEC-Q100 Grade 0 设计，
+      标称工作环境温度为 -40~150 °C。</p></div>
   </details>
 
   <details>

@@ -446,7 +446,7 @@
 
 <div class="container">
 
-  <!-- 两级筛选：应用领域 + 细分应用 -->
+  <!-- 两级筛选: 应用领域 + 细分应用 -->
   <div class="app-filter">
     <div class="sector-tabs" id="sectorTabs" role="tablist" aria-label="Anwendungsbereiche">
       <button class="sector-tab on" data-sector="auto" role="tab" aria-selected="true"><span class="t-no">01</span>Automotive</button>
@@ -630,7 +630,7 @@ var CASES = [
     chips: ['Hall-Schalter', 'LED-Konstantstromtreiber', 'Kostengünstiges Gehäuse'] },
   { sector: 'auto', sub: 'Latch-Hall-Sensor', title: 'Herstellerwahl für Kfz-Hall-Latches? Fünf Anbieter im Vergleich und eine 48-V-Lösung',
     summary: 'Ein Vergleich der Kfz-Hall-Latch-Portfolios von fünf Anbietern - Allegro, Melexis, TDK-Micronas, Infineon und Semiment - nach Versorgungsbereich, Temperaturbereich, Magnetschwellen, funktionaler Sicherheit und Gehäusen, ergänzt um eine Analyse des Zusammenhangs zwischen EOS-Ausfällen von Hall-Bausteinen und der Spannungsreserve.',
-    date: '2026-10-07', read: '9 min', detail: 'sensors.html',
+    date: '2026-10-07', read: '9 min', detail: 'guide-hall-latch-brands.html',
     chips: ['Fünf Anbieter im Vergleich', 'SC2919 (250V spannungsfest)', 'EOS-Ausfall und Spannungsreserve'] },
 
   /* ---- 机器人 ---- */
@@ -694,7 +694,7 @@ function getSector() {
   return SECTORS.filter(function (s) { return s.id === state.sector; })[0];
 }
 
-/* 细分应用按钮（按当前板块从数据派生） */
+/* 细分应用按钮(按当前板块从数据派生) */
 function renderSubs() {
   var subs = [];
   CASES.forEach(function (c) {
@@ -710,9 +710,9 @@ function renderSubs() {
 }
 
 /* 文章卡片 */
-/* 提示文案独立成变量：它被拼进 onclick 属性，若直接内联，多语言构建器的字符串
-   扫描会把整个属性值当成一个字符串而漏掉（2026-09-29 发现英文站 toasts 仍是中文） */
-/* 注意：本页 i18n.js 在下方才加载，这里不能立即调用 t()，必须延迟到运行时求值 */
+/* 提示文案独立成变量: 它被拼进 onclick 属性, 若直接内联, 多语言构建器的字符串
+   扫描会把整个属性值当成一个字符串而漏掉(2026-09-29 发现英文站 toasts 仍是中文) */
+/* 注意: 本页 i18n.js 在下方才加载, 这里不能立即调用 t(), 必须延迟到运行时求值 */
 var TIP_CARD = function () { return t('Die Detailseite dieser Fallstudie ist in Arbeit; eine Beispielseite finden Sie im Artikel “2-Draht PCB-Less Tuer”'); };
 
 function renderCards() {
@@ -769,7 +769,7 @@ sectorTabs.addEventListener('click', function (e) {
   renderAll();
 });
 
-/* 细分应用切换（事件委托） */
+/* 细分应用切换(事件委托) */
 subRow.addEventListener('click', function (e) {
   var btn = e.target.closest('.sub-tab');
   if (!btn) return;
@@ -777,8 +777,8 @@ subRow.addEventListener('click', function (e) {
   renderSubs(); renderDesc(); renderCards();
 });
 
-/* 深链入口：cases.html?sector=auto&sub=门锁（顶部「应用案例」大菜单的落地点）
-   参数一律先按真实数据校验，命中不了就退回默认，避免点进空白列表。 */
+/* 深链入口: cases.html?sector=auto&sub=门锁(顶部「应用案例」大菜单的落地点)
+   参数一律先按真实数据校验, 命中不了就退回默认, 避免点进空白列表.  */
 (function () {
   if (!window.URLSearchParams) return;
   var p = new URLSearchParams(location.search);

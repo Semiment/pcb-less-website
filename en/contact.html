@@ -494,14 +494,14 @@
         <button type="submit" class="btn btn-primary">Submit Inquiry</button>
         <span class="form-note">Submitting opens your email client with the details pre-filled — just send it. Or call us directly at 198 2141 1234.</span>
       </div>
-      <!-- 邮件客户端不可用时的兜底：把内容明文列出，客户可复制后自行发送 -->
+      <!-- 邮件客户端不可用时的兜底: 把内容明文列出, 客户可复制后自行发送 -->
       <div class="inquiry-fallback" id="inquiryFallback" hidden>
-        <p class="if-tip">若邮件客户端没有打开，请复制下面内容发送到 2099166018@qq.com，或直接致电 198 2141 1234：</p>
+        <p class="if-tip">若邮件客户端没有打开, 请复制下面内容发送到 2099166018@qq.com, 或直接致电 198 2141 1234: </p>
         <textarea class="if-box" id="inquiryFallbackBox" readonly rows="8"></textarea>
         <button type="button" class="btn btn-ghost" id="inquiryCopy">Copy all</button>
       </div>
-      <!-- 给 JS 用的提示文案：放在 DOM 文本节点里，由构建器随页面一起本地化
-           （不走 window.t —— i18n.js 的词典覆盖不全，缺词会静默退回中文） -->
+      <!-- 给 JS 用的提示文案: 放在 DOM 文本节点里, 由构建器随页面一起本地化
+           (不走 window.t —— i18n.js 的词典覆盖不全, 缺词会静默退回中文) -->
       <span hidden id="i18nToastSent">Your email client has been opened — please send. If it did not open, copy the text below and email it.</span>
       <span hidden id="i18nToastCopied">Copied — paste it into an email and send.</span>
       <span hidden id="i18nToastManual">Please select all and copy manually.</span>

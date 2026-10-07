@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wie wählt man den Hersteller für Kfz-Hall-Latches? Fünf Anbieter im Vergleich und die 48-V-Lösung von Semiment | Boda Electronic</title>
+<meta name="description" content="Auswahlvergleich für Kfz-Hall-Latches: repräsentative Typen, Temperaturbereiche, funktionale Sicherheit und 48-V-Tauglichkeit von Allegro APS12203, Melexis MLX92242, TDK-Micronas HAL 15xy, Infineon TLE4961 und Semiment SC2919/SC2943, ergänzt um die Analyse des Zusammenhangs zwischen EOS-Ausfällen von Hall-Bausteinen und der Spannungsreserve.">
+<!-- i18n:head -->
+  <meta name="language" content="de">
+  <link rel="alternate" hreflang="zh-CN" href="https://www.pcb-less.com/guide-hall-latch-brands.html">
+  <link rel="alternate" hreflang="en" href="https://www.pcb-less.com/en/guide-hall-latch-brands.html">
+  <link rel="alternate" hreflang="ja" href="https://www.pcb-less.com/ja/guide-hall-latch-brands.html">
+  <link rel="alternate" hreflang="de" href="https://www.pcb-less.com/de/guide-hall-latch-brands.html">
+  <link rel="alternate" hreflang="x-default" href="https://www.pcb-less.com/guide-hall-latch-brands.html">
+  <link rel="canonical" href="https://www.pcb-less.com/de/guide-hall-latch-brands.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Suzhou Boda Electronic Co., Ltd.">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:title" content="Wie wählt man den Hersteller für Kfz-Hall-Latches? Fünf Anbieter im Vergleich und die 48-V-Lösung von Semiment | Boda Electronic">
+  <meta property="og:description" content="Auswahlvergleich für Kfz-Hall-Latches: repräsentative Typen, Temperaturbereiche, funktionale Sicherheit und 48-V-Tauglichkeit von Allegro APS12203, Melexis MLX92242, TDK-Micronas HAL 15xy, Infineon TLE4961 und Semiment SC2919/SC2943, ergänzt um die Analyse des Zusammenhangs zwischen EOS-Ausfällen von Hall-Bausteinen und der Spannungsreserve.">
+  <meta property="og:url" content="https://www.pcb-less.com/de/guide-hall-latch-brands.html">
+  <meta property="og:image" content="https://www.pcb-less.com/images/og-cover-de.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Wie wählt man den Hersteller für Kfz-Hall-Latches? Fünf Anbieter im Vergleich und die 48-V-Lösung von Semiment | Boda Electronic">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Wie wählt man den Hersteller für Kfz-Hall-Latches? Fünf Anbieter im Vergleich und die 48-V-Lösung von Semiment | Boda Electronic">
+  <meta name="twitter:description" content="Auswahlvergleich für Kfz-Hall-Latches: repräsentative Typen, Temperaturbereiche, funktionale Sicherheit und 48-V-Tauglichkeit von Allegro APS12203, Melexis MLX92242, TDK-Micronas HAL 15xy, Infineon TLE4961 und Semiment SC2919/SC2943, ergänzt um die Analyse des Zusammenhangs zwischen EOS-Ausfällen von Hall-Bausteinen und der Spannungsreserve.">
+  <meta name="twitter:image" content="https://www.pcb-less.com/images/og-cover-de.png">
+
+<!-- /i18n:head -->
+<!-- i18n:assets -->
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<!-- /i18n:assets -->
+<link rel="stylesheet" href="../css/style.css">
+
+<style>
+/* ─────────────────────────────────────────────────────────────
+   本页专用排版. 全部收口在 .g-body 作用域内, 不污染站点公共样式. 
+   设计取向(反 AI 味): 
+     · 正文限宽 ~44 字/行, 表格与条目区可占满栏宽 —— 破除「整页一个宽度」的呆板
+     · 不用等宽卡片阵; 条目一律 border-top 分隔 + 左标题右说明的非对称双栏
+     · 表格只留横向分隔线, 去掉 Excel 式全网格
+     · 零渐变, 零外发光, 零阴影堆叠; 层级靠字重与留白, 不靠框
+     · 动效只做 transform / opacity, 且尊重 prefers-reduced-motion
+   ───────────────────────────────────────────────────────────── */
+.g-body{background:var(--surface);border:1px solid var(--border);border-radius:10px;
+        padding:clamp(24px,4vw,44px)}
+.g-body :where(p,li,.ans){max-width:44em}          /* 中文舒适行宽, 表格不受限 */
+
+/* 标题层级: 靠字重与色阶, 不做巨大字号 */
+.g-body h1{font-size:clamp(23px,2.6vw,29px);line-height:1.35;letter-spacing:-.01em;
+           color:var(--deep);font-weight:700;margin:0 0 8px}
+.g-body h2{font-size:clamp(18px,1.7vw,20px);font-weight:700;letter-spacing:-.005em;
+           color:var(--deep);margin:clamp(34px,5vw,52px) 0 16px;
+           padding-top:14px;border-top:1px solid var(--border)}
+.g-body h3{font-size:15.5px;font-weight:700;color:var(--ink);margin:26px 0 6px}
+.g-body p{margin:0 0 13px;color:var(--ink-2)}
+.g-body b,.g-body strong{color:var(--ink);font-weight:700}
+
+.g-meta{margin:0 0 26px;font-size:12.5px;color:var(--ink-3);
+        font-variant-numeric:tabular-nums}
+.g-lead{font-size:15px}
+
+/* 摘录块: 只留左侧主色实线, 不要四面框 + 圆角 + 底色的「提示卡」套路 */
+.g-answer{border-left:3px solid var(--accent);padding:2px 0 2px 20px;margin:0 0 22px}
+.g-answer p{color:var(--ink);font-size:15.5px;line-height:1.8}
+.g-tag{font-size:12px;font-weight:700;color:var(--ink-3);letter-spacing:.02em;margin:0 0 7px}
+
+/* 表格: 横向分隔线为主, 表头用下边框切分; 数字等宽对齐 */
+.g-scroll{overflow-x:auto}
+.g-body table{width:100%;border-collapse:collapse;font-size:13.5px;margin:14px 0 4px;
+              font-variant-numeric:tabular-nums}
+.g-body th{color:var(--deep);text-align:left;font-weight:700;font-size:12.5px;
+           padding:9px 12px 9px 0;border-bottom:1.5px solid var(--border);white-space:nowrap}
+.g-body td{padding:11px 12px 11px 0;border-bottom:1px solid var(--border);
+           vertical-align:top;color:var(--ink-2)}
+.g-body td:not(:last-child),.g-body th:not(:last-child){padding-right:16px}
+.g-body tbody tr:last-child td{border-bottom:0}
+.g-body td.nm{min-width:112px}
+/* 重点行: 左侧主色短线, 不用通栏底色 */
+.g-body tr.hl td{background:transparent}
+.g-body tr.hl td.nm{box-shadow:inset 2px 0 0 var(--accent);padding-left:12px;color:var(--ink);font-weight:700}
+
+/* 说明条: 小字, 左侧细线, 不做虚线框 */
+.g-note{font-size:12.5px;line-height:1.75;color:var(--ink-2);max-width:44em;
+        border-left:2px solid var(--border);padding:2px 0 2px 14px;margin:12px 0 0}
+
+/* 表格内的次级信息(国家 / 上市代码): 降为辅助层级 */
+.g-sub{display:block;margin-top:3px;font-size:12px;font-weight:400;color:var(--ink-3)}
+.g-lead2{font-size:15.5px;color:var(--ink);margin:0 0 12px}
+
+/* 赛卓专章: 左侧主色线 + 极浅底, 无渐变, 无双线边框 */
+.g-focus{border-left:3px solid var(--accent);background:#FAFBFD;
+         padding:24px 26px;margin:18px 0 0}
+.g-focus h3:first-child{margin-top:0}
+.g-focus ul{margin:10px 0 0;padding-left:18px}
+.g-focus li{margin-bottom:8px;font-size:14.5px;color:var(--ink-2)}
+
+/* 数据条: 上边线分栏, 等宽数字, 左对齐(不居中, 不做卡片) */
+.g-vp{display:grid;grid-template-columns:repeat(auto-fit,minmax(132px,1fr));gap:0 28px;margin:20px 0 4px}
+.g-vp div{border-top:2px solid var(--accent);padding:12px 0 0;background:none}
+.g-vp .v{font-size:22px;font-weight:700;line-height:1.15;color:var(--accent);
+         font-family:ui-monospace,"SFMono-Regular",Consolas,monospace;letter-spacing:-.02em}
+.g-vp .l{font-size:12.5px;color:var(--ink-2);margin-top:5px}
+
+/* 条目区: 左标题 / 右说明的非对称双栏, 条目间只用一条上边线分隔 */
+.g-grid{display:block;margin:16px 0 0}
+.g-card{display:grid;grid-template-columns:minmax(120px,21%) 1fr;gap:0 24px;
+        border-top:1px solid var(--border);padding:15px 0 16px;background:none;border-radius:0}
+.g-card h4{margin:0;font-size:14.5px;font-weight:700;color:var(--deep);line-height:1.6}
+.g-card p{margin:0;font-size:13.5px;line-height:1.75}
+@media(max-width:720px){
+  .g-card{grid-template-columns:1fr;gap:0}
+  .g-card p{margin-top:6px}
+}
+
+/* 客户名单: 横排一行式, 上边线分栏, 不做 LOGO 卡片阵 */
+.g-cli{display:flex;flex-wrap:wrap;gap:0 26px;margin:16px 0 0}
+.g-cli span{border-top:2px solid var(--border);padding:10px 0 0;min-width:88px;
+           font-size:14.5px;font-weight:600;color:var(--deep)}
+
+/* 常见问题: 列表式, 只留下边线; 展开态内容左缩进 */
+.g-body details{border:0;border-bottom:1px solid var(--border);background:none;margin:0}
+.g-body details:first-of-type{border-top:1px solid var(--border)}
+.g-body summary{cursor:pointer;padding:15px 2px;font-weight:600;color:var(--ink);font-size:15px;
+                list-style:none;display:flex;gap:10px;align-items:baseline;
+                transition:color .15s ease}
+.g-body summary::-webkit-details-marker{display:none}
+.g-body summary::before{content:"+";color:var(--accent);font-weight:700;font-size:16px;
+                        line-height:1;transition:transform .18s ease}
+.g-body details[open] summary::before{content:"\2212"}
+.g-body summary:hover{color:var(--accent)}
+.g-body details .ans{padding:0 2px 16px 26px;color:var(--ink-2);font-size:14.5px}
+.g-body details .ans p{margin:0 0 9px}
+.g-body details .ans p:last-child{margin-bottom:0}
+
+/* 结尾动作区: 深场实色, 8px 圆角, 不用大圆角胶囊 */
+.g-cta{background:var(--deep);border-radius:8px;padding:clamp(22px,3vw,30px) clamp(22px,3vw,32px);
+       margin:clamp(28px,4vw,42px) 0 0;display:flex;flex-wrap:wrap;gap:16px 24px;
+       align-items:center;justify-content:space-between}
+.g-cta h3{margin:0 0 5px;color:#fff;font-size:17px;font-weight:700}
+.g-cta p{margin:0;color:#C6D8F2;font-size:13.5px;max-width:44em}
+.g-cta a.btn{background:var(--accent-2);color:#fff;padding:11px 22px;border-radius:6px;
+             font-weight:600;font-size:14px;transition:transform .12s ease,background-color .15s ease}
+.g-cta a.btn:hover{background:#0295d4}
+.g-cta a.btn:active{transform:translateY(1px)}      /* 触感反馈, 不做外发光 */
+
+.g-rel{margin:24px 0 0;padding-top:16px;border-top:1px solid var(--border);
+       font-size:13.5px;color:var(--ink-2)}
+
+@media(prefers-reduced-motion:reduce){
+  .g-body *{transition:none !important;animation:none !important}
+}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Wie wählt man den Hersteller für Kfz-Hall-Latches? Fünf Anbieter im Vergleich und die 48-V-Lösung von Semiment",
+      "datePublished": "2026-10-07",
+      "dateModified": "2026-10-07",
+      "author": { "@type": "Organization", "name": "Suzhou Boda Electronic Co., Ltd." },
+      "publisher": { "@type": "Organization", "name": "Suzhou Boda Electronic Co., Ltd.", "url": "https://www.pcb-less.com/" },
+      "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pcb-less.com/guide-hall-latch-brands.html" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://www.pcb-less.com/index.html" },
+        { "@type": "ListItem", "position": 2, "name": "Anwendungen", "item": "https://www.pcb-less.com/cases.html" },
+        { "@type": "ListItem", "position": 3, "name": "So wählen Sie den Hersteller für Kfz-Hall-Latches", "item": "https://www.pcb-less.com/guide-hall-latch-brands.html" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Welche Hersteller liefern hauptsächlich Kfz-Hall-Latches?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Verfügbare Anbieter sind Allegro MicroSystems (USA), Melexis (Belgien), TDK-Micronas (Deutschland/Japan), Infineon (Deutschland) und Semiment (China). Die Latch-Linien der ersten vier sind alle nach AEC-Q100 qualifiziert; die aktülle Generation der Semiment-Hall-Produkte erhöht die Spannungsfestigkeit auf 60 V, und für 48-V-Systeme steht der SC2919 zur Verfügung." }
+        },
+        {
+          "@type": "Question",
+          "name": "Welcher Hall-Latch ist für ein 48-V-System zu wählen?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Die Herausforderung bei einem 48-V-System ist nicht die stationäre Betriebsspannung, sondern Transienten wie Lastabwurf. Daher ist bei der Auswahl die Spannungsreserve und nicht allein die Nennbetriebsspannung maßgeblich. Für 48-V-Systeme empfiehlt Semiment vor allem den SC2919 - 250 V Spannungsfestigkeit, Kfz-qualifiziert, direkt in 48-V-Systemen einsetzbar; für Niedervolt-Plattformen stehen die drei 60-V-Typen SC2943, SC2948 und SC245X zur Verfügung. Massgeblich ist das jeweils aktülle Herstellerdatenblatt." }
+        },
+        {
+          "@type": "Question",
+          "name": "Warum fallen Hall-ICs aus heimischer Fertigung leichter aus, und was hat das mit der Spannungsfestigkeit zu tun?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Bei den Ausfallmechanismen von Hall-Bausteinen zählt die elektrische Ueberlastung (EOS, Electrical Over Stress) zu den häufigsten Ursachen. In New-Energy-Fahrzeugen können Versorgungsschwankungen im Steürgerät, das Schalten von Pumpen- und Motorlasten sowie Transienten aus der parasitären Induktivität des Kabelbaums den Hall-Eingang mit Spitzen weit über der Nennspannung belasten. Das Bordnetz ist mit 12 V nominal ausgelegt, und die Industrie wählt üblich einen 3-fachen Sicherheitsfaktor - etwa 36 V Spannungsfestigkeit - als gängige Praxis für übliche Transienten. Die aktülle Generation der Semiment-Hall-Bausteine ist auf 60 V ausgelegt, ein 5-facher Spielraum bei einem 12-V-System, was bei Lastabwurf, Verpolung und induktivem Lastschalten deutlich mehr Reserve lässt. EOS-Schäden sind in der Regel permanent; der Ueberlastungspunkt kann anschliessend durch Fehleranalyse lokalisiert werden." }
+        },
+        {
+          "@type": "Question",
+          "name": "Wodurch unterscheiden sich die Hall-Produkte von Semiment?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Vier Unterschiede: erstens die Portfolio-Breite - ausser Hall-Sensoren auch Power-Management- und Motortreiber-ICs; zweitens die Spannungsreserve - die neü Generation erhöht die Hall-Festigkeit auf 60 V, ein 5-facher Spielraum bei einem 12-V-System, und der SC2919 dient mit 250 V Festigkeit direkt in 48-V-Systemen; drittens die Lieferkette - Semiment hat in eine eigene Kfz-Gehäuse- und Testlinie investiert (Zhejiang Saiyang in Jiashan, Zhejiang, seit 2022 in Produktion), die Wafer-Test, Gehäusung und Endtest abdeckt; viertens die einfache Substitution - mehrere Hall-Bausteine sind zu internationalen Mainstream-Typen pin-kompatibel und ohne mechanische Aenderungen ersetzbar." }
+        },
+        {
+          "@type": "Question",
+          "name": "Worin unterscheiden sich 2-Draht- und 3-Draht-Hall-Latches, und wann sollte ein 2-Draht-Typ verwendet werden?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Eine 2-Draht-Version legt Versorgung und Signal auf dasselbe Leitungspaar und kodiert den Schaltzustand über die Stromhöhe; sie arbeitet typisch mit nur zwei Leitungen. Eine 3-Draht-Version hat getrennte VDD/GND/OUT und liefert einen digitalen Open-Drain-Pegel. Die 2-Draht-Version ist vorzuziehen, wenn der Bauraum im Aktuator begrenzt ist, wenn Leiterplatte und überschüssiger Kabelbaum entfallen sollen oder wenn der Sensor direkt an einen Strommessport des ECU angeschlossen werden muss. Sowohl der Melexis MLX92242 als auch der TDK-Micronas HAL 15xy werden ausdrücklich in 2-Draht-Versionen angeboten." }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie wählt man zwischen AEC-Q100 Grade 0 und Grade 1?",
+          "acceptedAnswer": { "@type": "Answer", "text": "AEC-Q100 Grade 0 entspricht einer Umgebungstemperaturen-Obergrenze von 150°C, Grade 1 von 125°C. Sensoren in der Nähe von Motorraum, Getriebe oder Bremssystem sollten mindestens nach Grade 0 ausgelegt werden; für Fensterheber, Sitze und Innenraumbeleuchtung im Fahrgastraum reicht Grade 1 üblich aus. Der Semiment SC245X, SC2943 und SC2948 sind alle nach AEC-Q100 Grade 0 ausgelegt, mit einer nominellen Umgebungsbetriebstemperatur von -40~150°C." }
+        },
+        {
+          "@type": "Question",
+          "name": "Was ist eine PCB-Less-Hall-Lösung?",
+          "acceptedAnswer": { "@type": "Answer", "text": "PCB-Less bedeutet, die Anschlüsse des Hall-IC direkt auf Leiterrahmen, Kontakt oder Kabelbaum zu loten oder zu schweissen, wodurch die gesamte Leiterplatte im Aktuator entfällt. Voraussetzung ist, dass der Baustein die notwendige Kapazität und den Schutz selbst integriert, sodass keine externen passiven Bauteile mehr benötigt werden. Der TDK-Micronas HAC 37xy integriert bis zu 330 nF auf dem Chip, und der Hersteller merkt an, dass dieses Gehäuse ohne gedruckte Leiterplatte auskommt." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round">
+          <path d="M4 16V8l8-4 8 4v8l-8 4z"/><path d="M9 13.5l2 2 4-4.5"/>
+        </svg>
+      </span>
+      <span class="brand-text">
+        <span class="cn">Boda Electronic</span>
+        <span class="en"><span class="dm-a">PCB</span><span class="dm-s">-</span><span class="dm-b">LESS</span><span class="dm-s">.COM</span></span>
+      </span>
+    </a>
+        <nav class="main-nav">
+      <a class="nav-link" href="index.html">Startseite</a>
+      <div class="nav-item has-mega">
+        <button type="button" class="nav-btn" aria-expanded="false" aria-haspopup="true" aria-controls="mega-products">
+          Produkte <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="mega" id="mega-products">
+          <div class="mega-inner">
+            <div class="mega-rail" aria-label="Produktlinien">
+              <button type="button" class="mega-rail-item" data-panel="p-sensors">Sensoren</button>
+              <button type="button" class="mega-rail-item" data-panel="p-power">Stromversorgung</button>
+              <button type="button" class="mega-rail-item" data-panel="p-motor">Motortreiber</button>
+            </div>
+            <div class="mega-body">
+              <div class="mega-panel" data-panel="p-sensors">
+                <a class="mega-title" href="sensors.html">Sensoren <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                <div class="mega-grid">
+                <div class="mega-col">
+                  <a class="mega-cat" href="sensor-hall-switch.html">Hall-Schalter <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="sensor-latch.html">Latch-Hall-IC</a>
+                    <a class="mega-sub" href="sensor-dual.html">Zweikanal-Hall-Ausgang</a>
+                    <a class="mega-sub" href="sensor-omnipolar.html">Omnipolarer / unipolarer Hall-IC</a>
+                  </div>
+                </div>
+                <div class="mega-col">
+                  <a class="mega-cat" href="sensor-position.html">Positionssensor <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="sensor-linear.html">Linear-Hall (1D)</a>
+                    <a class="mega-sub" href="sensor-linear-prog.html">Programmierbarer Linear-Hall</a>
+                    <a class="mega-sub" href="sensor-angle.html">Winkelsensor (einachsig / mehrachsig)</a>
+                  </div>
+                </div>
+                <div class="mega-col">
+                  <a class="mega-cat" href="sensor-speed.html">Drehzahlsensor <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="sensor-wheel-speed.html">Raddrehzahlsensor</a>
+                    <a class="mega-sub" href="sensor-transmission.html">Getriebesensor</a>
+                    <a class="mega-sub" href="sensor-camshaft.html">Nockenwellensensor</a>
+                    <a class="mega-sub" href="sensor-crankshaft.html">Kurbelwellensensor</a>
+                    <a class="mega-sub" href="sensor-gear.html">Zahnradsensor</a>
+                  </div>
+                </div>
+                <div class="mega-col">
+                  <a class="mega-cat" href="sensor-encoder.html">Encoder <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="sensor-encoder-mag.html">Magnetischer Motor-Encoder</a>
+                    <a class="mega-sub" href="sensor-encoder-ind.html">Induktiver Motor-Encoder</a>
+                  </div>
+                </div>
+                <div class="mega-col">
+                  <a class="mega-cat" href="sensor-current-protection.html">Strom und Schutz <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="sensor-current.html">Monolithischer Stromsensor</a>
+                    <a class="mega-sub" href="sensor-leakage.html">Fehlerstromschutz</a>
+                  </div>
+                </div>
+                </div>
+                <div class="mega-foot"><a href="sensors.html">Alle Sensortypen ansehen <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a></div>
+              </div>
+              <div class="mega-panel" data-panel="p-power">
+                <a class="mega-title" href="power.html">Stromversorgung <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                <div class="mega-grid">
+                <div class="mega-col">
+                  <a class="mega-cat" href="power.html">DC-DC-Wandler <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="power.html">Schaltregler</a>
+                    <a class="mega-sub" href="power.html">Buck-Boost-Regler</a>
+                    <a class="mega-sub" href="power.html">Aufwärts- / Abwärtsregler</a>
+                  </div>
+                </div>
+                <div class="mega-col">
+                  <a class="mega-cat" href="power.html">Regler und Mehrfachausgänge <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="power.html">Linearregler (LDO)</a>
+                    <a class="mega-sub" href="power.html">DC-DC mit Mehrfachausgang</a>
+                  </div>
+                </div>
+                </div>
+                <div class="mega-foot"><a href="power.html">Alle Stromversorgungs-Typen ansehen <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a></div>
+              </div>
+              <div class="mega-panel" data-panel="p-motor">
+                <a class="mega-title" href="motor.html">Motortreiber <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                <div class="mega-grid">
+                <div class="mega-col">
+                  <a class="mega-cat" href="motor.html">Bürstenloser DC-Treiber <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="motor.html">Dreiphasiger BLDC-Treiber</a>
+                    <a class="mega-sub" href="motor.html">Einphasiger BLDC-Treiber</a>
+                    <a class="mega-sub" href="motor.html">ASIC mit integrierten MOSFETs</a>
+                  </div>
+                </div>
+                <div class="mega-col">
+                  <a class="mega-cat" href="motor.html">Bürstenbehafteter DC-Treiber <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="motor.html">DC-Treiber mit integrierter Steuerung</a>
+                    <a class="mega-sub" href="motor.html">Niederspannungs-Bürstentreiber</a>
+                  </div>
+                </div>
+                <div class="mega-col">
+                  <a class="mega-cat" href="motor.html">Schrittmotortreiber <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="motor.html">Schrittmotortreiber</a>
+                  </div>
+                </div>
+                <div class="mega-col">
+                  <a class="mega-cat" href="motor.html">Gate-Treiber und Vorstufen <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="motor.html">Dreiphasiger NN-Gate-Treiber</a>
+                    <a class="mega-sub" href="motor.html">PN-Gate-Treiber</a>
+                    <a class="mega-sub" href="motor.html">Hochspannungs-Gate-Treiber</a>
+                  </div>
+                </div>
+                <div class="mega-col">
+                  <a class="mega-cat" href="motor.html">Leistungs-MOSFETs <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="motor.html">N-Kanal-MOSFET</a>
+                    <a class="mega-sub" href="motor.html">P+N-Dual-Kanal-MOSFET</a>
+                    <a class="mega-sub" href="motor.html">Dual-N-Kanal-MOSFET</a>
+                  </div>
+                </div>
+                <div class="mega-col">
+                  <a class="mega-cat" href="motor.html">Automotive und Spezial <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="motor.html">Automotive-Bauteile</a>
+                    <a class="mega-sub" href="motor.html">Motorsteuerungs-MCU</a>
+                    <a class="mega-sub" href="motor.html">Spezialfunktions-ICs</a>
+                  </div>
+                </div>
+                </div>
+                <div class="mega-foot"><a href="motor.html">Alle Motortreiber ansehen <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nav-item has-mega">
+        <button type="button" class="nav-btn active" aria-expanded="false" aria-haspopup="true" aria-controls="mega-apps">
+          Anwendungen <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="mega" id="mega-apps">
+          <div class="mega-inner">
+            <div class="mega-rail" aria-label="Anwendungsbereiche">
+              <button type="button" class="mega-rail-item on" data-panel="p-auto">Automotive</button>
+              <button type="button" class="mega-rail-item" data-panel="p-robot">Robotik</button>
+              <button type="button" class="mega-rail-item" data-panel="p-industry">Industrie</button>
+              <button type="button" class="mega-rail-item" data-panel="p-consumer">Consumer-Elektronik</button>
+            </div>
+            <div class="mega-body">
+              <div class="mega-panel on" data-panel="p-auto">
+                <a class="mega-title" href="cases.html?sector=auto">Automotive <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                <div class="mega-grid">
+                <div class="mega-col">
+                  <a class="mega-cat" href="cases.html?sector=auto">Karosserie und Zugang <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="cases.html?sector=auto&sub=%E5%B0%BE%E9%97%A8">Heckklappe</a>
+                    <a class="mega-sub" href="cases.html?sector=auto&sub=%E9%97%A8%E9%94%81">Türschloss</a>
+                    <a class="mega-sub" href="cases.html?sector=auto&sub=%E6%91%87%E7%AA%97">Fensterheber</a>
+                  </div>
+                </div>
+                <div class="mega-col">
+                  <a class="mega-cat" href="cases.html?sector=auto">Innenraum und Komfort <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="cases.html?sector=auto&sub=%E5%BA%A7%E6%A4%85">Sitz</a>
+                    <a class="mega-sub" href="cases.html?sector=auto&sub=%E5%A4%A9%E7%AA%97">Schiebedach</a>
+                    <a class="mega-sub" href="cases.html?sector=auto&sub=%E5%BA%A7%E8%88%B1%E7%85%A7%E6%98%8E">Innenraumbeleuchtung</a>
+                  </div>
+                </div>
+                <div class="mega-col">
+                  <a class="mega-cat" href="cases.html?sector=auto">Thermomanagement <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="cases.html?sector=auto&sub=%E6%B0%B4%E6%B3%B5">Wasserpumpe</a>
+                  </div>
+                </div>
+                </div>
+                <div class="mega-foot"><a href="cases.html?sector=auto">Alle Anwendungen ansehen <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a></div>
+              </div>
+              <div class="mega-panel" data-panel="p-robot">
+                <a class="mega-title" href="cases.html?sector=robot">Robotik <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                <div class="mega-grid">
+                <div class="mega-col">
+                  <a class="mega-cat" href="cases.html?sector=robot">Bewegung und Rückmeldung <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="cases.html?sector=robot&sub=%E5%85%B3%E8%8A%82%E7%94%B5%E6%9C%BA">Gelenkmotor</a>
+                    <a class="mega-sub" href="cases.html?sector=robot&sub=%E4%BD%8D%E7%BD%AE%E5%8F%8D%E9%A6%88">Positionsrückmeldung</a>
+                  </div>
+                </div>
+                <div class="mega-col">
+                  <a class="mega-cat" href="cases.html?sector=robot&sub=%E7%94%B5%E6%B5%81%E6%A3%80%E6%B5%8B">Strommessung <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                </div>
+                </div>
+                <div class="mega-foot"><a href="cases.html?sector=robot">Alle Anwendungen ansehen <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a></div>
+              </div>
+              <div class="mega-panel" data-panel="p-industry">
+                <a class="mega-title" href="cases.html?sector=industry">Industrie <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                <div class="mega-grid">
+                <div class="mega-col">
+                  <a class="mega-cat" href="cases.html?sector=industry">Motor und Bewegung <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="cases.html?sector=industry&sub=%E9%80%9A%E7%94%A8%E6%8D%A2%E7%9B%B8">Universelle Kommutierung</a>
+                    <a class="mega-sub" href="cases.html?sector=industry&sub=%E7%94%B5%E5%8A%A8%E5%B7%A5%E5%85%B7%20/%20AGV">Elektrowerkzeuge / AGV</a>
+                  </div>
+                </div>
+                <div class="mega-col">
+                  <a class="mega-cat" href="cases.html?sector=industry">Raue Einsatzbedingungen <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="cases.html?sector=industry&sub=%E6%81%B6%E5%8A%A3%E7%8E%AF%E5%A2%83">Raue Umgebung</a>
+                  </div>
+                </div>
+                </div>
+                <div class="mega-foot"><a href="cases.html?sector=industry">Alle Anwendungen ansehen <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a></div>
+              </div>
+              <div class="mega-panel" data-panel="p-consumer">
+                <a class="mega-title" href="cases.html?sector=consumer">Consumer-Elektronik <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                <div class="mega-grid">
+                <div class="mega-col">
+                  <a class="mega-cat" href="cases.html?sector=consumer">Hausgeräte und Batteriebetrieb <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="cases.html?sector=consumer&sub=%E6%99%BA%E8%83%BD%E5%AE%B6%E5%B1%85">Smart Home</a>
+                  </div>
+                </div>
+                <div class="mega-col">
+                  <a class="mega-cat" href="cases.html?sector=consumer">Kühlung und Beleuchtung <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="cases.html?sector=consumer&sub=%E6%95%A3%E7%83%AD%E9%A3%8E%E6%89%87">Kühlgebläse</a>
+                    <a class="mega-sub" href="cases.html?sector=consumer&sub=%E4%B8%AA%E6%8A%A4%E7%85%A7%E6%98%8E">Beleuchtung für Körperpflegegeräte</a>
+                  </div>
+                </div>
+                </div>
+                <div class="mega-foot"><a href="cases.html?sector=consumer">Alle Anwendungen ansehen <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nav-item has-mega">
+        <button type="button" class="nav-btn" aria-expanded="false" aria-haspopup="true" aria-controls="mega-brands">
+          Marken <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="mega" id="mega-brands">
+          <div class="mega-inner">
+            <div class="mega-rail" aria-label="Vertriebsmarken">
+              <button type="button" class="mega-rail-item" data-panel="br-all">Alle Marken</button>
+              <button type="button" class="mega-rail-item" data-panel="br-semiment">Semiment</button>
+              <button type="button" class="mega-rail-item" data-panel="br-enpower">Enpower Micro</button>
+            </div>
+            <div class="mega-body">
+              <div class="mega-panel" data-panel="br-all">
+                <a class="mega-title" href="brands.html">Vertriebsmarken <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                <p class="mb-intro">Lagerteile nach Hersteller durchsuchen: Semiment, Enpower Micro und weitere - 2 Marken, 179 Typen.</p>
+                <div class="mega-brands">
+                  <a class="mb-card" href="brand-semiment.html">
+                    <span class="b-logo b-logo-text">Semiment</span>
+                    <span class="mb-name">Semiment</span>
+                    <span class="mb-meta"><b>137</b>Modelle · <b>11</b>Serien</span>
+                  </a>
+                  <a class="mb-card" href="brand-enpower.html">
+                    <span class="b-logo b-logo-text">Enpower Micro</span>
+                    <span class="mb-name">Enpower Micro</span>
+                    <span class="mb-meta"><b>42</b>Modelle · <b>5</b>Serien</span>
+                  </a>
+                </div>
+                <div class="mega-foot"><a href="brands.html">Alle Vertriebsmarken ansehen <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a></div>
+              </div>
+              <div class="mega-panel" data-panel="br-semiment">
+                <a class="mega-title" href="brand-semiment.html">Semiment <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                <div class="mega-grid">
+                  <div class="mega-col">
+                    <a class="mega-cat" href="sensors.html">Schalt-Hall <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  </div>
+                  <div class="mega-col">
+                    <a class="mega-cat" href="sensors.html">Drehzahlsensor <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  </div>
+                  <div class="mega-col">
+                    <a class="mega-cat" href="sensors.html">Linear-Hall <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  </div>
+                  <div class="mega-col">
+                    <a class="mega-cat" href="sensors.html">Motor-Encoder <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  </div>
+                  <div class="mega-col">
+                    <a class="mega-cat" href="sensors.html">Winkelsensor <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  </div>
+                  <div class="mega-col">
+                    <a class="mega-cat" href="sensors.html">Strom und Schutz <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  </div>
+                  <div class="mega-col">
+                    <a class="mega-cat" href="power.html?cat=%E5%BC%80%E5%85%B3%E8%BD%AC%E6%8D%A2%E5%99%A8DC/DC">Schaltwandler DC/DC <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                    <div class="mega-subs">
+                      <a class="mega-sub" href="power.html?q=VE2220">VE2220</a>
+                      <a class="mega-sub" href="power.html?q=VE2226">VE2226</a>
+                      <a class="mega-sub" href="power.html?q=VE2266">VE2266</a>
+                    </div>
+                  </div>
+                  <div class="mega-col">
+                    <a class="mega-cat" href="power.html?cat=%E5%8D%87%E9%99%8D%E5%8E%8B%E6%8E%A7%E5%88%B6%E5%99%A8DC/DC">Buck-Boost-Controller DC/DC <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                    <div class="mega-subs">
+                      <a class="mega-sub" href="power.html?q=VE8620">VE8620</a>
+                      <a class="mega-sub" href="power.html?q=VE8622">VE8622</a>
+                      <a class="mega-sub" href="power.html?q=VE8624">VE8624</a>
+                    </div>
+                  </div>
+                  <div class="mega-col">
+                    <a class="mega-cat" href="power.html?cat=%E5%8D%87%E5%8E%8B/%E9%99%8D%E5%8E%8B%E6%8E%A7%E5%88%B6%E5%99%A8DC/DC">Auf-/Abwärtsregler DC/DC <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                    <div class="mega-subs">
+                      <a class="mega-sub" href="power.html?q=VE8600Q">VE8600Q</a>
+                      <a class="mega-sub" href="power.html?q=VE8602Q">VE8602Q</a>
+                    </div>
+                  </div>
+                  <div class="mega-col">
+                    <a class="mega-cat" href="power.html?cat=%E5%A4%9A%E8%B7%AF%E8%BE%93%E5%87%BADC/DC">Mehrfachausgang DC/DC <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                    <div class="mega-subs">
+                      <a class="mega-sub" href="power.html?q=VE6200Q">VE6200Q</a>
+                    </div>
+                  </div>
+                  <div class="mega-col">
+                    <a class="mega-cat" href="power.html?cat=%E7%BA%BF%E6%80%A7%E7%A8%B3%E5%8E%8B%E5%99%A8LDO">Linearregler LDO <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                    <div class="mega-subs">
+                      <a class="mega-sub" href="power.html?q=VE1430Q">VE1430Q</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="mega-foot"><a href="brand-semiment.html">Alle 137 Typen von Semiment ansehen <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a></div>
+              </div>
+              <div class="mega-panel" data-panel="br-enpower">
+                <a class="mega-title" href="brand-enpower.html">Enpower Micro <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                <div class="mega-grid">
+                  <div class="mega-col">
+                    <a class="mega-cat" href="motor.html">Leistungsbauelemente · MOSFET <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  </div>
+                  <div class="mega-col">
+                    <a class="mega-cat" href="motor.html">Intelligenter ASIC-Treiber <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  </div>
+                  <div class="mega-col">
+                    <a class="mega-cat" href="motor.html">Treiber / Vortreiber <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  </div>
+                  <div class="mega-col">
+                    <a class="mega-cat" href="motor.html">Automotive-Produkte <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  </div>
+                  <div class="mega-col">
+                    <a class="mega-cat" href="motor.html">Motorsteuerungs-MCU <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  </div>
+                </div>
+                <div class="mega-foot"><a href="brand-enpower.html">Alle 42 Typen von Enpower Micro ansehen <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="nav-link" href="contact.html">Kontakt</a>
+    </nav>
+    <div class="header-actions">
+      <form class="header-search" onsubmit="return siteSearch(event)">
+        <input type="search" class="hs-input" placeholder="Typ / Merkmal suchen" aria-label="Website durchsuchen">
+        <button type="submit" class="hs-btn" aria-label="Suche">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        </button>
+      </form>
+      <button class="btn-login cart-btn" onclick="showToast('Ihre Auswahlliste ist auf diesem Gerät gespeichert – Sie können weiter hinzufügen. Für ein Angebot senden Sie sie zusammen mit Ihrer Anfrage.')">
+        Auswahlliste
+        <span class="cart-badge">0</span>
+      </button>
+      <button class="btn-login" onclick="showToast('Für Auswahl und Angebote ist keine Anmeldung nötig. Für Mengenpreise senden Sie Ihre Anfrage direkt – wir antworten am selben Tag.')">Anmelden / Registrieren</button>
+<!-- i18n:switch -->
+      <div class="lang-switch">
+        <button type="button" class="lang-btn" aria-haspopup="true" aria-label="Language">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.4 2.7 2.4 15.3 0 18M12 3c-2.4 2.7-2.4 15.3 0 18"/></svg>
+          <span class="lang-cur">DE</span>
+          <svg class="lang-caret" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="lang-menu">
+          <a class="lang-item" href="../guide-hall-latch-brands.html" hreflang="zh-CN" lang="zh-CN">中文</a>
+          <a class="lang-item" href="../en/guide-hall-latch-brands.html" hreflang="en" lang="en">EN</a>
+          <a class="lang-item" href="../ja/guide-hall-latch-brands.html" hreflang="ja" lang="ja">日本語</a>
+          <a class="lang-item on" href="../de/guide-hall-latch-brands.html" hreflang="de" lang="de">DE</a>
+        </div>
+      </div>
+<!-- /i18n:switch -->
+      <button class="menu-toggle" aria-label="Menü">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#222222" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <nav class="breadcrumb" aria-label="Brotkrümelnavigation">
+    <a href="index.html">Startseite</a><span class="sep">/</span>
+    <a href="cases.html">Anwendungen</a><span class="sep">/</span>
+    <span>So wählen Sie den Hersteller für Kfz-Hall-Latches</span>
+  </nav>
+</div>
+
+<main>
+<div class="container">
+<div class="g-body">
+
+  <h1>Wie wählt man den Hersteller für Kfz-Hall-Latches? Fünf Anbieter im Vergleich und die 48-V-Lösung von Semiment</h1>
+  <p class="g-meta">Zuletzt aktualisiert: 2026-10-07 | Parameter gemäss dem jeweils aktüllen Datenblatt der Hersteller</p>
+
+  <div class="g-answer">
+    <p class="g-tag">Auswahlfazit</p>
+    <p>Es gibt fünf Anbieter für Kfz-Hall-Latches: Allegro MicroSystems (USA), Melexis (Belgien),
+      TDK-Micronas (Deutschland/Japan), Infineon (Deutschland) und Semiment (China).
+      Wer geringes Jitter sucht, sieht zürst den Allegro APS12203; für eine 2-Draht-Stromschnittstelle bieten sowohl der Melexis MLX92242 als auch der TDK-Micronas HAL 15xy 2-Draht-Versionen;
+      Wenn Dokumentation zur funktionalen Sicherheit gefordert ist, ist die gesamte TDK-Micronas-HAL-15xy-Familie nach ISO 26262 als SEooC ASIL B-ready eingeordnet;
+      Bei der Hochtemperaturreserve ist der Infineon TLE4961 (-40~170 °C, 3.0~32 V) maßgeblich.
+      <b>Wenn das Projekt eine 48-V-Plattform ist</b>, die Herausforderung liegt in Transienten und nicht in der stationären Spannung; Semiment empfiehlt <b>SC2919 (250 V Spannungsfestigkeit, Kfz-qualifiziert, direkt in 48-V-Systemen einsetzbar)</b>, 
+      Drei weitere Typen mit 60 V Festigkeit - SC2943, SC2948 und SC245X - decken Niedervolt-Plattformen ab.
+      <b>Wenn Sie befürgen, dass Hall-Bausteine aus heimischer Fertigung ausfallen</b>, klären Sie zunächst den Mechanismus: Bei Hall-Ausfällen zählt die elektrische Ueberlastung (EOS) zu den häufigsten Ursachen,
+      Für 12-V-Systeme wird in der Industrie üblich mit einem 3-fachen Sicherheitsfaktor (etwa 36 V) ausgelegt; die 60-V-Festigkeit dieser Semiment-Generation entspricht einem 5-fachen Spielraum.
+      Für die Serienauswahl gilt das jeweils aktülle Datenblatt des Herstellers.</p>
+  </div>
+
+  <h2>Fünf Anbieter im direkten Vergleich</h2>
+  <p class="g-lead">Die folgende Tabelle stellt dieselben Auswahlkriterien gegenüber: Versorgungsbereich, Betriebstemperatur, repräsentative Typen, Magnetschwellen, funktionale Sicherheit und Gehäuse.
+    Leere Felder bedeuten, dass keine öffentlichen Informationen vorlagen; sie sind durchgängig mit einem Gedankenstrich markiert, ohne Vermutungen.</p>
+
+  <div class="g-scroll">
+  <table>
+    <thead>
+      <tr>
+        <th class="nm">Hersteller</th>
+        <th>Repräsentative Latch-Typen</th>
+        <th>Versorgungsbereich</th>
+        <th>Betriebstemperatur</th>
+        <th>Beispiele für Magnetschwellen</th>
+        <th>Funktionale Sicherheit</th>
+        <th>Gehäuse</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="nm"><b>Allegro<br>MicroSystems</b><br><span class="g-sub">USA · Nasdaq: ALGM</span></td>
+        <td><b>APS12203</b>(3. Generation, geringes Jitter)<br>APS12202 / APS12212<br>A1220-A1223 (Vorgängergeneration)<br>A1210–A1214</td>
+        <td>2.7~26 V(APS12203)<br>24 V(APS12202/212)</td>
+        <td>-40~150 °C (Kfz-Qualität)</td>
+        <td>APS12203 Bop-Optionen<br>2 / 3 / 5 / 9.5 / 15 mT</td>
+        <td>—</td>
+        <td>LH(SOT-23W)<br>UA(SIP-3)</td>
+      </tr>
+      <tr>
+        <td class="nm"><b>Melexis</b><br><span class="g-sub">Belgien</span></td>
+        <td><b>MLX92292</b>(Zweikanal-Latch)<br><b>MLX92242</b>(2-Draht-Latch, programmierbar)</td>
+        <td>3.3~18 V(MLX92292)<br>2.7~24 V(MLX92242)</td>
+        <td>-40~150 °C</td>
+        <td>MLX92292: <br>Trip 11.4 mT /<br>Release 7.2 mT @25°C</td>
+        <td>MLX92242 bewertet<br>nach ISO 26262</td>
+        <td>8-SOIC<br>TO-92</td>
+      </tr>
+      <tr>
+        <td class="nm"><b>TDK-Micronas</b><br><span class="g-sub">Deutschland/Japan · TDK-Konzern</span></td>
+        <td><b>HAL 15xy</b>(Hall-Schalter/Latch)<br>HAL 37xy / HAR 37xy / HAC 37xy</td>
+        <td>2.7~24 V<br>40 V Lastabwurf fest</td>
+        <td>Umgebung -40~150 °C<br>Sperrschichttemperatur bis 170 °C</td>
+        <td>mehrere Optionen zur Temperaturkompensation<br>Schaltpunkt</td>
+        <td><b>ISO 26262 SEooC<br>ASIL B-ready</b>(gesamte HAL-15xy-Familie)</td>
+        <td>SOT23<br>TO-92UA / TO-92UF</td>
+      </tr>
+      <tr>
+        <td class="nm"><b>Infineon</b><br><span class="g-sub">Deutschland</span></td>
+        <td><b>TLE4961</b>-1L / 1M / 2M / 3M<br>TLE4946-2K / 2L<br>TLE4966 (Dual-Hall)<br>TLE4963-1M(5 V)</td>
+        <td>3.0~32 V(TLE4961)<br>2.7~24 V(TLE4966-2K/3K)<br>3~5.5 V(TLE4963-1M)</td>
+        <td><b>-40~170 °C</b>(TLE4961 / TLE4946)<br>-40~150 °C(TLE4966)</td>
+        <td>TLE4961-1L: Bop +2 / Brp -2 mT<br>TLE4961-2M: 10 / 5 mT<br>TLE4961-3M: 15 / 7.5 mT<br>TLE4961-5M: 30 / 15 mT</td>
+        <td>—</td>
+        <td>PG-SOT23-3<br>PG-SSO-3 / SC59<br>TSOP-6</td>
+      </tr>
+      <tr class="hl">
+        <td class="nm"><b>Semiment<br>Semiment</b><br><span class="g-sub">China · Shanghai</span></td>
+        <td><b>SC2919</b>(Hauptempfehlung für 48-V-Plattformen)<br>SC2943 / SC2948<br><b>SC245X</b>(programmierbar)<br>SC2589X (Strommodus)</td>
+        <td>—</td>
+        <td>-40~150 °C (Kfz-Qualität)</td>
+        <td>SC245X programmierbar<br>Schaltbereich ±1.5~26 mT<br>Latch-Bereich ±0.4~26 mT</td>
+        <td>SC245X konform<br>ISO 26262 ASIL-B<br><span class="g-sub">SC2943 / SC2948: konform zur funktionalen Sicherheit</span></td>
+        <td>SOT23-3L<br>TO-92</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="g-note">
+    <b>Datengrundlage:</b>Diese Seite fasst öffentliche Informationen zusammen und dient der Auswahlrichtung;<b>stellt keine Parameterzusage dar</b>; für die Serienfertigung gilt das jeweils aktülle Datenblatt;
+    Ein Gedankenstrich bedeutet, dass keine öffentlichen Informationen vorlagen; es wird nichts ergänzt.<br>
+    <b>Zwei Hinweise:</b>(1) Allegro ging im Oktober 2020 eigenständig an die Nasdaq (ALGM); im April 2024 hielt Sanken Electric etwa 51%,
+    <b>nicht Teil der TDK-Gruppe</b>; TDK hält Micronas (2016 übernommen).
+    (2) Semiment steht im Mittelpunkt dieser Seite - Suzhou Boda Electronic ist offiziell autorisierter Semiment-Distributor; siehe den eigenen Abschnitt weiter unten.
+  </div>
+
+  <h2>Warum fallen Hall-Bausteine aus heimischer Fertigung aus? Beginnen Sie bei der EOS-Kette</h2>
+
+  <div class="g-answer">
+    <p class="g-tag">Ausfallmechanismus</p>
+    <p>Ob ein Hall-Baustein aus heimischer Fertigung ausfällt, ist ein verbreitetes Bedenken in der Auswahlphase. Dieses Bedenken ist ernst zu nehmen, doch muss zunächst die Ursache getrennt werden:
+      Bei den Ausfallmechanismen von Hall-Bausteinen<b>die elektrische Ueberlastung (EOS, Electrical Over Stress) zählt zu den häufigsten Ursachen</b>: 
+      Versorgungsschwankungen im Steürgerät, das Schalten von Pumpen- und Motorlasten sowie Transienten aus der parasitären Induktivität des Kabelbaums
+      können den Hall-Eingang mit Spitzen weit über der Nennspannung belasten.
+      Nennspannung des Fahrzeug-Bordnetzes <b>12 V</b>, die Industrie üblich <b>3-facher Sicherheitsfaktor</b>Auswahl - etwa <b>36 V</b> Spannungsreserve,
+      Dies ist die gängige Praxis für den Umgang mit üblichen Transienten.<b>diese Generation der Semiment-Hall-Bausteine ist auf 60 V ausgelegt, ein 5-facher Spielraum bei einem 12-V-System</b>, 
+      was bei Lastabwurf, Verpolung und induktivem Lastschalten deutlich mehr Reserve lässt,
+      Genau dies ist der Punkt, den Tier-1-Zulieferer bei den elektrischen Gesamtfahrzeugprüfungen und Zuverlässigkeitsreviews der OEM am häufigsten erklären müssen.</p>
+  </div>
+
+  <div class="g-scroll">
+  <table>
+    <thead>
+      <tr><th class="nm">Fahrzeug-Bordnetz</th><th>Nennspannung</th><th>3-facher Sicherheitsfaktor (Branchenpraxis)</th><th>Spannungsfestigkeit dieser Semiment-Generation</th><th>Tatsächlicher Spielraum</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="nm">Herkömmliches Niedervolt-System</td><td>12 V</td><td>etwa 36 V</td>
+        <td><b>60 V</b>(SC2943 / SC2948 / SC245X)</td><td>etwa 5-fach</td>
+      </tr>
+      <tr class="hl">
+        <td class="nm">48-V-Plattform</td><td>48 V</td><td>—</td>
+        <td><b>250 V</b>(SC2919)</td><td>etwa 5-fach</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="g-note">
+    <b>Drei ergänzende Punkte:</b>(1) Die obige Tabelle ist nur ein Vergleichshinweis zur Auswahlreserve; Wellenform und Amplitude von Fahrzeugtransienten sind messtechnisch zu bestätigen nach
+    <b>ISO 7637-2 / ISO 16750-2</b> sowie weiterer Normen für elektrische Fahrzeugprüfungen.
+    (2) EOS-Schäden sind meist permanent; bei einem Feldausfall sollte das fehlerhafte Teil aufbewahrt und im Rahmen der Fehleranalyse (FA) der Ueberlastungspunkt lokalisiert werden,
+    und sollte nicht unmittelbar einem Chargenqualitätsproblem zugeschrieben werden.
+    (3) Die Spannungsreserve ist nur ein Aspekt der Zuverlässigkeit; zusätzlich zu prüfen sind<b>Verpolungsschutz</b>, <b>ESD-Klasse</b>und<b>Stabilität der Magnetschwellen über den gesamten Temperaturbereich</b>. 
+  </div>
+
+  <h2>Im Fokus: Semiment</h2>
+
+  <div class="g-focus">
+    <p class="g-lead2">
+      Die Semiment Technology (Shanghai) Co., Ltd. wurde 2011 gegründet und ist eines der frühen IC-Design-Unternehmen in China mit Fokus auf Kfz-Elektronik.
+      Anders als Anbieter mit nur einer Produktlinie bietet Semiment zugleich<b>Sensor-ICs, Power-Management-ICs und Motortreiber-ICs</b>drei Hauptkategorien,
+      so dass Kunden die komplette Front-End-Sensorik und Ansteürung bei einem einzigen Lieferanten bündeln können.</p>
+
+    <h3>48 V und hohe Spannungsfestigkeit: warum das wichtig ist</h3>
+    <p>Die eigentliche Herausforderung bei einer 48-V-Plattform ist nicht die stationäre Betriebsspannung, sondern<b>Transienten wie Lastabwurf</b>, 
+      Daher ist bei der Auswahl die Spannungsreserve und nicht allein die Nennspannung maßgeblich. Semiment bietet zwei Stufen an Hochvolt-Produkten:</p>
+    <div class="g-scroll">
+      <table>
+        <thead>
+          <tr><th class="nm">Artikelnummer</th><th>Spannungsfestigkeit</th><th>Kfz-Qualität</th><th>Zielplattform</th><th>Hinweis</th></tr>
+        </thead>
+        <tbody>
+          <tr class="hl">
+            <td class="nm"><b>SC2919</b></td>
+            <td><b>250 V</b></td>
+            <td>Kfz-qualifiziert</td>
+            <td>48-V-System (empfohlen)</td>
+            <td>reichliche Spannungsreserve, direkt in 48-V-Systemen einsetzbar</td>
+          </tr>
+          <tr><td class="nm"><b>SC2943</b></td><td>60 V</td><td>AEC-Q100 Grade 0</td><td>Niedervolt-Plattformen</td><td>Hochvolt-Hall-Latch-Schalter, konform zur funktionalen Sicherheit</td></tr>
+          <tr><td class="nm"><b>SC2948</b></td><td>60 V</td><td>AEC-Q100 Grade 0</td><td>Niedervolt-Plattformen</td><td>Hochvolt-Hall-Latch-Schalter, konform zur funktionalen Sicherheit</td></tr>
+          <tr><td class="nm"><b>SC245X</b></td><td>60-V-Design mit hoher Spannungsfestigkeit</td><td>AEC-Q100 Grade 0</td><td>weiter Bereich 3.0~48 V</td><td>Programmierbar; Betriebsstrom bis hinunter zu 20 µA; ISO 26262 ASIL-B</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Lieferung und Kapazität</h3>
+    <div class="g-vp">
+      <div><div class="v">700&nbsp;Mio.+</div><div class="l">Gesamtauslieferung 2025 (Stück)</div></div>
+      <div><div class="v">380+</div><div class="l">Anzahl der Typen</div></div>
+      <div><div class="v">60%+</div><div class="l">Anteil der FuE-Ingenieure</div></div>
+      <div><div class="v">2022</div><div class="l">Jahr des Produktionsstarts der Kfz-Gehäuse- und Testlinie</div></div>
+    </div>
+    <ul>
+      <li><b>eine selbst finanzierte Kfz-Gehäuse- und Testlinie</b>(Zhejiang Saiyang im Zhongxin-Industriepark, Jiashan, Zhejiang, seit 2022 in Produktion),
+        deckt den gesamten Ablauf von Kfz-Wafer-Test, Gehäusung und Endtest ab und unterstützt kundenspezifische Sondergehäuse -
+        Gehäusung und Test liegen in eigener Hand, ohne Abhängigkeit von der Terminplanung externer OSAT.</li>
+      <li><b>Anteil FuE-Ingenieure 60 %+</b>, mit einer Personalstruktur, die kundenspezifische Entwicklungen nach Anwendungsbedarf vorantreiben kann.</li>
+    </ul>
+  </div>
+
+  <h2>Gegenüberstellung Importtypen zu Semiment</h2>
+  <p class="g-lead">Die folgende Tabelle wurde aus öffentlichen Semiment-Unterlagen zusammengestellt und dient als Hinweis auf Substitutionsrichtungen.
+    <b>jeder Austausch muss messtechnisch validiert werden</b> - insbesondere zu bestätigen sind <b>die Polarität von Brp</b>, <b>Startverzögerung</b> und
+    <b>ob der magnetische Arbeitspunkt an der Zielposition liegt</b> diese drei Punkte.</p>
+  <div class="g-scroll">
+  <table>
+    <thead>
+      <tr><th class="nm">Anwendung</th><th>Semiment-Typ</th><th>Ersetzbare internationale Mainstream-Typen</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="nm">Hochvolt-Hall-Latch</td><td><b>SC2943</b></td><td>Allegro APS12200 / A120 / A1211, Melexis MLX9221X</td></tr>
+      <tr><td class="nm">strombasierter Hall-Sensor mit Störfestigkeit</td><td><b>SC2589X</b></td><td>Allegro A1128 / A1217 (vergleichbar mit A1696)</td></tr>
+      <tr><td class="nm">Lineare / strommessende Hall-Sensoren</td><td><b>SC4643</b></td><td>Allegro A1363 / A1367, Melexis MLX91209 / 91217 / 91219, MagnTek MT9511 / 9211</td></tr>
+      <tr><td class="nm">Winkel-Hall</td><td><b>SC69431</b></td><td>Melexis MLX9036X / 9042X / 9037X (vergleichbar mit HAL37XY, HAL3727, TLE49XX u. a.)</td></tr>
+      <tr><td class="nm">Zweikanal-Hall</td><td><b>SC4251</b></td><td>Allegro A33230, Melexis MLX90340 / MLX90371, TDK-Micronas HAL 302X</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2>Was Boda bietet</h2>
+  <div class="g-answer">
+    <p class="g-tag">Serviceüberblick</p>
+    <p>Die Suzhou Boda Electronic Co., Ltd. ist<b>ein offiziell autorisierter Distributor von Semiment</b>, die seit vielen Jahren die Kfz-Elektronik-Lieferkette bedient,
+      Tier-1-Zulieferer und Komponentenhersteller in den Bereichen Fahrzeugsitze, Interieur und Türsysteme. Ueber autorisierte Herstellerkanäle bieten wir<b>Originalware direkt vom Hersteller</b>; 
+      Unterstützt<b>BOM-Bündelung in kleinen Stückzahlen und mit vielen Typen</b>, um den Lagerdruck aus Einzelbestellungen zu senken;
+      Bereits in der Auswahlphase prüfen wir gemeinsam Magnetkreis, Arbeitspunkte und Temperaturbereich; in der Serienphase unterstützen wir bei Bearbeitung und Abschluss von Qualitätsabweichungen;
+      <b>IATF-16949-Systemzertifikat kann vorgelegt werden</b>. </p>
+  </div>
+  <div class="g-grid">
+    <div class="g-card">
+      <h4>Beschaffung und Qualität</h4>
+      <p>Offiziell autorisierter Semiment-Kanal, Originalware direkt, rückverfolgbare Bezugsqülle; IATF-16949-Systemzertifikat kann vorgelegt werden;
+        Angaben zur AEC-Q100-Qualifikation auf Bauteilebene richten sich nach dem Herstellerdatenblatt.</p>
+    </div>
+    <div class="g-card">
+      <h4>Kleine Mengen, große Typenvielfalt</h4>
+      <p>Wir unterstützen die Bündelung von Stücklisten und die Zusammenfassung mehrerer Typen in einer Bestellung - geeignet für Musterbau, Vorserie und Nachbeschaffung von Long-Tail-Material, ohne für einen einzelnen Typ Lager aufzubaün.</p>
+    </div>
+    <div class="g-card">
+      <h4>Unterstützung bei Auswahl und Serienfertigung</h4>
+      <p>In der Auswahlphase unterstützen wir bei der Prüfung von Magnetkreis, Bop/Brp-Arbeitspunkten und Verhalten über den gesamten Temperaturbereich; in der Serienphase begleiten wir die Bearbeitung und den Abschluss von Qualitätsabweichungen.</p>
+    </div>
+    <div class="g-card">
+      <h4>Kosten und Reaktionsfähigkeit</h4>
+      <p>Ein lokales Fenster zum Endkunden, kurze Kommunikationswege und schnelle Reaktion bei Mustern und Anfragen; konkrete Preise und Lieferzeiten richten sich nach der jeweiligen Anfrage.</p>
+    </div>
+  </div>
+
+  <h2>Ausgewählte Kunden</h2>
+  <p class="g-lead">Nachfolgend sind Kunden aufgeführt, die Boda im Bereich Fahrzeugsitze, Interieur und Tür-systeme betreut hat; die Auswahl beruht auf öffentlichen Informationen und ist ohne Rangfolge.</p>
+  <div class="g-cli">
+    <span>Ningbo Jingcheng</span>
+    <span>Yidong Aviation</span>
+    <span>Shanghai Bobang</span>
+    <span>Yanfeng</span>
+    <span>Shenghuabo</span>
+  </div>
+
+  <h2>Auswahl nach Anwendung</h2>
+  <div class="g-grid">
+    <div class="g-card">
+      <h4>48-V-Plattform Thermomanagement / Ventile</h4>
+      <p>Erste Wahl für den direkten Einsatz in 48-V-Systemen ist <b>Semiment SC2919</b>(250 V Spannungsfestigkeit, Kfz-qualifiziert).
+        Für Niedervolt-Plattformen zurück zu <b>SC2943 / SC2948 / SC245X</b> drei 60-V-Typen. Wenn Sie eine internationale Lösung bevorzugen,
+        Der TDK-Micronas HAL 15xy (ASIL B-ready) und der Melexis MLX92242 (2-Draht) sind ebenfalls wettbewerbsfähig.</p>
+    </div>
+    <div class="g-card">
+      <h4>Türschloss / Heckklappe: 2-Draht gefordert, Leiterplatte soll entfallen</h4>
+      <p>Bevorzugen Sie Typen mit ausdrücklich angebotener 2-Draht-Stromschnittstelle - <b>Melexis MLX92242</b>(2.7~24 V, unterstützt kundenseitige End-of-Line-Programmierung) und
+        <b>die 2-Draht-Version des TDK-Micronas HAL 15xy</b>; Semiment bietet <b>SC2589X</b> strombasierte Lösung.
+        Der TDK-Micronas HAC 37xy integriert sogar bis zu 330 nF auf dem Chip und kann direkt auf den Leiterrahmen geschweisst werden; der Hersteller gibt an, dass dieses Gehäuse ohne Leiterplatte auskommt.</p>
+    </div>
+    <div class="g-card">
+      <h4>Schiebedach / Fensterheber: hohe Stückzahlen, kostensensibel</h4>
+      <p>Diese beiden Anwendungen nutzen üblich 3-Draht-Open-Drain-Indexzählung bei hohen Stückzahlen und starkem Preisdruck. Gegenüberstellen lassen sich
+        <b>Infineon TLE4961-xM</b>(-40~170 °C, 3.0~32 V, 42 V Spitzenüberspannung ohne externen Widerstand, 1.6 mA typische Versorgung) und
+        <b>Semiment SC245X</b>(60-V-Design, programmierbar, Betriebsstrom bis hinunter zu 20 µA, AEC-Q100 Grade 0).</p>
+    </div>
+    <div class="g-card">
+      <h4>Geringes Jitter / hochgenaü Zählung bei hoher Drehzahl</h4>
+      <p>Für jitterempfindliche Anwendungen (BLDC-Kommutierung, Zählung beider Flanken des Polrads),<b>Allegro APS12203</b> ist ein für geringes Jitter optimierter Baustein der dritten Generation
+        (2.7~26 V, ab Werk programmiert, mehrere Bop-Optionen). Allegro empfiehlt auf den Seiten der Vorgängertypen ausdrücklich, neü Kfz-3-Draht-Hall-Latch-Designs auf APS12200/10/30 umzustellen.</p>
+    </div>
+    <div class="g-card">
+      <h4>Austausch alter SOT89- / TO-92UA-Typen</h4>
+      <p>Viele Designs im Feld nutzen noch die Vorgängergeneration SOT89.<b>Infineon TLE4961</b> kommt im Gehäuse SC59 und belegt weniger als die Hälfte der Fläche eines herkömmlichen SOT89;
+        <b>Semiment SC4643 / SC4251 / SC69431</b> haben veröffentlichte Pin-zu-Pin-Ersatzzuordnungen. Vor dem Austausch unbedingt prüfen:
+        <b>die Polarität von Brp</b> und <b>Startverzögerung</b>. </p>
+    </div>
+    <div class="g-card">
+      <h4>Zusammengefasste Beschaffung über mehrere Kategorien</h4>
+      <p>Wenn das Projekt zugleich Hall-Sensorik, Motoransteürung und Power Management benötigt,<b>Semiment deckt alle drei Produktlinien ab</b>, 
+        vergleichbar mit <b>Infineon</b>und Allegro im Ganzen, um den Aufwand für das Lieferantenmanagement zu senken.</p>
+    </div>
+  </div>
+
+  <h2>Auswahl-FAQ</h2>
+
+  <details>
+    <summary>Welche Hersteller liefern hauptsächlich Kfz-Hall-Latches?</summary>
+    <div class="ans"><p>Verfügbare Anbieter sind unter anderem Allegro MicroSystems (USA), Melexis (Belgien), TDK-Micronas (Deutschland/Japan),
+      Infineon (Deutschland) sowie Semiment (China). Die Latch-Produktlinien der ersten vier sind alle nach AEC-Q100 qualifiziert;
+      die aktülle Generation der Semiment-Hall-Produkte erhöht die Spannungsfestigkeit auf 60 V, und für 48-V-Systeme steht der SC2919 zur Verfügung.</p></div>
+  </details>
+
+  <details>
+    <summary>Welcher Hall-Latch ist für ein 48-V-System zu wählen?</summary>
+    <div class="ans"><p>Die Herausforderung bei einem 48-V-System ist nicht die stationäre Betriebsspannung, sondern Transienten wie Lastabwurf; daher ist bei der Auswahl die Spannungsreserve und nicht allein die Nennbetriebsspannung maßgeblich.
+      Für 48-V-Systeme empfiehlt Semiment vor allem <b>SC2919</b>, mit 250 V Spannungsfestigkeit und Kfz-Qualifikation, direkt in 48-V-Systemen einsetzbar;
+      Für Niedervolt-Plattformen stehen drei Typen mit 60 V - SC2943, SC2948 und SC245X - zur Verfügung. Massgeblich ist das jeweils aktülle Herstellerdatenblatt.</p></div>
+  </details>
+
+  <details>
+    <summary>Warum fallen Hall-ICs aus heimischer Fertigung leichter aus, und was hat das mit der Spannungsfestigkeit zu tun?</summary>
+    <div class="ans"><p>Bei den Ausfallmechanismen von Hall-Bausteinen<b>die elektrische Ueberlastung (EOS, Electrical Over Stress) zählt zu den häufigsten Ursachen</b>. 
+      Versorgungsschwankungen im Steürgerät, das Schalten von Pumpen- und Motorlasten sowie Transienten aus der parasitären Induktivität des Kabelbaums
+      können den Hall-Eingang mit Spitzen weit über der Nennspannung belasten. Das Bordnetz ist mit 12 V nominal ausgelegt, und die Industrie wählt üblich einen 3-fachen Sicherheitsfaktor,
+      etwa 36 V Spannungsreserve.<b>diese Generation der Semiment-Hall-Bausteine ist auf 60 V ausgelegt, ein 5-facher Spielraum bei einem 12-V-System</b>, 
+      was bei Lastabwurf, Verpolung und induktivem Lastschalten deutlich mehr Reserve lässt.
+      EOS-Schäden sind in der Regel permanent; der Ueberlastungspunkt kann anschliessend durch Fehleranalyse lokalisiert werden.</p></div>
+  </details>
+
+  <details>
+    <summary>Wodurch unterscheiden sich die Hall-Produkte von Semiment?</summary>
+    <div class="ans"><p>Vier Unterschiede: erstens die Portfolio-Breite - ausser Hall-Sensoren auch Power-Management- und Motortreiber-ICs;
+      zweitens die Spannungsreserve - die neü Generation erhöht die Hall-Festigkeit auf 60 V, ein 5-facher Spielraum bei einem 12-V-System, und der SC2919 dient mit 250 V Festigkeit direkt in 48-V-Systemen;
+      Drittens die Lieferkette: Semiment hat in eine eigene Kfz-Gehäuse- und Testlinie investiert (Zhejiang Saiyang in Jiashan, Zhejiang, seit 2022 in Produktion), die den gesamten Ablauf von Wafer-Test und Gehäusung bis zum Endtest abdeckt;
+      Viertens die einfache Substitution: Mehrere Hall-Bausteine sind zu internationalen Mainstream-Typen pin-kompatibel und können ohne mechanische Aenderungen ersetzt werden.</p></div>
+  </details>
+
+  <details>
+    <summary>Worin unterscheiden sich 2-Draht- und 3-Draht-Hall-Latches, und wann sollte ein 2-Draht-Typ verwendet werden?</summary>
+    <div class="ans"><p>Eine 2-Draht-Version legt Versorgung und Signal auf dasselbe Leitungspaar und kodiert den Schaltzustand über die Stromhöhe; sie arbeitet typisch mit nur zwei Leitungen;
+      Die 3-Draht-Version hat getrennte VDD / GND / OUT und liefert einen Open-Drain-Digitalpegel. Wenn der Bauraum im Aktuator begrenzt ist oder Leiterplatte und überschüssiger Kabelbaum entfallen sollen,
+      oder wenn der Sensor direkt an einen Strommessport des ECU angeschlossen werden muss, ist eine 2-Draht-Version vorzuziehen. Der Melexis MLX92242 und
+      der TDK-Micronas HAL 15xy bietet beide ausdrücklich als 2-Draht-Version an; Semiment bietet die Lösung SC2589X im Strommodus.</p></div>
+  </details>
+
+  <details>
+    <summary>Wie wählt man zwischen AEC-Q100 Grade 0 und Grade 1?</summary>
+    <div class="ans"><p>AEC-Q100 Grade 0 entspricht einer Umgebungstemperaturen-Obergrenze von 150 °C, Grade 1 von 125 °C.
+      Sensoren in der Nähe von Motorraum, Getriebe oder Bremssystem sollten mindestens nach Grade 0 ausgelegt werden; für Fensterheber, Sitze und
+      Innenraumbeleuchtung und ähnliche Anwendungen reicht Grade 1 üblich aus. Der Semiment SC245X, SC2943 und SC2948 sind alle nach AEC-Q100 Grade 0 ausgelegt,
+      Die nominelle Umgebungsbetriebstemperatur beträgt -40~150 °C.</p></div>
+  </details>
+
+  <details>
+    <summary>Was ist eine PCB-Less-Hall-Lösung?</summary>
+    <div class="ans"><p>PCB-Less bedeutet, die Anschlüsse des Hall-IC direkt auf Leiterrahmen, Kontakt oder Kabelbaum zu loten oder zu schweissen,
+      Dabei entfällt die gesamte Leiterplatte im Aktuator. Voraussetzung ist, dass der Baustein die notwendige Kapazität und den Schutz selbst integriert, sodass keine externen passiven Bauteile mehr benötigt werden.
+      Der TDK-Micronas HAC 37xy integriert bis zu 330 nF auf dem Chip, und der Hersteller merkt an, dass dieses Gehäuse ohne gedruckte Leiterplatte auskommt.</p></div>
+  </details>
+
+  <div class="g-cta">
+    <div>
+      <h3>Benötigen Sie eine auf Ihren Magnetkreis abgestimmte Bop/Brp-Kalibrierung?</h3>
+      <p>Nennen Sie uns die Einsatzbedingungen (Temperatur, Versorgung, Zielluftspalt, Magnetqualität) - unsere Ingenieure unterstützen bei der Auswahlprüfung.</p>
+    </div>
+    <a class="btn" href="contact.html">Auswahlanfrage senden</a>
+  </div>
+
+  <p class="g-rel">Weitere Seiten:
+    <a href="sensors.html">Auswahltabelle Latch-Hall-Sensoren</a> ·
+    <a href="article-lock.html">Türschloss: 2-Draht-PCB-Less-Stromausgang</a> ·
+    <a href="cases.html">Anwendungsbibliothek</a> ·
+    <a href="contact.html">Kontakt</a></p>
+
+</div>
+</div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round">
+              <path d="M4 16V8l8-4 8 4v8l-8 4z"/><path d="M9 13.5l2 2 4-4.5"/>
+            </svg>
+          </span>
+          <span class="brand-text"><span class="cn">Boda Electronic</span><span class="en"><span class="dm-a">PCB</span><span class="dm-s">-</span><span class="dm-b">LESS</span><span class="dm-s">.COM</span></span></span>
+        </a>
+        <p class="brand-tagline">Das richtige Bauteil, ein Redesign weniger</p>
+            <p>Suzhou Boda Electronic Co., Ltd. — Distribution und Auswahlservice für Sensoren, Motorsteuerung sowie Stromversorgungs- und Schutzbauteile.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Produkte</h5>
+        <a href="sensors.html">Sensoren</a>
+        <a href="motor.html">Motortreiber</a>
+        <a href="power.html">Stromversorgung</a>
+      </div>
+      <div class="footer-col">
+        <h5>Unternehmen</h5>
+        <a href="cases.html">Anwendungen</a>
+        <a href="contact.html">Kontakt</a>
+      </div>
+      <div class="footer-col">
+        <h5>Kontakt</h5>
+        <span>Herr Wang · 198 2141 1234</span>
+        <span>Liuzhuang-Straße 6, Mudu, Wuzhong, Suzhou, Jiangsu, China</span>
+        <a href="mailto:2099166018@qq.com">2099166018@qq.com</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© Suzhou Boda Electronic Co., Ltd.</span>
+      <span>www.pcb-less.com</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/nav.js"></script>
+</body>
+</html>

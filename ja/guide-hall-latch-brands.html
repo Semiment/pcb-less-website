@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>車載ホールラッチのメーカー選び？5社比較と Semiment の48Vソリューション | 柏達電子</title>
+<meta name="description" content="車載ホールラッチの選定比較：Allegro APS12203、Melexis MLX92242、TDK-Micronas HAL 15xy、Infineon TLE4961、Semiment SC2919/SC2943 の代表型番、温度範囲、機能安全、48Vシステム適合性を整理し、ホールの EOS 故障と耐圧マージンの関係も解説します。">
+<!-- i18n:head -->
+  <meta name="language" content="ja">
+  <link rel="alternate" hreflang="zh-CN" href="https://www.pcb-less.com/guide-hall-latch-brands.html">
+  <link rel="alternate" hreflang="en" href="https://www.pcb-less.com/en/guide-hall-latch-brands.html">
+  <link rel="alternate" hreflang="ja" href="https://www.pcb-less.com/ja/guide-hall-latch-brands.html">
+  <link rel="alternate" hreflang="de" href="https://www.pcb-less.com/de/guide-hall-latch-brands.html">
+  <link rel="alternate" hreflang="x-default" href="https://www.pcb-less.com/guide-hall-latch-brands.html">
+  <link rel="canonical" href="https://www.pcb-less.com/ja/guide-hall-latch-brands.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="蘇州柏達電子有限公司">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:title" content="車載ホールラッチのメーカー選び？5社比較と Semiment の48Vソリューション | 柏達電子">
+  <meta property="og:description" content="車載ホールラッチの選定比較：Allegro APS12203、Melexis MLX92242、TDK-Micronas HAL 15xy、Infineon TLE4961、Semiment SC2919/SC2943 の代表型番、温度範囲、機能安全、48Vシステム適合性を整理し、ホールの EOS 故障と耐圧マージンの関係も解説します。">
+  <meta property="og:url" content="https://www.pcb-less.com/ja/guide-hall-latch-brands.html">
+  <meta property="og:image" content="https://www.pcb-less.com/images/og-cover-ja.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="車載ホールラッチのメーカー選び？5社比較と Semiment の48Vソリューション | 柏達電子">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="車載ホールラッチのメーカー選び？5社比較と Semiment の48Vソリューション | 柏達電子">
+  <meta name="twitter:description" content="車載ホールラッチの選定比較：Allegro APS12203、Melexis MLX92242、TDK-Micronas HAL 15xy、Infineon TLE4961、Semiment SC2919/SC2943 の代表型番、温度範囲、機能安全、48Vシステム適合性を整理し、ホールの EOS 故障と耐圧マージンの関係も解説します。">
+  <meta name="twitter:image" content="https://www.pcb-less.com/images/og-cover-ja.png">
+
+<!-- /i18n:head -->
+<!-- i18n:assets -->
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<!-- /i18n:assets -->
+<link rel="stylesheet" href="../css/style.css">
+
+<style>
+/* ─────────────────────────────────────────────────────────────
+   本页专用排版。全部收口在 .g-body 作用域内，不污染站点公共样式。
+   设计取向（反 AI 味）：
+     · 正文限宽 ~44 字/行，表格与条目区可占满栏宽 —— 破除「整页一个宽度」的呆板
+     · 不用等宽卡片阵；条目一律 border-top 分隔 + 左标题右说明的非对称双栏
+     · 表格只留横向分隔线，去掉 Excel 式全网格
+     · 零渐变、零外发光、零阴影堆叠；层级靠字重与留白，不靠框
+     · 动效只做 transform / opacity，且尊重 prefers-reduced-motion
+   ───────────────────────────────────────────────────────────── */
+.g-body{background:var(--surface);border:1px solid var(--border);border-radius:10px;
+        padding:clamp(24px,4vw,44px)}
+.g-body :where(p,li,.ans){max-width:44em}          /* 中文舒适行宽，表格不受限 */
+
+/* 标题层级：靠字重与色阶，不做巨大字号 */
+.g-body h1{font-size:clamp(23px,2.6vw,29px);line-height:1.35;letter-spacing:-.01em;
+           color:var(--deep);font-weight:700;margin:0 0 8px}
+.g-body h2{font-size:clamp(18px,1.7vw,20px);font-weight:700;letter-spacing:-.005em;
+           color:var(--deep);margin:clamp(34px,5vw,52px) 0 16px;
+           padding-top:14px;border-top:1px solid var(--border)}
+.g-body h3{font-size:15.5px;font-weight:700;color:var(--ink);margin:26px 0 6px}
+.g-body p{margin:0 0 13px;color:var(--ink-2)}
+.g-body b,.g-body strong{color:var(--ink);font-weight:700}
+
+.g-meta{margin:0 0 26px;font-size:12.5px;color:var(--ink-3);
+        font-variant-numeric:tabular-nums}
+.g-lead{font-size:15px}
+
+/* 摘录块：只留左侧主色实线，不要四面框 + 圆角 + 底色的「提示卡」套路 */
+.g-answer{border-left:3px solid var(--accent);padding:2px 0 2px 20px;margin:0 0 22px}
+.g-answer p{color:var(--ink);font-size:15.5px;line-height:1.8}
+.g-tag{font-size:12px;font-weight:700;color:var(--ink-3);letter-spacing:.02em;margin:0 0 7px}
+
+/* 表格：横向分隔线为主，表头用下边框切分；数字等宽对齐 */
+.g-scroll{overflow-x:auto}
+.g-body table{width:100%;border-collapse:collapse;font-size:13.5px;margin:14px 0 4px;
+              font-variant-numeric:tabular-nums}
+.g-body th{color:var(--deep);text-align:left;font-weight:700;font-size:12.5px;
+           padding:9px 12px 9px 0;border-bottom:1.5px solid var(--border);white-space:nowrap}
+.g-body td{padding:11px 12px 11px 0;border-bottom:1px solid var(--border);
+           vertical-align:top;color:var(--ink-2)}
+.g-body td:not(:last-child),.g-body th:not(:last-child){padding-right:16px}
+.g-body tbody tr:last-child td{border-bottom:0}
+.g-body td.nm{min-width:112px}
+/* 重点行：左侧主色短线，不用通栏底色 */
+.g-body tr.hl td{background:transparent}
+.g-body tr.hl td.nm{box-shadow:inset 2px 0 0 var(--accent);padding-left:12px;color:var(--ink);font-weight:700}
+
+/* 说明条：小字、左侧细线，不做虚线框 */
+.g-note{font-size:12.5px;line-height:1.75;color:var(--ink-2);max-width:44em;
+        border-left:2px solid var(--border);padding:2px 0 2px 14px;margin:12px 0 0}
+
+/* 表格内的次级信息（国家 / 上市代码）：降为辅助层级 */
+.g-sub{display:block;margin-top:3px;font-size:12px;font-weight:400;color:var(--ink-3)}
+.g-lead2{font-size:15.5px;color:var(--ink);margin:0 0 12px}
+
+/* 赛卓专章：左侧主色线 + 极浅底，无渐变、无双线边框 */
+.g-focus{border-left:3px solid var(--accent);background:#FAFBFD;
+         padding:24px 26px;margin:18px 0 0}
+.g-focus h3:first-child{margin-top:0}
+.g-focus ul{margin:10px 0 0;padding-left:18px}
+.g-focus li{margin-bottom:8px;font-size:14.5px;color:var(--ink-2)}
+
+/* 数据条：上边线分栏、等宽数字、左对齐（不居中、不做卡片） */
+.g-vp{display:grid;grid-template-columns:repeat(auto-fit,minmax(132px,1fr));gap:0 28px;margin:20px 0 4px}
+.g-vp div{border-top:2px solid var(--accent);padding:12px 0 0;background:none}
+.g-vp .v{font-size:22px;font-weight:700;line-height:1.15;color:var(--accent);
+         font-family:ui-monospace,"SFMono-Regular",Consolas,monospace;letter-spacing:-.02em}
+.g-vp .l{font-size:12.5px;color:var(--ink-2);margin-top:5px}
+
+/* 条目区：左标题 / 右说明的非对称双栏，条目间只用一条上边线分隔 */
+.g-grid{display:block;margin:16px 0 0}
+.g-card{display:grid;grid-template-columns:minmax(120px,21%) 1fr;gap:0 24px;
+        border-top:1px solid var(--border);padding:15px 0 16px;background:none;border-radius:0}
+.g-card h4{margin:0;font-size:14.5px;font-weight:700;color:var(--deep);line-height:1.6}
+.g-card p{margin:0;font-size:13.5px;line-height:1.75}
+@media(max-width:720px){
+  .g-card{grid-template-columns:1fr;gap:0}
+  .g-card p{margin-top:6px}
+}
+
+/* 客户名单：横排一行式、上边线分栏，不做 LOGO 卡片阵 */
+.g-cli{display:flex;flex-wrap:wrap;gap:0 26px;margin:16px 0 0}
+.g-cli span{border-top:2px solid var(--border);padding:10px 0 0;min-width:88px;
+           font-size:14.5px;font-weight:600;color:var(--deep)}
+
+/* 常见问题：列表式，只留下边线；展开态内容左缩进 */
+.g-body details{border:0;border-bottom:1px solid var(--border);background:none;margin:0}
+.g-body details:first-of-type{border-top:1px solid var(--border)}
+.g-body summary{cursor:pointer;padding:15px 2px;font-weight:600;color:var(--ink);font-size:15px;
+                list-style:none;display:flex;gap:10px;align-items:baseline;
+                transition:color .15s ease}
+.g-body summary::-webkit-details-marker{display:none}
+.g-body summary::before{content:"+";color:var(--accent);font-weight:700;font-size:16px;
+                        line-height:1;transition:transform .18s ease}
+.g-body details[open] summary::before{content:"\2212"}
+.g-body summary:hover{color:var(--accent)}
+.g-body details .ans{padding:0 2px 16px 26px;color:var(--ink-2);font-size:14.5px}
+.g-body details .ans p{margin:0 0 9px}
+.g-body details .ans p:last-child{margin-bottom:0}
+
+/* 结尾动作区：深场实色，8px 圆角，不用大圆角胶囊 */
+.g-cta{background:var(--deep);border-radius:8px;padding:clamp(22px,3vw,30px) clamp(22px,3vw,32px);
+       margin:clamp(28px,4vw,42px) 0 0;display:flex;flex-wrap:wrap;gap:16px 24px;
+       align-items:center;justify-content:space-between}
+.g-cta h3{margin:0 0 5px;color:#fff;font-size:17px;font-weight:700}
+.g-cta p{margin:0;color:#C6D8F2;font-size:13.5px;max-width:44em}
+.g-cta a.btn{background:var(--accent-2);color:#fff;padding:11px 22px;border-radius:6px;
+             font-weight:600;font-size:14px;transition:transform .12s ease,background-color .15s ease}
+.g-cta a.btn:hover{background:#0295d4}
+.g-cta a.btn:active{transform:translateY(1px)}      /* 触感反馈，不做外发光 */
+
+.g-rel{margin:24px 0 0;padding-top:16px;border-top:1px solid var(--border);
+       font-size:13.5px;color:var(--ink-2)}
+
+@media(prefers-reduced-motion:reduce){
+  .g-body *{transition:none !important;animation:none !important}
+}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "車載ホールラッチのメーカー選び？5社比較と Semiment の48Vソリューション",
+      "datePublished": "2026-10-07",
+      "dateModified": "2026-10-07",
+      "author": { "@type": "Organization", "name": "蘇州柏達電子有限公司" },
+      "publisher": { "@type": "Organization", "name": "蘇州柏達電子有限公司", "url": "https://www.pcb-less.com/" },
+      "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pcb-less.com/guide-hall-latch-brands.html" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://www.pcb-less.com/index.html" },
+        { "@type": "ListItem", "position": 2, "name": "アプリケーション", "item": "https://www.pcb-less.com/cases.html" },
+        { "@type": "ListItem", "position": 3, "name": "車載ホールラッチのメーカー選び", "item": "https://www.pcb-less.com/guide-hall-latch-brands.html" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "車載ホールラッチICは主にどのメーカーが供給していますか？",
+          "acceptedAnswer": { "@type": "Answer", "text": "選択可能なサプライヤには Allegro MicroSystems（米国）、Melexis（ベルギー）、TDK-Micronas（ドイツ/日本）、Infineon（ドイツ）、Semiment（中国）があります。上位4社のラッチ製品はすべて AEC-Q100 認証を取得しています。Semiment のホール製品は現世代で耐圧60Vへ引き上げられ、48V系に使える SC2919 も用意しています。" }
+        },
+        {
+          "@type": "Question",
+          "name": "48V系にはどのホールラッチを選ぶべきですか？",
+          "acceptedAnswer": { "@type": "Answer", "text": "48Vシステムの難所は定常動作電圧ではなく、ロードダンプなどの過渡サージです。したがって選定では公称動作電圧だけでなく耐圧マージンを見る必要があります。Semiment は48V系向けに SC2919 を主に推奨します。耐圧250Vで車載認証を備え、48V系に直接使用できます。また SC2943、SC2948、SC245X の3品（耐圧60V）を低電圧プラットフォーム向けに用意しています。詳細は最新のメーカーデータシートをご確認ください。" }
+        },
+        {
+          "@type": "Question",
+          "name": "国産ホールICはなぜ故障しやすいのか？耐圧とどのような関係がありますか？",
+          "acceptedAnswer": { "@type": "Answer", "text": "ホールICの故障モードの中で、電気的過ストレス（EOS、Electrical Over Stress）は発生頻度の高い原因の一つです。新エネルギー車では、電装系の電源変動、ポンプ・モーター負荷の切替、ハーネスの寄生インダクタンスによる過渡サージにより、ホール入力に定格を大きく超えるスパイクが印加されます。車両電源は公称12Vであり、業界では一般に3倍の安全率（約36Vの耐圧）で選定します。これは通常の過渡に対する一般的な考え方です。Semimentの現世代ホール製品は耐圧60Vを実現しており、12V系に対して5倍のマージンに相当し、ロードダンプ・逆接続・誘導性負荷の切替時に十分な余裕を確保します。EOSによる損傷は通常 恒久的であり、故障解析により過ストレス箇所を特定できます。" }
+        },
+        {
+          "@type": "Question",
+          "name": "Semiment のホール製品は何が違うのですか？",
+          "acceptedAnswer": { "@type": "Answer", "text": "4つの違いがあります。第1は製品網羅性で、ホールセンサに加えて電源管理ICとモータドライバICを含むこと。第2は耐圧マージンで、現世代のホールは耐圧60Vへ引き上げられ、12V系の5倍のマージンに相当し、さらに SC2919 は250V耐圧で48V系に直接使用できます。第3はサプライチェーンで、Semiment は自社投資の車載用封止・試験ライン（浙江賽揚、浙江省嘉善、2022年稼働）を有し、ウェーハ試験・封止・完成品試験までをカバーします。第4は置換の容易さで、複数のホール製品が海外主要品番とピン互換であり、機械構造を変更せずに置き換えられます。" }
+        },
+        {
+          "@type": "Question",
+          "name": "2線式ホールラッチと3線式の違いは何か、いつ2線式を使うべきですか？",
+          "acceptedAnswer": { "@type": "Answer", "text": "2線式は電源と信号を同じ1対の線に多重化し、電流値でスイッチ状態を表します。通常わずか2本の線で動作します。3線式は VDD/GND/OUT が独立し、オープンドレインのデジタルレベルを出力します。アクチュエータ内部のスペースが限られる場合、PCBと余分なハーネスを省きたい場合、センサを ECU の電流検出ポートへ直接接続する必要がある場合は、2線式を優先すべきです。Melexis MLX92242 と TDK-Micronas HAL 15xy はいずれも2線式バージョンを明確に用意しています。" }
+        },
+        {
+          "@type": "Question",
+          "name": "AEC-Q100 Grade 0 と Grade 1 はどう選ぶべきですか？",
+          "acceptedAnswer": { "@type": "Answer", "text": "AEC-Q100 Grade 0 は環境温度上限150°C、Grade 1 は125°Cに対応します。エンジンルーム、トランスミッション、ブレーキシステム付近に搭載されるセンサは、少なくとも Grade 0 で選定すべきです。室内のウィンドウレギュレータ、シート、内装照明などの用途では Grade 1 で通常十分です。Semiment の SC245X、SC2943、SC2948 はいずれも AEC-Q100 Grade 0 で設計され、公称動作環境温度は -40~150°C です。" }
+        },
+        {
+          "@type": "Question",
+          "name": "PCB-Less ホールソリューションとは何ですか？",
+          "acceptedAnswer": { "@type": "Answer", "text": "PCB-Less とは、ホールICのリードをリードフレーム、端子、ハーネスへ直接はんだ付けまたは溶接し、アクチュエータ内部の PCB 全体を無くす手法です。実現の前提は、デバイス自体が必要なコンデンサと保護を集積し、外付け受動部品に依存しないことです。TDK-Micronas の HAC 37xy は最大330nFをオンチップで集積しており、メーカーはこのパッケージがプリント基板を必要としない旨を記載しています。" }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round">
+          <path d="M4 16V8l8-4 8 4v8l-8 4z"/><path d="M9 13.5l2 2 4-4.5"/>
+        </svg>
+      </span>
+      <span class="brand-text">
+        <span class="cn">柏達電子</span>
+        <span class="en"><span class="dm-a">PCB</span><span class="dm-s">-</span><span class="dm-b">LESS</span><span class="dm-s">.COM</span></span>
+      </span>
+    </a>
+        <nav class="main-nav">
+      <a class="nav-link" href="index.html">ホーム</a>
+      <div class="nav-item has-mega">
+        <button type="button" class="nav-btn" aria-expanded="false" aria-haspopup="true" aria-controls="mega-products">
+          製品 <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="mega" id="mega-products">
+          <div class="mega-inner">
+            <div class="mega-rail" aria-label="製品ライン">
+              <button type="button" class="mega-rail-item" data-panel="p-sensors">センサ</button>
+              <button type="button" class="mega-rail-item" data-panel="p-power">電源管理</button>
+              <button type="button" class="mega-rail-item" data-panel="p-motor">モータドライバ</button>
+            </div>
+            <div class="mega-body">
+              <div class="mega-panel" data-panel="p-sensors">
+                <a class="mega-title" href="sensors.html">センサ <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                <div class="mega-grid">
+                <div class="mega-col">
+                  <a class="mega-cat" href="sensor-hall-switch.html">ホールスイッチ <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="sensor-latch.html">ラッチ型ホール IC</a>
+                    <a class="mega-sub" href="sensor-dual.html">2 チャンネルホール出力</a>
+                    <a class="mega-sub" href="sensor-omnipolar.html">全極／単極ホール IC</a>
+                  </div>
+                </div>
+                <div class="mega-col">
+                  <a class="mega-cat" href="sensor-position.html">位置センサ <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="sensor-linear.html">リニアホール（1D）</a>
+                    <a class="mega-sub" href="sensor-linear-prog.html">プログラマブルリニアホール</a>
+                    <a class="mega-sub" href="sensor-angle.html">角度センサ（単軸 / 多軸）</a>
+                  </div>
+                </div>
+                <div class="mega-col">
+                  <a class="mega-cat" href="sensor-speed.html">速度センサ <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="sensor-wheel-speed.html">車輪速センサ</a>
+                    <a class="mega-sub" href="sensor-transmission.html">トランスミッションセンサ</a>
+                    <a class="mega-sub" href="sensor-camshaft.html">カムシャフトセンサ</a>
+                    <a class="mega-sub" href="sensor-crankshaft.html">クランクシャフトセンサ</a>
+                    <a class="mega-sub" href="sensor-gear.html">ギヤセンサ</a>
+                  </div>
+                </div>
+                <div class="mega-col">
+                  <a class="mega-cat" href="sensor-encoder.html">エンコーダ <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="sensor-encoder-mag.html">磁気式モータエンコーダ</a>
+                    <a class="mega-sub" href="sensor-encoder-ind.html">誘導式モータエンコーダ</a>
+                  </div>
+                </div>
+                <div class="mega-col">
+                  <a class="mega-cat" href="sensor-current-protection.html">電流・保護 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="sensor-current.html">モノリシック電流センサ</a>
+                    <a class="mega-sub" href="sensor-leakage.html">漏電保護</a>
+                  </div>
+                </div>
+                </div>
+                <div class="mega-foot"><a href="sensors.html">センサの全型番を見る <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a></div>
+              </div>
+              <div class="mega-panel" data-panel="p-power">
+                <a class="mega-title" href="power.html">電源管理 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                <div class="mega-grid">
+                <div class="mega-col">
+                  <a class="mega-cat" href="power.html">DC-DC コンバータ <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="power.html">スイッチングコンバータ</a>
+                    <a class="mega-sub" href="power.html">昇降圧コントローラ</a>
+                    <a class="mega-sub" href="power.html">昇圧 / 降圧コントローラ</a>
+                  </div>
+                </div>
+                <div class="mega-col">
+                  <a class="mega-cat" href="power.html">レギュレータと多出力 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="power.html">リニアレギュレータ（LDO）</a>
+                    <a class="mega-sub" href="power.html">多出力 DC-DC</a>
+                  </div>
+                </div>
+                </div>
+                <div class="mega-foot"><a href="power.html">電源管理の全型番を見る <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a></div>
+              </div>
+              <div class="mega-panel" data-panel="p-motor">
+                <a class="mega-title" href="motor.html">モータドライバ <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                <div class="mega-grid">
+                <div class="mega-col">
+                  <a class="mega-cat" href="motor.html">ブラシレス DC ドライバ <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="motor.html">三相 BLDC ドライバ</a>
+                    <a class="mega-sub" href="motor.html">単相 BLDC ドライバ</a>
+                    <a class="mega-sub" href="motor.html">MOSFET 内蔵 ASIC</a>
+                  </div>
+                </div>
+                <div class="mega-col">
+                  <a class="mega-cat" href="motor.html">ブラシ付き DC ドライバ <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="motor.html">制御内蔵 DC ドライバ</a>
+                    <a class="mega-sub" href="motor.html">低電圧ブラシ付きドライバ</a>
+                  </div>
+                </div>
+                <div class="mega-col">
+                  <a class="mega-cat" href="motor.html">ステッピングモータドライバ <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="motor.html">ステッピングモータドライバ</a>
+                  </div>
+                </div>
+                <div class="mega-col">
+                  <a class="mega-cat" href="motor.html">ゲートドライバ・プリドライバ <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="motor.html">三相 NN ゲートドライバ</a>
+                    <a class="mega-sub" href="motor.html">PN ゲートドライバ</a>
+                    <a class="mega-sub" href="motor.html">高耐圧ゲートドライバ</a>
+                  </div>
+                </div>
+                <div class="mega-col">
+                  <a class="mega-cat" href="motor.html">パワー段 MOSFET <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="motor.html">N チャネル MOSFET</a>
+                    <a class="mega-sub" href="motor.html">P+N デュアルチャネル MOSFET</a>
+                    <a class="mega-sub" href="motor.html">デュアル N チャネル MOSFET</a>
+                  </div>
+                </div>
+                <div class="mega-col">
+                  <a class="mega-cat" href="motor.html">車載・専用 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="motor.html">車載グレードデバイス</a>
+                    <a class="mega-sub" href="motor.html">モータ制御 MCU</a>
+                    <a class="mega-sub" href="motor.html">専用機能 IC</a>
+                  </div>
+                </div>
+                </div>
+                <div class="mega-foot"><a href="motor.html">モータドライバの全型番を見る <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nav-item has-mega">
+        <button type="button" class="nav-btn active" aria-expanded="false" aria-haspopup="true" aria-controls="mega-apps">
+          アプリケーション <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="mega" id="mega-apps">
+          <div class="mega-inner">
+            <div class="mega-rail" aria-label="アプリケーション分野">
+              <button type="button" class="mega-rail-item on" data-panel="p-auto">車載</button>
+              <button type="button" class="mega-rail-item" data-panel="p-robot">ロボティクス</button>
+              <button type="button" class="mega-rail-item" data-panel="p-industry">産業機器</button>
+              <button type="button" class="mega-rail-item" data-panel="p-consumer">民生エレクトロニクス</button>
+            </div>
+            <div class="mega-body">
+              <div class="mega-panel on" data-panel="p-auto">
+                <a class="mega-title" href="cases.html?sector=auto">車載 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                <div class="mega-grid">
+                <div class="mega-col">
+                  <a class="mega-cat" href="cases.html?sector=auto">ボディと乗降 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="cases.html?sector=auto&sub=%E5%B0%BE%E9%97%A8">パワーバックドア</a>
+                    <a class="mega-sub" href="cases.html?sector=auto&sub=%E9%97%A8%E9%94%81">ドアロック</a>
+                    <a class="mega-sub" href="cases.html?sector=auto&sub=%E6%91%87%E7%AA%97">パワーウィンドウ</a>
+                  </div>
+                </div>
+                <div class="mega-col">
+                  <a class="mega-cat" href="cases.html?sector=auto">キャビンと快適装備 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="cases.html?sector=auto&sub=%E5%BA%A7%E6%A4%85">シート</a>
+                    <a class="mega-sub" href="cases.html?sector=auto&sub=%E5%A4%A9%E7%AA%97">サンルーフ</a>
+                    <a class="mega-sub" href="cases.html?sector=auto&sub=%E5%BA%A7%E8%88%B1%E7%85%A7%E6%98%8E">キャビン照明</a>
+                  </div>
+                </div>
+                <div class="mega-col">
+                  <a class="mega-cat" href="cases.html?sector=auto">熱マネジメント <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="cases.html?sector=auto&sub=%E6%B0%B4%E6%B3%B5">ウォータポンプ</a>
+                  </div>
+                </div>
+                </div>
+                <div class="mega-foot"><a href="cases.html?sector=auto">アプリケーション事例をすべて見る <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a></div>
+              </div>
+              <div class="mega-panel" data-panel="p-robot">
+                <a class="mega-title" href="cases.html?sector=robot">ロボティクス <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                <div class="mega-grid">
+                <div class="mega-col">
+                  <a class="mega-cat" href="cases.html?sector=robot">運動とフィードバック <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="cases.html?sector=robot&sub=%E5%85%B3%E8%8A%82%E7%94%B5%E6%9C%BA">関節モータ</a>
+                    <a class="mega-sub" href="cases.html?sector=robot&sub=%E4%BD%8D%E7%BD%AE%E5%8F%8D%E9%A6%88">位置フィードバック</a>
+                  </div>
+                </div>
+                <div class="mega-col">
+                  <a class="mega-cat" href="cases.html?sector=robot&sub=%E7%94%B5%E6%B5%81%E6%A3%80%E6%B5%8B">電流検出 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                </div>
+                </div>
+                <div class="mega-foot"><a href="cases.html?sector=robot">アプリケーション事例をすべて見る <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a></div>
+              </div>
+              <div class="mega-panel" data-panel="p-industry">
+                <a class="mega-title" href="cases.html?sector=industry">産業機器 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                <div class="mega-grid">
+                <div class="mega-col">
+                  <a class="mega-cat" href="cases.html?sector=industry">モータと運動 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="cases.html?sector=industry&sub=%E9%80%9A%E7%94%A8%E6%8D%A2%E7%9B%B8">汎用転流</a>
+                    <a class="mega-sub" href="cases.html?sector=industry&sub=%E7%94%B5%E5%8A%A8%E5%B7%A5%E5%85%B7%20/%20AGV">電動工具 / AGV</a>
+                  </div>
+                </div>
+                <div class="mega-col">
+                  <a class="mega-cat" href="cases.html?sector=industry">過酷な使用環境 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="cases.html?sector=industry&sub=%E6%81%B6%E5%8A%A3%E7%8E%AF%E5%A2%83">過酷環境</a>
+                  </div>
+                </div>
+                </div>
+                <div class="mega-foot"><a href="cases.html?sector=industry">アプリケーション事例をすべて見る <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a></div>
+              </div>
+              <div class="mega-panel" data-panel="p-consumer">
+                <a class="mega-title" href="cases.html?sector=consumer">民生エレクトロニクス <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                <div class="mega-grid">
+                <div class="mega-col">
+                  <a class="mega-cat" href="cases.html?sector=consumer">家電と電池駆動 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="cases.html?sector=consumer&sub=%E6%99%BA%E8%83%BD%E5%AE%B6%E5%B1%85">スマートホーム</a>
+                  </div>
+                </div>
+                <div class="mega-col">
+                  <a class="mega-cat" href="cases.html?sector=consumer">放熱と照明 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  <div class="mega-subs">
+                    <a class="mega-sub" href="cases.html?sector=consumer&sub=%E6%95%A3%E7%83%AD%E9%A3%8E%E6%89%87">冷却ファン</a>
+                    <a class="mega-sub" href="cases.html?sector=consumer&sub=%E4%B8%AA%E6%8A%A4%E7%85%A7%E6%98%8E">パーソナルケア照明</a>
+                  </div>
+                </div>
+                </div>
+                <div class="mega-foot"><a href="cases.html?sector=consumer">アプリケーション事例をすべて見る <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nav-item has-mega">
+        <button type="button" class="nav-btn" aria-expanded="false" aria-haspopup="true" aria-controls="mega-brands">
+          ブランド <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="mega" id="mega-brands">
+          <div class="mega-inner">
+            <div class="mega-rail" aria-label="代理ブランド">
+              <button type="button" class="mega-rail-item" data-panel="br-all">全ブランド</button>
+              <button type="button" class="mega-rail-item" data-panel="br-semiment">セイジュオ電子</button>
+              <button type="button" class="mega-rail-item" data-panel="br-enpower">インノン科技</button>
+            </div>
+            <div class="mega-body">
+              <div class="mega-panel" data-panel="br-all">
+                <a class="mega-title" href="brands.html">代理ブランド <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                <p class="mb-intro">メーカー別に在庫型番を閲覧：セイジュオ電子、インノン科技 ほか 2 ブランド、全 179 型番。</p>
+                <div class="mega-brands">
+                  <a class="mb-card" href="brand-semiment.html">
+                    <span class="b-logo b-logo-text">Semiment</span>
+                    <span class="mb-name">セイジュオ電子</span>
+                    <span class="mb-meta"><b>137</b>モデル · <b>11</b>シリーズ</span>
+                  </a>
+                  <a class="mb-card" href="brand-enpower.html">
+                    <span class="b-logo b-logo-text">Enpower Micro</span>
+                    <span class="mb-name">インノン科技</span>
+                    <span class="mb-meta"><b>42</b>モデル · <b>5</b>シリーズ</span>
+                  </a>
+                </div>
+                <div class="mega-foot"><a href="brands.html">代理ブランドをすべて見る <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a></div>
+              </div>
+              <div class="mega-panel" data-panel="br-semiment">
+                <a class="mega-title" href="brand-semiment.html">セイジュオ電子 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                <div class="mega-grid">
+                  <div class="mega-col">
+                    <a class="mega-cat" href="sensors.html">スイッチホール <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  </div>
+                  <div class="mega-col">
+                    <a class="mega-cat" href="sensors.html">速度センサ <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  </div>
+                  <div class="mega-col">
+                    <a class="mega-cat" href="sensors.html">リニアホール <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  </div>
+                  <div class="mega-col">
+                    <a class="mega-cat" href="sensors.html">モーターエンコーダ <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  </div>
+                  <div class="mega-col">
+                    <a class="mega-cat" href="sensors.html">角度センサ <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  </div>
+                  <div class="mega-col">
+                    <a class="mega-cat" href="sensors.html">電流・保護 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  </div>
+                  <div class="mega-col">
+                    <a class="mega-cat" href="power.html?cat=%E5%BC%80%E5%85%B3%E8%BD%AC%E6%8D%A2%E5%99%A8DC/DC">スイッチングコンバータ DC/DC <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                    <div class="mega-subs">
+                      <a class="mega-sub" href="power.html?q=VE2220">VE2220</a>
+                      <a class="mega-sub" href="power.html?q=VE2226">VE2226</a>
+                      <a class="mega-sub" href="power.html?q=VE2266">VE2266</a>
+                    </div>
+                  </div>
+                  <div class="mega-col">
+                    <a class="mega-cat" href="power.html?cat=%E5%8D%87%E9%99%8D%E5%8E%8B%E6%8E%A7%E5%88%B6%E5%99%A8DC/DC">昇降圧コントローラ DC/DC <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                    <div class="mega-subs">
+                      <a class="mega-sub" href="power.html?q=VE8620">VE8620</a>
+                      <a class="mega-sub" href="power.html?q=VE8622">VE8622</a>
+                      <a class="mega-sub" href="power.html?q=VE8624">VE8624</a>
+                    </div>
+                  </div>
+                  <div class="mega-col">
+                    <a class="mega-cat" href="power.html?cat=%E5%8D%87%E5%8E%8B/%E9%99%8D%E5%8E%8B%E6%8E%A7%E5%88%B6%E5%99%A8DC/DC">昇圧/降圧コントローラ DC/DC <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                    <div class="mega-subs">
+                      <a class="mega-sub" href="power.html?q=VE8600Q">VE8600Q</a>
+                      <a class="mega-sub" href="power.html?q=VE8602Q">VE8602Q</a>
+                    </div>
+                  </div>
+                  <div class="mega-col">
+                    <a class="mega-cat" href="power.html?cat=%E5%A4%9A%E8%B7%AF%E8%BE%93%E5%87%BADC/DC">多出力 DC/DC <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                    <div class="mega-subs">
+                      <a class="mega-sub" href="power.html?q=VE6200Q">VE6200Q</a>
+                    </div>
+                  </div>
+                  <div class="mega-col">
+                    <a class="mega-cat" href="power.html?cat=%E7%BA%BF%E6%80%A7%E7%A8%B3%E5%8E%8B%E5%99%A8LDO">リニアレギュレータ LDO <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                    <div class="mega-subs">
+                      <a class="mega-sub" href="power.html?q=VE1430Q">VE1430Q</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="mega-foot"><a href="brand-semiment.html">セイジュオ電子 の全 137 型番を見る <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a></div>
+              </div>
+              <div class="mega-panel" data-panel="br-enpower">
+                <a class="mega-title" href="brand-enpower.html">インノン科技 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                <div class="mega-grid">
+                  <div class="mega-col">
+                    <a class="mega-cat" href="motor.html">パワーデバイス・MOSFET <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  </div>
+                  <div class="mega-col">
+                    <a class="mega-cat" href="motor.html">スマート ASIC ドライバ <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  </div>
+                  <div class="mega-col">
+                    <a class="mega-cat" href="motor.html">ドライバ / プリドライバ <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  </div>
+                  <div class="mega-col">
+                    <a class="mega-cat" href="motor.html">車載グレード <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  </div>
+                  <div class="mega-col">
+                    <a class="mega-cat" href="motor.html">モータ制御 MCU <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+                  </div>
+                </div>
+                <div class="mega-foot"><a href="brand-enpower.html">インノン科技 の全 42 型番を見る <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="nav-link" href="contact.html">お問い合わせ</a>
+    </nav>
+    <div class="header-actions">
+      <form class="header-search" onsubmit="return siteSearch(event)">
+        <input type="search" class="hs-input" placeholder="型番 / 特長で検索" aria-label="サイト内検索">
+        <button type="submit" class="hs-btn" aria-label="検索">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        </button>
+      </form>
+      <button class="btn-login cart-btn" onclick="showToast('選定リストはこの端末に保存されました。続けて追加できます。お見積りはご要望と併せて送信してください。')">
+        選定リスト
+        <span class="cart-badge">0</span>
+      </button>
+      <button class="btn-login" onclick="showToast('選定・お見積りにログインは不要です。一括お見積りはご要望をそのまま送信ください。当日中にご返信します。')">ログイン / 新規登録</button>
+<!-- i18n:switch -->
+      <div class="lang-switch">
+        <button type="button" class="lang-btn" aria-haspopup="true" aria-label="Language">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.4 2.7 2.4 15.3 0 18M12 3c-2.4 2.7-2.4 15.3 0 18"/></svg>
+          <span class="lang-cur">日本語</span>
+          <svg class="lang-caret" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="lang-menu">
+          <a class="lang-item" href="../guide-hall-latch-brands.html" hreflang="zh-CN" lang="zh-CN">中文</a>
+          <a class="lang-item" href="../en/guide-hall-latch-brands.html" hreflang="en" lang="en">EN</a>
+          <a class="lang-item on" href="../ja/guide-hall-latch-brands.html" hreflang="ja" lang="ja">日本語</a>
+          <a class="lang-item" href="../de/guide-hall-latch-brands.html" hreflang="de" lang="de">DE</a>
+        </div>
+      </div>
+<!-- /i18n:switch -->
+      <button class="menu-toggle" aria-label="メニュー">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#222222" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <nav class="breadcrumb" aria-label="パンくずリスト">
+    <a href="index.html">ホーム</a><span class="sep">/</span>
+    <a href="cases.html">アプリケーション</a><span class="sep">/</span>
+    <span>車載ホールラッチのメーカー選び</span>
+  </nav>
+</div>
+
+<main>
+<div class="container">
+<div class="g-body">
+
+  <h1>車載ホールラッチのメーカー選び？5社比較と Semiment の48Vソリューション</h1>
+  <p class="g-meta">最終更新：2026-10-07 ｜ パラメータは各メーカーの最新データシートに準拠</p>
+
+  <div class="g-answer">
+    <p class="g-tag">選定の結論</p>
+    <p>車載ホールラッチICのサプライヤは5社あります：Allegro MicroSystems（米国）、Melexis（ベルギー）、
+      TDK-Micronas（ドイツ/日本）、Infineon（ドイツ）、Semiment（中国）です。
+      低ジッタを重視する場合は Allegro APS12203 を優先してください。2線式電流インタフェースには、Melexis MLX92242 と TDK-Micronas HAL 15xy がいずれも2線式バージョンを用意しています。
+      機能安全ドキュメントが必要な場合、TDK-Micronas HAL 15xy は全シリーズが ISO 26262 に基づき SEooC ASIL B-ready と位置付けられています。
+      高温側の余裕では Infineon TLE4961（-40~170°C、3.0~32V）が有力です。
+      <b>プロジェクトが48Vプラットフォームの場合</b>、難所は定常電圧ではなく過渡サージであり、Semiment は次を推奨します: <b>SC2919（耐圧250V、車載認証取得、48V系に直接使用可能）</b>，
+      また、SC2943、SC2948、SC245X の3品（耐圧60V）が低電圧プラットフォームをカバーします。
+      <b>国産ホールの故障が懸念される場合は</b>、まずメカニズムを確認してください。ホールの故障において電気的過ストレス（EOS）は発生頻度の高い原因の一つであり、
+      12V系では業界一般に3倍の安全率（約36V）で選定します。Semiment の現世代60V品は5倍のマージンに相当します。
+      量産選定では各社の最新データシートに従ってください。</p>
+  </div>
+
+  <h2>5社の横比較</h2>
+  <p class="g-lead">以下の表は同一の選定軸（電源範囲、動作温度範囲、代表型番、磁気しきい値、機能安全、パッケージ）で整理しています。
+    空欄は公開情報が得られていないことを意味し、すべて「—」と記載し、推測は行いません。</p>
+
+  <div class="g-scroll">
+  <table>
+    <thead>
+      <tr>
+        <th class="nm">メーカー</th>
+        <th>代表ラッチ型番</th>
+        <th>電源範囲</th>
+        <th>動作温度</th>
+        <th>磁気しきい値の例</th>
+        <th>機能安全</th>
+        <th>パッケージ</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="nm"><b>Allegro<br>MicroSystems</b><br><span class="g-sub">米国 · Nasdaq: ALGM</span></td>
+        <td><b>APS12203</b>（低ジッタ第3世代）<br>APS12202 / APS12212<br>A1220–A1223（旧世代）<br>A1210–A1214</td>
+        <td>2.7~26 V（APS12203）<br>24 V（APS12202/212）</td>
+        <td>-40~150°C（車載グレード）</td>
+        <td>APS12203 の選択可能な Bop<br>2 / 3 / 5 / 9.5 / 15 mT</td>
+        <td>—</td>
+        <td>LH（SOT-23W）<br>UA（SIP-3）</td>
+      </tr>
+      <tr>
+        <td class="nm"><b>Melexis</b><br><span class="g-sub">ベルギー</span></td>
+        <td><b>MLX92292</b>（2チャネルラッチ）<br><b>MLX92242</b>（2線式プログラマブルラッチ）</td>
+        <td>3.3~18 V（MLX92292）<br>2.7~24 V（MLX92242）</td>
+        <td>-40~150 °C</td>
+        <td>MLX92292：<br>Trip 11.4 mT /<br>Release 7.2 mT @25°C</td>
+        <td>MLX92242 は次に基づく<br>ISO 26262 に基づく評価</td>
+        <td>8-SOIC<br>TO-92</td>
+      </tr>
+      <tr>
+        <td class="nm"><b>TDK-Micronas</b><br><span class="g-sub">ドイツ/日本・TDKグループ</span></td>
+        <td><b>HAL 15xy</b>（ホールスイッチ/ラッチ）<br>HAL 37xy / HAR 37xy / HAC 37xy</td>
+        <td>2.7~24 V<br>40V ロードダンプ耐性</td>
+        <td>環境 -40~150°C<br>接合温度 最大170°C</td>
+        <td>複数の温度補正オプション<br>スイッチ点</td>
+        <td><b>ISO 26262 SEooC<br>ASIL B-ready</b>（HAL 15xy 全シリーズ）</td>
+        <td>SOT23<br>TO-92UA / TO-92UF</td>
+      </tr>
+      <tr>
+        <td class="nm"><b>Infineon</b><br><span class="g-sub">ドイツ</span></td>
+        <td><b>TLE4961</b>-1L / 1M / 2M / 3M<br>TLE4946-2K / 2L<br>TLE4966（デュアルホール）<br>TLE4963-1M（5 V）</td>
+        <td>3.0~32 V（TLE4961）<br>2.7~24 V（TLE4966-2K/3K）<br>3~5.5 V（TLE4963-1M）</td>
+        <td><b>-40~170 °C</b>（TLE4961 / TLE4946）<br>-40~150 °C（TLE4966）</td>
+        <td>TLE4961-1L：Bop +2 / Brp -2 mT<br>TLE4961-2M：10 / 5 mT<br>TLE4961-3M：15 / 7.5 mT<br>TLE4961-5M：30 / 15 mT</td>
+        <td>—</td>
+        <td>PG-SOT23-3<br>PG-SSO-3 / SC59<br>TSOP-6</td>
+      </tr>
+      <tr class="hl">
+        <td class="nm"><b>Semiment<br>Semiment</b><br><span class="g-sub">中国・上海</span></td>
+        <td><b>SC2919</b>（48Vプラットフォーム向け主推）<br>SC2943 / SC2948<br><b>SC245X</b>（プログラマブル）<br>SC2589X（電流モード）</td>
+        <td>—</td>
+        <td>-40~150°C（車載グレード）</td>
+        <td>SC245X プログラマブル<br>スイッチ範囲 ±1.5~26 mT<br>ラッチ範囲 ±0.4~26 mT</td>
+        <td>SC245X 準拠<br>ISO 26262 ASIL-B<br><span class="g-sub">SC2943 / SC2948：機能安全に対応</span></td>
+        <td>SOT23-3L<br>TO-92</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="g-note">
+    <b>データの扱い:</b>本ページは公開情報を整理したもので、選定の方向性判断に用います。<b>パラメータの保証ではありません</b>。量産では各社の最新データシートに従ってください。
+    「—」は公開情報が得られていないことを示し、推測で補完しません。<br>
+    <b>2点の補足:</b>① Allegro は2020年10月にナスダックへ単独上場し（ALGM）、2024年4月時点で Sanken Electric が約51%を保有しています。
+    <b>TDK グループ傘下ではありません</b>。TDK が保有しているのは Micronas（2016年買収）です。
+    ② Semiment は本ページの重点推奨対象です —— 蘇州柏達電子は Semiment の公式正規代理店です。詳細は後述の特集をご覧ください。
+  </div>
+
+  <h2>国産ホールはなぜ故障するのか？まず EOS の連鎖を見る</h2>
+
+  <div class="g-answer">
+    <p class="g-tag">故障メカニズム</p>
+    <p>国産ホールが故障するかどうかは、選定段階でよくある懸念です。この懸念は真剣に受け止める価値がありますが、まず原因を切り分ける必要があります。
+      ホールICの故障モードの中で、<b>電気的過ストレス（EOS、Electrical Over Stress）は発生頻度の高い原因の一つです</b>：
+      新エネルギー車における電装系の電源変動、ポンプ・モーター負荷の切替、ハーネスの寄生インダクタンスによる過渡サージは、
+      いずれもホール入力に定格を大きく超えるスパイクを印加します。
+      車両電源システムの公称電圧 <b>12 V</b>。業界では一般に <b>3倍の安全率</b>選定 —— 約 <b>36 V</b> の耐圧マージン。
+      これは通常の過渡に対する一般的な考え方です。<b>Semiment の現世代ホールは耐圧60Vを実現し、12V系に対して5倍のマージンに相当します</b>，
+      ロードダンプ、逆接続、誘導性負荷の切替時に、より十分な安全余裕を確保します。
+      これは Tier1 が OEM の車両レベル電気試験や信頼性レビューで最も頻繁に指摘される点です。</p>
+  </div>
+
+  <div class="g-scroll">
+  <table>
+    <thead>
+      <tr><th class="nm">車両電源システム</th><th>公称電圧</th><th>3倍の安全率（業界一般）</th><th>Semiment 現世代品の耐圧</th><th>実際のマージン</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="nm">一般的な低電圧システム</td><td>12 V</td><td>約36V</td>
+        <td><b>60 V</b>（SC2943 / SC2948 / SC245X）</td><td>約5倍</td>
+      </tr>
+      <tr class="hl">
+        <td class="nm">48Vプラットフォーム</td><td>48 V</td><td>—</td>
+        <td><b>250 V</b>（SC2919）</td><td>約5倍</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="g-note">
+    <b>3点の補足:</b>① 上記の表は選定マージンの比較参考にすぎません。車両過渡の波形と振幅は、
+    <b>ISO 7637-2 / ISO 16750-2</b> などの車両電気試験規格に従って実測確認してください。
+    ② EOS による損傷は通常 恒久的です。市場で故障が発生した場合は故障品を保管し、故障解析（FA）の手順で過ストレス箇所を特定してください。
+    ロット品質の問題と直接決めつけるべきではありません。
+    ③ 耐圧マージンは信頼性の一要素にすぎません。併せて確認が必要です:<b>逆電圧保護</b>、<b>ESD レベル</b>と<b>全温度域での磁気しきい値の安定性</b>。
+  </div>
+
+  <h2>注目: Semiment</h2>
+
+  <div class="g-focus">
+    <p class="g-lead2">
+      Semiment Technology（上海）股份有限公司は2011年に設立され、中国で早期から車載電子向けに取り組むIC設計会社の一つです。
+      単一製品ラインのメーカーと異なり、Semiment は併せて提供します:<b>センサIC、電源管理IC、モータドライバIC</b>3つの大きなカテゴリ。
+      顧客は同一サプライヤで、フロントエンドの検出と駆動のソリューション一式をまとめられます。</p>
+
+    <h3>48Vと高耐圧：なぜ重要なのか</h3>
+    <p>48Vプラットフォームの真の難所は定常動作電圧ではなく、<b>ロードダンプなどの過渡サージ</b>，
+      したがって選定では公称電圧だけでなく耐圧マージンを見るべきです。Semiment は高耐圧として2つの製品群を用意しています:</p>
+    <div class="g-scroll">
+      <table>
+        <thead>
+          <tr><th class="nm">型番</th><th>耐圧等級</th><th>車載</th><th>対象プラットフォーム</th><th>説明</th></tr>
+        </thead>
+        <tbody>
+          <tr class="hl">
+            <td class="nm"><b>SC2919</b></td>
+            <td><b>250 V</b></td>
+            <td>車載認証を取得</td>
+            <td>48V系（推奨）</td>
+            <td>耐圧マージンが十分で、48V系に直接使用できます</td>
+          </tr>
+          <tr><td class="nm"><b>SC2943</b></td><td>60 V</td><td>AEC-Q100 Grade 0</td><td>低電圧プラットフォーム</td><td>高耐圧ホールラッチスイッチ、機能安全に対応</td></tr>
+          <tr><td class="nm"><b>SC2948</b></td><td>60 V</td><td>AEC-Q100 Grade 0</td><td>低電圧プラットフォーム</td><td>高耐圧ホールラッチスイッチ、機能安全に対応</td></tr>
+          <tr><td class="nm"><b>SC245X</b></td><td>60V 高耐圧設計</td><td>AEC-Q100 Grade 0</td><td>3.0~48V 広入力</td><td>プログラマブル。動作電流は最低20µAに対応。ISO 26262 ASIL-B</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>供給と生産能力</h3>
+    <div class="g-vp">
+      <div><div class="v">7&nbsp;億+</div><div class="l">2025年の総出荷数（個）</div></div>
+      <div><div class="v">380+</div><div class="l">製品型番数</div></div>
+      <div><div class="v">60%+</div><div class="l">研究開発エンジニアの比率</div></div>
+      <div><div class="v">2022</div><div class="l">車載用封止・試験ラインの稼働年</div></div>
+    </div>
+    <ul>
+      <li><b>自社投資の車載用封止・試験ライン</b>（浙江賽揚、浙江省嘉善中新産業園、2022年稼働）、
+        車載グレードのウェーハ試験、封止、完成品試験までの全工程をカバーし、特殊パッケージのカスタマイズ要求にも対応します ——
+        封止・試験工程は自社で管理しており、第三者 OSAT のスケジュールに依存しません。</li>
+      <li><b>研究開発エンジニア比率 60%+</b>。アプリケーション要求に応じたカスタム開発を推進できる人員構成です。</li>
+    </ul>
+  </div>
+
+  <h2>輸入型番から Semiment への置換対照</h2>
+  <p class="g-lead">以下の表は Semiment の公開資料をまとめたもので、置換の方向性の参考として掲載します。
+    <b>置換は必ず実測で検証してください</b> —— 特に確認が必要です: <b>Brp の極性</b>、<b>起動遅延</b> と
+    <b>磁気動作点が目標位置に収まっているか</b> この3点。</p>
+  <div class="g-scroll">
+  <table>
+    <thead>
+      <tr><th class="nm">用途</th><th>Semiment 型番</th><th>置換可能な海外主要型番</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="nm">高耐圧ホールラッチ</td><td><b>SC2943</b></td><td>Allegro APS12200 / A120 / A1211、Melexis MLX9221X</td></tr>
+      <tr><td class="nm">電流モード耐ノイズホール</td><td><b>SC2589X</b></td><td>Allegro A1128 / A1217（A1696 相当）</td></tr>
+      <tr><td class="nm">リニア / 電流検出ホール</td><td><b>SC4643</b></td><td>Allegro A1363 / A1367、Melexis MLX91209 / 91217 / 91219、MagnTek MT9511 / 9211</td></tr>
+      <tr><td class="nm">角度ホール</td><td><b>SC69431</b></td><td>Melexis MLX9036X / 9042X / 9037X（HAL37XY、HAL3727、TLE49XX などに対応）</td></tr>
+      <tr><td class="nm">2チャネルホール</td><td><b>SC4251</b></td><td>Allegro A33230、Melexis MLX90340 / MLX90371、TDK-Micronas HAL 302X</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2>柏達が提供できること</h2>
+  <div class="g-answer">
+    <p class="g-tag">サービス概要</p>
+    <p>蘇州柏達電子有限会社情報は<b>Semiment の公式正規代理店</b>。長年にわたり車載電子のサプライチェーンに携わり、
+      自動車シート、内装、ドアシステム分野の Tier1 および部品メーカーに対応しています。正規代理店チャネルにより提供します:<b>メーカー純正品の直接供給</b>；
+      対応<b>小ロット・多品種の BOM 取りまとめ</b>。1型番ごとの発注による在庫負担を軽減します。
+      選定段階から磁気回路、動作点、温度範囲の確認を共同で行い、量産段階では品質異常の処理とクローズを支援します。
+      <b>IATF 16949 システム証明書を提供可能</b>。</p>
+  </div>
+  <div class="g-grid">
+    <div class="g-card">
+      <h4>調達と品質</h4>
+      <p>Semiment 公式の正規代理店チャネル、純正品の直接供給、トレーサブルな調達元。IATF 16949 システム証明書を提供可能。
+        デバイスレベルの AEC-Q100 認証情報は、メーカーのデータシートに準じます。</p>
+    </div>
+    <div class="g-card">
+      <h4>小ロット・多品種</h4>
+      <p>端数の BOM まとめや複数型番の同時発注に対応します。試作、パイロット生産、ロングテール品の補充に適し、単一型番のために在庫を抱える必要はありません。</p>
+    </div>
+    <div class="g-card">
+      <h4>選定と量産のサポート</h4>
+      <p>選定段階では磁気回路、Bop/Brp 動作点、全温度域での挙動の確認を支援します。量産段階では品質異常の処理とクローズまでを支援します。</p>
+    </div>
+    <div class="g-card">
+      <h4>コストと対応力</h4>
+      <p>エンド顧客に向けたローカル窓口として、連絡経路が短く、サンプルと見積りへの対応が迅速です。具体的な価格と納期は個別の見積りに準じます。</p>
+    </div>
+  </div>
+
+  <h2>主な顧客</h2>
+  <p class="g-lead">以下は、柏達が自動車シート、内装、ドアシステム分野で対応してきた顧客です。公開情報に基づく一部の列挙であり、順不同です。</p>
+  <div class="g-cli">
+    <span>寧波精誠</span>
+    <span>一東航空</span>
+    <span>上海博邦</span>
+    <span>延鋒</span>
+    <span>勝華波</span>
+  </div>
+
+  <h2>用途別の選び方</h2>
+  <div class="g-grid">
+    <div class="g-card">
+      <h4>48Vプラットフォームの熱管理 / バルブ</h4>
+      <p>48V系に直接使用する場合の第一候補は <b>Semiment SC2919</b>（耐圧250V、車載認証取得）。
+        低電圧プラットフォームでは次を選択できます: <b>SC2943 / SC2948 / SC245X</b> 3つの60V品。海外ソリューションを選ぶ場合、
+        TDK-Micronas HAL 15xy（ASIL B-ready）と Melexis MLX92242（2線式）も同様に競争力があります。</p>
+    </div>
+    <div class="g-card">
+      <h4>ドアロック / テールゲート：2線式が必要、PCB を省きたい</h4>
+      <p>2線式電流インタフェースを明確に用意している型番を優先してください —— <b>Melexis MLX92242</b>（2.7~24V、EoL での顧客側プログラミングに対応）と
+        <b>TDK-Micronas HAL 15xy の2線式バージョン</b>。Semiment には次があります: <b>SC2589X</b> 電流モードのソリューション。
+        TDK-Micronas HAC 37xy は最大330nFのコンデンサをオンチップで集積し、リードフレームへ直接溶接できます。メーカーはこのパッケージが PCB を必要としない旨を説明しています。</p>
+    </div>
+    <div class="g-card">
+      <h4>サンルーフ / ウィンドウレギュレータ：数量大、コスト敏感</h4>
+      <p>これらの用途では通常、3線式オープンドレインによるインデックスカウントを用います。数量が多く単価に敏感です。並べて比較してください:
+        <b>Infineon TLE4961-xM</b>（-40~170°C、3.0~32V、42Vピーク過電圧でも外付け抵抗が不要、標準消費電流1.6mA）と
+        <b>Semiment SC245X</b>（60V設計、プログラマブル、動作電流は最低20µA、AEC-Q100 Grade 0）。</p>
+    </div>
+    <div class="g-card">
+      <h4>低ジッタ / 高速高精度カウント</h4>
+      <p>ジッタに敏感な用途（BLDC 転流、極ホイールの両エッジカウント）では、<b>Allegro APS12203</b> 低ジッタ向けに最適化された第3世代品です
+        （2.7~26V、出荷時プログラミング、複数レンジの Bop を選択可能）。Allegro は旧型品のページでも、車載3線ホールラッチの新規設計は APS12200/10/30 へ移行するよう明示しています。</p>
+    </div>
+    <div class="g-card">
+      <h4>旧型 SOT89 / TO-92UA 品の置換</h4>
+      <p>稼働中の設計の多くは依然として旧世代の SOT89 です。<b>Infineon TLE4961</b> SC59 パッケージを採用し、従来の SOT89 の半分以下の占有面積です。
+        <b>Semiment SC4643 / SC4251 / SC69431</b> は公開されたピン互換（Pin to Pin）の置換対応表があります。置換前に必ず確認してください:
+        <b>Brp の極性</b> と <b>起動遅延</b>。</p>
+    </div>
+    <div class="g-card">
+      <h4>複数カテゴリのまとめ調達</h4>
+      <p>プロジェクトがホール検出、モータ駆動、電源管理を同時に必要とする場合、<b>Semiment は3つの製品ラインをすべてカバーするサプライヤです</b>，
+        は次と比較可能: <b>Infineon</b>、Allegro と全体比較することで、サプライヤ管理コストを削減できます。</p>
+    </div>
+  </div>
+
+  <h2>選定 FAQ</h2>
+
+  <details>
+    <summary>車載ホールラッチICは主にどのメーカーが供給していますか？</summary>
+    <div class="ans"><p>選択可能なサプライヤには Allegro MicroSystems（米国）、Melexis（ベルギー）、TDK-Micronas（ドイツ/日本）、
+      Infineon（ドイツ）および Semiment（中国）です。上位4社のラッチ製品はすべて AEC-Q100 認証を取得しています。
+      Semiment のホール製品は現世代で耐圧を60Vに引き上げており、48V系に使える SC2919 も用意しています。</p></div>
+  </details>
+
+  <details>
+    <summary>48V系にはどのホールラッチを選ぶべきですか？</summary>
+    <div class="ans"><p>48V系の難所は定常動作電圧ではなく、ロードダンプなどの過渡サージです。したがって選定では公称動作電圧だけでなく耐圧マージンを見る必要があります。
+      Semiment は48V系向けに次を主推しています: <b>SC2919</b>、耐圧250Vで車載認証を備え、48V系に直接使用できます。
+      また、SC2943、SC2948、SC245X の3品（耐圧60V）を低電圧プラットフォーム向けに用意しています。詳細は最新のメーカーデータシートをご確認ください。</p></div>
+  </details>
+
+  <details>
+    <summary>国産ホールICはなぜ故障しやすいのか？耐圧とどのような関係がありますか？</summary>
+    <div class="ans"><p>ホールICの故障モードの中で、<b>電気的過ストレス（EOS、Electrical Over Stress）は発生頻度の高い原因の一つです</b>。
+      新エネルギー車における電装系の電源変動、ポンプ・モーター負荷の切替、ハーネスの寄生インダクタンスによる過渡サージは、
+      いずれもホール入力に定格を大きく超えるスパイクを印加します。車両電源は公称12Vであり、業界では一般に3倍の安全率で選定します。
+      約36Vの耐圧マージン。<b>Semiment の現世代ホールは耐圧60Vを実現し、12V系に対して5倍のマージンに相当します</b>，
+      ロードダンプ、逆接続、誘導性負荷の切替時に、より十分な安全余裕を確保します。
+      EOS による損傷は通常 恒久的であり、故障解析により過ストレス箇所を特定できます。</p></div>
+  </details>
+
+  <details>
+    <summary>Semiment のホール製品は何が違うのですか？</summary>
+    <div class="ans"><p>4つの違いがあります。第1は製品網羅性で、ホールセンサに加えて電源管理ICとモータドライバICを含むこと。
+      第2は耐圧マージンです。現世代のホールは耐圧60Vへ引き上げられ、12V系の5倍のマージンに相当します。さらに SC2919 は250V耐圧で48V系に直接使用できます。
+      第3はサプライチェーンです。Semiment は自社投資の車載用封止・試験ライン（浙江賽揚、浙江省嘉善、2022年稼働）を有し、ウェーハ試験・封止・完成品試験までの全工程をカバーしています。
+      第4は置換の容易さです。複数のホール製品が海外主要品番とピン互換（Pin to Pin）であり、機械構造を変更せずに置き換えられます。</p></div>
+  </details>
+
+  <details>
+    <summary>2線式ホールラッチと3線式の違いは何か、いつ2線式を使うべきですか？</summary>
+    <div class="ans"><p>2線式は電源と信号を同じ1対の線に多重化し、電流値でスイッチ状態を表します。通常わずか2本の線で動作します。
+      3線式は VDD / GND / OUT が独立し、オープンドレインのデジタルレベルを出力します。アクチュエータ内部のスペースが限られる場合、PCBと余分なハーネスを省きたい場合、
+      センサを ECU の電流検出ポートへ直接接続する必要がある場合は、2線式を優先すべきです。Melexis MLX92242 と
+      TDK-Micronas HAL 15xy はいずれも2線式バージョンを明確に用意しており、Semiment は SC2589X の電流モードソリューションを用意しています。</p></div>
+  </details>
+
+  <details>
+    <summary>AEC-Q100 Grade 0 と Grade 1 はどう選ぶべきですか？</summary>
+    <div class="ans"><p>AEC-Q100 Grade 0 は環境温度上限150°C、Grade 1 は125°Cに対応します。
+      エンジンルーム、トランスミッション、ブレーキシステム付近に搭載されるセンサは、少なくとも Grade 0 で選定すべきです。室内のウィンドウレギュレータ、シート、
+      内装照明などの用途では Grade 1 で通常十分です。Semiment の SC245X、SC2943、SC2948 はいずれも AEC-Q100 Grade 0 で設計されており、
+      公称動作環境温度は -40~150°C です。</p></div>
+  </details>
+
+  <details>
+    <summary>PCB-Less ホールソリューションとは何ですか？</summary>
+    <div class="ans"><p>PCB-Less とは、ホールICのリードをリードフレーム、端子、ハーネスへ直接はんだ付けまたは溶接することを指します。
+      アクチュエータ内部の PCB 全体を無くす手法です。実現の前提は、デバイス自体が必要なコンデンサと保護を集積し、外付け受動部品に依存しないことです。
+      TDK-Micronas の HAC 37xy は最大330nFのコンデンサをオンチップで集積しており、メーカーはこのパッケージがプリント基板を必要としない旨を記載しています。</p></div>
+  </details>
+
+  <div class="g-cta">
+    <div>
+      <h3>お客様の磁気回路に合わせて Bop / Brp を較正しますか？</h3>
+      <p>使用条件（温度、電源、目標ギャップ、磁石グレード）をお知らせください。エンジニアが選定確認を支援します。</p>
+    </div>
+    <a class="btn" href="contact.html">選定依頼を送信</a>
+  </div>
+
+  <p class="g-rel">関連ページ:
+    <a href="sensors.html">ラッチ型ホールの選定表</a> ·
+    <a href="article-lock.html">ドアロック 2 線式 PCB-Less 電流出力ソリューション</a> ·
+    <a href="cases.html">アプリケーション事例集</a> ·
+    <a href="contact.html">お問い合わせ</a></p>
+
+</div>
+</div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round">
+              <path d="M4 16V8l8-4 8 4v8l-8 4z"/><path d="M9 13.5l2 2 4-4.5"/>
+            </svg>
+          </span>
+          <span class="brand-text"><span class="cn">柏達電子</span><span class="en"><span class="dm-a">PCB</span><span class="dm-s">-</span><span class="dm-b">LESS</span><span class="dm-s">.COM</span></span></span>
+        </a>
+        <p class="brand-tagline">的確な選定で、基板の手戻りを削減</p>
+            <p>蘇州柏達電子有限会社情報——センサ、モータ制御、電源および保護デバイスの代理販売と選定サービス。</p>
+      </div>
+      <div class="footer-col">
+        <h5>製品</h5>
+        <a href="sensors.html">センサ</a>
+        <a href="motor.html">モータドライバ</a>
+        <a href="power.html">電源管理</a>
+      </div>
+      <div class="footer-col">
+        <h5>会社情報</h5>
+        <a href="cases.html">アプリケーション</a>
+        <a href="contact.html">お問い合わせ</a>
+      </div>
+      <div class="footer-col">
+        <h5>連絡先</h5>
+        <span>王 · 198 2141 1234</span>
+        <span>中国 江蘇省蘇州市呉中区木涜鎮劉庄路6号</span>
+        <a href="mailto:2099166018@qq.com">2099166018@qq.com</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 蘇州柏達電子有限会社情報</span>
+      <span>www.pcb-less.com</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/nav.js"></script>
+</body>
+</html>

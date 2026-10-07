@@ -436,11 +436,11 @@
   </div>
 </header>
 
-<!-- Hero：满屏暗场 + 右侧悬浮选型台（2026-09-29 老板第四次定调）
-     视觉语言 = 板级微距实拍 + 深海军蓝遮罩（左浓右淡）+ 12 列工程竖线
-              + 容器四角对位标记 + 细颗粒（全部由 CSS 画出，不新增图片请求）；
-     「选型台」用高光色描边 + 投影浮于首屏右半部分，hover 上浮并加强描边光。
-     原「在库型号 · 锁存霍尔」块已按指令撤除。 -->
+<!-- Hero: 满屏暗场 + 右侧悬浮选型台(2026-09-29 老板第四次定调)
+     视觉语言 = 板级微距实拍 + 深海军蓝遮罩(左浓右淡)+ 12 列工程竖线
+              + 容器四角对位标记 + 细颗粒(全部由 CSS 画出, 不新增图片请求); 
+     「选型台」用高光色描边 + 投影浮于首屏右半部分, hover 上浮并加强描边光. 
+     原「在库型号 · 锁存霍尔」块已按指令撤除.  -->
 <section class="hero">
   <div class="hero-bg" aria-hidden="true">
     <img src="../images/hero-dark.jpg" alt="Automotive-grade printed circuit board with on-board ICs (illustrative image)" width="1516" height="900" decoding="async">
@@ -448,7 +448,7 @@
   <div class="hero-grid" aria-hidden="true"></div>
   <div class="hero-grain" aria-hidden="true"></div>
   <div class="container">
-    <!-- 四角对位标记：与容器真实边角重合，工程制图语言；纯 CSS 边框，无图片 -->
+    <!-- 四角对位标记: 与容器真实边角重合, 工程制图语言; 纯 CSS 边框, 无图片 -->
     <div class="hero-marks" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
     <div class="hero-main">
       <div class="hero-copy">
@@ -464,8 +464,8 @@
         </div>
       </div>
 
-      <!-- 选型台：浮于首屏右半部分。外层保留 hero-picker 类名，
-           js/app.js 的事件委托、#hpCount、#hpGo、.hp-reset 全部无需改动 -->
+      <!-- 选型台: 浮于首屏右半部分. 外层保留 hero-picker 类名, 
+           js/app.js 的事件委托, #hpCount, #hpGo, .hp-reset 全部无需改动 -->
       <div class="hero-panel hero-picker rise d5" role="group" aria-label="Quick Selection">
         <div class="hp-head">
           <span class="hp-title">Quick Selection</span>
@@ -501,11 +501,11 @@
       </div>
     </div>
   </div>
-  <!-- 首屏底部：五项服务承诺（2026-09-29 老板指令）
-       取代原「179 / 3 / 13 / −40~150℃」数字条；配色配置沿用原数据条，未引入新色值：
-       标题＝白 92% / 13.5px / 600，说明＝白 62% / 12.5px / 400，
-       高光色只做条目顶部 16×2px 标线（「点」），不给标题染色、不做整列底色。
-       内容取自原「五大优势」区块，该区块已随之撤除，避免同页重复。 -->
+  <!-- 首屏底部: 五项服务承诺(2026-09-29 老板指令)
+       取代原「179 / 3 / 13 / −40~150℃」数字条; 配色配置沿用原数据条, 未引入新色值: 
+       标题＝白 92% / 13.5px / 600, 说明＝白 62% / 12.5px / 400, 
+       高光色只做条目顶部 16×2px 标线(「点」), 不给标题染色, 不做整列底色. 
+       内容取自原「五大优势」区块, 该区块已随之撤除, 避免同页重复.  -->
   <div class="hero-band">
     <div class="container">
       <ul class="hb-grid">
@@ -534,7 +534,7 @@
   </div>
 </section>
 
-<!-- 产品中心：行式布局 -->
+<!-- 产品中心: 行式布局 -->
 <section class="section">
   <div class="container">
     <div class="section-head reveal">
@@ -582,7 +582,7 @@
   </div>
 </section>
 
-<!-- 精选应用方案（打通应用方案文库） -->
+<!-- 精选应用方案(打通应用方案文库) -->
 <section class="section alt">
   <div class="container">
     <div class="section-head reveal">
@@ -609,7 +609,7 @@
         </div>
       </a>
 
-      <div class="article-card" role="button" tabindex="0" onclick="showToast('该方案详情页整理中；示例详情页可从「车门锁 PCB-Less」文章进入')">
+      <div class="article-card" role="button" tabindex="0" onclick="showToast('该方案详情页整理中; 示例详情页可从「车门锁 PCB-Less」文章进入')">
         <div class="cover">
           <img src="../images/cover-robot.jpg" alt="Robotic Joint Commutation" loading="lazy">
           <span class="cover-tag">Robotics</span>
@@ -626,7 +626,7 @@
         </div>
       </div>
 
-      <div class="article-card" role="button" tabindex="0" onclick="showToast('该方案详情页整理中；示例详情页可从「车门锁 PCB-Less」文章进入')">
+      <div class="article-card" role="button" tabindex="0" onclick="showToast('该方案详情页整理中; 示例详情页可从「车门锁 PCB-Less」文章进入')">
         <div class="cover">
           <img src="../images/cover-consumer.jpg" alt="Smart Lock Battery-powered Detection" loading="lazy">
           <span class="cover-tag">Consumer Electronics</span>
@@ -648,13 +648,13 @@
   </div>
 </section>
 
-<!-- 资质与合规（2026-09-29 新增）
-     作用：把首屏五项承诺落到「可索取的文件」上，对应客户采购部的供应商准入清单。
-     口径纪律：① IATF 16949 一律用「可提供 … 体系证书」，**不得**写成公司已获证的自称
-       —— 柏达是代理商，证书主体可能是原厂；「可提供」任何主体下都成立，
-       而采购真正要的也正是「能不能给我文件」。
-       ② AEC-Q100 是**器件级**应力测试认证，不是公司资质，必须按型号提供报告。
-     复用 .svc-grid/.svc-item（2 列错落 20px 位移），零新增 CSS。 -->
+<!-- 资质与合规(2026-09-29 新增)
+     作用: 把首屏五项承诺落到「可索取的文件」上, 对应客户采购部的供应商准入清单. 
+     口径纪律: ① IATF 16949 一律用「可提供 … 体系证书」, **不得**写成公司已获证的自称
+       —— 柏达是代理商, 证书主体可能是原厂; 「可提供」任何主体下都成立, 
+       而采购真正要的也正是「能不能给我文件」. 
+       ② AEC-Q100 是**器件级**应力测试认证, 不是公司资质, 必须按型号提供报告. 
+     复用 .svc-grid/.svc-item(2 列错落 20px 位移), 零新增 CSS.  -->
 <section class="section">
   <div class="container">
     <div class="section-head reveal">
@@ -719,7 +719,7 @@
   </div>
 </section>
 
-<!-- 五大优势已上移到首屏底部（.hero-band），此处不再重复；深色「工程与供应支持」直接接 CTA -->
+<!-- 五大优势已上移到首屏底部(.hero-band), 此处不再重复; 深色「工程与供应支持」直接接 CTA -->
 
 <!-- CTA -->
 <section class="section">

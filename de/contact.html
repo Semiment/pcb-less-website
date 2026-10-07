@@ -494,14 +494,14 @@
         <button type="submit" class="btn btn-primary">Anfrage senden</button>
         <span class="form-note">Beim Absenden öffnet sich Ihr E-Mail-Programm mit vorausgefüllten Angaben – einfach senden. Oder rufen Sie uns direkt an: 198 2141 1234.</span>
       </div>
-      <!-- 邮件客户端不可用时的兜底：把内容明文列出，客户可复制后自行发送 -->
+      <!-- 邮件客户端不可用时的兜底: 把内容明文列出, 客户可复制后自行发送 -->
       <div class="inquiry-fallback" id="inquiryFallback" hidden>
-        <p class="if-tip">若邮件客户端没有打开，请复制下面内容发送到 2099166018@qq.com，或直接致电 198 2141 1234：</p>
+        <p class="if-tip">若邮件客户端没有打开, 请复制下面内容发送到 2099166018@qq.com, 或直接致电 198 2141 1234: </p>
         <textarea class="if-box" id="inquiryFallbackBox" readonly rows="8"></textarea>
         <button type="button" class="btn btn-ghost" id="inquiryCopy">Alles kopieren</button>
       </div>
-      <!-- 给 JS 用的提示文案：放在 DOM 文本节点里，由构建器随页面一起本地化
-           （不走 window.t —— i18n.js 的词典覆盖不全，缺词会静默退回中文） -->
+      <!-- 给 JS 用的提示文案: 放在 DOM 文本节点里, 由构建器随页面一起本地化
+           (不走 window.t —— i18n.js 的词典覆盖不全, 缺词会静默退回中文) -->
       <span hidden id="i18nToastSent">Ihr E-Mail-Programm wurde geöffnet – bitte senden. Falls es nicht geöffnet wurde, kopieren Sie den Text unten und senden ihn per E-Mail.</span>
       <span hidden id="i18nToastCopied">Kopiert – in eine E-Mail einfügen und senden.</span>
       <span hidden id="i18nToastManual">Bitte manuell markieren und kopieren.</span>

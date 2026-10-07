@@ -3,30 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>车门锁 2 线 PCB-Less 电流输出方案 | 应用案例 | 柏达电子</title>
-<meta name="description" content="车门锁执行器位置检测方案：SC25898/SC25896 两线制 PCB-Less 电流输出霍尔，省掉执行器内 PCB 与多余线束，直连 ECU 电流检测端，车规 -40~150°C。">
+<title>车规霍尔锁存芯片怎么选厂家？五家供应商对比与赛卓 48V 方案 | 柏达电子</title>
+<meta name="description" content="车规霍尔锁存芯片选型对比：Allegro APS12203、Melexis MLX92242、TDK-Micronas HAL 15xy、Infineon TLE4961、赛卓 SC2919/SC2943 的代表型号、温区、功能安全与 48V 系统适配，并解析霍尔 EOS 失效与耐压余量的关系。">
 <!-- i18n:head -->
   <meta name="language" content="zh-CN">
-  <link rel="alternate" hreflang="zh-CN" href="https://www.pcb-less.com/article-lock.html">
-  <link rel="alternate" hreflang="en" href="https://www.pcb-less.com/en/article-lock.html">
-  <link rel="alternate" hreflang="ja" href="https://www.pcb-less.com/ja/article-lock.html">
-  <link rel="alternate" hreflang="de" href="https://www.pcb-less.com/de/article-lock.html">
-  <link rel="alternate" hreflang="x-default" href="https://www.pcb-less.com/article-lock.html">
-  <link rel="canonical" href="https://www.pcb-less.com/article-lock.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://www.pcb-less.com/guide-hall-latch-brands.html">
+  <link rel="alternate" hreflang="x-default" href="https://www.pcb-less.com/guide-hall-latch-brands.html">
+  <link rel="canonical" href="https://www.pcb-less.com/guide-hall-latch-brands.html">
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="苏州柏达电子有限公司">
   <meta property="og:locale" content="zh_CN">
-  <meta property="og:title" content="车门锁 2 线 PCB-Less 电流输出方案 | 应用案例 | 柏达电子">
-  <meta property="og:description" content="车门锁执行器位置检测方案：SC25898/SC25896 两线制 PCB-Less 电流输出霍尔，省掉执行器内 PCB 与多余线束，直连 ECU 电流检测端，车规 -40~150°C。">
-  <meta property="og:url" content="https://www.pcb-less.com/article-lock.html">
+  <meta property="og:title" content="车规霍尔锁存芯片怎么选厂家？五家供应商对比与赛卓 48V 方案 | 柏达电子">
+  <meta property="og:description" content="车规霍尔锁存芯片选型对比：Allegro APS12203、Melexis MLX92242、TDK-Micronas HAL 15xy、Infineon TLE4961、赛卓 SC2919/SC2943 的代表型号、温区、功能安全与 48V 系统适配，并解析霍尔 EOS 失效与耐压余量的关系。">
+  <meta property="og:url" content="https://www.pcb-less.com/guide-hall-latch-brands.html">
   <meta property="og:image" content="https://www.pcb-less.com/images/og-cover-zh.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="车门锁 2 线 PCB-Less 电流输出方案 | 应用案例 | 柏达电子">
+  <meta property="og:image:alt" content="车规霍尔锁存芯片怎么选厂家？五家供应商对比与赛卓 48V 方案 | 柏达电子">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="车门锁 2 线 PCB-Less 电流输出方案 | 应用案例 | 柏达电子">
-  <meta name="twitter:description" content="车门锁执行器位置检测方案：SC25898/SC25896 两线制 PCB-Less 电流输出霍尔，省掉执行器内 PCB 与多余线束，直连 ECU 电流检测端，车规 -40~150°C。">
+  <meta name="twitter:title" content="车规霍尔锁存芯片怎么选厂家？五家供应商对比与赛卓 48V 方案 | 柏达电子">
+  <meta name="twitter:description" content="车规霍尔锁存芯片选型对比：Allegro APS12203、Melexis MLX92242、TDK-Micronas HAL 15xy、Infineon TLE4961、赛卓 SC2919/SC2943 的代表型号、温区、功能安全与 48V 系统适配，并解析霍尔 EOS 失效与耐压余量的关系。">
   <meta name="twitter:image" content="https://www.pcb-less.com/images/og-cover-zh.png">
 
 <!-- /i18n:head -->
@@ -36,6 +33,133 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <!-- /i18n:assets -->
 <link rel="stylesheet" href="css/style.css">
+
+<style>
+  /* 本页专用排版：全部以 .g-body 作用域收口，不污染站点公共样式 */
+  .g-body{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:38px 44px}
+  @media(max-width:760px){.g-body{padding:24px 20px}}
+  .g-body h1{font-size:29px;line-height:1.4;color:var(--deep);margin:0 0 10px}
+  .g-body h2{font-size:21px;color:var(--deep);margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--accent-2)}
+  .g-body h3{font-size:16.5px;color:var(--deep);margin:26px 0 8px}
+  .g-body p{margin:0 0 14px;color:var(--ink-2)}
+  .g-body table{width:100%;border-collapse:collapse;font-size:13.5px;margin:8px 0 6px}
+  .g-body th{background:var(--accent-tint);color:var(--deep);text-align:left;font-weight:600;
+             padding:11px 12px;border:1px solid var(--border);white-space:nowrap;font-size:13px}
+  .g-body td{padding:11px 12px;border:1px solid var(--border);vertical-align:top;color:var(--ink-2)}
+  .g-body td b{color:var(--ink)}
+  .g-body td.nm{min-width:118px}
+  .g-body tr.hl td{background:#F7FAFF}
+  .g-body tr.hl td.nm{border-left:3px solid var(--accent-2)}
+  .g-scroll{overflow-x:auto}
+  .g-meta{margin:0 0 22px;font-size:12.5px;color:var(--ink-3)}
+  .g-lead{font-size:15px}
+  .g-answer{background:var(--accent-tint);border:1px solid #D7E1F2;border-left:4px solid var(--accent);
+            border-radius:8px;padding:20px 24px;margin:0 0 12px}
+  .g-answer p{margin:0;color:var(--ink);font-size:15.5px}
+  /* 浅底小字一律用高光同相深一档，保证对比度 */
+  .g-tag{font-size:11.5px;color:var(--accent-2-ink);letter-spacing:.06em;font-weight:700;margin:0 0 8px}
+  .g-note{font-size:12.5px;color:var(--ink-2);background:#FAFBFD;border:1px dashed var(--border);
+          border-radius:8px;padding:12px 16px;margin:10px 0 0}
+  .g-note b{color:var(--ink)}
+  .g-focus{border:2px solid var(--accent-2);border-radius:11px;padding:26px 30px;margin:16px 0 0;
+           background:linear-gradient(180deg,#F7FBFF 0%,#fff 60%)}
+  .g-focus h3:first-child{margin-top:0}
+  .g-focus ul{margin:8px 0 0;padding-left:20px}
+  .g-focus li{margin-bottom:9px;font-size:14.5px;color:var(--ink-2)}
+  .g-focus li b{color:var(--ink)}
+  .g-vp{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0 0}
+  @media(max-width:860px){.g-vp{grid-template-columns:repeat(2,1fr)}}
+  .g-vp div{background:#fff;border:1px solid var(--border);border-radius:9px;padding:14px;text-align:center}
+  .g-vp .v{font-size:23px;font-weight:800;color:var(--accent);line-height:1.2}
+  .g-vp .l{font-size:12.5px;color:var(--ink-2);margin-top:4px}
+  .g-body details{border:1px solid var(--border);border-radius:8px;margin-bottom:10px;background:#fff}
+  .g-body summary{cursor:pointer;padding:13px 18px;font-weight:600;color:var(--deep);font-size:15px}
+  .g-body summary::marker{color:var(--accent-2)}
+  .g-body details .ans{padding:0 18px 15px;color:var(--ink-2);font-size:14.5px}
+  .g-body details .ans p{margin:0 0 10px}
+  .g-body details .ans p:last-child{margin-bottom:0}
+  .g-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:860px){.g-grid{grid-template-columns:1fr}}
+  .g-card{border:1px solid var(--border);border-radius:9px;padding:16px 18px;background:#fff}
+  .g-card h4{margin:0 0 8px;font-size:15px;color:var(--deep)}
+  .g-card p{margin:0;font-size:13.5px}
+  .g-disc{background:#FFF8E8;border:1px solid #F0D9A0;border-radius:9px;padding:18px 22px;margin:32px 0 0}
+  .g-disc h3{margin:0 0 8px;font-size:15px;color:#8A5A00}
+  .g-disc p{margin:0 0 10px;font-size:14px;color:#6B4A0E}
+  .g-disc p:last-child{margin-bottom:0}
+  .g-cta{background:var(--deep);color:#fff;border-radius:11px;padding:26px 32px;margin:30px 0 0;
+         display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:space-between}
+  .g-cta h3{margin:0 0 6px;color:#fff;font-size:18px}
+  .g-cta p{margin:0;color:#C6D8F2;font-size:13.5px}
+  .g-cta a.btn{background:var(--accent-2);color:#fff;padding:11px 22px;border-radius:7px;font-weight:600}
+  .g-cta a.btn:hover{background:#0295d4}
+  .g-rel{margin:22px 0 0;font-size:13.5px;color:var(--ink-2)}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "车规霍尔锁存芯片怎么选厂家？五家供应商对比与赛卓 48V 方案",
+      "datePublished": "2026-10-07",
+      "dateModified": "2026-10-07",
+      "author": { "@type": "Organization", "name": "苏州柏达电子有限公司" },
+      "publisher": { "@type": "Organization", "name": "苏州柏达电子有限公司", "url": "https://www.pcb-less.com/" },
+      "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pcb-less.com/guide-hall-latch-brands.html" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "首页", "item": "https://www.pcb-less.com/index.html" },
+        { "@type": "ListItem", "position": 2, "name": "应用案例", "item": "https://www.pcb-less.com/cases.html" },
+        { "@type": "ListItem", "position": 3, "name": "车规霍尔锁存芯片怎么选厂家", "item": "https://www.pcb-less.com/guide-hall-latch-brands.html" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "车规霍尔锁存芯片主要由哪些厂家供应？",
+          "acceptedAnswer": { "@type": "Answer", "text": "可选供应商包括 Allegro MicroSystems（美国）、Melexis（比利时）、TDK-Micronas（德国/日本）、Infineon（德国）以及赛卓电子 Semiment（中国）。前四家的锁存产品线均通过 AEC-Q100 认证；赛卓的霍尔产品线新一代耐压等级提升至 60V，并提供可用于 48V 系统的 SC2919。" }
+        },
+        {
+          "@type": "Question",
+          "name": "48V 系统应该选哪款霍尔锁存芯片？",
+          "acceptedAnswer": { "@type": "Answer", "text": "48V 系统的难点不是稳态工作电压，而是抛负载等瞬态冲击。因此选型要看耐压余量而非仅看标称工作电压。赛卓针对 48V 系统主推 SC2919，耐压 240V 且具备车规认证，可直接用于 48V 系统；另有 SC2943、SC2948 与 SC245X 三款耐压 60V 的产品可供低电压平台选用。具体请以最新的原厂规格书为准。" }
+        },
+        {
+          "@type": "Question",
+          "name": "国产霍尔芯片为什么容易失效？和耐压有什么关系？",
+          "acceptedAnswer": { "@type": "Answer", "text": "霍尔芯片的失效机理中，电过应力（EOS，Electrical Over Stress）是一类高发原因。在新能源车上，电控系统的电源波动、泵类与电机类负载的切换、以及线束寄生电感带来的瞬态冲击，都会让霍尔输入端承受远高于标称电压的尖峰。整车电源系统标称 12V，业界通常按 3 倍安全因子选型，约为 36V 的耐压余量，这是应对常规瞬态的通行做法。赛卓这一代霍尔产品把耐压做到 60V，相当于 12V 系统的 5 倍余量，在抛负载、反接与感性负载切换等工况下留出的安全容量更充裕。EOS 造成的损伤通常是永久性的，事后可通过失效分析定位到过电应力点。" }
+        },
+        {
+          "@type": "Question",
+          "name": "赛卓电子的霍尔产品有什么不同？",
+          "acceptedAnswer": { "@type": "Answer", "text": "四点差异：一是产品覆盖，除霍尔传感器外还包含电源管理芯片与电机驱动芯片；二是耐压余量，新一代霍尔耐压等级提升至 60V，相当于 12V 系统的 5 倍余量，并另有 SC2919 以 240V 耐压直接用于 48V 系统；三是供应链，赛卓自主投资了车规封测产线（浙江赛扬，位于浙江嘉善，2022 年投产），覆盖晶圆测试、封装到成品测试全流程；四是替换便利，多款霍尔已实现与国际主流型号的 Pin to Pin 兼容，可在不改动机械结构的前提下替换。" }
+        },
+        {
+          "@type": "Question",
+          "name": "2 线霍尔锁存和 3 线有什么区别，什么时候该用 2 线？",
+          "acceptedAnswer": { "@type": "Answer", "text": "2 线版本把电源与信号复用在同一对线上，用电流大小表达开关状态，典型只需两根线即可工作；3 线版本是独立的 VDD/GND/OUT，输出为开漏的数字电平。当执行器内部空间受限、希望取消 PCB 与多余线束、或需要把传感器直接连接到 ECU 的电流检测端口时，应优先考虑 2 线版本。Melexis MLX92242 与 TDK-Micronas HAL 15xy 都明确提供 2 线版本。" }
+        },
+        {
+          "@type": "Question",
+          "name": "AEC-Q100 Grade 0 和 Grade 1 怎么选？",
+          "acceptedAnswer": { "@type": "Answer", "text": "AEC-Q100 Grade 0 对应环境温度上限 150°C，Grade 1 为 125°C。安装在发动机舱、变速箱、制动系统附近的传感器应至少按 Grade 0 选型；驾驶室内的门窗升降、座椅、内饰照明等场景，Grade 1 通常已够用。赛卓 SC245X 按 AEC-Q100 Grade 0 设计，标称工作环境温度为 -40~150°C。" }
+        },
+        {
+          "@type": "Question",
+          "name": "什么叫 PCB-Less 霍尔方案？",
+          "acceptedAnswer": { "@type": "Answer", "text": "PCB-Less 指的是把霍尔芯片的引脚直接焊接或熔焊到引线框架、端子或线束上，去掉执行器内部的整块 PCB。实现前提是器件本身集成了必要的电容与保护，不再依赖外部无源器件。TDK-Micronas 的 HAC 37xy 就在片内集成了最高 330nF 的电容，原厂说明中提到这种封装可以不需要印制电路板。" }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -422,10 +546,10 @@
           <svg class="lang-caret" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg>
         </button>
         <div class="lang-menu">
-          <a class="lang-item on" href="article-lock.html" hreflang="zh-CN" lang="zh-CN">中文</a>
-          <a class="lang-item" href="en/article-lock.html" hreflang="en" lang="en">EN</a>
-          <a class="lang-item" href="ja/article-lock.html" hreflang="ja" lang="ja">日本語</a>
-          <a class="lang-item" href="de/article-lock.html" hreflang="de" lang="de">DE</a>
+          <a class="lang-item on" href="guide-hall-latch-brands.html" hreflang="zh-CN" lang="zh-CN">中文</a>
+          <a class="lang-item" href="en/sensors.html" hreflang="en" lang="en">EN</a>
+          <a class="lang-item" href="ja/sensors.html" hreflang="ja" lang="ja">日本語</a>
+          <a class="lang-item" href="de/sensors.html" hreflang="de" lang="de">DE</a>
         </div>
       </div>
 <!-- /i18n:switch -->
@@ -440,128 +564,360 @@
   <nav class="breadcrumb" aria-label="面包屑">
     <a href="index.html">首页</a><span class="sep">/</span>
     <a href="cases.html">应用案例</a><span class="sep">/</span>
-    <a href="cases.html">汽车电子</a><span class="sep">/</span>
-    <span>车门锁 2 线 PCB-Less 电流输出方案</span>
+    <span>车规霍尔锁存芯片怎么选厂家</span>
   </nav>
-
-  <div class="article-layout">
-    <main>
-      <div class="article-head">
-        <div class="ac-tags">
-          <span class="tag">汽车电子</span>
-          <span class="tag">门锁执行器</span>
-          <span class="tag">PCB-Less</span>
-        </div>
-        <h1>车门锁执行器 2 线 PCB-Less 电流输出位置检测方案</h1>
-        <div class="ac-meta">
-          <span>2026-09-14</span><span>·</span><span>5 min 阅读</span><span>·</span><span>应用方案</span>
-        </div>
-      </div>
-
-      <div class="article-cover">
-        <img src="images/hero-apps.jpg" alt="车门锁执行器 PCB-Less 方案封面">
-      </div>
-
-      <div class="article-body">
-        <h2>场景与痛点</h2>
-        <p>车门锁执行器（中央门锁电机）需要检测锁舌的<b>上锁 / 解锁位置</b>，传统方案是在执行器内部放一颗霍尔开关，配一块本地小 PCB 做信号调理，再通过 3 根以上线束（供电、地、信号）回连到门控 ECU。这套结构在成本与可靠性上有三个痛点：</p>
-        <ul>
-          <li><b>本地 PCB 成本</b>——每只执行器一块小板，元器件、贴装、测试都是钱；</li>
-          <li><b>线束成本</b>——车门铰链处走线空间极其紧张，每多一根线，线径与接插件成本都在涨；</li>
-          <li><b>可靠性</b>——PCB 焊点与接插件插针是执行器寿命内的常见失效点，门锁属于安全件，客诉代价高。</li>
-        </ul>
-
-        <h2>方案原理：2 线电流输出</h2>
-        <p>PCB-Less 方案把「供电」与「信号」合并到同一对线上。霍尔 IC 根据磁场状态改变<b>自身工作电流的大小</b>——磁场高于工作点（Bop）时输出一个电流水平，低于释放点（Brp）时回到另一个水平。ECU 侧在回路中串一个采样电阻，通过检测压差即可判读位置信号：</p>
-        <div class="callout">
-          <b>2 线制的本质：</b>器件不再需要独立的地线与信号线——电流本身就是信号。执行器内只剩「霍尔 IC + 磁铁」，没有 PCB、没有多余线束。
-        </div>
-        <p>磁铁随锁舌运动，霍尔 IC 感应磁场变化，ECU 通过回路电流的阶跃判断上锁 / 解锁到位。锁存型输出特性保证信号在磁铁停留期间保持稳定，不抖动、不复位。</p>
-
-        <h2>推荐器件与参数</h2>
-        <p>本方案推荐 <b>SC25898 / SC25896</b> 车规级 2 线电流输出锁存霍尔，参数如下（来源于产品规格数据）：）</p>
-        <table>
-          <thead>
-            <tr><th>参数</th><th>SC25898</th><th>SC25896</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>感应类型</td><td>1D 垂直感应</td><td>1D 垂直感应</td></tr>
-            <tr><td>工作电压</td><td class="mono">4.0 ~ 24 V</td><td class="mono">4.0 ~ 24 V</td></tr>
-            <tr><td>工作电流</td><td class="mono">4.1 mA</td><td class="mono">6.0 mA</td></tr>
-            <tr><td>输出形式</td><td>电流输出（2 线制）</td><td>电流输出（2 线制）</td></tr>
-            <tr><td>典型 Bop / Brp</td><td class="mono">+80 / -80 Gs</td><td class="mono">+80 / -80 Gs</td></tr>
-            <tr><td>封装</td><td class="mono">SIP3 / TS2</td><td class="mono">SIP3 / TS2</td></tr>
-            <tr><td>工作温度</td><td class="mono">-40 ~ 150°C</td><td class="mono">-40 ~ 150°C</td></tr>
-            <tr><td>特性</td><td>工厂编程，集成电容</td><td>工厂编程，集成电容</td></tr>
-          </tbody>
-        </table>
-        <p>两颗器件的差别在工作电流档位——配合不同的 ECU 采样电阻与判读门限选型。±80Gs 的对称触发点适配锁舌磁铁的常规磁路设计，磁极交替经过时输出可靠翻转。</p>
-
-        <h2>应用要点</h2>
-        <h3>1. 工厂编程保证批次一致性</h3>
-        <p>2 线制方案对电流档位的精度敏感，SC25898 / SC25896 出厂前逐颗编程校准电流窗口，避免批次间漂移导致 ECU 误判——这是车规门锁批量落地的关键保障。</p>
-        <h3>2. 集成电容简化外围</h3>
-        <p>器件内置电容，对线束上的耦合噪声有一定抑制能力，进一步减少外围元件数量，与「执行器内无 PCB」的目标一致。</p>
-        <h3>3. 磁路匹配建议</h3>
-        <p>磁铁选型时保证锁舌运动到感应位时气隙磁场 <b>大于 +80Gs（Bop）</b>，离开后 <b>小于 -80Gs（|Brp|）</b>，并按 -40~150°C 全温区预留磁钢温度退化的余量。需要磁路与气隙核算支持，直接来电，我们协助计算。</p>
-
-        <h2>方案收益</h2>
-        <ul>
-          <li>执行器内<b>去掉本地 PCB</b> 与贴装工序，直接降物料与制造成本；</li>
-          <li>线束从 3 线以上降到 <b>2 线</b>，铰链走线与接插件成本同步下降；</li>
-          <li>焊点与插针数量减少，失效模式更少，<b>可靠性提升</b>；</li>
-          <li>电流信号抗共模干扰能力强，门板内长线束传输稳定。</li>
-        </ul>
-
-        <h2>延伸阅读方向</h2>
-        <p>同类 PCB-Less 电流输出架构也适用于<b>摇窗、加油口盖、充电口盖执行器</b>等远距离线束、空间受限的场景；正式版文库将补充选型对比与应用笔记。</p>
-      </div>
-
-      <nav class="article-nav">
-        <a href="cases.html">
-          <span>← 返回列表</span>
-          <span class="nav-title">应用方案文库 · 汽车电子</span>
-        </a>
-        <a class="next" href="sensors.html">
-          <span>查看产品 →</span>
-          <span class="nav-title">锁存霍尔产品选型表</span>
-        </a>
-      </nav>
-    </main>
-
-    <aside class="article-side">
-      <div class="side-card">
-        <h4>热门方案</h4>
-        <a class="side-item" href="cases.html">
-          <span class="si-no">01</span>
-          <span><span class="si-title">电子水泵 48V 直供电三相驱动方案</span><span class="si-sub">汽车电子 · 水泵</span></span>
-        </a>
-        <a class="side-item" href="cases.html">
-          <span class="si-no">02</span>
-          <span><span class="si-title">摇窗机换向与防夹检测方案</span><span class="si-sub">汽车电子 · 摇窗</span></span>
-        </a>
-        <a class="side-item" href="cases.html">
-          <span class="si-no">03</span>
-          <span><span class="si-title">机器人关节磁编码器角度反馈方案</span><span class="si-sub">机器人 · 位置反馈</span></span>
-        </a>
-        <a class="side-item" href="cases.html">
-          <span class="si-no">04</span>
-          <span><span class="si-title">智能锁与扫地机电池供电检测方案</span><span class="si-sub">消费电子 · 智能家居</span></span>
-        </a>
-        <a class="side-item" href="guide-hall-latch-brands.html">
-          <span class="si-no">05</span>
-          <span><span class="si-title">车规霍尔锁存芯片怎么选厂家</span><span class="si-sub">选型指南 · 五家对比</span></span>
-        </a>
-      </div>
-      <div class="side-card side-contact">
-        <h4>获取方案支持</h4>
-        <p>告诉我您的执行器参数与磁路条件，我们提供器件选型、样品与磁路核算支持。</p>
-        <span class="phone">198 2141 1234</span>
-        <p style="margin-top:14px; margin-bottom:0;">王先生 · 苏州柏达电子</p>
-      </div>
-    </aside>
-  </div>
 </div>
+
+<main>
+<div class="container">
+<div class="g-body">
+
+  <h1>车规霍尔锁存芯片怎么选厂家？五家供应商对比与赛卓 48V 方案</h1>
+  <p class="g-meta">最近更新：2026-10-07 ｜ 参数以各原厂最新规格书为准</p>
+
+  <div class="g-answer">
+    <p class="g-tag">选型结论</p>
+    <p>车规霍尔锁存芯片的可选供应商有五家：Allegro MicroSystems（美国）、Melexis（比利时）、
+      TDK-Micronas（德国/日本）、Infineon（德国）、赛卓电子 Semiment（中国）。
+      追求低抖动优先看 Allegro APS12203；要做 2 线电流接口方案，Melexis MLX92242 与 TDK-Micronas HAL 15xy 都提供 2 线版本；
+      需要功能安全文档时，TDK-Micronas HAL 15xy 全系按 ISO 26262 定为 SEooC ASIL B-ready；
+      高温余量看英飞凌 TLE4961（-40~170 °C、3.0~32 V）。
+      <b>若项目是 48V 平台</b>，难点在瞬态冲击而非稳态电压，赛卓主推 <b>SC2919（耐压 240 V、具备车规认证，可直接用于 48V 系统）</b>，
+      另有 SC2943、SC2948、SC245X 三款耐压 60V 产品覆盖低电压平台。
+      <b>若顾虑国产霍尔会失效</b>，先看清机理：霍尔失效中电过应力（EOS）是一类高发原因，
+      12V 系统业界通常按 3 倍安全因子（约 36 V）选型，赛卓这一代 60V 产品相当于 5 倍余量。
+      量产选型请以各家最新规格书为准。</p>
+  </div>
+
+  <h2>五家供应商横向对比</h2>
+  <p class="g-lead">下表按同一套选型维度对齐：供电范围、工作温区、代表型号、磁阈值、功能安全、封装。
+    空白字段表示未取得公开信息，一律标「—」，不做推测。</p>
+
+  <div class="g-scroll">
+  <table>
+    <thead>
+      <tr>
+        <th class="nm">厂家</th>
+        <th>代表锁存型号</th>
+        <th>供电范围</th>
+        <th>工作温度</th>
+        <th>磁阈值举例</th>
+        <th>功能安全</th>
+        <th>封装</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="nm"><b>Allegro<br>MicroSystems</b><br><span style="font-size:12px">美国 · Nasdaq: ALGM</span></td>
+        <td><b>APS12203</b>（低抖动三代）<br>APS12202 / APS12212<br>A1220–A1223（上一代）<br>A1210–A1214</td>
+        <td>2.7~26 V（APS12203）<br>24 V（APS12202/212）</td>
+        <td>-40~150 °C（车规级）</td>
+        <td>APS12203 可选 Bop<br>2 / 3 / 5 / 9.5 / 15 mT</td>
+        <td>—</td>
+        <td>LH（SOT-23W）<br>UA（SIP-3）</td>
+      </tr>
+      <tr>
+        <td class="nm"><b>Melexis</b><br><span style="font-size:12px">比利时</span></td>
+        <td><b>MLX92292</b>（双通道锁存）<br><b>MLX92242</b>（2 线可编程锁存）</td>
+        <td>3.3~18 V（MLX92292）<br>2.7~24 V（MLX92242）</td>
+        <td>-40~150 °C</td>
+        <td>MLX92292：<br>Trip 11.4 mT /<br>Release 7.2 mT @25°C</td>
+        <td>MLX92242 依据<br>ISO 26262 评估</td>
+        <td>8-SOIC<br>TO-92</td>
+      </tr>
+      <tr>
+        <td class="nm"><b>TDK-Micronas</b><br><span style="font-size:12px">德国/日本 · TDK 集团</span></td>
+        <td><b>HAL 15xy</b>（霍尔开关/锁存）<br>HAL 37xy / HAR 37xy / HAC 37xy</td>
+        <td>2.7~24 V<br>抗 40 V load dump</td>
+        <td>环境 -40~150 °C<br>结温至 170 °C</td>
+        <td>多种可选温度补偿<br>开关点</td>
+        <td><b>ISO 26262 SEooC<br>ASIL B-ready</b>（HAL 15xy 全系）</td>
+        <td>SOT23<br>TO-92UA / TO-92UF</td>
+      </tr>
+      <tr>
+        <td class="nm"><b>Infineon</b><br><span style="font-size:12px">德国</span></td>
+        <td><b>TLE4961</b>-1L / 1M / 2M / 3M<br>TLE4946-2K / 2L<br>TLE4966（双霍尔）<br>TLE4963-1M（5 V）</td>
+        <td>3.0~32 V（TLE4961）<br>2.7~24 V（TLE4966-2K/3K）<br>3~5.5 V（TLE4963-1M）</td>
+        <td><b>-40~170 °C</b>（TLE4961 / TLE4946）<br>-40~150 °C（TLE4966）</td>
+        <td>TLE4961-1L：Bop +2 / Brp -2 mT<br>TLE4961-2M：10 / 5 mT<br>TLE4961-3M：15 / 7.5 mT<br>TLE4961-5M：30 / 15 mT</td>
+        <td>—</td>
+        <td>PG-SOT23-3<br>PG-SSO-3 / SC59<br>TSOP-6</td>
+      </tr>
+      <tr class="hl">
+        <td class="nm"><b>赛卓<br>Semiment</b><br><span style="font-size:12px">中国 · 上海</span></td>
+        <td><b>SC2919</b>（48V 平台主推）<br>SC2943 / SC2948<br><b>SC245X</b>（可编程）<br>SC2589X（电流型）</td>
+        <td>—</td>
+        <td>-40~150 °C<br>（车规级）</td>
+        <td>SC245X 可编程<br>开关范围 ±1.5~26 mT<br>锁存范围 ±0.4~26 mT</td>
+        <td>SC245X 符合<br>ISO 26262 ASIL-B</td>
+        <td>SOT23-3L<br>TO-92</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="g-note">
+    <b>数据口径：</b>本页为公开信息整理，用于选型方向判断，<b>不构成参数承诺</b>，量产请以各家最新规格书为准；
+    「—」表示未取得公开信息，不推测补全。<br>
+    <b>两点说明：</b>① Allegro 于 2020 年 10 月在纳斯达克独立上市（ALGM），截至 2024 年 4 月 Sanken Electric 持股约 51%，
+    <b>并非 TDK 旗下</b>；TDK 持有的是 Micronas（2016 年收购）。
+    ② 赛卓为本页重点推荐对象，苏州柏达电子是赛卓官方授权代理商，详见后文专章与文末利益声明。
+  </div>
+
+  <h2>国产霍尔为什么会失效？先看 EOS 这条链</h2>
+
+  <div class="g-answer">
+    <p class="g-tag">失效机理</p>
+    <p>国产霍尔会不会失效，是选型阶段的常见顾虑。这个顾虑值得认真对待，但失效原因需要先分清：
+      霍尔芯片的失效机理中，<b>电过应力（EOS，Electrical Over Stress）是一类高发原因</b>：
+      新能源车上电控系统的电源波动、泵类与电机类负载的切换、以及线束寄生电感带来的瞬态冲击，
+      都会让霍尔输入端承受远高于标称电压的尖峰。
+      整车电源系统标称 <b>12 V</b>，业界通常按 <b>3 倍安全因子</b>选型 —— 约 <b>36 V</b> 的耐压余量，
+      这是应对常规瞬态的通行做法。<b>赛卓这一代霍尔把耐压做到 60 V，相当于 12 V 系统的 5 倍余量</b>，
+      在抛负载、反接与感性负载切换等工况下留出的安全容量更充裕，
+      这正是 Tier1 在应对主机厂整车电气测试与可靠性评审时最常被追问的一点。</p>
+  </div>
+
+  <div class="g-scroll">
+  <table>
+    <thead>
+      <tr><th class="nm">整车电源系统</th><th>标称电压</th><th>3 倍安全因子（业界通行）</th><th>赛卓这一代产品耐压</th><th>实际余量</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="nm">常规低压系统</td><td>12 V</td><td>约 36 V</td>
+        <td><b>60 V</b>（SC2943 / SC2948 / SC245X）</td><td><b>约 5 倍</b></td>
+      </tr>
+      <tr class="hl">
+        <td class="nm">48V 平台</td><td>48 V</td><td>—</td>
+        <td><b>240 V</b>（SC2919）</td><td><b>约 5 倍</b></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="g-note">
+    <b>三点补充：</b>① 上表仅为选型余量的对比参考，整车瞬态的波形与幅值应按
+    <b>ISO 7637-2 / ISO 16750-2</b> 等整车电气测试标准实测确认。
+    ② EOS 造成的损伤通常是永久性的；现场出现失效时建议保留失效件，按失效分析（FA）流程定位过电应力点，
+    不宜直接归因为批次质量问题。
+    ③ 耐压余量只是可靠性的一环，还需同时核对<b>反向电压保护</b>、<b>ESD 等级</b>与<b>全温区磁阈值稳定性</b>。
+  </div>
+
+  <h2>重点推荐：赛卓电子 Semiment</h2>
+
+  <div class="g-focus">
+    <p style="font-size:15.5px;color:var(--ink);margin-bottom:10px">
+      赛卓电子科技（上海）股份有限公司成立于 2011 年，是国内较早面向汽车电子的集成电路设计公司之一。
+      与单产品线厂商不同，赛卓同时提供<b>传感器芯片、电源管理芯片与电机驱动芯片</b>三大类，
+      便于客户在同一供应商完成整套前端感知与驱动方案的整合。</p>
+
+    <h3>48V 与高耐压：为什么是重点</h3>
+    <p style="margin-bottom:6px">48V 平台的真正难点不是稳态工作电压，而是<b>抛负载等瞬态冲击</b>，
+      因此选型应看耐压余量而非仅看标称电压。赛卓在高耐压上提供了两档产品线：</p>
+    <div class="g-scroll">
+      <table style="margin-top:6px">
+        <thead>
+          <tr><th class="nm">型号</th><th>耐压等级</th><th>车规</th><th>适用平台</th><th>说明</th></tr>
+        </thead>
+        <tbody>
+          <tr class="hl">
+            <td class="nm"><b>SC2919</b></td>
+            <td><b>240 V</b></td>
+            <td>具备车规认证</td>
+            <td><b>48V 系统（主推）</b></td>
+            <td>耐压余量充足，可直接用于 48V 系统</td>
+          </tr>
+          <tr><td class="nm"><b>SC2943</b></td><td>60 V</td><td>—</td><td>低电压平台</td><td>高耐压锁存霍尔开关</td></tr>
+          <tr><td class="nm"><b>SC2948</b></td><td>60 V</td><td>—</td><td>低电压平台</td><td>高耐压锁存霍尔开关</td></tr>
+          <tr><td class="nm"><b>SC245X</b></td><td>60 V 高耐压设计</td><td>AEC-Q100 Grade 0</td><td>3.0~48 V 宽压</td><td>可编程；支持低至 20 µA 工作电流；ISO 26262 ASIL-B</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>交付与产能</h3>
+    <div class="g-vp">
+      <div><div class="v">7&nbsp;亿+</div><div class="l">2025 年总出货量（颗）</div></div>
+      <div><div class="v">380+</div><div class="l">产品型号数量</div></div>
+      <div><div class="v">60%+</div><div class="l">研发工程人员占比</div></div>
+      <div><div class="v">2022</div><div class="l">车规封测产线投产年</div></div>
+    </div>
+    <ul>
+      <li><b>自主投资的车规封测产线</b>（浙江赛扬，位于浙江嘉善中新产业园，2022 年投产），
+        覆盖车规级晶圆测试、封装到成品测试全流程，支持定制化的特殊封装需求 ——
+        封测环节自主可控，不必依赖第三方 OSAT 排期。</li>
+      <li><b>研发工程人员占比 60%+</b>，具备按应用需求推进定制开发的人力结构。</li>
+    </ul>
+  </div>
+
+  <h2>进口型号替换为赛卓的对照</h2>
+  <p class="g-lead">下表据赛卓公开资料整理，供替换方向参考。
+    <b>任何替换都必须以实测验证为准</b> —— 尤其要确认 <b>Brp 的正负方向</b>、<b>开机延时</b> 与
+    <b>磁路工作点是否落在目标位置</b> 这三项。</p>
+  <div class="g-scroll">
+  <table>
+    <thead>
+      <tr><th class="nm">应用场景</th><th>赛卓型号</th><th>可替换的国际主流型号</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="nm">高耐压锁存霍尔</td><td><b>SC2943</b></td><td>Allegro APS12200 / A120 / A1211、Melexis MLX9221X</td></tr>
+      <tr><td class="nm">电流型抗干扰霍尔</td><td><b>SC2589X</b></td><td>Allegro A1128 / A1217（对标 A1696）</td></tr>
+      <tr><td class="nm">线性 / 电流采样霍尔</td><td><b>SC4643</b></td><td>Allegro A1363 / A1367、Melexis MLX91209 / 91217 / 91219、MagnTek MT9511 / 9211</td></tr>
+      <tr><td class="nm">角度霍尔</td><td><b>SC69431</b></td><td>Melexis MLX9036X / 9042X / 9037X（对标 HAL37XY、HAL3727、TLE49XX 等）</td></tr>
+      <tr><td class="nm">双通道霍尔</td><td><b>SC4251</b></td><td>Allegro A33230、Melexis MLX90340 / MLX90371、TDK-Micronas HAL 302X</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2>柏达能提供什么</h2>
+  <div class="g-answer" style="margin:0 0 14px">
+    <p class="g-tag">服务概览</p>
+    <p>苏州柏达电子有限公司是<b>赛卓电子（Semiment）官方授权代理商</b>，长期服务于汽车电子产业链，
+      配套汽车座椅、内饰与门系统等方向的 Tier1 及零部件厂商。依托原厂授权渠道提供<b>原厂正品直供</b>；
+      支持<b>小批量、多品种的 BOM 搭配</b>，降低一单一采的库存压力；
+      在选型阶段即可协同核对磁路、工作点与温区，量产阶段协助推进品质异常的处理与闭环；
+      <b>可提供 IATF 16949 体系证书</b>。</p>
+  </div>
+  <div class="g-grid">
+    <div class="g-card">
+      <h4>货源与质量</h4>
+      <p>赛卓官方授权渠道，原厂正品直供，货源可追溯；可提供 IATF 16949 体系证书；
+        器件级 AEC-Q100 认证信息以原厂规格书为准。</p>
+    </div>
+    <div class="g-card">
+      <h4>小批量多品种</h4>
+      <p>支持零散 BOM 搭配与多型号并单，适合研发打样、试产与长尾物料补给，不必为单一型号压库存。</p>
+    </div>
+    <div class="g-card">
+      <h4>选型与量产配合</h4>
+      <p>选型阶段协助核对磁路、Bop/Brp 工作点与全温区表现；量产阶段配合推进品质异常处理与闭环。</p>
+    </div>
+    <div class="g-card">
+      <h4>成本与响应</h4>
+      <p>面向终端客户的本地窗口，沟通链路短，样品与询价响应快；具体价格与交期以实际询价为准。</p>
+    </div>
+  </div>
+
+  <h2>按场景怎么选</h2>
+  <div class="g-grid">
+    <div class="g-card">
+      <h4>48V 平台热管理 / 阀体</h4>
+      <p>直接用于 48V 系统的首选是 <b>赛卓 SC2919</b>（耐压 240 V、具备车规认证）。
+        低电压平台可回到 <b>SC2943 / SC2948 / SC245X</b> 三款 60 V 产品。若走国际方案，
+        TDK-Micronas HAL 15xy（ASIL B-ready）与 Melexis MLX92242（2 线）同样具备竞争力。</p>
+    </div>
+    <div class="g-card">
+      <h4>车门锁 / 尾门：要 2 线、要省掉 PCB</h4>
+      <p>优先看明确提供 2 线电流接口的型号 —— <b>Melexis MLX92242</b>（2.7~24 V，支持 EoL 客户端编程）与
+        <b>TDK-Micronas HAL 15xy 的 2 线版本</b>；赛卓则有 <b>SC2589X</b> 电流型方案。
+        TDK-Micronas HAC 37xy 更在片内集成最高 330 nF 电容、可直接焊到引线框架，原厂说明这种封装可以不需要 PCB。</p>
+    </div>
+    <div class="g-card">
+      <h4>天窗 / 摇窗：用量大，成本敏感</h4>
+      <p>这两类场景通常用 3 线开漏做 index counting，用量大、单价敏感。可并列对比
+        <b>Infineon TLE4961-xM</b>（-40~170 °C、3.0~32 V、峰值 42 V 过压无需外置电阻、1.6 mA 典型供电）与
+        <b>赛卓 SC245X</b>（60 V 设计、可编程、工作电流可低至 20 µA、AEC-Q100 Grade 0）。</p>
+    </div>
+    <div class="g-card">
+      <h4>低抖动 / 高速精确计数</h4>
+      <p>对抖动敏感的场景（BLDC 换向、极轮双沿计数），<b>Allegro APS12203</b> 是为低抖动优化的第三代产品
+        （2.7~26 V，出厂编程，可选多档 Bop）。Allegro 官方也在旧型号页面上明确建议：新汽车三线霍尔锁存设计转向 APS12200/10/30。</p>
+    </div>
+    <div class="g-card">
+      <h4>替换老旧 SOT89 / TO-92UA 物料</h4>
+      <p>很多在役方案还是上一代的 SOT89。<b>Infineon TLE4961</b> 采用 SC59 封装，占地比传统 SOT89 小一半以上；
+        <b>赛卓 SC4643 / SC4251 / SC69431</b> 则有公开的 Pin to Pin 替代对照。替换前一定要核对
+        <b>Brp 的正负方向</b> 与 <b>开机延时</b>。</p>
+    </div>
+    <div class="g-card">
+      <h4>多品类整合采购</h4>
+      <p>若项目同时需要霍尔感知、电机驱动与电源管理，<b>赛卓是三条线都有覆盖的供应商</b>，
+        可与 <b>Infineon</b>、Allegro 做整体比较，减少供应商管理成本。</p>
+    </div>
+  </div>
+
+  <h2>选型 FAQ</h2>
+
+  <details>
+    <summary>车规霍尔锁存芯片主要由哪些厂家供应？</summary>
+    <div class="ans"><p>可选供应商包括 Allegro MicroSystems（美国）、Melexis（比利时）、TDK-Micronas（德国/日本）、
+      Infineon（德国）以及赛卓电子 Semiment（中国）。前四家的锁存产品线均通过 AEC-Q100 认证；
+      赛卓的霍尔产品线新一代耐压等级提升至 60V，并提供可用于 48V 系统的 SC2919。</p></div>
+  </details>
+
+  <details>
+    <summary>48V 系统应该选哪款霍尔锁存芯片？</summary>
+    <div class="ans"><p>48V 系统的难点不是稳态工作电压，而是抛负载等瞬态冲击，因此选型要看耐压余量而非仅看标称工作电压。
+      赛卓针对 48V 系统主推 <b>SC2919</b>，耐压 240 V 且具备车规认证，可直接用于 48V 系统；
+      另有 SC2943、SC2948 与 SC245X 三款耐压 60 V 的产品可供低电压平台选用。具体请以最新的原厂规格书为准。</p></div>
+  </details>
+
+  <details>
+    <summary>国产霍尔芯片为什么容易失效？和耐压有什么关系？</summary>
+    <div class="ans"><p>霍尔芯片的失效机理中，<b>电过应力（EOS，Electrical Over Stress）是一类高发原因</b>。
+      新能源车上电控系统的电源波动、泵类与电机类负载的切换、以及线束寄生电感带来的瞬态冲击，
+      都会让霍尔输入端承受远高于标称电压的尖峰。整车电源系统标称 12 V，业界通常按 3 倍安全因子选型，
+      约 36 V 的耐压余量。<b>赛卓这一代霍尔把耐压做到 60 V，相当于 12 V 系统的 5 倍余量</b>，
+      在抛负载、反接与感性负载切换等工况下留出的安全容量更充裕。
+      EOS 造成的损伤通常是永久性的，事后可通过失效分析定位到过电应力点。</p></div>
+  </details>
+
+  <details>
+    <summary>赛卓电子的霍尔产品有什么不同？</summary>
+    <div class="ans"><p>四点差异：一是产品覆盖，除霍尔传感器外还包含电源管理芯片与电机驱动芯片；
+      二是耐压余量，新一代霍尔耐压提升至 60 V，相当于 12 V 系统的 5 倍余量，另有 SC2919 以 240 V 耐压直接用于 48 V 系统；
+      三是供应链，赛卓自主投资了车规封测产线（浙江赛扬，位于浙江嘉善，2022 年投产），覆盖晶圆测试、封装到成品测试全流程；
+      四是替换便利，多款霍尔已实现与国际主流型号的 Pin to Pin 兼容，可在不改动机械结构的前提下替换。</p></div>
+  </details>
+
+  <details>
+    <summary>2 线霍尔锁存和 3 线有什么区别，什么时候该用 2 线？</summary>
+    <div class="ans"><p>2 线版本把电源与信号复用在同一对线上，用电流大小表达开关状态，典型只需两根线即可工作；
+      3 线版本为独立的 VDD / GND / OUT，输出开漏数字电平。当执行器内部空间受限、希望取消 PCB 与多余线束，
+      或需要把传感器直接连接到 ECU 的电流检测端口时，应优先考虑 2 线版本。Melexis MLX92242 与
+      TDK-Micronas HAL 15xy 都明确提供 2 线版本；赛卓则有 SC2589X 电流型方案。</p></div>
+  </details>
+
+  <details>
+    <summary>AEC-Q100 Grade 0 和 Grade 1 怎么选？</summary>
+    <div class="ans"><p>AEC-Q100 Grade 0 对应环境温度上限 150 °C，Grade 1 为 125 °C。
+      安装在发动机舱、变速箱、制动系统附近的传感器应至少按 Grade 0 选型；驾驶室内的门窗升降、座椅、
+      内饰照明等场景，Grade 1 通常已够用。赛卓 SC245X 按 AEC-Q100 Grade 0 设计，标称工作环境温度为 -40~150 °C。</p></div>
+  </details>
+
+  <details>
+    <summary>什么叫 PCB-Less 霍尔方案？</summary>
+    <div class="ans"><p>PCB-Less 指的是把霍尔芯片的引脚直接焊接或熔焊到引线框架、端子或线束上，
+      去掉执行器内部的整块 PCB。实现前提是器件本身集成了必要的电容与保护，不再依赖外部无源器件。
+      TDK-Micronas 的 HAC 37xy 就在片内集成了最高 330 nF 的电容，原厂说明中提到这种封装可以不需要印制电路板。</p></div>
+  </details>
+
+  <div class="g-disc">
+    <h3>利益声明</h3>
+    <p>苏州柏达电子有限公司为<b>赛卓电子（Semiment）的官方授权代理商</b>。
+      因此本页对赛卓的介绍带有商业立场，请您结合原厂规格书独立判断。</p>
+    <p>本页同时对比的 Allegro MicroSystems、Melexis、TDK-Micronas、Infineon，
+      柏达<b>未取得代理授权</b>，相关内容为公开信息整理，不构成代理承诺或销售报价；
+      若您需要这些品牌的供货渠道，请直接联系相应原厂或其授权代理商。</p>
+  </div>
+
+  <div class="g-cta">
+    <div>
+      <h3>需要按您的磁路标定 Bop / Brp？</h3>
+      <p>把工况（温度、供电、目标间距、磁铁牌号）告诉我们，工程师协助核对选型。</p>
+    </div>
+    <a class="btn" href="contact.html">提交选型需求</a>
+  </div>
+
+  <p class="g-rel">相关页面：
+    <a href="sensors.html">锁存霍尔产品选型表</a> ·
+    <a href="article-lock.html">车门锁 2 线 PCB-Less 电流输出方案</a> ·
+    <a href="cases.html">应用案例文库</a> ·
+    <a href="contact.html">联系我们</a></p>
+
+</div>
+</div>
+</main>
 
 <footer class="site-footer">
   <div class="container">

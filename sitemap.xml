@@ -764,7 +764,7 @@
   <url>
     <loc>https://www.pcb-less.com/sensor-omnipolar.html</loc>
     <lastmod>2026-09-30</lastmod>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.pcb-less.com/sensor-omnipolar.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.pcb-less.com/en/sensor-omnipolar.html"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://www.pcb-less.com/ja/sensor-omnipolar.html"/>
@@ -774,7 +774,7 @@
   <url>
     <loc>https://www.pcb-less.com/en/sensor-omnipolar.html</loc>
     <lastmod>2026-09-30</lastmod>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.pcb-less.com/sensor-omnipolar.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.pcb-less.com/en/sensor-omnipolar.html"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://www.pcb-less.com/ja/sensor-omnipolar.html"/>
@@ -784,7 +784,7 @@
   <url>
     <loc>https://www.pcb-less.com/ja/sensor-omnipolar.html</loc>
     <lastmod>2026-09-30</lastmod>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.pcb-less.com/sensor-omnipolar.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.pcb-less.com/en/sensor-omnipolar.html"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://www.pcb-less.com/ja/sensor-omnipolar.html"/>
@@ -794,12 +794,52 @@
   <url>
     <loc>https://www.pcb-less.com/de/sensor-omnipolar.html</loc>
     <lastmod>2026-09-30</lastmod>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.pcb-less.com/sensor-omnipolar.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.pcb-less.com/en/sensor-omnipolar.html"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://www.pcb-less.com/ja/sensor-omnipolar.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.pcb-less.com/de/sensor-omnipolar.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.pcb-less.com/sensor-omnipolar.html"/>
+  </url>
+  <url>
+    <loc>https://www.pcb-less.com/sensor-current-switch.html</loc>
+    <lastmod>2026-09-30</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.pcb-less.com/sensor-current-switch.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.pcb-less.com/en/sensor-current-switch.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.pcb-less.com/ja/sensor-current-switch.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.pcb-less.com/de/sensor-current-switch.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.pcb-less.com/sensor-current-switch.html"/>
+  </url>
+  <url>
+    <loc>https://www.pcb-less.com/en/sensor-current-switch.html</loc>
+    <lastmod>2026-09-30</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.pcb-less.com/sensor-current-switch.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.pcb-less.com/en/sensor-current-switch.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.pcb-less.com/ja/sensor-current-switch.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.pcb-less.com/de/sensor-current-switch.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.pcb-less.com/sensor-current-switch.html"/>
+  </url>
+  <url>
+    <loc>https://www.pcb-less.com/ja/sensor-current-switch.html</loc>
+    <lastmod>2026-09-30</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.pcb-less.com/sensor-current-switch.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.pcb-less.com/en/sensor-current-switch.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.pcb-less.com/ja/sensor-current-switch.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.pcb-less.com/de/sensor-current-switch.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.pcb-less.com/sensor-current-switch.html"/>
+  </url>
+  <url>
+    <loc>https://www.pcb-less.com/de/sensor-current-switch.html</loc>
+    <lastmod>2026-09-30</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.pcb-less.com/sensor-current-switch.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.pcb-less.com/en/sensor-current-switch.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.pcb-less.com/ja/sensor-current-switch.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.pcb-less.com/de/sensor-current-switch.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.pcb-less.com/sensor-current-switch.html"/>
   </url>
   <url>
     <loc>https://www.pcb-less.com/sensor-linear.html</loc>

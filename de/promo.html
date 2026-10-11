@@ -182,13 +182,18 @@ p.g-note{font-size:12.5px;line-height:1.75;color:var(--ink-2);max-width:44em;
 .p-list a{font-size:17px;font-weight:500;color:#1A4085;text-decoration:none}
 .p-list a:hover{text-decoration:underline}
 .p-list p{margin:.4em 0 0;color:#4F4F4F;font-size:14px}
-/* ---- hero: 左文右海报 ---- */
-.promo-hero{display:grid;grid-template-columns:1fr minmax(210px,290px);gap:36px;align-items:center}
-.promo-hero-txt{max-width:44em}
-.promo-order{margin:.5em 0 0;color:#4F4F4F;font-size:14px}
-.promo-hero-poster{justify-self:end}
-.promo-hero-poster .p-poster{width:100%;height:auto;max-width:290px;
- border:1px solid #E2E2E2;border-radius:4px;display:block}
+/* ---- hero: 全幅背景主图(高贵紫工业风)+ 左侧文案 ---- */
+.promo-hero{position:relative;overflow:hidden;padding:80px 0 60px;color:#fff;background:#1a0836}
+.promo-hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.promo-hero-scrim{position:absolute;inset:0;z-index:1;
+ background:linear-gradient(90deg, rgba(26,8,54,.95) 0%, rgba(26,8,54,.74) 42%, rgba(26,8,54,.30) 74%, rgba(26,8,54,.06) 100%)}
+.promo-hero .container{position:relative;z-index:2}
+.promo-hero .eyebrow{color:#C9A6FF;margin-bottom:14px}
+.promo-hero .eyebrow::before{background:#C9A6FF}
+.promo-hero h1{color:#fff;font-size:clamp(28px,3vw,40px);font-weight:700;letter-spacing:-0.01em;margin-bottom:12px}
+.promo-hero p{color:rgba(255,255,255,.8);max-width:64ch;font-size:15.5px;line-height:1.7}
+.promo-hero .p-badge{background:#C9A6FF;color:#2a0d52}
+.promo-order{margin:.5em 0 0;font-size:14px;color:rgba(255,255,255,.66)}
 /* ---- 规格要点条形(非等宽卡片, 避 AI 味) ---- */
 .p-glance{display:flex;flex-wrap:wrap;margin:1.4em 0 0;border-top:1px solid #E2E2E2;border-bottom:1px solid #E2E2E2}
 .p-glance>div{flex:1 1 150px;padding:.85em 1em;border-left:1px solid #E2E2E2}
@@ -196,12 +201,13 @@ p.g-note{font-size:12.5px;line-height:1.75;color:var(--ink-2);max-width:44em;
 .p-glance span{display:block;font-size:12.5px;color:#4F4F4F}
 .p-glance b{display:block;margin-top:.25em;font-size:16px;color:#1A4085;font-weight:600}
 @media (max-width:720px){
- .promo-hero{grid-template-columns:1fr;gap:18px}
- .promo-hero-poster{order:-1;justify-self:start}
- .promo-hero-poster .p-poster{max-width:210px}
+ .promo-hero{padding:54px 0 40px}
+ .promo-hero-scrim{background:linear-gradient(180deg, rgba(26,8,54,.5) 0%, rgba(26,8,54,.88) 100%)}
  .p-glance>div{flex:1 1 45%}
 }
 </style>
+
+
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -264,7 +270,7 @@ p.g-note{font-size:12.5px;line-height:1.75;color:var(--ink-2);max-width:44em;
     "name": "Suzhou Boda Electronic Co., Ltd.",
     "url": "https://www.pcb-less.com"
    },
-   "image": "https://www.pcb-less.com/img/sc2498t-poster.svg",
+   "image": "https://www.pcb-less.com/img/sc2498t-hero.jpg",
    "offers": {
     "@type": "Offer",
     "availability": "https://schema.org/InStock",
@@ -434,19 +440,19 @@ p.g-note{font-size:12.5px;line-height:1.75;color:var(--ink-2);max-width:44em;
         </div>
       </div>
       <div class="nav-item has-mega">
-        <button type="button" class="nav-btn" aria-expanded="false" aria-haspopup="true" aria-controls="mega-apps">
+        <button type="button" class="nav-btn active" aria-expanded="false" aria-haspopup="true" aria-controls="mega-apps">
           Anwendung <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
         </button>
         <div class="mega" id="mega-apps">
           <div class="mega-inner">
             <div class="mega-rail" aria-label="Anwendungsbereiche">
-              <button type="button" class="mega-rail-item" data-panel="p-auto">Automotive</button>
+              <button type="button" class="mega-rail-item on" data-panel="p-auto">Automotive</button>
               <button type="button" class="mega-rail-item" data-panel="p-robot">Robotik</button>
               <button type="button" class="mega-rail-item" data-panel="p-industry">Industrie</button>
               <button type="button" class="mega-rail-item" data-panel="p-consumer">Consumer-Elektronik</button>
             </div>
             <div class="mega-body">
-              <div class="mega-panel" data-panel="p-auto">
+              <div class="mega-panel on" data-panel="p-auto">
                 <a class="mega-title" href="cases.html?sector=auto">Automotive <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
                 <div class="mega-grid">
                 <div class="mega-col">
@@ -645,7 +651,7 @@ p.g-note{font-size:12.5px;line-height:1.75;color:var(--ink-2);max-width:44em;
           </div>
         </div>
       </div>
-      <a class="nav-link active" href="promo.html">Am Lager</a>
+      <a class="nav-link" href="promo.html">Am Lager</a>
       <a class="nav-link" href="tool-magnetic.html">Magnetkreis-Tool</a>
       <a class="nav-link" href="contact.html">Kontakt</a>
     </nav>

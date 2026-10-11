@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200" width="900" height="1200" role="img" aria-label="SC2498T 高压锁存型平面感应霍尔开关 库存现货">
+  <defs>
+    <style>
+      .boda{font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB",sans-serif;}
+    </style>
+  </defs>
+
+  <!-- 外框 -->
+  <rect x="0" y="0" width="900" height="1200" fill="#FFFFFF"/>
+  <rect x="14" y="14" width="872" height="1172" fill="none" stroke="#3D66AE" stroke-width="2"/>
+
+  <!-- 顶部品牌深场 -->
+  <rect x="14" y="14" width="872" height="176" fill="#001B5D"/>
+  <text x="56" y="92" class="boda" fill="#FFFFFF" font-size="62" font-weight="700" letter-spacing="1">SC2498T</text>
+  <text x="58" y="138" class="boda" fill="#9FB2D8" font-size="23" font-weight="500">高压锁存型 · 平面感应霍尔开关</text>
+  <!-- 库存现货 标识 -->
+  <rect x="600" y="58" width="240" height="58" rx="4" fill="#3D66AE"/>
+  <text x="720" y="95" class="boda" fill="#FFFFFF" font-size="28" font-weight="700" text-anchor="middle" letter-spacing="4">库存现货</text>
+
+  <!-- 芯片示意 -->
+  <g>
+    <rect x="300" y="300" width="300" height="210" rx="12" fill="#EEF2F9" stroke="#3D66AE" stroke-width="3"/>
+    <circle cx="332" cy="332" r="9" fill="#3D66AE"/>
+    <text x="450" y="412" class="boda" fill="#1A4085" font-size="40" font-weight="700" text-anchor="middle" letter-spacing="2">2498T</text>
+    <!-- 三脚 -->
+    <rect x="350" y="510" width="46" height="46" fill="#3D66AE"/>
+    <rect x="427" y="510" width="46" height="46" fill="#3D66AE"/>
+    <rect x="504" y="510" width="46" height="46" fill="#3D66AE"/>
+    <text x="450" y="600" class="boda" fill="#4F4F4F" font-size="22" text-anchor="middle">SOT23-3L · 编带 3000 / 盘</text>
+  </g>
+
+  <!-- 关键参数条 -->
+  <g>
+    <rect x="56" y="660" width="788" height="2" fill="#E2E2E2"/>
+    <g class="boda" fill="#222222" font-size="24">
+      <rect x="56" y="700" width="14" height="14" fill="#009FE3"/>
+      <text x="86" y="714">动作点 +3.0 mT（±30 Gs） · 释放点 −3.0 mT</text>
+      <rect x="56" y="760" width="14" height="14" fill="#009FE3"/>
+      <text x="86" y="774">工作电压 2.8 ~ 40 V · 耐压 −28 ~ 60 V</text>
+      <rect x="56" y="820" width="14" height="14" fill="#009FE3"/>
+      <text x="86" y="834">AEC-Q100 Grade 0 · 工作温度 −40 ~ 150 °C</text>
+      <rect x="56" y="880" width="14" height="14" fill="#009FE3"/>
+      <text x="86" y="894">开漏输出 · 带宽 20 kHz · 可替换 A1260 / MLX92211</text>
+    </g>
+    <rect x="56" y="944" width="788" height="2" fill="#E2E2E2"/>
+  </g>
+
+  <!-- 底部落款 -->
+  <rect x="14" y="1010" width="872" height="176" fill="#001B5D"/>
+  <text x="56" y="1078" class="boda" fill="#FFFFFF" font-size="30" font-weight="700">苏州柏达电子</text>
+  <text x="58" y="1116" class="boda" fill="#9FB2D8" font-size="20">PCB-LESS · www.pcb-less.com</text>
+  <text x="844" y="1078" class="boda" fill="#CDD8EE" font-size="22" text-anchor="end">可申请样品</text>
+  <text x="844" y="1116" class="boda" fill="#CDD8EE" font-size="22" text-anchor="end">下载规格书</text>
+</svg>

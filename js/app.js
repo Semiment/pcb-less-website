@@ -1,9 +1,9 @@
 /* 柏达官网原型交互脚本 */
 
 /* ---------- 产品数据（脚本生成，勿手改） ----------
-   来源：Notion 产品库「汽车锁存霍尔（AEC-Q100）/ 低成本锁存霍尔 / 锁存双路霍尔效应输出」
+   来源：产品资料「汽车锁存霍尔（AEC-Q100）/ 低成本锁存霍尔 / 锁存双路霍尔效应输出」
    由 .workbuddy/cache/misc/build_products_js.py 生成 —— 与传感器品类页同源同值。
-   首页 Hero 选型台与传感器页快检表都用它；改数据请改 Notion 后重跑脚本。 */
+   首页 Hero 选型台与传感器页快检表都用它；改数据请改源数据后重跑脚本。 */
 window.PRODUCTS = [
   { model: "SC2943", type: t("1D 垂直"), typeNorm: "1D", series: t("汽车锁存霍尔"), feature: t("高灵敏度，60V耐压，限流保护40mA"), voltage: "2.7~40", current: "1.2mA", output: t("开漏输出"), bop: "30", brp: "-30", pkg: "SOT23 / SIP3", temp: "-40~150°C" },
   { model: "SC2948", type: t("1D 垂直"), typeNorm: "1D", series: t("汽车锁存霍尔"), feature: t("低灵敏度，60V耐压，限流保护40mA"), voltage: "2.7~40", current: "1.2mA", output: t("开漏输出"), bop: "80", brp: "-80", pkg: "SOT23 / SIP3", temp: "-40~150°C" },

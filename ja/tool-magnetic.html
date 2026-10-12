@@ -451,19 +451,19 @@ margin:0 0 4px;max-width:62em;line-height:1.7
         </div>
       </div>
       <div class="nav-item has-mega">
-        <button type="button" class="nav-btn" aria-expanded="false" aria-haspopup="true" aria-controls="mega-apps">
+        <button type="button" class="nav-btn active" aria-expanded="false" aria-haspopup="true" aria-controls="mega-apps">
           アプリケーション <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
         </button>
         <div class="mega" id="mega-apps">
           <div class="mega-inner">
             <div class="mega-rail" aria-label="アプリケーション分野">
-              <button type="button" class="mega-rail-item" data-panel="p-auto">車載</button>
+              <button type="button" class="mega-rail-item on" data-panel="p-auto">車載</button>
               <button type="button" class="mega-rail-item" data-panel="p-robot">ロボティクス</button>
               <button type="button" class="mega-rail-item" data-panel="p-industry">産業機器</button>
               <button type="button" class="mega-rail-item" data-panel="p-consumer">民生エレクトロニクス</button>
             </div>
             <div class="mega-body">
-              <div class="mega-panel" data-panel="p-auto">
+              <div class="mega-panel on" data-panel="p-auto">
                 <a class="mega-title" href="cases.html?sector=auto">車載 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
                 <div class="mega-grid">
                 <div class="mega-col">
@@ -663,7 +663,7 @@ margin:0 0 4px;max-width:62em;line-height:1.7
         </div>
       </div>
       <a class="nav-link" href="promo.html">在庫あり</a>
-      <a class="nav-link active" href="tool-magnetic.html">磁気回路ツール</a>
+      <a class="nav-link" href="tool-magnetic.html">磁気回路ツール</a>
       <a class="nav-link" href="contact.html">お問い合わせ</a>
     </nav>
     <div class="header-actions">
@@ -1058,7 +1058,7 @@ margin:0 0 4px;max-width:62em;line-height:1.7
 
 <footer class="site"><div class="wrap">
   <p>The kernel is the surface-charge method (B = Br/4π·Σ dA·r/|r|³), cross-checked against the axial closed-form solution with error under 0.1%. It suits near-field selection estimates without a magnetic return path; it does not replace 3-D FEM when a back-iron or skewed multi-pole is present.</p>
-  <p>Device parameters: the SC245X family uses values from the Semiment datasheet Rev.V1.1 table 9.2 (1 mT = 10 Gs); the other parts are taken from the Notion Hall product library, with tolerances not published by the manufacturer counted at a general +/-10 Gs.</p>
+  <p>Device parameters: the SC245X family uses values from the Semiment datasheet Rev.V1.1 table 9.2 (1 mT = 10 Gs); the other parts are taken from the manufacturer datasheet, with tolerances not published by the manufacturer counted at a general +/-10 Gs.</p>
 </div></footer>
 </div>
 
@@ -1173,9 +1173,7 @@ Mounting tolerance +/-0.1 mm, air-gap deviation +/-0.2 mm, ring pole-pitch error
 
 <script src="../js/i18n.js"></script>
 <script src="../js/nav.js"></script>
-<script>var MAGSTR = {"M0": "sintered NdFeB · N シリーズ（最高 80 °C）", "M1": "sintered NdFeB · M シリーズ（最高 100 °C）", "M2": "sintered NdFeB · H シリーズ（最高 120 °C）", "M3": "sintered NdFeB · SH シリーズ（最高 150 °C）", "M4": "sintered NdFeB · UH シリーズ（最高 180 °C）", "M5": "sintered NdFeB · EH / AH シリーズ（最高 200 / 230 °C）", "M6": "ferrite ", "M7": "SmCo ", "M8": "NdFeB ", "M9": "オープンドレイン", "M10": "datasheet Rev.V1.1", "M11": "オムニポーラ／ユニポーラ選択可，highest sensitivity", "M12": "オープンドレイン", "M13": "datasheet Rev.V1.1", "M14": "オープンドレイン", "M15": "datasheet Rev.V1.1", "M16": "オープンドレイン", "M17": "datasheet Rev.V1.1", "M18": "オープンドレイン", "M19": "datasheet Rev.V1.1", "M20": "Default 8.2 mT; programmable −220~220 Gs, step ≈5 Gs", "M21": "オープンドレイン", "M22": "2D 平面/垂直，平行成分", "M23": "電流出力", "M24": "1D 垂直", "M25": "電流出力", "M26": "1D 垂直", "M27": "オープンドレイン", "M28": "1D 垂直，60 V", "M29": "オープンドレイン", "M30": "48 V recommended，250 V", "M31": "オープンドレイン", "M32": "1D 垂直", "M33": "オープンドレイン", "M34": "2D 平面/垂直，平行成分", "M35": "オープンドレイン", "M36": "1D 垂直，60 V", "M37": "オープンドレイン", "M38": "オープンドレイン", "M39": "Notion + 実測口径", "M40": "actual spec 5~17 Gs", "M41": "オープンドレイン", "M42": "2D 平面/垂直，平行成分", "M43": "オープンドレイン", "M44": "オープンドレイン", "M45": "内蔵プルアップ", "M46": "オープンドレイン", "M47": "ユニポーラ／オムニポーラ（proximity switch）", "M48": "ラッチタイプ（リング直交）", "M49": "\" role=\"img\" aria-label=\"磁界スケール尺，in Gauss\">", "M50": "\" y=\"12\" font-size=\"10.5\" fill=\"#4F4F4F\">磁界スケール尺 · 判定成分（Gs）\u003c/text>", "M51": "\" y=\"12\" font-size=\"10.5\" fill=\"#4F4F4F\" text-anchor=\"end\">ピーク ±", "M52": " 倍 Bop", "M53": "\" font-size=\"10.5\" fill=\"#001B5D\" text-anchor=\"end\">chip marking surface\u003c/text>", "M54": "\" font-size=\"10\" fill=\"#9AA3B0\" text-anchor=\"middle\">始点 ", "M55": "\" font-size=\"10.5\" fill=\"#0074A8\">エアギャップ s\u003c/text>", "M56": "到達不可", "M57": "\" font-size=\"9.5\" fill=\"#9AA3B0\">= 動作ストローク S_op\u003c/text>", "M58": "\u003ctext x=\"62\" y=\"60\" font-size=\"10.5\" fill=\"#222\">magnet motion direction\u003c/text>", "M59": "\u003ctext x=\"62\" y=\"76\" font-size=\"10\" fill=\"#4F4F4F\">vertical reciprocation along the magnetization axis\u003c/text>", "M60": "\u003ctext x=\"62\" y=\"90\" font-size=\"10\" fill=\"#4F4F4F\">↓ 接近   ↑ 遠ざかる\u003c/text>", "M61": "\" font-size=\"10\" fill=\"#9AA3B0\" text-anchor=\"middle\">始点\u003c/text>", "M62": "\" font-size=\"10.5\" fill=\"#222\" text-anchor=\"middle\">横断方向\u003c/text>", "M63": "\" font-size=\"10\" fill=\"#9AA3B0\" text-anchor=\"end\">s = 0 正対\u003c/text>", "M64": "\" font-size=\"10.5\" fill=\"#0074A8\">実装高さ ", "M65": "\u003ctext x=\"62\" y=\"60\" font-size=\"10.5\" fill=\"#222\">magnet motion direction\u003c/text>", "M66": "\u003ctext x=\"62\" y=\"76\" font-size=\"10\" fill=\"#4F4F4F\">印字面に平行移動\u003c/text>", "M67": "\u003ctext x=\"62\" y=\"90\" font-size=\"10\" fill=\"#4F4F4F\">実装高さ維持\u003c/text>", "M68": "\" font-size=\"10.5\" fill=\"#4F4F4F\" text-anchor=\"middle\">ストローク s (mm) · far on left, near on right\u003c/text>", "M69": ")\" text-anchor=\"middle\">判定成分 Bz (Gs)\u003c/text>", "M70": "動作 ", "M71": "リリース ", "M72": "Field empty: for face-on the gap is computed — at Bop crossing distance = S_op, read top-right.", "M73": "To change it, adjust magnet size, grade, or temp range, or pick another Bop part; the two digits relate in the stroke-temperature plot.", "M74": "直径 D", "M75": "長さ A", "M76": "チップ印字面朝上，磁石はチップ真上に，N（又は S）pole face facing the chip，move up and down along the magnetization axis。in the chart「エアギャップ s」is the distance from magnet bottom face to chip marking surface，i.e. the operating stroke S_op——磁石がこの距離まで下降で反転。", "M77": "チップ印字面朝上，磁石はチップ上方に、実装エアギャップ維持，印字面に平行に横断。Mounting gap = vertical distance base-to-marking-face，上の欄で直接指定。s = 0 磁石正対を示す，the vertical direction always follows Bz 判定。", "M78": "proximity switch must use unipolar／オムニポーラ：ラッチは磁界反転でリリース，磁石が単に遠ざかってもリセットせず。", "M79": "Reachable over full range × PASS", "M80": "Reachable at room temp only × Insufficient over full range", "M81": "stroke insufficient × FAIL", "M82": "customer requirement ", "M83": " mm；公称動作ストローク ", "M84": " mm，Min after full-temp tolerance stack-up ", "M85": " mm，余裕 ", "M86": "customer requirement ", "M87": " mm；公称動作 ", "M88": " mm 基準達成，But worst over full range only ", "M89": " mm。磁石を厚く、グレード向上，より高感度型番へ。", "M90": "customer requirement ", "M91": " mm；公称動作のみ ", "M92": " mm。磁石体積を拡大、高グレード材へ，or pick a lower Bop 型番（本シリーズ SC2450 は 25 Gs）。", "M93": "\u003cb>プログラム逆算：\u003c/b>requires ", "M94": " mm 動作時，", "M95": "°C 高温減磁時のこの点磁界 ", "M96": " Gs，により 1.25 x margin; it is recommended to Bop ～として設定 \u003cb>", "M97": " Gs\u003c/b>（取 5 Gs step about ", "M98": "磁石又はストローク調整", "M99": "プログラム範囲", "M100": "超過", "M101": "端面正対：薄灰点線枠は磁石始点（最遠点），the solid box marks the operating point，赤点線は出力反転時の磁石高さ。判定成分は Bz ——  it crosses the sense face vertically， also perpendicular to pole face，最強信号の配置，so with the same magnet it gives the longest operating stroke。", "M102": "平面横断：薄灰点線枠＝始点，実枠はチップ正対位置。磁石側面は磁荷を持たず（σ = M·n̂ = 0），側面磁界は端面のエッジ磁界，主成分は依然 Bz， therefore also by Bz 判定，ただしピークは端面正対より低い。", "M103": "常温", "M104": "振幅不足", "M105": "Amplitude insufficient at tolerance extremes", "M106": "\" font-size=\"10.5\" fill=\"#4F4F4F\">N/S 境界 · 過零反転\u003c/text>", "M107": " 極対\u003c/text>", "M108": "\" font-size=\"11\" fill=\"#4F4F4F\">外半径 Ro ", "M109": " mm（外径 φ", "M110": "）· 内半径 Ri ", "M111": " mm（内径 φ", "M112": "）· Radial wall ", "M113": "\" font-size=\"11\" fill=\"#4F4F4F\">アキシャル厚 L ", "M114": " mm · エアギャップ ", "M115": " mm · 2 個の弧長間隔 ", "M116": "Radial: Hall outside, sense to center; poles on outer cyl, end face polifree", "M117": "Axial: Hall outside end face, sense parallel; poles on end face, outer cyl polifree", "M118": "\" font-size=\"11\" fill=\"#4F4F4F\">A 上にある N / S 境界線上 —— ラッチの反転点は磁界ゼロ，", "M119": "磁界過零は境界通過の瞬間\u003c/text>", "M120": "\" font-size=\"11\" fill=\"#4F4F4F\">A と B mounting angle ", "M121": "° 機械，ちょうど 1 電気周期の 1/4，すなわち理想 90° 電気角位相差\u003c/text>", "M122": "Axial thickness L", "M123": " 極対 · 磁極 ", "M124": " 個 · 1 電気周期 = 1 極対 · 全周 ", "M125": " パルス", "M126": "Radial multipole: N/S alternate on outer cyl, end face itself polifree", "M127": "Axial multipole: N/S on end face, outer cyl itself polifree", "M128": "\" font-size=\"11.5\" fill=\"#001B5D\" font-weight=\"600\">A / B 実装関係（zoomed-in）\u003c/text>", "M129": "\" font-size=\"10\" fill=\"#9AA3B0\">図中の角は拡大，数値は実値\u003c/text>", "M130": "O リング中心", "M131": "° 機械", "M132": "≡ 90° 電気角", "M133": "中心距離 ", "M134": "エアギャップ ", "M135": "収まらず：プレースホルダ ", "M136": " mm，最大 ", "M137": " 極対", "M138": "プレースホルダ ", "M139": " mm · 並べて配置可", "M140": ")\" text-anchor=\"middle\">判定成分 (Gs)\u003c/text>", "M141": "\" font-size=\"10.5\" fill=\"#4F4F4F\">コンパレータ整形後のデジタル出力 —— The quadrature levels measured on a scope\u003c/text>", "M142": "\" font-size=\"10.5\" fill=\"#B3261E\">A 路出力\u003c/text>", "M143": "\" font-size=\"10.5\" fill=\"#0074A8\">B 路出力\u003c/text>", "M144": "\" font-size=\"10\" fill=\"#B3261E\" text-anchor=\"end\">1 回転 ", "M145": " ハイレベル + ", "M146": " ローレベル\u003c/text>", "M147": "\" font-size=\"10\" fill=\"#0074A8\" text-anchor=\"end\">1 回転 ", "M148": " ハイレベル + ", "M149": " ローレベル\u003c/text>", "M150": "° 電気角（目標 90°，i.e. the mounting angle ", "M151": "° 機械角）\u003c/text>", "M152": "\" font-size=\"10.5\" fill=\"#4F4F4F\" text-anchor=\"middle\">横軸はリング機械角：1 回転 0~360° = ", "M153": " electrical periods = ", "M154": " 磁極，1 electrical periods = ", "M155": "° 機械角\u003c/text>", "M156": "\" font-size=\"10.5\" fill=\"#4F4F4F\" text-anchor=\"middle\">リングが 1 回転，A / B 各路が反転 ", "M157": " 回 —— so each channel gets ", "M158": " ハイと ", "M159": " ローレベル\u003c/text>", "M160": "Hall on ring outer side, sense toward center, Br; typical brushed motor end.", "M161": "Hall faces ring end face, sense parallel, Bz; for ample axial space.", "M162": "Ring quadrature: latch only; toggle by zero-cross, phase stable; unipolar/omnipolar duty drifts.", "M163": "Annular cylinder，Ro / Ri Center to outer edge、Bore distance（Radius caliber）。Radial wall ", "M164": " mm，アキシャル厚 ", "M165": "内半径は最小肉厚に制限 1 mm limited to ", "M166": " enter the value directly in the box on the right，精度 0.01 mm。", "M167": "動作不可 × FAIL", "M168": "：Peak at gap only ", "M169": " Gs，到達要 ", "M170": " Gs。ギャップを縮小、リングを厚く、高グレード材へ，or use a lower-threshold part。", "M171": "立体図。", "M172": "平面図。", "M173": "Field amplitude insufficient; unreliable toggle.", "M174": "直交精度基準達成 × PASS", "M175": "統計合成基準達成 × 最悪規格外", "M176": "直交誤差規格外 × FAIL", "M177": " 実装角度（時） ", "M178": "°機械，2 個の弧長間隔に相当 ", "M179": " mm。エアギャップ磁界ピーク ", "M180": " Gs，as the threshold ", "M181": " Gs の ", "M182": " 倍。最悪直交誤差 ", "M183": "°，目標 ±", "M184": "閾値ミスマッチ", "M185": "Two Bops at extremes, opposite combo; offset ÷ gradient", "M186": "PCB mounting position", "M187": " mm falls within radius ", "M188": " mm 上，誤差が増幅 P 倍", "M189": "エアギャップ偏差", "M190": " mm 磁界振幅を変化，Indirectly changes crossing angle", "M191": "リング極ピッチ", "M192": "Magnetization pitch error counted directly in elec angle", "M193": "\u003ctr>\u003ctd>\u003cb>最悪重畳\u003c/b>\u003c/td>\u003ctd class=\"n\">", "M194": "規格外", "M195": "\u003ctr>\u003ctd>statistical combination (RSS)\u003c/td>\u003ctd class=\"n\">", "M196": "\u003ctd>RMS when the errors are independent，実際のロット水準は両者間\u003c/td>\u003c/tr>", "M197": "閾値ミスマッチ", "M198": "PCB 実装", "M199": "リング極ピッチ", "M200": "エアギャップ偏差", "M201": "\u003cb>現在の支配的誤差源：", "M202": "Air-gap field reaches threshold ", "M203": " 倍，Waveform very steep near zero（勾配≈ ", "M204": " Gs/°），threshold tolerance barely affects phase。Tolerance budget should go to\u003cb>ギャップ安定性と実装精度\u003c/b>上，no need to pay a premium for paired Hall sensors。", "M205": "Air-gap field is the threshold ", "M206": " 倍，波形勾配≈ ", "M207": " Gs/°，threshold mismatch already contributes。\u003cb>ギャップ公差と閾値公差の両方を管理\u003c/b>。", "M208": "Air-gap field is only the threshold's ", "M209": " 倍，波形ゆるやか（勾配 ", "M210": " Gs/°），\u003cb>Threshold mismatch dominates phase error\u003c/b>。Increase gap-field margin or use lower-threshold part。", "M211": " 注意 P 2 倍ごとに，the same mechanical tolerance error doubles。", "M212": "立体図（斜め上からの平面図）。リングはセンタ穴付き環状円柱：外半径 Ro = ", "M213": " mm（外径 φ", "M214": " mm），内半径 Ri = ", "M215": " mm（内径 φ", "M216": " mm），Radial wall Ro − Ri = ", "M217": " mm，アキシャル厚 L = ", "M218": "平面図。", "M219": " 交互磁極が 1 電気周期を構成；2 個のホールは ", "M220": "° 機械角配置，この角は電気周期に相当 1/4，すなわち理想 90° 位相差。", "M221": "収まらず ≤ ", "M222": " 極対", "M223": "直径 D", "M224": "長さ A", "M225": "実装高さ", "M226": "エアギャップ", "M227": "横変位", "M228": "オフセット", "M229": "ホールは磁石軸線上で端面正対，判定 Bz，最強信号。", "M230": "磁石がホールに対し横移動。", "M231": "本型番は 2D planar，the component parallel to the package face \u003cb>Bx\u003c/b>，when displacement passes through center Bx 過零で符号反転，the latch switches accordingly。", "M232": "本型番は 1D vertical，判定 \u003cb>Bz\u003c/b>，正対時が振幅最大。", "M233": "Hall offset, side-mounted, Bz; for no-facing, space-limited.", "M234": "動作", "M235": "未動作", "M236": "Margin adequate over full range × PASS", "M237": "余裕きつめ × 再確認要", "M238": "Insufficient over full range × FAIL", "M239": "室温 25°C 判定成分 ", "M240": " Gs，余裕 ", "M241": "%。全温度域 ", "M242": "°C plus air-gap tolerance ±", "M243": " mm 後，最悪点は ", "M244": "°C，最悪余裕 ", "M245": "%（閾値公差を計上 +", "M246": "\" font-size=\"10.5\" fill=\"#4F4F4F\" text-anchor=\"middle\">温度 (°C)\u003c/text>", "M247": ")\" text-anchor=\"middle\">判定成分 (Gs)\u003c/text>", "M248": "最悪閾値 ", "M249": "\" font-size=\"10.5\" fill=\"#001B5D\" text-anchor=\"end\">chip marking surface\u003c/text>", "M250": "\" font-size=\"10\" fill=\"#9AA3B0\" text-anchor=\"middle\">始点 ", "M251": "接近", "M252": "遠ざかる", "M253": "\" font-size=\"10.5\" fill=\"#0074A8\">エアギャップ s\u003c/text>", "M254": "\" font-size=\"10\" fill=\"#9AA3B0\" text-anchor=\"middle\">始点\u003c/text>", "M255": "\" font-size=\"10\" fill=\"#9AA3B0\" text-anchor=\"end\">s = 0 正対\u003c/text>", "M256": "右", "M257": "左", "M258": "\" font-size=\"10.5\" fill=\"#0074A8\">実装高さ ", "M259": "動作", "M260": "リリース", "M261": "\u003ctext x=\"182\" y=\"266\" font-size=\"11.5\" fill=\"#001B5D\">判定成分 ", "M262": " Gs · 動作閾値 ", "M263": "° 機械\u003c/text>", "M264": "\" font-size=\"10.5\" fill=\"#0074A8\" text-anchor=\"middle\">エアギャップ ", "M265": "\" y=\"72\" font-size=\"11.5\" fill=\"#4F4F4F\">極対数 P = ", "M266": " · 磁極数 ", "M267": "\" y=\"92\" font-size=\"11.5\" fill=\"#4F4F4F\">実装角度 ", "M268": "° 機械 = ", "M269": "° 電気角\u003c/text>", "M270": "\">A 路 ", "M271": "動作", "M272": "リリース", "M273": "\">B 路 ", "M274": "動作", "M275": "リリース", "M276": "\" y=\"176\" font-size=\"11.5\" fill=\"#001B5D\">実測位相差 ", "M277": "° 電気角\u003c/text>", "M278": "\">to target 90° 偏差 ", "M279": "\" y=\"176\" font-size=\"11.5\" fill=\"#B3261E\">振幅不足，Neither channel operates\u003c/text>", "M280": ")\" text-anchor=\"middle\">判定成分 (Gs)\u003c/text>", "M281": "接近時動作ゾーン", "M282": "遠ざかる時保持ゾーン", "M283": "ヒステリシス ΔS = ", "M284": "ストローク s (mm) · far on left, near on right", "M285": "横変位 s (mm) · negative left, positive right", "M286": "薄灰点線 = 25 °C 参考，青線 = 現在 ", "M287": " 路\u003c/text>", "M288": "\" text-anchor=\"end\">1 回転 ", "M289": " パルス\u003c/text>", "M290": "立上り間隔 Δφ = ", "M291": "° 電気角 · 目標 90°", "M292": "\" font-size=\"10.5\" fill=\"#4F4F4F\" text-anchor=\"middle\">リング機械角（1 回転 0~360° = ", "M293": " electrical periods = ", "M294": " 磁極），カーソルは現在の位相\u003c/text>", "M295": "\" font-size=\"10\" fill=\"#8A8A8A\">細線は磁界波形，Below: two output square waves；Light part = phase not yet reached by ring\u003c/text>", "M296": "現在のストローク", "M297": "判定成分", "M298": "出力状態", "M299": "動作", "M300": "リリース", "M301": "動作点", "M302": "リリース点", "M303": "ヒステリシス ΔS", "M304": "現在の機械角", "M305": "対応電気角", "M306": "A 路磁界", "M307": "B 路磁界", "M308": "A 路出力", "M309": "動作", "M310": "リリース", "M311": "B 路出力", "M312": "動作", "M313": "リリース", "M314": "実測位相差", "M315": "Neither channel operates", "M316": "エアギャップ ", "M317": " mm 下ピークのみ ", "M318": " Gs，動作閾値未満 ", "M319": " Gs。ギャップ縮小、リング厚化又は高グレード。", "M320": "位相差 ", "M321": "° · 偏差 ", "M322": "目標 ±", "M323": "° 電気角。P = ", "M324": " 理想実装角度（時） ", "M325": "° mech; mech deviation amplified P× into elec", "M326": "：現在与え ", "M327": "° 機械偏差，換算 ", "M328": "° 電気角。", "M329": " 閾値ミスマッチ ", "M330": " Gs effect depends on field gradient——ギャップが小さいほど磁界が強い，the same mismatch yields a smaller phase shift。", "M331": "X = full 360° mech; waveform drawn left→right over one rev, cursor = phase.", "M332": "P periods/rev → P highs and P lows per channel per rev → countable pulses.", "M333": "Top: field seen by Hall; bottom: A/B digitized outputs — the quadrature levels on a scope.", "M334": "Rising-edge interval = measured phase, ideal 90° elec; mismatch shifts it.", "M335": "この構成では動作せず", "M336": "ピークのみ ", "M337": " Gs，動作閾値に未到達 ", "M338": "Polarity opposite; try \"S face toward chip\".", "M339": "Enlarge magnet, shrink stroke, or use lower-Bop part.", "M340": "動作 ", "M341": " mm · 遠ざかってもリリースせず", "M342": "これは", "M343": "latch behavior：リリース点 Brp = ", "M344": " Gs 逆極性側，simply moving away only drives the field toward 0 符号反転なし， therefore output stays。近接はユニポーラ／オムニポーラへ（例 SC245X シリーズ）。", "M345": "動作 ", "M346": " mm · リリース ", "M347": " mm · ヒステリシス ", "M348": "Hysteresis resists chatter: jitter near operate, as long as not exiting release, no toggle.", "M349": "現在 ", "M350": " °C 下動作点は ", "M351": " mm；温度スライダで高温減磁の動作点前倒し。", "M352": "青線は現在温度の磁界—stroke curve，薄灰点線は 25 °C 参考。下部 2 バンド：上バンドは接近時動作，", "M353": "下バンドは遠ざかる時も保持，両者の差がヒステリシス ΔS。", "M354": "一時停止", "M355": "再生", "M356": "直径 D", "M357": "長さ A", "M358": "チップ印字面朝上，磁石はチップ真上に，磁化軸に沿い（鉛直方向）上下往復。watch the magnet start from（薄灰点線枠）the output flips when it moves down to which distance——実枠は現在位置。", "M359": "Fixed height, sweeps parallel to face; strongest at facing (s=0).", "M360": "Multipole ring spins, two Halls on outer circumference, Br, quadrature square waves.", "M361": "Multipole ring spins, two Halls outside end face, sense Bz; angle 90° elec.", "M362": "Positive Bop: operates with N face; S face will not.", "M363": "Negative Bop: needs S face; default N will not.", "M364": "1 回転 ", "M365": "one turn ", "M366": " 秒", "M367": "磁石は磁化軸に沿い上下往復：the light-gray dashed box is the start point，再生で下降；接近時は磁界単調増強，越える Bop 出力反転；遠ざかって Brp を超えてリセット，the difference of the two positions is the hysteresis。the vertical ruler on the right reads the true distance from magnet to chip marking surface。", "M368": "磁石はチップ上方に、実装高さ一定，平面内で左右横断：the light-gray dashed box is the start point，実枠は再生で平行移動。磁石正対時が最強，the field first rises then falls with displacement，So one pass gives operate and release twice each。", "M369": "多極リング回転，", "M370": " 磁極が 2 ホールを交互に通過。実装角度を 90° 電気角（すなわち ", "M371": "° 機械）2 路は 1/4 周期ずれ（時）。", "M372": "Axial: Hall outside end face, Bz; angle also 90° elec.", "M373": "ユニポーラ／オムニポーラ", "M374": "ラッチタイプ（バイポーラ）", "M375": " Gs · 電源 ", "M376": "\u003cbr>data source：", "M377": " · 判定成分（基準） \u003cb>Bx\u003c/b>", "M378": "ラッチタイプのみ", "M379": "ユニポーラ／オムニポーラのみ"};
-function MT(s){return (MAGSTR[s]!==undefined)?MAGSTR[s]:s;}
-
+<script>
 
 /* ==================== 数据 ==================== */
 var GS = 1e4, T_REF = 20.0;
@@ -1187,38 +1185,38 @@ var GS = 1e4, T_REF = 20.0;
    铁氧体取 -0.19 %/°C（公开资料给 -0.18~-0.20）。具体牌号量产仍以磁材厂 datasheet 为准。 */
 var MATERIALS = {};
 var MAT_GROUPS = [
-  {g:MT('M0'), items:[
+  {g:"烧结钕铁硼 · N 系列（最高 80 °C）", items:[
     ["NdFeB-N30","N30",[1.08,1.13],-0.12,80], ["NdFeB-N33","N33",[1.13,1.18],-0.12,80],
     ["NdFeB-N35","N35",[1.17,1.22],-0.12,80], ["NdFeB-N38","N38",[1.21,1.26],-0.12,80],
     ["NdFeB-N40","N40",[1.24,1.29],-0.12,80], ["NdFeB-N42","N42",[1.28,1.32],-0.12,80],
     ["NdFeB-N45","N45",[1.32,1.37],-0.12,80], ["NdFeB-N48","N48",[1.36,1.41],-0.12,80],
     ["NdFeB-N50","N50",[1.39,1.44],-0.12,80], ["NdFeB-N52","N52",[1.42,1.47],-0.12,80]
   ]},
-  {g:MT('M1'), items:[
+  {g:"烧结钕铁硼 · M 系列（最高 100 °C）", items:[
     ["NdFeB-N35M","N35M",[1.17,1.22],-0.12,100], ["NdFeB-N38M","N38M",[1.21,1.26],-0.12,100],
     ["NdFeB-N40M","N40M",[1.24,1.29],-0.12,100], ["NdFeB-N42M","N42M",[1.28,1.33],-0.12,100],
     ["NdFeB-N45M","N45M",[1.32,1.37],-0.12,100], ["NdFeB-N48M","N48M",[1.36,1.41],-0.12,100],
     ["NdFeB-N50M","N50M",[1.39,1.44],-0.12,100]
   ]},
-  {g:MT('M2'), items:[
+  {g:"烧结钕铁硼 · H 系列（最高 120 °C）", items:[
     ["NdFeB-N30H","N30H",[1.08,1.13],-0.12,120], ["NdFeB-N33H","N33H",[1.13,1.18],-0.12,120],
     ["NdFeB-N35H","N35H",[1.17,1.22],-0.12,120], ["NdFeB-N38H","N38H",[1.21,1.26],-0.12,120],
     ["NdFeB-N40H","N40H",[1.24,1.29],-0.12,120], ["NdFeB-N42H","N42H",[1.28,1.33],-0.12,120],
     ["NdFeB-N45H","N45H",[1.32,1.37],-0.12,120], ["NdFeB-N48H","N48H",[1.36,1.41],-0.12,120]
   ]},
-  {g:MT('M3'), items:[
+  {g:"烧结钕铁硼 · SH 系列（最高 150 °C）", items:[
     ["NdFeB-N30SH","N30SH",[1.08,1.13],-0.11,150], ["NdFeB-N33SH","N33SH",[1.13,1.18],-0.11,150],
     ["NdFeB-N35SH","N35SH",[1.17,1.22],-0.11,150], ["NdFeB-N38SH","N38SH",[1.21,1.26],-0.11,150],
     ["NdFeB-N40SH","N40SH",[1.24,1.29],-0.11,150], ["NdFeB-N42SH","N42SH",[1.28,1.32],-0.11,150],
     ["NdFeB-N45SH","N45SH",[1.32,1.37],-0.11,150], ["NdFeB-N48SH","N48SH",[1.36,1.41],-0.11,150]
   ]},
-  {g:MT('M4'), items:[
+  {g:"烧结钕铁硼 · UH 系列（最高 180 °C）", items:[
     ["NdFeB-N28UH","N28UH",[1.04,1.09],-0.10,180], ["NdFeB-N30UH","N30UH",[1.08,1.13],-0.10,180],
     ["NdFeB-N33UH","N33UH",[1.13,1.18],-0.10,180], ["NdFeB-N35UH","N35UH",[1.17,1.22],-0.10,180],
     ["NdFeB-N38UH","N38UH",[1.21,1.26],-0.10,180], ["NdFeB-N40UH","N40UH",[1.24,1.29],-0.10,180],
     ["NdFeB-N42UH","N42UH",[1.28,1.33],-0.10,180]
   ]},
-  {g:MT('M5'), items:[
+  {g:"烧结钕铁硼 · EH / AH 系列（最高 200 / 230 °C）", items:[
     ["NdFeB-N28EH","N28EH",[1.04,1.09],-0.10,200], ["NdFeB-N30EH","N30EH",[1.08,1.13],-0.10,200],
     ["NdFeB-N33EH","N33EH",[1.13,1.18],-0.10,200], ["NdFeB-N35EH","N35EH",[1.17,1.22],-0.10,200],
     ["NdFeB-N38EH","N38EH",[1.21,1.26],-0.10,200], ["NdFeB-N40EH","N40EH",[1.24,1.29],-0.10,200],
@@ -1238,8 +1236,8 @@ var MAT_GROUPS = [
   ]}
 ];
 MAT_GROUPS.forEach(function(G){
-  var pre = (G.g.indexOf("铁氧体") >= 0) ? MT('M6')
-          : (G.g.indexOf("钐钴") >= 0)   ? MT('M7') : MT('M8');
+  var pre = (G.g.indexOf("铁氧体") >= 0) ? "铁氧体 "
+          : (G.g.indexOf("钐钴") >= 0)   ? "钐钴 " : "钕铁硼 ";
   G.items.forEach(function(it){
     MATERIALS[it[0]] = {name:pre + it[1], br:it[2], a:it[3], tmax:it[4], grp:G.g};
   });
@@ -1251,28 +1249,28 @@ function hal(m,bop,brp,bmn,bmx,rmn,rmx,v,thi,o,pkg,src,prog,note,t2d){
 }
 var HALLS = [
   /* SC245X —— 赛卓规格书 Rev.V1.1 表 9.2（Gs） */
-  hal("SC2450",  25,  15,  15,  35,  10,  30, "3.0~40",150,MT('M9'),"SOT23-3L / TO-92S",MT('M10'),0,MT('M11'),0),
-  hal("SC2451", 100,  85,  80, 120,  65, 105, "3.0~40",150,MT('M12'),"SOT23-3L / TO-92S",MT('M13'),0,"",0),
-  hal("SC2452", 180, 130, 160, 200, 110, 150, "3.0~40",150,MT('M14'),"SOT23-3L / TO-92S",MT('M15'),0,"",0),
-  hal("SC2455", 220, 170, 190, 250, 140, 200, "3.0~40",150,MT('M16'),"SOT23-3L / TO-92S",MT('M17'),0,"",0),
-  hal("SC2459",  82,  62,-220, 220,   5, 100, "3.0~40",150,MT('M18'),"SOT23-3L / TO-92S",MT('M19'),1,MT('M20'),0),
-  /* Notion 汽车锁存库 */
-  hal("SC2498T", 30,  30,  20,  40,  20,  40, "2.7~40",150,MT('M21'),"SOT23","Notion",0,MT('M22'),1),
-  hal("SC25898", 80, -80,  70,  90, -90, -70, "4.0~24",150,MT('M23'),"SIP3/TS2","Notion",0,MT('M24'),0),
-  hal("SC25896", 80, -80,  70,  90, -90, -70, "4.0~24",150,MT('M25'),"SIP3/TS2","Notion",0,MT('M26'),0),
-  hal("SC2943",  30, -30,  20,  40, -40, -20, "2.7~40",150,MT('M27'),"SOT23, SIP3","Notion",0,MT('M28'),0),
-  hal("SC2919",  70, -70,  60,  80, -80, -60, "4.0~125",150,MT('M29'),"SOT23, SIP3","Notion",0,MT('M30'),0),
-  hal("SC2498",  80, -80,  70,  90, -90, -70, "2.7~40",150,MT('M31'),"SOT23, SIP3","Notion",0,MT('M32'),0),
-  hal("SC2943T", 30, -30,  20,  40, -40, -20, "2.7~40",150,MT('M33'),"SOT23, SIP3","Notion",0,MT('M34'),1),
-  hal("SC2948",  80, -80,  70,  90, -90, -70, "2.7~40",150,MT('M35'),"SOT23, SIP3","Notion",0,MT('M36'),0),
-  /* Notion 低成本库 */
-  hal("SC2002",  20, -20,  10,  30, -30, -10, "1.8~5.5",125,MT('M37'),"SOT23-3L/5L","Notion",0,"",0),
-  hal("SC2401",  -9,   9, -17,  -5,   5,  17, "2.5~18",125,MT('M38'),"SOT23/SIP3",MT('M39'),0,MT('M40'),0),
-  hal("SC2403T", 30, -30,  20,  40, -40, -20, "2.8~40",125,MT('M41'),"SOT23/SIP3","Notion",0,MT('M42'),1),
-  hal("SC2402", -20,  20, -30, -10,  10,  30, "2.5~18",125,MT('M43'),"SOT23/SIP3","Notion",0,"",0),
-  hal("SC2403",  30, -30,  20,  40, -40, -20, "2.8~40",125,MT('M44'),"SOT23/SIP3","Notion",0,"",0),
-  hal("SC2202", -20,  20, -30, -10,  10,  30, "2.5~24",125,MT('M45'),"SIP3/SOT23","Notion",0,"",0),
-  hal("SC1245", -50,  50, -60, -40,  40,  60, "3.8~40",125,MT('M46'),"SOT23/SIP3","Notion",0,"",0)
+  hal("SC2450",  25,  15,  15,  35,  10,  30, "3.0~40",150,"オープンドレイン","SOT23-3L / TO-92S","规格书 Rev.V1.1",0,"全极／单极可选，灵敏度最高",0),
+  hal("SC2451", 100,  85,  80, 120,  65, 105, "3.0~40",150,"オープンドレイン","SOT23-3L / TO-92S","规格书 Rev.V1.1",0,"",0),
+  hal("SC2452", 180, 130, 160, 200, 110, 150, "3.0~40",150,"オープンドレイン","SOT23-3L / TO-92S","规格书 Rev.V1.1",0,"",0),
+  hal("SC2455", 220, 170, 190, 250, 140, 200, "3.0~40",150,"オープンドレイン","SOT23-3L / TO-92S","规格书 Rev.V1.1",0,"",0),
+  hal("SC2459",  82,  62,-220, 220,   5, 100, "3.0~40",150,"オープンドレイン","SOT23-3L / TO-92S","规格书 Rev.V1.1",1,"出厂默认 8.2 mT；可编程 -220~220 Gs，步长约 5 Gs",0),
+  /* 汽车锁存库 */
+  hal("SC2498T", 30,  30,  20,  40,  20,  40, "2.7~40",150,"オープンドレイン","SOT23","原厂规格书",0,"2D 平面/垂直，感应平行分量",1),
+  hal("SC25898", 80, -80,  70,  90, -90, -70, "4.0~24",150,"電流出力","SIP3/TS2","原厂规格书",0,"1D 垂直",0),
+  hal("SC25896", 80, -80,  70,  90, -90, -70, "4.0~24",150,"電流出力","SIP3/TS2","原厂规格书",0,"1D 垂直",0),
+  hal("SC2943",  30, -30,  20,  40, -40, -20, "2.7~40",150,"オープンドレイン","SOT23, SIP3","原厂规格书",0,"1D 垂直，60 V",0),
+  hal("SC2919",  70, -70,  60,  80, -80, -60, "4.0~125",150,"オープンドレイン","SOT23, SIP3","原厂规格书",0,"48 V 主推，250 V",0),
+  hal("SC2498",  80, -80,  70,  90, -90, -70, "2.7~40",150,"オープンドレイン","SOT23, SIP3","原厂规格书",0,"1D 垂直",0),
+  hal("SC2943T", 30, -30,  20,  40, -40, -20, "2.7~40",150,"オープンドレイン","SOT23, SIP3","原厂规格书",0,"2D 平面/垂直，感应平行分量",1),
+  hal("SC2948",  80, -80,  70,  90, -90, -70, "2.7~40",150,"オープンドレイン","SOT23, SIP3","原厂规格书",0,"1D 垂直，60 V",0),
+  /* 低成本库 */
+  hal("SC2002",  20, -20,  10,  30, -30, -10, "1.8~5.5",125,"オープンドレイン","SOT23-3L/5L","原厂规格书",0,"",0),
+  hal("SC2401",  -9,   9, -17,  -5,   5,  17, "2.5~18",125,"オープンドレイン","SOT23/SIP3","原厂规格书 + 实测口径",0,"实际规格 5~17 Gs",0),
+  hal("SC2403T", 30, -30,  20,  40, -40, -20, "2.8~40",125,"オープンドレイン","SOT23/SIP3","原厂规格书",0,"2D 平面/垂直，感应平行分量",1),
+  hal("SC2402", -20,  20, -30, -10,  10,  30, "2.5~18",125,"オープンドレイン","SOT23/SIP3","原厂规格书",0,"",0),
+  hal("SC2403",  30, -30,  20,  40, -40, -20, "2.8~40",125,"オープンドレイン","SOT23/SIP3","原厂规格书",0,"",0),
+  hal("SC2202", -20,  20, -30, -10,  10,  30, "2.5~24",125,"内蔵プルアップ","SIP3/SOT23","原厂规格书",0,"",0),
+  hal("SC1245", -50,  50, -60, -40,  40,  60, "3.8~40",125,"オープンドレイン","SOT23/SIP3","原厂规格书",0,"",0)
 ];
 /* 按适用场景归类：SC245X 系列是单极／全极，其余为锁存型（双极）。
    接近开关只能选单极／全极 —— 锁存型在磁场退到零时不会释放（B→0 不反号）；
@@ -1457,8 +1455,8 @@ function chips(id, def, fn){
 }
 /* 霍尔型号下拉：按适用场景分组（单极／全极 / 锁存型），默认值自动落在可用集合内 */
 function hallFill(id, list, def){
-  var groups = [[MT('M47'), list.filter(function(h){ return h.cls === "switch"; })],
-                [MT('M48'),   list.filter(function(h){ return h.cls === "latch";  })]];
+  var groups = [["单极／全极（接近开关）", list.filter(function(h){ return h.cls === "switch"; })],
+                ["锁存型（磁环正交）",   list.filter(function(h){ return h.cls === "latch";  })]];
   var html = "", i;
   groups.forEach(function(G){
     if(!G[1].length) return;
@@ -1566,10 +1564,10 @@ function gsScaleSvg(cf){
     if(t < 0) t = 0; if(t > 1) t = 1;
     return xL + t*(xR-xL);
   }
-  var o = '<svg viewBox="0 0 '+W+' '+H+MT('M49');
-  o += '<text x="'+xL+MT('M50');
-  o += '<text x="'+xR+MT('M51')+gsNum(cf.peak)+' Gs'+
-       (cf.op > 0 && cf.peak > 0 ? ' · ' + (cf.peak/Math.abs(cf.op)).toFixed(0) + MT('M52') : '')+'</text>';
+  var o = '<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="磁场刻度尺，单位高斯">';
+  o += '<text x="'+xL+'" y="12" font-size="10.5" fill="#4F4F4F">磁场刻度尺 · 判定分量（Gs）</text>';
+  o += '<text x="'+xR+'" y="12" font-size="10.5" fill="#4F4F4F" text-anchor="end">峰值 ±'+gsNum(cf.peak)+' Gs'+
+       (cf.op > 0 && cf.peak > 0 ? ' · ' + (cf.peak/Math.abs(cf.op)).toFixed(0) + ' 倍 Bop' : '')+'</text>';
   for(var k=0;k<12;k++){
     var v0 = -V + 2*V*k/12, v1 = -V + 2*V*(k+1)/12;
     o += '<rect x="'+X(v0).toFixed(1)+'" y="'+yT+'" width="'+(X(v1)-X(v0)+0.6).toFixed(1)+'" height="'+bh+
@@ -1719,7 +1717,7 @@ function drawAppSvg(mode, dim, R){
   s += '<rect x="'+(cx-32)+'" y="'+yFace+'" width="64" height="30" rx="4" fill="#3D66AE"/>';
   s += '<text x="'+cx+'" y="'+(yFace+19)+'" font-size="10.5" fill="#fff" text-anchor="middle">IC</text>';
   s += '<line x1="'+(cx-46)+'" y1="'+yFace+'" x2="'+(cx+46)+'" y2="'+yFace+'" stroke="#001B5D" stroke-width="2.5"/>';
-  s += '<text x="'+(cx-52)+'" y="'+(yFace+4)+MT('M53');
+  s += '<text x="'+(cx-52)+'" y="'+(yFace+4)+'" font-size="10.5" fill="#001B5D" text-anchor="end">芯片丝印面</text>';
 
   if(mode === "front"){
     var sy = 156/40;                                     /* 竖直方向等比：3.9 px/mm */
@@ -1734,7 +1732,7 @@ function drawAppSvg(mode, dim, R){
     s += '<line x1="'+cx+'" y1="'+(yb0-mh-12).toFixed(1)+'" x2="'+cx+'" y2="'+yFace+'" stroke="#C9D4E6" stroke-width="1" stroke-dasharray="4 4"/>';
     s += '<rect x="'+(cx-mw/2).toFixed(1)+'" y="'+(yb0-mh).toFixed(1)+'" width="'+mw.toFixed(1)+'" height="'+mh.toFixed(1)+
          '" rx="3" fill="none" stroke="#C9D4E6" stroke-width="1.3" stroke-dasharray="5 4"/>';
-    s += '<text x="'+cx+'" y="'+Math.max(10, yb0-mh-6).toFixed(1)+MT('M54')+smax.toFixed(0)+' mm</text>';
+    s += '<text x="'+cx+'" y="'+Math.max(10, yb0-mh-6).toFixed(1)+'" font-size="10" fill="#9AA3B0" text-anchor="middle">起点 '+smax.toFixed(0)+' mm</text>';
     var corr = yt - yb0;
     if(corr > 16){
       var alen = Math.min(corr - 6, 46), a0 = yb0 + (corr - alen)/2;
@@ -1746,10 +1744,10 @@ function drawAppSvg(mode, dim, R){
     var gx = cx + mw/2 + 26;
     s += '<line x1="'+gx.toFixed(1)+'" y1="'+yb.toFixed(1)+'" x2="'+gx.toFixed(1)+'" y2="'+yFace+'" stroke="#009FE3" stroke-width="1.4" marker-end="url(#arb)" marker-start="url(#arb)"/>';
     var gMid = (yFace + yb)/2; if(gMid > yFace - 34) gMid = yFace - 34;
-    s += '<text x="'+(gx+6).toFixed(1)+'" y="'+(gMid-4).toFixed(1)+MT('M55');
+    s += '<text x="'+(gx+6).toFixed(1)+'" y="'+(gMid-4).toFixed(1)+'" font-size="10.5" fill="#0074A8">气隙 s</text>';
     s += '<text x="'+(gx+6).toFixed(1)+'" y="'+(gMid+10).toFixed(1)+'" font-size="11" fill="#0074A8" font-weight="600">'+
-         (R.sop===null? MT('M56') : R.sop.toFixed(2)+" mm")+'</text>';
-    s += '<text x="'+(gx+6).toFixed(1)+'" y="'+(gMid+23).toFixed(1)+MT('M57');
+         (R.sop===null? "不可达" : R.sop.toFixed(2)+" mm")+'</text>';
+    s += '<text x="'+(gx+6).toFixed(1)+'" y="'+(gMid+23).toFixed(1)+'" font-size="9.5" fill="#9AA3B0">= 动作行程 S_op</text>';
     var rx = 560;
     s += '<line x1="'+rx+'" y1="'+yFace+'" x2="'+rx+'" y2="'+yTop+'" stroke="#E2E2E2"/>';
     for(var v=0; v<=smax+0.01; v+=10){
@@ -1759,9 +1757,9 @@ function drawAppSvg(mode, dim, R){
     }
     s += '<text x="'+rx+'" y="'+(yTop-6)+'" font-size="9.5" fill="#9AA3B0" text-anchor="middle">mm</text>';
     s += '<line x1="52" y1="52" x2="52" y2="86" stroke="#222" stroke-width="2.2" marker-end="url(#ark)"/>';
-    s += MT('M58');
-    s += MT('M59');
-    s += MT('M60');
+    s += '<text x="62" y="60" font-size="10.5" fill="#222">磁铁运动方向</text>';
+    s += '<text x="62" y="76" font-size="10" fill="#4F4F4F">沿磁化轴竖直往复</text>';
+    s += '<text x="62" y="90" font-size="10" fill="#4F4F4F">↓ 靠近   ↑ 远离</text>';
   }else{
     var vg = +$("aVgap").value;
     var mw2 = Math.min(120, Math.max(44, (dim.r? dim.r*2 : dim.a)*5.6));
@@ -1773,20 +1771,20 @@ function drawAppSvg(mode, dim, R){
          '" rx="3" fill="none" stroke="#C9D4E6" stroke-width="1.3" stroke-dasharray="5 4"/>';
     /* 「起点」跟着磁体尺寸和气隙跑（行号域 39.6~130），放在虚线框上方会跟左上角图例抢位；
        挪到框下方后行号域变成 139.6~192，永远贴着起点框，且离图例足够远。 */
-    s += '<text x="'+x0+'" y="'+(gy+14).toFixed(1)+MT('M61');
+    s += '<text x="'+x0+'" y="'+(gy+14).toFixed(1)+'" font-size="10" fill="#9AA3B0" text-anchor="middle">起点</text>';
     s += '<line x1="'+(x0+mw2/2+10).toFixed(1)+'" y1="'+(gyt-18).toFixed(1)+'" x2="'+(cx-mw2/2-10).toFixed(1)+'" y2="'+(gyt-18).toFixed(1)+
          '" stroke="#222" stroke-width="2" marker-end="url(#ark)"/>';
-    s += '<text x="'+((x0+mw2/2+cx-mw2/2)/2).toFixed(1)+'" y="'+(gyt-26).toFixed(1)+MT('M62');
+    s += '<text x="'+((x0+mw2/2+cx-mw2/2)/2).toFixed(1)+'" y="'+(gyt-26).toFixed(1)+'" font-size="10.5" fill="#222" text-anchor="middle">横掠方向</text>';
     s += magBox(cx-mw2/2, gyt, mw2, mh2, nDown, lbl);
     s += '<line x1="'+cx+'" y1="'+(gyt+mh2).toFixed(1)+'" x2="'+cx+'" y2="'+yFace+'" stroke="#C9D4E6" stroke-width="1" stroke-dasharray="3 3"/>';
-    s += '<text x="'+(cx-6)+'" y="'+(yFace-8)+MT('M63');
+    s += '<text x="'+(cx-6)+'" y="'+(yFace-8)+'" font-size="10" fill="#9AA3B0" text-anchor="end">s = 0 正对</text>';
     var hx = cx + mw2/2 + 26;
     s += '<line x1="'+hx.toFixed(1)+'" y1="'+gy.toFixed(1)+'" x2="'+hx.toFixed(1)+'" y2="'+yFace+'" stroke="#009FE3" stroke-width="1.4" marker-end="url(#arb)" marker-start="url(#arb)"/>';
-    s += '<text x="'+(hx+6).toFixed(1)+'" y="'+(gy+(yFace-gy)/2+4).toFixed(1)+MT('M64')+vg.toFixed(1)+' mm</text>';
+    s += '<text x="'+(hx+6).toFixed(1)+'" y="'+(gy+(yFace-gy)/2+4).toFixed(1)+'" font-size="10.5" fill="#0074A8">安装高度 '+vg.toFixed(1)+' mm</text>';
     s += '<line x1="52" y1="52" x2="52" y2="86" stroke="#222" stroke-width="2.2" marker-end="url(#ark)"/>';
-    s += MT('M65');
-    s += MT('M66');
-    s += MT('M67');
+    s += '<text x="62" y="60" font-size="10.5" fill="#222">磁铁运动方向</text>';
+    s += '<text x="62" y="76" font-size="10" fill="#4F4F4F">平行丝印面平移</text>';
+    s += '<text x="62" y="90" font-size="10" fill="#4F4F4F">安装高度保持不变</text>';
   }
   s += '</svg>';
   return s;
@@ -1811,8 +1809,8 @@ function drawAppChart(R, mode, dim, vgap){
     o += '<text x="'+X(g)+'" y="'+(H-pb+16)+'" font-size="10" fill="#4F4F4F" text-anchor="middle">'+g+'</text>';
   }
   o += gsAxis(Y, 0, ymax, pl);
-  o += '<text x="'+(W/2)+'" y="'+(H-4)+MT('M68');
-  o += '<text x="12" y="'+(H/2)+'" font-size="10.5" fill="#4F4F4F" transform="rotate(-90 12 '+(H/2)+MT('M69');
+  o += '<text x="'+(W/2)+'" y="'+(H-4)+'" font-size="10.5" fill="#4F4F4F" text-anchor="middle">行程 s (mm) · 左远右近</text>';
+  o += '<text x="12" y="'+(H/2)+'" font-size="10.5" fill="#4F4F4F" transform="rotate(-90 12 '+(H/2)+')" text-anchor="middle">判定分量 Bz (Gs)</text>';
   /* 标签统一登记后再落位：既不互相压字，也不许掉进 x 轴刻度那一行 */
   var LB = [], yTop = pt+11, yBot = (H-pb)-4;
   o += '<line x1="'+pl+'" y1="'+Y(R.op)+'" x2="'+(W-pr)+'" y2="'+Y(R.op)+'" stroke="#3D66AE" stroke-width="1.4" stroke-dasharray="6 3"/>';
@@ -1825,11 +1823,11 @@ function drawAppChart(R, mode, dim, vgap){
   o += polyline(pts, "#009FE3", 2);
   if(R.sop!==null){
     o += '<circle cx="'+X(R.sop)+'" cy="'+Y(R.op)+'" r="4.5" fill="#fff" stroke="#B3261E" stroke-width="2"/>';
-    LB.push({txt:MT('M70')+R.sop.toFixed(2)+" mm", fs:10.5, color:"#B3261E", anc:"middle", x:X(R.sop), y:Y(R.op)-10, dir:-1});
+    LB.push({txt:"动作 "+R.sop.toFixed(2)+" mm", fs:10.5, color:"#B3261E", anc:"middle", x:X(R.sop), y:Y(R.op)-10, dir:-1});
   }
   if(R.srp!==null){
     o += '<circle cx="'+X(R.srp)+'" cy="'+Y(R.rp)+'" r="4" fill="#fff" stroke="#1F7A4C" stroke-width="2"/>';
-    LB.push({txt:MT('M71')+R.srp.toFixed(2)+" mm", fs:10.5, color:"#1F7A4C", anc:"end", x:(X(R.srp)+34), y:Y(R.rp)+16, dir:1});
+    LB.push({txt:"释放 "+R.srp.toFixed(2)+" mm", fs:10.5, color:"#1F7A4C", anc:"end", x:(X(R.srp)+34), y:Y(R.rp)+16, dir:1});
   }
   fixLabels(LB, W, yTop, yBot, 12).forEach(function(b){ o += tstr(b); });
   o += '</svg>';
@@ -1851,14 +1849,14 @@ function runApp(){
   /* 两个模式的气隙一个是输入、一个是输出，差别必须在界面上写明白，否则会以为控件丢了。 */
   $("aGapNote").style.display = (mode==="front")?"":"none";
   $("aGapNote").textContent = (mode==="front")
-    ? MT('M72') +
-      MT('M73')
+    ? "这一栏现在是空的，因为端面正对时气隙是算出来的结果：磁铁沿磁化轴竖直靠近，磁场越过 Bop 的那一刻，磁铁底面到芯片丝印面的距离就是动作行程 S_op，直接读右上第一格。" +
+      "想让它变大变小，要动的是磁体尺寸、材料牌号、温度范围这三处，或者换一个 Bop 不同的型号；上下两位数字之间的关系在下方的行程—温度图里画得很清楚。"
     : "";
-  $("aD1L").textContent = (shape==="cylinder")?MT('M74'):MT('M75');
+  $("aD1L").textContent = (shape==="cylinder")?"直径 D":"长度 A";
   $("aModeHint").textContent = ((mode==="front")
-    ? MT('M76')
-    : MT('M77')) +
-    MT('M78');
+    ? "芯片丝印面朝上，磁铁在芯片正上方，N（或 S）极面正对芯片，沿磁化轴竖直方向上下移动。图上的「气隙 s」就是磁铁底面到芯片丝印面的距离，也就是动作行程 S_op——磁铁下移到这个距离时输出翻转。"
+    : "芯片丝印面朝上，磁铁悬在芯片上方、安装气隙保持不变，平行于丝印面横向平移掠过芯片。这里的安装气隙就是磁铁底面到芯片丝印面的垂直距离，用上面那一栏直接给定。s = 0 表示磁体正对芯片，垂直方向始终按 Bz 判定。") +
+    "接近开关只能选单极／全极：锁存型要靠磁场反向才释放，磁铁单纯远离时不会复位。";
 
   var R = appEval(hall, matKey, dim, mode, vgap, tlo, thi, +$("aProg").value, +$("aHys").value);
 
@@ -1870,31 +1868,31 @@ function runApp(){
   var okNom = R.sop!==null && R.sop >= req;
   var okWorst = R.lo!==null && R.lo >= req;
   $("aVerdict").className = "big " + (okWorst?"pass":(okNom?"warn":"bad"));
-  $("aVerdict").textContent = okWorst ? MT('M79')
-                            : okNom  ? MT('M80')
-                                     : MT('M81');
+  $("aVerdict").textContent = okWorst ? "全温区可达 × PASS"
+                            : okNom  ? "仅常温可达 × 全温区不足"
+                                     : "行程不足 × FAIL";
   $("aVerdictSub").textContent = okWorst
-    ? MT('M82')+req.toFixed(1)+MT('M83')+fmt(R.sop)+MT('M84')+fmt(R.lo)+MT('M85')+(R.lo-req).toFixed(2)+" mm。"
+    ? "客户要求 "+req.toFixed(1)+" mm；名义动作行程 "+fmt(R.sop)+" mm，全温区叠加公差后最小 "+fmt(R.lo)+" mm，余量 "+(R.lo-req).toFixed(2)+" mm。"
     : okNom
-    ? MT('M86')+req.toFixed(1)+MT('M87')+fmt(R.sop)+MT('M88')+fmt(R.lo)+MT('M89')
-    : MT('M90')+req.toFixed(1)+MT('M91')+fmt(R.sop)+MT('M92');
+    ? "客户要求 "+req.toFixed(1)+" mm；名义动作 "+fmt(R.sop)+" mm 已达标，但全温区最坏仅 "+fmt(R.lo)+" mm。建议加厚磁体、提高牌号，或换用灵敏度更高的型号。"
+    : "客户要求 "+req.toFixed(1)+" mm；名义动作仅 "+fmt(R.sop)+" mm。需增大磁体体积、改用高牌号磁材，或选用更低 Bop 的型号（本系列 SC2450 为 25 Gs）。";
 
   if(hall.prog){
     var rb = recommendBop(matKey, dim, mode, vgap, thi, req);
     var feasible = rb.need>=5 && rb.need<=220;
     $("aProgTip").style.display = "";
-    $("aProgTip").innerHTML = MT('M93')+req.toFixed(1)+MT('M94')+
-      thi+MT('M95')+rb.bAt.toFixed(0)+MT('M96')+
-      rb.need.toFixed(0)+MT('M97')+rb.units+" Gs）。"+
-      (feasible? "" : " <span class=\"bad\">" + MT('M100') + " -220~220 Gs " + MT('M99') + "，" + MT('M98') + "。</span>");
+    $("aProgTip").innerHTML = "<b>编程反推：</b>要求在 "+req.toFixed(1)+" mm 处动作时，"+
+      thi+"°C 高温弱磁下该点场强为 "+rb.bAt.toFixed(0)+" Gs，按 1.25 倍余量建议把 Bop 编为 <b>"+
+      rb.need.toFixed(0)+" Gs</b>（取 5 Gs 步长约 "+rb.units+" Gs）。"+
+      (feasible? "" : " <span class=\"bad\">超出 -220~220 Gs プログラム可能范围，需调整磁石或行程。</span>");
   }else{
     $("aProgTip").style.display = "none";
   }
 
   $("aSvg").innerHTML = drawAppSvg(mode, dim, R);
   $("aFigcap").textContent = (mode==="front")
-    ? MT('M101')
-    : MT('M102');
+    ? "端面正对：浅灰虚线框是磁铁起点（最远处），实心框是动作点位置，红虚线为输出翻转时磁铁底面的高度。判断分量取 Bz —— 它既垂直穿过芯片感应面，也垂直于磁铁磁极面，是信号最强的布置，所以同样磁体下动作行程最远。"
+    : "平面横掠：浅灰虚线框为起点，实心框为磁铁正对芯片的位置。磁铁侧面本身不带磁荷（σ = M·n̂ = 0），侧向场是端面的边缘场，主分量仍为 Bz，因此同样按 Bz 判定，但峰值低于端面正对。";
   $("aChart").innerHTML = drawAppChart(R, mode, dim, vgap);
 
   var tb = $("aCmp").querySelector("tbody"), rows = "";
@@ -1908,7 +1906,7 @@ function runApp(){
       '<td class="n">'+h.bop_min.toFixed(0)+' ~ '+h.bop_max.toFixed(0)+'</td>'+
       '<td class="n">'+fmt(r.sop)+'</td><td class="n">'+fmt(r.srp)+'</td>'+
       '<td class="n">'+fmt(r.lo)+' ~ '+fmt(r.hi)+'</td>'+
-      '<td class="'+(okw?"pass":(ok?"warn":"bad"))+'">'+(okw?"PASS":(ok?MT('M103'):"FAIL"))+'</td></tr>';
+      '<td class="'+(okw?"pass":(ok?"warn":"bad"))+'">'+(okw?"PASS":(ok?"常温":"FAIL"))+'</td></tr>';
   });
   tb.innerHTML = rows;
 }
@@ -1998,12 +1996,12 @@ function quadCore(hall, matKey, mode, Ro, Ri, L, P, gap, dpos, dg, dmg, tamb){
   var curve = ringCurve(pts, br, mode, Rs, gap/1000, L/1000, P);
   var op = Math.abs(hall.bop);
   var c0 = cross(curve, op);
-  if(c0.th === null) return {ok:false, reason:MT('M104'), amp:c0.amp, need:op, P:P};
+  if(c0.th === null) return {ok:false, reason:"幅值不足", amp:c0.amp, need:op, P:P};
 
   var tol = hall.prog ? 5 : Math.max(hall.bop_max-hall.bop, hall.bop-hall.bop_min);
   var opA = Math.max(1, op-tol/2), opB = op+tol/2;
   var cA = cross(curve, opA), cB = cross(curve, opB);
-  if(cA.th===null || cB.th===null) return {ok:false, reason:MT('M105'), amp:c0.amp, need:op, P:P};
+  if(cA.th===null || cB.th===null) return {ok:false, reason:"公差极值下幅值不足", amp:c0.amp, need:op, P:P};
 
   var errMis = Math.abs(cB.th - cA.th)*P*180/Math.PI;
   var errPos = (dpos/Rsmm)*P*180/Math.PI;
@@ -2095,24 +2093,24 @@ function drawQuadSvg(mode, Ro, Ri, L, P, gap, dist){
   s += '<text x="'+ca[0].toFixed(1)+'" y="'+(ca[1]+3.5).toFixed(1)+'" font-size="10" fill="#fff" text-anchor="middle">A</text>';
   s += '<text x="'+cb[0].toFixed(1)+'" y="'+(cb[1]+3.5).toFixed(1)+'" font-size="10" fill="#fff" text-anchor="middle">B</text>';
   /* 分界点 / 磁极中心 两个位置的物理含义，直接标在 A、B 旁边 */
-  s += '<text x="'+(gp1[0]+6).toFixed(1)+'" y="'+(gp1[1]+4).toFixed(1)+MT('M106');
+  s += '<text x="'+(gp1[0]+6).toFixed(1)+'" y="'+(gp1[1]+4).toFixed(1)+'" font-size="10.5" fill="#4F4F4F">N/S 分界 · 过零翻转</text>';
   var ra = rr+26;
   s += '<path d="'+arcD(ra,tA,tB)+'" fill="none" stroke="#B3261E" stroke-width="1.6"/>';
   var mid = pt(rr+14, (tA+tB)/2);
   var mx2 = Math.min(Math.max(mid[0], 26), W-26), my2 = Math.max(mid[1], 15);
   s += '<text x="'+mx2.toFixed(1)+'" y="'+my2.toFixed(1)+'" font-size="11.5" fill="#B3261E" text-anchor="middle">'+(90/P).toFixed(1)+'°</text>';
-  s += '<text x="'+cx+'" y="'+(cy+4)+'" font-size="12" fill="#001B5D" text-anchor="middle">'+P+MT('M107');
-  s += '<text x="14" y="'+(H-76)+MT('M108')+Ro.toFixed(2)+MT('M109')+(2*Ro).toFixed(2)+
-       MT('M110')+Ri.toFixed(2)+MT('M111')+(2*Ri).toFixed(2)+MT('M112')+(Ro-Ri).toFixed(2)+' mm</text>';
-  s += '<text x="14" y="'+(H-58)+MT('M113')+L.toFixed(2)+MT('M114')+gap.toFixed(2)+
-       MT('M115')+dist.toFixed(2)+' mm</text>';
+  s += '<text x="'+cx+'" y="'+(cy+4)+'" font-size="12" fill="#001B5D" text-anchor="middle">'+P+' 对极</text>';
+  s += '<text x="14" y="'+(H-76)+'" font-size="11" fill="#4F4F4F">外半径 Ro '+Ro.toFixed(2)+' mm（外径 φ'+(2*Ro).toFixed(2)+
+       '）· 内半径 Ri '+Ri.toFixed(2)+' mm（内径 φ'+(2*Ri).toFixed(2)+'）· 径向壁厚 '+(Ro-Ri).toFixed(2)+' mm</text>';
+  s += '<text x="14" y="'+(H-58)+'" font-size="11" fill="#4F4F4F">轴向厚度 L '+L.toFixed(2)+' mm · 气隙 '+gap.toFixed(2)+
+       ' mm · 两颗弧长间距 '+dist.toFixed(2)+' mm</text>';
   s += '<text x="14" y="'+(H-40)+'" font-size="11" fill="#4F4F4F">'+(rad
-       ? MT('M116')
-       : MT('M117'))+'</text>';
-  s += '<text x="14" y="'+(H-94)+MT('M118')+
-       MT('M119');
-  s += '<text x="14" y="'+(H-22)+MT('M120')+(90/P).toFixed(1)+
-       MT('M121');
+       ? "径向感应：霍尔在环外侧、感应面朝环心；N / S 磁极在环的外柱面上，端面无磁极"
+       : "轴向感应：霍尔在环端面外、感应面平行端面；N / S 磁极在端面上，外柱面无磁极")+'</text>';
+  s += '<text x="14" y="'+(H-94)+'" font-size="11" fill="#4F4F4F">A 压在 N / S 分界线上 —— 锁存型的翻转点就是磁场过零点，'+
+       '磁场过零正好发生在分界扫过它的那一刻</text>';
+  s += '<text x="14" y="'+(H-22)+'" font-size="11" fill="#4F4F4F">A 与 B 的安装夹角 '+(90/P).toFixed(1)+
+       '° 机械，正好是一个电周期的 1/4，即理想的 90° 电角度相位差</text>';
   s += '</svg>';
   return s;
 }
@@ -2250,7 +2248,7 @@ function drawRing3D(mode, Ro, Ri, L, P, gap, dist, fit){
   o += '<line x1="'+lx.toFixed(1)+'" y1="'+pLb[1].toFixed(1)+'" x2="'+(cx-Ro*s).toFixed(1)+'" y2="'+pLb[1].toFixed(1)+
        '" stroke="#C9D4E6" stroke-width="1" stroke-dasharray="2 2"/>';
   /* L 的数值固定写在左上角：环放大到边界时左侧留不出字宽，标签不能再跟着引线走 */
-  o += r3txt(14, 26, MT('M122'), "#4F4F4F", "start", 10.5);
+  o += r3txt(14, 26, "轴向厚度 L", "#4F4F4F", "start", 10.5);
   o += r3txt(14, 44, L.toFixed(2)+" mm", "#222", "start", 12.5);
 
   /* 7 两颗霍尔：A 在 N/S 分界上、B 在磁极中心（见上方口径） */
@@ -2296,10 +2294,10 @@ function drawRing3D(mode, Ro, Ri, L, P, gap, dist, fit){
 
   /* 8 右侧整块留给「A / B 安装关系」放大图；底部一行写磁化方式口径 */
   o += ringDetail(P, gap, dist, fit, W);
-  o += r3txt(cx, H-36, "P = "+P+MT('M123')+ (2*P) +MT('M124')+P+MT('M125'), "#4F4F4F", "middle", 11);
+  o += r3txt(cx, H-36, "P = "+P+" 对极 · 磁极 "+ (2*P) +" 个 · 一个电周期 = 一个极对 · 整圈 "+P+" 个脉冲", "#4F4F4F", "middle", 11);
   o += r3txt(cx, H-14, rad
-      ? MT('M126')
-      : MT('M127'), "#4F4F4F", "middle", 11);
+      ? "径向多极充磁：N / S 交替分布在外柱面，端面本身无磁极"
+      : "轴向多极充磁：N / S 交替分布在端面，外柱面本身无磁极", "#4F4F4F", "middle", 11);
   o += '</svg>';
   return o;
 }
@@ -2316,8 +2314,8 @@ function ringDetail(P, gap, dist, fit, W){
   function PV(r, th){ return [ox + r*Math.cos(th), oy + r*Math.sin(th)]; }
   var A = PV(Rv, -vth/2), B = PV(Rv, vth/2);
   var o = '<rect x="'+x0+'" y="'+y0+'" width="'+w+'" height="'+h+'" rx="8" fill="#FBFCFE" stroke="#DCE3EE"/>';
-  o += '<text x="'+(x0+14)+'" y="'+(y0+22)+MT('M128');
-  o += '<text x="'+(x0+14)+'" y="'+(y0+38)+MT('M129');
+  o += '<text x="'+(x0+14)+'" y="'+(y0+22)+'" font-size="11.5" fill="#001B5D" font-weight="600">A / B 安装关系（局部放大）</text>';
+  o += '<text x="'+(x0+14)+'" y="'+(y0+38)+'" font-size="10" fill="#9AA3B0">图中夹角已放大，数值为真实值</text>';
   [A,B].forEach(function(p){
     o += '<line x1="'+ox+'" y1="'+oy+'" x2="'+p[0].toFixed(1)+'" y2="'+p[1].toFixed(1)+
          '" stroke="#C9D4E6" stroke-width="1" stroke-dasharray="3 3"/>';
@@ -2326,7 +2324,7 @@ function ringDetail(P, gap, dist, fit, W){
   o += '<path d="M'+a0[0].toFixed(1)+' '+a0[1].toFixed(1)+' A'+rA.toFixed(1)+' '+rA.toFixed(1)+
        ' 0 0 1 '+a1[0].toFixed(1)+' '+a1[1].toFixed(1)+'" fill="none" stroke="#B3261E" stroke-width="1.4"/>';
   o += '<circle cx="'+ox+'" cy="'+oy+'" r="3" fill="#222"/>';
-  o += r3txt(ox, oy+19, MT('M130'), "#4F4F4F", "middle", 10);
+  o += r3txt(ox, oy+19, "O 环心", "#4F4F4F", "middle", 10);
   o += '<line x1="'+A[0].toFixed(1)+'" y1="'+A[1].toFixed(1)+'" x2="'+B[0].toFixed(1)+'" y2="'+B[1].toFixed(1)+
        '" stroke="#3D66AE" stroke-width="1.6"/>';
   [["A",A,"#B3261E"],["B",B,"#0074A8"]].forEach(function(pp){
@@ -2334,13 +2332,13 @@ function ringDetail(P, gap, dist, fit, W){
     o += '<text x="'+pp[1][0].toFixed(1)+'" y="'+(pp[1][1]+3.6).toFixed(1)+'" font-size="9.5" fill="#fff" text-anchor="middle">'+pp[0]+'</text>';
   });
   var tx = Math.max(A[0],B[0]) + 19;
-  o += r3txt(tx, oy-13, "Θ = "+(Dang*180/Math.PI).toFixed(2)+MT('M131'), "#B3261E", "start", 11);
-  o += r3txt(tx, oy+4,  MT('M132'), "#4F4F4F", "start", 11);
-  o += r3txt(tx, oy+21, MT('M133')+dist.toFixed(2)+" mm", (fit && !fit.ok) ? "#B3261E" : "#001B5D", "start", 11);
-  o += r3txt(tx, oy+38, MT('M134')+gap.toFixed(2)+" mm", "#A15C00", "start", 11);
+  o += r3txt(tx, oy-13, "Θ = "+(Dang*180/Math.PI).toFixed(2)+"° 机械", "#B3261E", "start", 11);
+  o += r3txt(tx, oy+4,  "≡ 90° 电角度", "#4F4F4F", "start", 11);
+  o += r3txt(tx, oy+21, "中心距 "+dist.toFixed(2)+" mm", (fit && !fit.ok) ? "#B3261E" : "#001B5D", "start", 11);
+  o += r3txt(tx, oy+38, "气隙 "+gap.toFixed(2)+" mm", "#A15C00", "start", 11);
   o += r3txt(x0+14, y0+h-14, (fit && !fit.ok)
-      ? MT('M135')+fit.pkgW.toFixed(1)+MT('M136')+Math.max(1,fit.Pmax)+MT('M137')
-      : MT('M138')+(fit ? fit.pkgW.toFixed(1) : "—")+MT('M139'),
+      ? "装不下：占位 "+fit.pkgW.toFixed(1)+" mm，最多 "+Math.max(1,fit.Pmax)+" 对极"
+      : "占位 "+(fit ? fit.pkgW.toFixed(1) : "—")+" mm · 并排布置可行",
       (fit && !fit.ok) ? "#B3261E" : "#4F4F4F", "start", 10.5);
   return o;
 }
@@ -2386,7 +2384,7 @@ function drawWave(curve, P, op, urel){
   /* ---------- 上区：磁场与门限 ---------- */
   s += '<line x1="'+pl+'" y1="'+Y(0)+'" x2="'+(W-pr)+'" y2="'+Y(0)+'" stroke="#E2E2E2"/>';
   s += '<line x1="'+pl+'" y1="'+fT+'" x2="'+pl+'" y2="'+fB+'" stroke="#E2E2E2"/>';
-  s += '<text x="12" y="'+((fT+fB)/2)+'" font-size="10.5" fill="#4F4F4F" transform="rotate(-90 12 '+((fT+fB)/2)+MT('M140');
+  s += '<text x="12" y="'+((fT+fB)/2)+'" font-size="10.5" fill="#4F4F4F" transform="rotate(-90 12 '+((fT+fB)/2)+')" text-anchor="middle">判定分量 (Gs)</text>';
   s += gsAxis(Y, -amp, amp, pl);
   /* 电周期分界（每 360°/P 机械角一次）——让「一圈 = P 个电周期」一眼可见 */
   if(P <= 12){
@@ -2454,11 +2452,11 @@ function drawWave(curve, P, op, urel){
 
   /* ---------- 下区：两路数字输出 ---------- */
   var sepY = 166;
-  s += '<text x="'+pl+'" y="'+sepY+MT('M141');
-  s += '<text x="'+pl+'" y="'+(yAH-8)+MT('M142');
-  s += '<text x="'+pl+'" y="'+(yBH-8)+MT('M143');
-  s += '<text x="'+(W-pr)+'" y="'+(yAH-8)+MT('M144')+rA.length+MT('M145')+rA.length+MT('M146');
-  s += '<text x="'+(W-pr)+'" y="'+(yBH-8)+MT('M147')+rB.length+MT('M148')+rB.length+MT('M149');
+  s += '<text x="'+pl+'" y="'+sepY+'" font-size="10.5" fill="#4F4F4F">比较器整形后的数字输出 —— 示波器上测到的就是这两路正交高低电平</text>';
+  s += '<text x="'+pl+'" y="'+(yAH-8)+'" font-size="10.5" fill="#B3261E">A 路输出</text>';
+  s += '<text x="'+pl+'" y="'+(yBH-8)+'" font-size="10.5" fill="#0074A8">B 路输出</text>';
+  s += '<text x="'+(W-pr)+'" y="'+(yAH-8)+'" font-size="10" fill="#B3261E" text-anchor="end">一圈 '+rA.length+' 个高电平 + '+rA.length+' 个低电平</text>';
+  s += '<text x="'+(W-pr)+'" y="'+(yBH-8)+'" font-size="10" fill="#0074A8" text-anchor="end">一圈 '+rB.length+' 个高电平 + '+rB.length+' 个低电平</text>';
   [["H",yAH],["L",yAL],["H",yBH],["L",yBL]].forEach(function(t){
     s += '<text x="'+(pl-7)+'" y="'+(t[1]+3.5)+'" font-size="9.5" fill="#8A8A8A" text-anchor="end">'+t[0]+'</text>';
   });
@@ -2472,15 +2470,15 @@ function drawWave(curve, P, op, urel){
     var dr = ((rB[0]-rA[0]) % per + per) % per;  /* 折进 0~per */
     if(dr > per/2) dr = per - dr;                /* 再折进 0~per/2 -> 0~180° 电角度 */
     var dphi = dr*P;
-    s += '<text x="'+((pl+W-pr)/2).toFixed(1)+'" y="'+(yBL+22)+'" font-size="10.5" fill="#001B5D" text-anchor="middle">Δφ = '+dphi.toFixed(1)+MT('M150')+(90/P).toFixed(2)+MT('M151');
+    s += '<text x="'+((pl+W-pr)/2).toFixed(1)+'" y="'+(yBL+22)+'" font-size="10.5" fill="#001B5D" text-anchor="middle">Δφ = '+dphi.toFixed(1)+'° 电角度（目标 90°，即安装角 '+(90/P).toFixed(2)+'° 机械角）</text>';
   }
 
   /* ---------- 横轴：磁环机械角 ---------- */
   for(g=0; g<=360; g+=90){
     s += '<text x="'+X(g)+'" y="'+(H-34)+'" font-size="10" fill="#4F4F4F" text-anchor="middle">'+g+'°</text>';
   }
-  s += '<text x="'+(W/2)+'" y="'+(H-17)+MT('M152')+P+MT('M153')+(2*P)+MT('M154')+(360/P).toFixed(1)+MT('M155');
-  s += '<text x="'+(W/2)+'" y="'+(H-3)+MT('M156')+P+MT('M157')+P+MT('M158')+P+MT('M159');
+  s += '<text x="'+(W/2)+'" y="'+(H-17)+'" font-size="10.5" fill="#4F4F4F" text-anchor="middle">横轴为磁环机械角：一圈 0~360° = '+P+' 个电周期 = '+(2*P)+' 个磁极，1 个电周期 = '+(360/P).toFixed(1)+'° 机械角</text>';
+  s += '<text x="'+(W/2)+'" y="'+(H-3)+'" font-size="10.5" fill="#4F4F4F" text-anchor="middle">磁环转一圈，A / B 两路各翻转 '+P+' 次 —— 所以每路各出现 '+P+' 个高电平与 '+P+' 个低电平</text>';
   s += '</svg>';
   return s;
 }
@@ -2499,16 +2497,16 @@ function runQuad(){
   var tamb = +$("qT").value, goal = +$("qGoal").value;
 
   $("qModeHint").textContent = ((mode==="radial")
-    ? MT('M160')
-    : MT('M161')) +
-    MT('M162');
+    ? "霍尔贴在磁环外圆侧方，感应面朝向环心，判定径向分量 Br。多数有刷电机轴端方案。"
+    : "霍尔正对磁环端面，感应面平行于环端面，判定轴向分量 Bz。适合轴向空间充裕的场合。") +
+    "磁环正交只能选锁存型：翻转点由磁场过零决定，与幅值无关，相位才稳定；单极／全极的翻转点受幅值影响，占空比会跑。";
   /* 半径口径必须显式写清：磁环是带中心孔的环形柱体，Ro / Ri 是半径不是直径。
      读数与输入框由 _fmt 统一刷出，避免这里再手写一遍 textContent。 */
   paintAll();
-  $("qRingHint").textContent = MT('M163')+
-    (Ro-Ri).toFixed(2) + MT('M164') + Lc.toFixed(2) + " mm。" +
-    (hiCap ? MT('M165') + Ri.toFixed(2) + " mm。" : "") +
-    MT('M166');
+  $("qRingHint").textContent = "环形柱体，Ro / Ri 是环心到外缘、内孔的距离（半径口径）。径向壁厚 "+
+    (Ro-Ri).toFixed(2) + " mm，轴向厚度 " + Lc.toFixed(2) + " mm。" +
+    (hiCap ? "内半径已按最小壁厚 1 mm 限制为 " + Ri.toFixed(2) + " mm。" : "") +
+    " 数值可在右侧框内直接键入，精确到 0.01 mm。";
 
   var Rsmm0 = mode==="radial" ? (Ro+gap) : ((Ro+Ri)/2);
   var dist0 = 2*Rsmm0*Math.sin((Math.PI/2)/P/2);
@@ -2525,15 +2523,15 @@ function runQuad(){
     $("kAmp").textContent  = R.amp.toFixed(0);
     $("kErr").textContent  = "—";
     $("qVerdict").className = "big bad";
-    $("qVerdict").textContent = MT('M167');
-    $("qVerdictSub").textContent = R.reason + MT('M168')+R.amp.toFixed(0)+MT('M169')+R.need.toFixed(0)+
-      MT('M170');
+    $("qVerdict").textContent = "不可动作 × FAIL";
+    $("qVerdictSub").textContent = R.reason + "：气隙处峰值仅 "+R.amp.toFixed(0)+" Gs，需达到 "+R.need.toFixed(0)+
+      " Gs。请减小气隙、加厚磁环、改用高牌号磁材，或换用更低阈值的型号。";
     $("qErrTab").querySelector("tbody").innerHTML = "";
     $("qWave").innerHTML = "";
     $("qScan").querySelector("tbody").innerHTML = "";
     $("qBudget").textContent = "";
-    $("qFigcap").textContent = (qView.get()==="iso" ? MT('M171') : MT('M172'))+
-      MT('M173');
+    $("qFigcap").textContent = (qView.get()==="iso" ? "立体视图。" : "俯视视图。")+
+      "当前参数下磁场幅值不足，无法可靠翻转。";
     return;
   }
 
@@ -2545,18 +2543,18 @@ function runQuad(){
 
   var okAll = R.worst <= goal, okRss = R.rss <= goal;
   $("qVerdict").className = "big " + (okAll?"pass":(okRss?"warn":"bad"));
-  $("qVerdict").textContent = okAll ? MT('M174')
-                            : okRss ? MT('M175')
-                                    : MT('M176');
-  $("qVerdictSub").textContent = "P = "+P+MT('M177')+R.install.toFixed(2)+MT('M178')+
-    dist.toFixed(2)+MT('M179')+R.amp.toFixed(0)+MT('M180')+R.op.toFixed(0)+MT('M181')+
-    (R.amp/R.op).toFixed(1)+MT('M182')+R.worst.toFixed(2)+MT('M183')+goal.toFixed(0)+"°。";
+  $("qVerdict").textContent = okAll ? "正交精度达标 × PASS"
+                            : okRss ? "统计合成达标 × 最坏超差"
+                                    : "正交误差超差 × FAIL";
+  $("qVerdictSub").textContent = "P = "+P+" 时安装夹角 "+R.install.toFixed(2)+"°机械，对应两颗弧长间距 "+
+    dist.toFixed(2)+" mm。气隙磁场峰值 "+R.amp.toFixed(0)+" Gs，为阈值 "+R.op.toFixed(0)+" Gs 的 "+
+    (R.amp/R.op).toFixed(1)+" 倍。最坏正交误差 "+R.worst.toFixed(2)+"°，目标 ±"+goal.toFixed(0)+"°。";
 
   var items = [
-    [MT('M184'), R.errMis, MT('M185')],
-    [MT('M186'), R.errPos, "±"+dpos.toFixed(2)+MT('M187')+R.Rsense.toFixed(1)+MT('M188')],
-    [MT('M189'), R.errGap, "±"+dg.toFixed(2)+MT('M190')],
-    [MT('M191'), R.errMag, MT('M192')]
+    ["阈值失配", R.errMis, "两颗 Bop 取公差极值反向组合，穿越角偏移 ÷ 波形梯度"],
+    ["PCB mounting position", R.errPos, "±"+dpos.toFixed(2)+" mm 落在半径 "+R.Rsense.toFixed(1)+" mm 上，误差被放大 P 倍"],
+    ["エアギャップ偏差", R.errGap, "±"+dg.toFixed(2)+" mm 改变磁场幅值，间接改变穿越角"],
+    ["磁环极分度", R.errMag, "充磁本身的角分度误差，直接按电角度计入"]
   ];
   var rows = "", mx = Math.max(R.errMis,R.errPos,R.errGap,R.errMag);
   items.forEach(function(it){
@@ -2565,29 +2563,29 @@ function runQuad(){
       '<td class="n">'+it[1].toFixed(2)+'</td><td class="n">'+pct.toFixed(0)+'%</td>'+
       '<td>'+it[2]+'</td></tr>';
   });
-  rows += MT('M193')+R.worst.toFixed(2)+'</td>'+
-          '<td class="n">100%</td><td class="'+(okAll?"pass":"bad")+'">'+(okAll?"PASS":MT('M194'))+'</td></tr>';
-  rows += MT('M195')+R.rss.toFixed(2)+'</td><td class="n">—</td>'+
-          MT('M196');
+  rows += '<tr><td><b>最坏叠加</b></td><td class="n">'+R.worst.toFixed(2)+'</td>'+
+          '<td class="n">100%</td><td class="'+(okAll?"pass":"bad")+'">'+(okAll?"PASS":"超差")+'</td></tr>';
+  rows += '<tr><td>统计合成 (RSS)</td><td class="n">'+R.rss.toFixed(2)+'</td><td class="n">—</td>'+
+          '<td>各误差相互独立时的均方根，实际批量水平介于两者之间</td></tr>';
   $("qErrTab").querySelector("tbody").innerHTML = rows;
 
-  var dominant = (R.errMis===mx)? MT('M197') : (R.errPos===mx)? MT('M198') : (R.errMag===mx)? MT('M199') : MT('M200');
+  var dominant = (R.errMis===mx)? "阈值失配" : (R.errPos===mx)? "PCB 贴装" : (R.errMag===mx)? "磁环极分度" : "エアギャップ偏差";
   var ratio = R.amp/R.op;
-  $("qBudget").innerHTML = MT('M201') + dominant + "。</b>" +
+  $("qBudget").innerHTML = "<b>当前主导误差源：" + dominant + "。</b>" +
     (ratio > 20
-      ? MT('M202')+ratio.toFixed(0)+MT('M203')+R.slopePerDegE.toFixed(0)+MT('M204')
+      ? "气隙磁场达阈值的 "+ratio.toFixed(0)+" 倍，波形在过零点附近极陡（梯度约 "+R.slopePerDegE.toFixed(0)+" Gs/°），阈值公差几乎不影响相位。此时公差预算应投在<b>气隙稳定性与贴装精度</b>上，不必为挑选配对的霍尔付溢价。"
       : (ratio > 4
-        ? MT('M205')+ratio.toFixed(1)+MT('M206')+R.slopePerDegE.toFixed(1)+MT('M207')
-        : MT('M208')+ratio.toFixed(1)+MT('M209')+R.slopePerDegE.toFixed(2)+MT('M210')))
-    + MT('M211');
+        ? "气隙磁场为阈值的 "+ratio.toFixed(1)+" 倍，波形梯度约 "+R.slopePerDegE.toFixed(1)+" Gs/°，阈值失配已开始有贡献。<b>气隙与阈值公差两者都要管</b>。"
+        : "气隙磁场仅为阈值的 "+ratio.toFixed(1)+" 倍，波形平缓（梯度 "+R.slopePerDegE.toFixed(2)+" Gs/°），<b>阈值失配会主导相位误差</b>。建议加大气隙场强余量或改用低阈值型号。"))
+    + " 注意 P 每增大一倍，同样的机械公差误差就翻倍。";
 
   $("qFigcap").textContent = (qView.get() === "iso"
-      ? MT('M212')+Ro.toFixed(2)+MT('M213')+(2*Ro).toFixed(2)+
-        MT('M214')+Ri.toFixed(2)+MT('M215')+(2*Ri).toFixed(2)+MT('M216')+
-        (Ro-Ri).toFixed(2)+MT('M217')+Lc.toFixed(2)+" mm。"
-      : MT('M218'))+
-    (2*P)+MT('M219')+R.install.toFixed(2)+
-    MT('M220');
+      ? "立体视图（斜上方俯视）。磁环是带中心孔的环形柱体：外半径 Ro = "+Ro.toFixed(2)+" mm（外径 φ"+(2*Ro).toFixed(2)+
+        " mm），内半径 Ri = "+Ri.toFixed(2)+" mm（内径 φ"+(2*Ri).toFixed(2)+" mm），径向壁厚 Ro − Ri = "+
+        (Ro-Ri).toFixed(2)+" mm，轴向厚度 L = "+Lc.toFixed(2)+" mm。"
+      : "俯视视图。")+
+    (2*P)+" 个交替磁极构成一个完整电周期；两颗霍尔按 "+R.install.toFixed(2)+
+    "° 机械角摆放，该夹角正好对应电周期的 1/4，即理想的 90° 相位差。";
   $("qWave").innerHTML = drawWave(R.curve, P, R.op, Math.abs(hall.brp));
 
   /* 极对数扫描 1..32：同时给出幅值、误差预算与「两颗是否装得下」 */
@@ -2611,7 +2609,7 @@ function runQuad(){
       '<td class="n">'+r.worst.toFixed(2)+'</td>'+
       '<td class="n"'+(fitR.ok?'':' style="color:#B3261E"')+'>'+distP.toFixed(2)+'</td>'+
       '<td class="'+(okp?"pass":"bad")+'">'+(fitR.ok ? (okp?"PASS":"FAIL")
-            : (MT('M221')+Math.max(1,fitR.Pmax)+MT('M222')))+'</td></tr>';
+            : ("装不下 ≤ "+Math.max(1,fitR.Pmax)+" 对极"))+'</td></tr>';
   }
   sb.innerHTML = srows;
 }
@@ -2644,15 +2642,15 @@ function runOne(){
   var tlo = +$("oTlo").value, thi = +$("oThi").value;
 
   $("oD2Wrap").style.display = (shape==="block")?"":"none";
-  $("oD1L").textContent = (shape==="cylinder")?MT('M223'):MT('M224');
-  $("oGL").textContent = (model==="slide")?MT('M225'):MT('M226');
-  $("oOL").textContent = (model==="slide")?MT('M227'):MT('M228');
+  $("oD1L").textContent = (shape==="cylinder")?"直径 D":"长度 A";
+  $("oGL").textContent = (model==="slide")?"実装高さ":"エアギャップ";
+  $("oOL").textContent = (model==="slide")?"横向位移":"オフセット";
   $("oModelHint").textContent =
-    model==="axial"   ? MT('M229')
-    : model==="slide"  ? (MT('M230') + (hall.t2d
-        ? MT('M231')
-        : MT('M232')))
-    : MT('M233');
+    model==="axial"   ? "霍尔在磁铁轴线上正对磁极端面，判定 Bz，信号最强。"
+    : model==="slide"  ? ("磁铁相对霍尔横向平移。" + (hall.t2d
+        ? "本型号为 2D 平面型，感应平行于封装面的分量 <b>Bx</b>，位移经过中心时 Bx 过零变号，据此锁存切换。"
+        : "本型号为 1D 垂直型，判定 <b>Bz</b>，磁铁正对时幅值最大。"))
+    : "霍尔偏离磁铁轴线侧装，判定 Bz。用于无法正对、安装空间受限的场合。";
 
   var a = MATERIALS[matKey].a;
   var pts = chargePoints(shape, dim, 20);
@@ -2676,14 +2674,14 @@ function runOne(){
   $("kB").textContent  = b25.toFixed(0);
   $("kM0").textContent = m0.toFixed(1);
   $("kMw").textContent = mw.toFixed(1);
-  $("kSt").textContent = Math.abs(b25)>=op ? MT('M234') : MT('M235');
+  $("kSt").textContent = Math.abs(b25)>=op ? "动作" : "未动作";
   $("oVerdict").className = "big " + (mw>=20?"pass":(mw>=0?"warn":"bad"));
-  $("oVerdict").textContent = mw>=20 ? MT('M236')
-                            : mw>=0  ? MT('M237')
-                                     : MT('M238');
-  $("oVerdictSub").textContent = MT('M239')+b25.toFixed(0)+" Gs，Bop "+op.toFixed(0)+
-    MT('M240')+m0.toFixed(1)+MT('M241')+tlo+"~"+thi+MT('M242')+tol.toFixed(1)+
-    MT('M243')+wT.toFixed(0)+MT('M244')+mw.toFixed(1)+MT('M245')+(opW-op).toFixed(0)+" Gs）。";
+  $("oVerdict").textContent = mw>=20 ? "全温区余量充足 × PASS"
+                            : mw>=0  ? "余量偏紧 × 需复核"
+                                     : "全温区不足 × FAIL";
+  $("oVerdictSub").textContent = "室温 25°C 判定分量 "+b25.toFixed(0)+" Gs，Bop "+op.toFixed(0)+
+    " Gs，余量 "+m0.toFixed(1)+"%。全温区 "+tlo+"~"+thi+"°C 叠加气隙公差 ±"+tol.toFixed(1)+
+    " mm 后，最不利点在 "+wT.toFixed(0)+"°C，最坏余量 "+mw.toFixed(1)+"%（已计入阈值公差 +"+(opW-op).toFixed(0)+" Gs）。";
 
   var W=620,H=210,pl=54,pr=18,pt=14,pb=32;
   var temps=[], vals=[], ymax=op*1.4;
@@ -2699,14 +2697,14 @@ function runOne(){
   s += '<line x1="'+pl+'" y1="'+(H-pb)+'" x2="'+(W-pr)+'" y2="'+(H-pb)+'" stroke="#E2E2E2"/>';
   s += '<line x1="'+pl+'" y1="'+pt+'" x2="'+pl+'" y2="'+(H-pb)+'" stroke="#E2E2E2"/>';
   s += gsAxis(Y, 0, ymax, pl);
-  s += '<text x="'+(W/2)+'" y="'+(H-4)+MT('M246');
-  s += '<text x="12" y="'+(H/2)+'" font-size="10.5" fill="#4F4F4F" transform="rotate(-90 12 '+(H/2)+MT('M247');
+  s += '<text x="'+(W/2)+'" y="'+(H-4)+'" font-size="10.5" fill="#4F4F4F" text-anchor="middle">温度 (°C)</text>';
+  s += '<text x="12" y="'+(H/2)+'" font-size="10.5" fill="#4F4F4F" transform="rotate(-90 12 '+(H/2)+')" text-anchor="middle">判定分量 (Gs)</text>';
   var LB2 = [];
   s += '<line x1="'+pl+'" y1="'+Y(op)+'" x2="'+(W-pr)+'" y2="'+Y(op)+'" stroke="#3D66AE" stroke-width="1.4" stroke-dasharray="6 3"/>';
   LB2.push({txt:"Bop "+op.toFixed(0)+" Gs", fs:10.5, color:"#3D66AE", anc:"end", x:(W-pr-3), y:Y(op)-5, dir:-1});
   if(Math.abs(opW-op)>0.5){
     s += '<line x1="'+pl+'" y1="'+Y(opW)+'" x2="'+(W-pr)+'" y2="'+Y(opW)+'" stroke="#B3261E" stroke-width="1.2" stroke-dasharray="3 3"/>';
-    LB2.push({txt:MT('M248')+opW.toFixed(0)+" Gs", fs:10.5, color:"#B3261E", anc:"end", x:(W-pr-3), y:Y(opW)-5, dir:-1});
+    LB2.push({txt:"最坏阈值 "+opW.toFixed(0)+" Gs", fs:10.5, color:"#B3261E", anc:"end", x:(W-pr-3), y:Y(opW)-5, dir:-1});
   }
   /* 两条阈值线挨得很近时，标签必须分到两行，且不许落到温度刻度那一行 */
   fixLabels(LB2, W, pt+11, (H-pb)-3, 12).forEach(function(b){ s += tstr(b); });
@@ -2907,7 +2905,7 @@ function anGeomAppr(c, s, u, V){
   o += '<rect x="'+(cx-32)+'" y="'+yFace+'" width="64" height="30" rx="4" fill="#3D66AE"/>';
   o += '<text x="'+cx+'" y="'+(yFace+19)+'" font-size="10.5" fill="#fff" text-anchor="middle">IC</text>';
   o += '<line x1="'+(cx-46)+'" y1="'+yFace+'" x2="'+(cx+46)+'" y2="'+yFace+'" stroke="#001B5D" stroke-width="2.5"/>';
-  o += '<text x="'+(cx-52)+'" y="'+(yFace+4)+MT('M249');
+  o += '<text x="'+(cx-52)+'" y="'+(yFace+4)+'" font-size="10.5" fill="#001B5D" text-anchor="end">芯片丝印面</text>';
 
   if(c.mode === "front"){
     /* 竖直布置：磁铁在芯片正上方，沿磁化轴上下移动 */
@@ -2920,7 +2918,7 @@ function anGeomAppr(c, s, u, V){
     o += '<line x1="'+cx+'" y1="'+(yb0-mh-12).toFixed(1)+'" x2="'+cx+'" y2="'+yFace+'" stroke="#C9D4E6" stroke-width="1" stroke-dasharray="4 4"/>';
     o += '<rect x="'+(cx-mw/2).toFixed(1)+'" y="'+(yb0-mh).toFixed(1)+'" width="'+mw.toFixed(1)+'" height="'+mh.toFixed(1)+
          '" rx="3" fill="none" stroke="#C9D4E6" stroke-width="1.3" stroke-dasharray="5 4"/>';
-    o += '<text x="'+cx+'" y="'+Math.max(10, yb0-mh-6).toFixed(1)+MT('M250')+c.smax.toFixed(0)+' mm</text>';
+    o += '<text x="'+cx+'" y="'+Math.max(10, yb0-mh-6).toFixed(1)+'" font-size="10" fill="#9AA3B0" text-anchor="middle">起点 '+c.smax.toFixed(0)+' mm</text>';
     if(c.sop !== null && c.sop <= c.smax){
       var yo = yFace - c.sop*sy;
       o += '<line x1="'+(cx-mw/2-6).toFixed(1)+'" y1="'+yo.toFixed(1)+'" x2="'+(cx+mw/2+6).toFixed(1)+'" y2="'+yo.toFixed(1)+
@@ -2937,12 +2935,12 @@ function anGeomAppr(c, s, u, V){
       o += '<line x1="'+ax.toFixed(1)+'" y1="'+(mcy+aL/2).toFixed(1)+'" x2="'+ax.toFixed(1)+'" y2="'+(mcy-aL/2).toFixed(1)+
            '" stroke="#222" stroke-width="2.2" marker-end="url(#ank)"/>';
     }
-    o += '<text x="'+(ax-6).toFixed(1)+'" y="'+Math.min(mcy+4, yFace-24).toFixed(1)+'" font-size="10.5" fill="#222" text-anchor="end">'+(AN.dir>0?MT('M251'):MT('M252'))+'</text>';
+    o += '<text x="'+(ax-6).toFixed(1)+'" y="'+Math.min(mcy+4, yFace-24).toFixed(1)+'" font-size="10.5" fill="#222" text-anchor="end">'+(AN.dir>0?"靠近":"远离")+'</text>';
     /* 气隙（竖直双向箭头） */
     var gx = cx + mw/2 + 26;
     o += '<line x1="'+gx.toFixed(1)+'" y1="'+yb.toFixed(1)+'" x2="'+gx.toFixed(1)+'" y2="'+yFace+'" stroke="#009FE3" stroke-width="1.4" marker-end="url(#anb)" marker-start="url(#anb)"/>';
     var gMid = (yFace + yb)/2; if(gMid > yFace - 34) gMid = yFace - 34;
-    o += '<text x="'+(gx+6).toFixed(1)+'" y="'+(gMid-4).toFixed(1)+MT('M253');
+    o += '<text x="'+(gx+6).toFixed(1)+'" y="'+(gMid-4).toFixed(1)+'" font-size="10.5" fill="#0074A8">气隙 s</text>';
     o += '<text x="'+(gx+6).toFixed(1)+'" y="'+(gMid+10).toFixed(1)+'" font-size="11" fill="#0074A8" font-weight="600">'+Math.abs(s).toFixed(2)+' mm</text>';
     /* 距离标尺 */
     var rx = 560;
@@ -2966,22 +2964,22 @@ function anGeomAppr(c, s, u, V){
     o += '<line x1="'+x0+'" y1="'+(gy-mgh-18).toFixed(1)+'" x2="'+(cx+150)+'" y2="'+(gy-mgh-18).toFixed(1)+'" stroke="#C9D4E6" stroke-width="1" stroke-dasharray="4 4"/>';
     o += '<rect x="'+(x0-mgw/2).toFixed(1)+'" y="'+(gy-mgh).toFixed(1)+'" width="'+mgw.toFixed(1)+'" height="'+mgh.toFixed(1)+
          '" rx="3" fill="none" stroke="#C9D4E6" stroke-width="1.3" stroke-dasharray="5 4"/>';
-    o += '<text x="'+x0+'" y="'+(gy-mgh-26).toFixed(1)+MT('M254');
+    o += '<text x="'+x0+'" y="'+(gy-mgh-26).toFixed(1)+'" font-size="10" fill="#9AA3B0" text-anchor="middle">起点</text>';
     o += magBox(mgcx-mgw/2, gy-mgh, mgw, mgh, nDown, (dia.toFixed(1)+"×"+c.dim.l.toFixed(1)));
     o += '<line x1="'+cx+'" y1="'+(gy+2).toFixed(1)+'" x2="'+cx+'" y2="'+yFace+'" stroke="#C9D4E6" stroke-width="1" stroke-dasharray="3 3"/>';
-    o += '<text x="'+(cx-6)+'" y="'+(yFace-8)+MT('M255');
+    o += '<text x="'+(cx-6)+'" y="'+(yFace-8)+'" font-size="10" fill="#9AA3B0" text-anchor="end">s = 0 正对</text>';
     o += '<line x1="'+(mgcx+mgw/2+8).toFixed(1)+'" y1="'+(gy-mgh-18).toFixed(1)+'" x2="'+(mgcx+mgw/2+(AN.dir>0?46:-46)).toFixed(1)+'" y2="'+(gy-mgh-18).toFixed(1)+'" stroke="#222" stroke-width="2.2" marker-end="url(#ank)"/>';
-    o += '<text x="'+(mgcx+mgw/2+8).toFixed(1)+'" y="'+(gy-mgh-24).toFixed(1)+'" font-size="10.5" fill="#222">'+(AN.dir>0?MT('M256'):MT('M257'))+'</text>';
+    o += '<text x="'+(mgcx+mgw/2+8).toFixed(1)+'" y="'+(gy-mgh-24).toFixed(1)+'" font-size="10.5" fill="#222">'+(AN.dir>0?"向右":"向左")+'</text>';
     var hx = cx + mgw/2 + 30;
     o += '<line x1="'+hx.toFixed(1)+'" y1="'+gy.toFixed(1)+'" x2="'+hx.toFixed(1)+'" y2="'+yFace+'" stroke="#009FE3" stroke-width="1.4" marker-end="url(#anb)" marker-start="url(#anb)"/>';
-    o += '<text x="'+(hx+6).toFixed(1)+'" y="'+(gy+(yFace-gy)/2+4).toFixed(1)+MT('M258')+c.vg.toFixed(1)+' mm</text>';
+    o += '<text x="'+(hx+6).toFixed(1)+'" y="'+(gy+(yFace-gy)/2+4).toFixed(1)+'" font-size="10.5" fill="#0074A8">安装高度 '+c.vg.toFixed(1)+' mm</text>';
   }
 
   o += '<circle cx="70" cy="262" r="7" fill="'+(on?"#1F7A4C":"#fff")+'" stroke="'+(on?"#1F7A4C":"#4F4F4F")+'" stroke-width="2"/>';
-  o += '<text x="84" y="266" font-size="11.5" fill="'+(on?"#1F7A4C":"#4F4F4F")+'">OUT '+(on?MT('M259'):MT('M260'))+'</text>';
+  o += '<text x="84" y="266" font-size="11.5" fill="'+(on?"#1F7A4C":"#4F4F4F")+'">OUT '+(on?"动作":"释放")+'</text>';
   o += '<rect x="166" y="257" width="10" height="10" fill="'+gsColor(u, V)+'" stroke="#9AA3B0" stroke-width="0.8"/>';
-  o += MT('M261')+bTxt+'</text>';
-  o += '<text x="330" y="266" font-size="11.5" fill="#4F4F4F">'+h.m+' · Bop '+h.bop+MT('M262')+c.op.toFixed(0)+' Gs</text>';
+  o += '<text x="182" y="266" font-size="11.5" fill="#001B5D">判定分量 '+bTxt+'</text>';
+  o += '<text x="330" y="266" font-size="11.5" fill="#4F4F4F">'+h.m+' · Bop '+h.bop+' Gs · 动作门限 '+c.op.toFixed(0)+' Gs</text>';
   o += '</svg>';
   return o;
 }
@@ -3019,7 +3017,7 @@ function anGeomRing(c, phi, V, ua, ub){
   o += '<path d="'+anSector(cx, cy, rs*0.62, rs*0.62, 0, c.thB)+'" fill="none" stroke="#009FE3" stroke-width="1.3"/>';
   /* 角度文字写在夹角内侧（环心附近），避免小半径 / 密极时压到 A / B 点标 */
   o += '<text x="'+cx+'" y="'+(cy+4)+'" font-size="11" fill="#0074A8" text-anchor="middle">'+
-       (c.thB*180/Math.PI).toFixed(1)+MT('M263');
+       (c.thB*180/Math.PI).toFixed(1)+'° 机械</text>';
   /* P 大时两路在图上必然叠在一起（实际已装不下，超差表会给出判定）——
      改用「引出标注」：A / B 引到环体右侧、一上一下，保证任何参数下都不压字 */
   var tightAB = Math.hypot(bx-ax, by-ay) < 26;
@@ -3035,26 +3033,26 @@ function anGeomRing(c, phi, V, ua, ub){
     o += '<text x="'+px.toFixed(1)+'" y="'+(py+4).toFixed(1)+'" font-size="10" fill="'+(p[3]?"#fff":"#001B5D")+'" text-anchor="middle">'+p[0]+'</text>';
   });
   o += '<line x1="'+cx+'" y1="'+(cy+ro+16)+'" x2="'+(cx+ro)+'" y2="'+(cy+ro+16)+'" stroke="#009FE3" stroke-width="1.3" marker-end="url(#anb2)" marker-start="url(#anb2)"/>';
-  o += '<text x="'+(cx+ro/2)+'" y="'+(cy+ro+30)+MT('M264')+c.gap.toFixed(2)+' mm</text>';
+  o += '<text x="'+(cx+ro/2)+'" y="'+(cy+ro+30)+'" font-size="10.5" fill="#0074A8" text-anchor="middle">气隙 '+c.gap.toFixed(2)+' mm</text>';
   var tx = 400;
   o += '<text x="'+tx+'" y="52" font-size="11.5" fill="#001B5D">'+c.hall.m+' · Bop '+c.hall.bop+' Gs</text>';
-  o += '<text x="'+tx+MT('M265')+c.P+MT('M266')+nsec+'</text>';
-  o += '<text x="'+tx+MT('M267')+(c.thB*180/Math.PI).toFixed(1)+
-       MT('M268')+(c.thB*c.P*180/Math.PI).toFixed(1)+MT('M269');
+  o += '<text x="'+tx+'" y="72" font-size="11.5" fill="#4F4F4F">极对数 P = '+c.P+' · 磁极数 '+nsec+'</text>';
+  o += '<text x="'+tx+'" y="92" font-size="11.5" fill="#4F4F4F">安装夹角 '+(c.thB*180/Math.PI).toFixed(1)+
+       '° 机械 = '+(c.thB*c.P*180/Math.PI).toFixed(1)+'° 电角</text>';
   o += '<circle cx="'+(tx+5)+'" cy="118" r="7" fill="'+(AN.outA?"#1F7A4C":"#fff")+'" stroke="'+(AN.outA?"#1F7A4C":"#4F4F4F")+'" stroke-width="2"/>';
-  o += '<text x="'+(tx+19)+'" y="122" font-size="11.5" fill="'+(AN.outA?"#1F7A4C":"#4F4F4F")+MT('M270')+(AN.outA?MT('M271'):MT('M272'))+'</text>';
+  o += '<text x="'+(tx+19)+'" y="122" font-size="11.5" fill="'+(AN.outA?"#1F7A4C":"#4F4F4F")+'">A 路 '+(AN.outA?"动作":"释放")+'</text>';
   o += '<rect x="496" y="113" width="10" height="10" fill="'+gsColor(ua, V)+'" stroke="#9AA3B0" stroke-width="0.8"/>';
   o += '<text x="512" y="122" font-size="11" fill="#009FE3">'+(ua>=0?"+":"")+ua.toFixed(0)+' Gs</text>';
   o += '<circle cx="'+(tx+5)+'" cy="142" r="7" fill="'+(AN.outB?"#1F7A4C":"#fff")+'" stroke="'+(AN.outB?"#1F7A4C":"#4F4F4F")+'" stroke-width="2"/>';
-  o += '<text x="'+(tx+19)+'" y="146" font-size="11.5" fill="'+(AN.outB?"#1F7A4C":"#4F4F4F")+MT('M273')+(AN.outB?MT('M274'):MT('M275'))+'</text>';
+  o += '<text x="'+(tx+19)+'" y="146" font-size="11.5" fill="'+(AN.outB?"#1F7A4C":"#4F4F4F")+'">B 路 '+(AN.outB?"动作":"释放")+'</text>';
   o += '<rect x="496" y="137" width="10" height="10" fill="'+gsColor(ub, V)+'" stroke="#9AA3B0" stroke-width="0.8"/>';
   o += '<text x="512" y="146" font-size="11" fill="#0074A8">'+(ub>=0?"+":"")+ub.toFixed(0)+' Gs</text>';
   if(c.dphi !== null){
-    o += '<text x="'+tx+MT('M276')+c.dphi.toFixed(1)+MT('M277');
+    o += '<text x="'+tx+'" y="176" font-size="11.5" fill="#001B5D">实测相位差 '+c.dphi.toFixed(1)+'° 电角</text>';
     o += '<text x="'+tx+'" y="196" font-size="11.5" fill="'+(Math.abs(c.dphi-90)<=+$("anGoal").value?"#1F7A4C":"#B3261E")+
-         MT('M278')+(c.dphi-90>=0?"+":"")+(c.dphi-90).toFixed(1)+'°</text>';
+         '">与目标 90° 偏差 '+(c.dphi-90>=0?"+":"")+(c.dphi-90).toFixed(1)+'°</text>';
   }else{
-    o += '<text x="'+tx+MT('M279');
+    o += '<text x="'+tx+'" y="176" font-size="11.5" fill="#B3261E">幅值不足，两路均不动作</text>';
   }
   o += '</svg>';
   return o;
@@ -3071,7 +3069,7 @@ function anChartAppr(c, s, u){
   var o = '<svg viewBox="0 0 '+W+' '+H+'" role="img">';
   o += '<line x1="'+pl+'" y1="'+Y(0)+'" x2="'+(W-pr)+'" y2="'+Y(0)+'" stroke="#E2E2E2"/>';
   o += '<line x1="'+pl+'" y1="'+pt+'" x2="'+pl+'" y2="'+(H-pb)+'" stroke="#E2E2E2"/>';
-  o += '<text x="12" y="'+(H/2-30)+'" font-size="10.5" fill="#4F4F4F" transform="rotate(-90 12 '+(H/2-30)+MT('M280');
+  o += '<text x="12" y="'+(H/2-30)+'" font-size="10.5" fill="#4F4F4F" transform="rotate(-90 12 '+(H/2-30)+')" text-anchor="middle">判定分量 (Gs)</text>';
   o += gsAxis(Y, ymin, ymax, pl);
   var p25 = [], pT = [];
   for(i=0;i<c.ss.length;i++){ p25.push([X(c.ss[i]), Y(c.u25[i])]); pT.push([X(c.ss[i]), Y(c.uu[i])]); }
@@ -3095,18 +3093,18 @@ function anChartAppr(c, s, u){
     var x0 = Math.min(xa,xb), x1 = Math.max(xa,xb);
     o += '<rect x="'+x0.toFixed(1)+'" y="'+y+'" width="'+(x1-x0).toFixed(1)+'" height="'+bh+'" fill="'+color+'"/>';
   }
-  band(c.sop, "#3D66AE", b1, MT('M281'));
-  band(c.srp, "#9DB6DC", b2, MT('M282'));
+  band(c.sop, "#3D66AE", b1, "靠近时动作区");
+  band(c.srp, "#9DB6DC", b2, "远离时保持区");
   if(c.sop !== null && c.srp !== null && Math.abs(c.srp-c.sop) > 0.005){
     var xo = X(c.sop), xr = X(c.srp);
     o += '<line x1="'+xo.toFixed(1)+'" y1="'+pt+'" x2="'+xo.toFixed(1)+'" y2="'+b2+'" stroke="#B3261E" stroke-width="1" stroke-dasharray="3 2"/>';
     o += '<line x1="'+xr.toFixed(1)+'" y1="'+pt+'" x2="'+xr.toFixed(1)+'" y2="'+b2+'" stroke="#1F7A4C" stroke-width="1" stroke-dasharray="3 2"/>';
-    LA.push({txt:MT('M283')+Math.abs(c.srp-c.sop).toFixed(2)+" mm", fs:10.5, color:"#001B5D", anc:"middle",
+    LA.push({txt:"回差 ΔS = "+Math.abs(c.srp-c.sop).toFixed(2)+" mm", fs:10.5, color:"#001B5D", anc:"middle",
              x:((Math.min(xo,xr)+Math.max(xo,xr))/2), y:pt+12, dir:1});
   }
-  var ax = (c.mode === "front") ? MT('M284') : MT('M285');
+  var ax = (c.mode === "front") ? "行程 s (mm) · 左远右近" : "横向位移 s (mm) · 负左正右";
   o += '<text x="'+(W/2)+'" y="'+(H-6)+'" font-size="10.5" fill="#4F4F4F" text-anchor="middle">'+ax+'</text>';
-  LA.push({txt:MT('M286')+c.T+" °C", fs:10, color:"#8A8A8A", anc:"start", x:(pl+4), y:pt+12, dir:1});
+  LA.push({txt:"浅灰虚线 = 25 °C 参考，蓝线 = 当前 "+c.T+" °C", fs:10, color:"#8A8A8A", anc:"start", x:(pl+4), y:pt+12, dir:1});
   fixLabels(LA, W, pt+11, (H-pb)-3, 12).forEach(function(b){ o += tstr(b); });
   o += '</svg>';
   return o;
@@ -3154,8 +3152,8 @@ function anChartRing(c, phi){
       prev = v;
     }
     if(prev !== null) pts2.push([X(360), yy + (prev? 0 : 11)]);
-    o += '<text x="'+(pl-6)+'" y="'+(yy+9)+'" font-size="10" fill="#4F4F4F" text-anchor="end">'+t[0]+MT('M287');
-    o += '<text x="'+(W-pr)+'" y="'+(yy+11)+'" font-size="9.5" fill="'+t[2]+MT('M288')+c.P+MT('M289');
+    o += '<text x="'+(pl-6)+'" y="'+(yy+9)+'" font-size="10" fill="#4F4F4F" text-anchor="end">'+t[0]+' 路</text>';
+    o += '<text x="'+(W-pr)+'" y="'+(yy+11)+'" font-size="9.5" fill="'+t[2]+'" text-anchor="end">一圈 '+c.P+' 个脉冲</text>';
     if(ti === 0) wA = polyline(pts2, t[2], 1.8); else wB = polyline(pts2, t[2], 1.8);
   });
   /* ★ 磁环转动 -> 波形自左向右「画」出来：磁环已转到的相位画实色，
@@ -3180,7 +3178,7 @@ function anChartRing(c, phi){
     o += '<line x1="'+X(eb)+'" y1="'+pt+'" x2="'+X(eb)+'" y2="'+(bandY+30)+'" stroke="#1F7A4C" stroke-width="1" stroke-dasharray="3 2"/>';
     /* 相位差文字放在磁场区下方、方波轨道上方，避免压住左上角的图内说明；
        两个上升沿贴到左边时中心点会带着整句跑出画布，所以先按字宽把中心钳回来。 */
-    var dphiTxt = MT('M290')+c.dphi.toFixed(1)+MT('M291');
+    var dphiTxt = '上升沿间隔 Δφ = '+c.dphi.toFixed(1)+'° 电角度 · 目标 90°';
     var dphiW = tw(dphiTxt, 10.5), dphiX = (X(ea)+X(eb))/2;
     dphiX = Math.max(Math.min(dphiX, (W-pr)-dphiW/2), dphiW/2+2);
     o += '<text x="'+dphiX.toFixed(1)+'" y="'+(bandY-7)+
@@ -3188,20 +3186,20 @@ function anChartRing(c, phi){
   }
   o += '<line x1="'+xNow.toFixed(1)+'" y1="'+(pt-2)+'" x2="'+xNow.toFixed(1)+'" y2="'+clipBot.toFixed(1)+'" stroke="#222" stroke-width="1.2" opacity="0.5"/>';
   o += '<circle cx="'+xNow.toFixed(1)+'" cy="'+(pt-2)+'" r="3" fill="#222"/>';
-  o += '<text x="'+(W/2)+'" y="'+(H-6)+MT('M292')+c.P+MT('M293')+(2*c.P)+MT('M294');
-  o += '<text x="'+(pl+4)+'" y="'+(pt+12)+MT('M295');
+  o += '<text x="'+(W/2)+'" y="'+(H-6)+'" font-size="10.5" fill="#4F4F4F" text-anchor="middle">磁环机械角（一圈 0~360° = '+c.P+' 个电周期 = '+(2*c.P)+' 个磁极），游标即当前相位</text>';
+  o += '<text x="'+(pl+4)+'" y="'+(pt+12)+'" font-size="10" fill="#8A8A8A">细线为磁场波形，下方为两路输出方波；浅色部分为磁环尚未转到的相位</text>';
   o += '</svg>';
   return o;
 }
 
 function anLiveAppr(c, s, u){
   var cells = [
-    [MT('M296'), s.toFixed(2), " mm", ""],
-    [MT('M297'), (u>=0?"+":"")+u.toFixed(0), " Gs", AN.out?"hi":"lo"],
-    [MT('M298'), AN.out?MT('M299'):MT('M300'), "", AN.out?"hi":"lo"],
-    [MT('M301'), c.sop===null?"—":c.sop.toFixed(2), " mm", ""],
-    [MT('M302'), c.srp===null?"—":c.srp.toFixed(2), " mm", ""],
-    [MT('M303'), (c.sop!==null&&c.srp!==null)?Math.abs(c.srp-c.sop).toFixed(2):"—", " mm", ""]
+    ["当前行程", s.toFixed(2), " mm", ""],
+    ["判定成分", (u>=0?"+":"")+u.toFixed(0), " Gs", AN.out?"hi":"lo"],
+    ["输出状态", AN.out?"动作":"释放", "", AN.out?"hi":"lo"],
+    ["动作点", c.sop===null?"—":c.sop.toFixed(2), " mm", ""],
+    ["释放点", c.srp===null?"—":c.srp.toFixed(2), " mm", ""],
+    ["ヒステリシス ΔS", (c.sop!==null&&c.srp!==null)?Math.abs(c.srp-c.sop).toFixed(2):"—", " mm", ""]
   ];
   var o = "";
   cells.forEach(function(x){
@@ -3215,13 +3213,13 @@ function anLiveRing(c, phi, ua, ub){
   var mech = phi/(2*Math.PI)*360;      /* 整圈机械角 */
   var elec = mech*c.P;                 /* 对应电角度 */
   var cells = [
-    [MT('M304'), mech.toFixed(1), "°", ""],
-    [MT('M305'), elec.toFixed(0), "°", ""],
-    [MT('M306'), ua.toFixed(0), " Gs", ""],
-    [MT('M307'), ub.toFixed(0), " Gs", ""],
-    [MT('M308'), AN.outA?MT('M309'):MT('M310'), "", AN.outA?"hi":"lo"],
-    [MT('M311'), AN.outB?MT('M312'):MT('M313'), "", AN.outB?"hi":"lo"],
-    [MT('M314'), c.dphi===null?"—":c.dphi.toFixed(1), "°", ""]
+    ["当前机械角", mech.toFixed(1), "°", ""],
+    ["对应电角度", elec.toFixed(0), "°", ""],
+    ["A 路磁场", ua.toFixed(0), " Gs", ""],
+    ["B 路磁场", ub.toFixed(0), " Gs", ""],
+    ["A 路输出", AN.outA?"动作":"释放", "", AN.outA?"hi":"lo"],
+    ["B 路输出", AN.outB?"动作":"释放", "", AN.outB?"hi":"lo"],
+    ["实测相位差", c.dphi===null?"—":c.dphi.toFixed(1), "°", ""]
   ];
   var o = "";
   cells.forEach(function(x){
@@ -3259,22 +3257,22 @@ function renderAnim(){
     var goal = +$("anGoal").value;
     var v = $("anVerdict");
     if(c.dphi === null){
-      v.className = "big bad"; v.textContent = MT('M315');
-      $("anVerdictSub").textContent = MT('M316')+c.gap.toFixed(2)+MT('M317')+amax.toFixed(0)+
-        MT('M318')+c.opA.toFixed(0)+MT('M319');
+      v.className = "big bad"; v.textContent = "两路均不动作";
+      $("anVerdictSub").textContent = "气隙 "+c.gap.toFixed(2)+" mm 下峰值仅 "+amax.toFixed(0)+
+        " Gs，低于动作门限 "+c.opA.toFixed(0)+" Gs。需减小气隙、加厚磁环或换更高牌号材料。";
     }else{
       var err = Math.abs(c.dphi-90);
       v.className = "big " + (err<=goal?"pass":(err<=goal*1.6?"warn":"bad"));
-      v.textContent = MT('M320')+c.dphi.toFixed(1)+MT('M321')+(c.dphi-90>=0?"+":"")+(c.dphi-90).toFixed(1)+"°";
-      $("anVerdictSub").textContent = MT('M322')+goal+MT('M323')+c.P+MT('M324')+(90/c.P).toFixed(1)+
-        MT('M325')+
-        (Math.abs(c.dthDeg)>0.001 ? MT('M326')+c.dthDeg.toFixed(1)+MT('M327')+(c.dthDeg*c.P).toFixed(1)+MT('M328') : "。")+
-        MT('M329')+c.mis+MT('M330');
+      v.textContent = "相位差 "+c.dphi.toFixed(1)+"° · 偏差 "+(c.dphi-90>=0?"+":"")+(c.dphi-90).toFixed(1)+"°";
+      $("anVerdictSub").textContent = "目标 ±"+goal+"° 电角度。P = "+c.P+" 时理想安装夹角 "+(90/c.P).toFixed(1)+
+        "° 机械；机械偏差会被放大 P 倍换算成电角度"+
+        (Math.abs(c.dthDeg)>0.001 ? "：当前给了 "+c.dthDeg.toFixed(1)+"° 机械偏差，折算 "+(c.dthDeg*c.P).toFixed(1)+"° 电角度。" : "。")+
+        " 阈值失配 "+c.mis+" Gs 的影响取决于磁场梯度——气隙越小场越强，同样的失配造成的相位偏移越小。";
     }
-    $("anCap2").textContent = MT('M331')+
-      MT('M332')+
-      MT('M333')+
-      MT('M334');
+    $("anCap2").textContent = "横轴是磁环整圈 360° 机械角：磁环转过一整圈，波形自左向右跟着画出来，游标即当前相位。"+
+      "一圈含 P 个电周期，所以每路一圈内出现 P 个高电平与 P 个低电平——转一圈就能数出脉冲数。"+
+      "上方曲线是霍尔看到的磁场，下方是 A / B 两路整形后的数字输出——示波器上测到的就是这两路正交高低电平。"+
+      "上升沿间隔即实测相位差，理想为 90° 电角度；两颗芯片阈值不一致时穿越点错开，相位差随之偏离。";
   }else{
     var s = (c.mode === "front") ? (c.smax + (0.05-c.smax)*AN.p) : ((2*AN.p-1)*c.smax);
     var u = anBAt(c, s);
@@ -3289,23 +3287,23 @@ function renderAnim(){
     anLiveAppr(c, s, u);
     var v2 = $("anVerdict");
     if(c.sop === null){
-      v2.className = "big bad"; v2.textContent = MT('M335');
-      $("anVerdictSub").textContent = MT('M336')+c.peak.toFixed(0)+MT('M337')+c.op.toFixed(0)+
-        " Gs。"+(c.pol*c.sgn<0? MT('M338') :
-        MT('M339'));
+      v2.className = "big bad"; v2.textContent = "该配置下不会动作";
+      $("anVerdictSub").textContent = "峰值仅 "+c.peak.toFixed(0)+" Gs，未达到动作门限 "+c.op.toFixed(0)+
+        " Gs。"+(c.pol*c.sgn<0? "当前磁体极性与该型号响应极性相反，可切换「S 面朝向芯片」再试。" :
+        "可增大磁体、减小行程范围，或换用 Bop 更低的型号。");
     }else if(c.latch){
-      v2.className = "big warn"; v2.textContent = MT('M340')+c.sop.toFixed(2)+MT('M341');
-      $("anVerdictSub").textContent = MT('M342')+c.hall.m+MT('M343')+c.urel.toFixed(0)+
-        MT('M344');
+      v2.className = "big warn"; v2.textContent = "动作 "+c.sop.toFixed(2)+" mm · 远离不释放";
+      $("anVerdictSub").textContent = "这是"+c.hall.m+"的锁存特性：释放点 Brp = "+c.urel.toFixed(0)+
+        " Gs 在反极性侧，单纯远离只会让磁场趋近于 0 而不会反号，因此输出保持不动。接近开关应改选单极或全极开关（如 SC245X 系列）。";
     }else{
       var dS = Math.abs(c.srp-c.sop);
       v2.className = "big " + (dS>=1?"pass":(dS>=0.3?"warn":"bad"));
-      v2.textContent = MT('M345')+c.sop.toFixed(2)+MT('M346')+c.srp.toFixed(2)+MT('M347')+dS.toFixed(2)+" mm";
-      $("anVerdictSub").textContent = MT('M348')+
-        MT('M349')+c.T+MT('M350')+c.sop.toFixed(2)+MT('M351');
+      v2.textContent = "动作 "+c.sop.toFixed(2)+" mm · 释放 "+c.srp.toFixed(2)+" mm · 回差 "+dS.toFixed(2)+" mm";
+      $("anVerdictSub").textContent = "回差是抗抖动的能力：磁铁在动作点附近抖动时，只要不退出释放点，输出就不会来回翻转。"+
+        "当前 "+c.T+" °C 下动作点为 "+c.sop.toFixed(2)+" mm；拖动温度滑块可看高温剩磁下降后动作点如何提前。";
     }
-    $("anCap2").textContent = MT('M352')+
-      MT('M353');
+    $("anCap2").textContent = "蓝线为当前温度的磁场—行程曲线，浅灰虚线是 25 °C 参考。底部两条带：上带是靠近时的动作区间，"+
+      "下带是远离时仍保持动作的区间，两者之差就是回差 ΔS。";
   }
   var pv = $("anProg");
   if(pv) pv.value = Math.round(AN.p*1000);
@@ -3332,7 +3330,7 @@ function animLoop(ts){
 
 function setPlayBtn(){
   var b = $("anPlay");
-  b.textContent = AN.play ? MT('M354') : MT('M355');
+  b.textContent = AN.play ? "一時停止" : "播放";
   b.className = AN.play ? "pri" : "";
 }
 
@@ -3347,22 +3345,22 @@ function runAnim(){
   paintAll();
   $("anD2Wrap").style.display  = (anShape.get() === "block" && !ring) ? "" : "none";
   $("anVgWrap").style.display  = (anMode.get() === "flat") ? "" : "none";
-  $("anD1L").textContent = (anShape.get() === "cylinder") ? MT('M356') : MT('M357');
+  $("anD1L").textContent = (anShape.get() === "cylinder") ? "直径 D" : "长度 A";
   var h = HM[$("anHall").value];
   $("anModeHint").textContent =
-    anMode.get() === "front" ? MT('M358')
-    : anMode.get() === "flat" ? MT('M359')
-    : anMode.get() === "radial" ? MT('M360')
-    : MT('M361');
+    anMode.get() === "front" ? "芯片丝印面朝上，磁铁在芯片正上方，沿磁化轴（竖直方向）上下往复。看磁铁从起点（浅灰虚线框）下移到哪一距离时输出翻转——实心框就是此刻的位置。"
+    : anMode.get() === "flat" ? "磁铁保持安装高度不变，平行于芯片丝印面左右横掠。磁铁正对芯片（s = 0）时磁场最强。"
+    : anMode.get() === "radial" ? "多极磁环旋转，两颗霍尔贴在环外侧圆周面，感应径向分量 Br，输出两路正交方波。"
+    : "多极磁环旋转，两颗霍尔位于环端面外侧，感应轴向分量 Bz。安装夹角仍为 90° 电角度。";
   $("anPolHint").textContent = (h.bop >= 0)
-    ? MT('M362')
-    : MT('M363');
-  $("anSpdLab").textContent = (ring ? MT('M364') : MT('M365')) + (4.0/(+$("anSpd").value/100)).toFixed(1) + MT('M366');
+    ? "该型号 Bop 为正，磁体 N 面朝向芯片时才会动作；翻转为 S 面朝向则不会动作。"
+    : "该型号 Bop 为负，需磁体 S 面朝向芯片才会动作；默认 N 面朝向时不会动作。";
+  $("anSpdLab").textContent = (ring ? "转一圈 " : "一趟 ") + (4.0/(+$("anSpd").value/100)).toFixed(1) + " 秒";
   $("anFigcap").textContent =
-    anMode.get() === "front" ? MT('M367')
-    : anMode.get() === "flat" ? MT('M368')
-    : anMode.get() === "radial" ? MT('M369')+ (2*(+$("anP").value)) +MT('M370')+(90/+$("anP").value).toFixed(1)+MT('M371')
-    : MT('M372');
+    anMode.get() === "front" ? "磁铁沿磁化轴竖直往复：浅灰虚线框是起点，随播放向下移动；靠近时磁场单调增强，越过 Bop 输出翻转；远离时要退到 Brp 以外才复位，两个位置之差就是回差。右侧竖直标尺可直接读出磁铁到芯片丝印面的真实距离。"
+    : anMode.get() === "flat" ? "磁铁悬在芯片上方、安装高度不变，在平面内左右横掠：浅灰虚线框是起点，实心框随播放平移。磁铁正对芯片时场最强，场随位移先升后降，所以一趟会经历动作与释放各两次。"
+    : anMode.get() === "radial" ? "多极磁环旋转，"+ (2*(+$("anP").value)) +" 个磁极交替掠过两颗霍尔。安装夹角取 90° 电角度（即 "+(90/+$("anP").value).toFixed(1)+"° 机械）时两路相差四分之一周期。"
+    : "轴向感应时霍尔位于环端面外侧，感应轴向分量 Bz；安装夹角同样是 90° 电角度。";
   AN.cache = ring ? anBuildRing() : anBuildAppr();
   renderAnim();
 }
@@ -3382,11 +3380,11 @@ hallFill("oHall", HALLS,       "SC2943");   /* 场景3 单点校核：全量，�
 
 function hallHint(id, hid){
   var h = HM[$(hid).value];
-  var cls = (h.cls === "switch") ? MT('M373') : MT('M374');
+  var cls = (h.cls === "switch") ? "单极／全极" : "锁存型（双极）";
   $(id).innerHTML = "<b>"+h.m+"</b> · "+cls+" · Bop "+h.bop+" Gs（"+h.bop_min.toFixed(0)+" ~ "+h.bop_max.toFixed(0)+
-    "） · Brp "+h.brp+MT('M375')+h.v+" V · "+h.tlo+" ~ "+h.thi+" °C · "+h.o+" · "+h.pkg+
-    MT('M376') + h.src + (h.note? " · "+h.note : "") +
-    (h.t2d? MT('M377') : "");
+    "） · Brp "+h.brp+" Gs · 供电 "+h.v+" V · "+h.tlo+" ~ "+h.thi+" °C · "+h.o+" · "+h.pkg+
+    "<br>数据来源：" + h.src + (h.note? " · "+h.note : "") +
+    (h.t2d? " · 判定分量按 <b>Bx</b>" : "");
 }
 function progToggle(){
   var h = HM[$("aHall").value];
@@ -3395,7 +3393,7 @@ function progToggle(){
 /* 动画页：接近模式只给单极／全极，磁环模式只给锁存型 */
 function refillAnHall(){
   var ring = anRing();
-  $("anHallKind").textContent = ring ? MT('M378') : MT('M379');
+  $("anHallKind").textContent = ring ? "ラッチタイプのみ" : "ユニポーラ／オムニポーラのみ";
   hallFill("anHall", ring ? LATCH_LIST : SWITCH_LIST, ring ? "SC2943" : "SC2452");
   hallHint("anHallHint","anHall");
 }

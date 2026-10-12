@@ -469,6 +469,38 @@
     <span>Full parameters being compiled</span>
   </div>
 
+  <div class="pv-sec">
+    <div class="pv-bar">
+      <div class="pv-toggle">
+        <button type="button" class="pv-btn on" data-view="card">Card</button>
+        <button type="button" class="pv-btn" data-view="list">List</button>
+      </div>
+    </div>
+    <div class="pv-card">
+  <div class="pc-grid">
+      <article class="pc-card">
+        <span class="pc-model">SC9314UA</span>
+        <div class="pc-kvs"><span class="pc-kv"><i>Package</i>UA</span></div>
+        <div class="pc-act"><button class="btn-add" data-model="SC9314UA">Add to List</button></div>
+      </article>
+      <article class="pc-card">
+        <span class="pc-model">SC9388T3</span>
+        <div class="pc-kvs"><span class="pc-kv"><i>Package</i>T3</span></div>
+        <div class="pc-act"><button class="btn-add" data-model="SC9388T3">Add to List</button></div>
+      </article>
+      <article class="pc-card">
+        <span class="pc-model">SC9675IM</span>
+        <div class="pc-kvs"><span class="pc-kv"><i>Package</i>IM</span></div>
+        <div class="pc-act"><button class="btn-add" data-model="SC9675IM">Add to List</button></div>
+      </article>
+      <article class="pc-card">
+        <span class="pc-model">SC9675T3</span>
+        <div class="pc-kvs"><span class="pc-kv"><i>Package</i>T3</span></div>
+        <div class="pc-act"><button class="btn-add" data-model="SC9675T3">Add to List</button></div>
+      </article>
+  </div>
+    </div>
+    <div class="pv-list">
   <div class="table-wrap">
     <table class="product-table">
       <thead><tr><th>Part Number</th><th>Package</th><th>Datasheet</th><th>Action</th></tr></thead>
@@ -481,6 +513,8 @@
     </table>
   </div>
   <p class="table-note">Note: the list above covers the in-stock part numbers for this category; the full parameter table (operating voltage, magnetic characteristics, output form, temperature grade, etc.) is being compiled - call us for datasheets and sample support.</p>
+    </div>
+  </div>
 
   <div class="quick-pick">
     <div>
@@ -549,5 +583,8 @@ document.getElementById("seriesBar").addEventListener("click", function (e) {
 <script src="../js/i18n.js"></script>
 <script src="../js/app.js"></script>
 <script src="../js/nav.js"></script>
+
+<button type="button" class="cart-fab">Selection List<span class="cart-n">0</span></button>
+<script src="../js/product-view.js" defer></script>
 </body>
 </html>

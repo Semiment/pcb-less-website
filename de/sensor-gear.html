@@ -469,6 +469,33 @@
     <span>Vollständige Parameter in Arbeit</span>
   </div>
 
+  <div class="pv-sec">
+    <div class="pv-bar">
+      <div class="pv-toggle">
+        <button type="button" class="pv-btn on" data-view="card">Karten</button>
+        <button type="button" class="pv-btn" data-view="list">Liste</button>
+      </div>
+    </div>
+    <div class="pv-card">
+  <div class="pc-grid">
+      <article class="pc-card">
+        <span class="pc-model">SC9632VB</span>
+        <div class="pc-act"><button class="btn-add" data-model="SC9632VB">Zur Liste hinzufügen</button></div>
+        <p class="pc-common"><b>Für alle Serien:</b>Gehäuse VB</p>
+      </article>
+      <article class="pc-card">
+        <span class="pc-model">SC9633VB</span>
+        <div class="pc-act"><button class="btn-add" data-model="SC9633VB">Zur Liste hinzufügen</button></div>
+        <p class="pc-common"><b>Für alle Serien:</b>Gehäuse VB</p>
+      </article>
+      <article class="pc-card">
+        <span class="pc-model">SC9634VB</span>
+        <div class="pc-act"><button class="btn-add" data-model="SC9634VB">Zur Liste hinzufügen</button></div>
+        <p class="pc-common"><b>Für alle Serien:</b>Gehäuse VB</p>
+      </article>
+  </div>
+    </div>
+    <div class="pv-list">
   <div class="table-wrap">
     <table class="product-table">
       <thead><tr><th>Artikelnummer</th><th>Gehäuse</th><th>Datenblatt</th><th>Aktion</th></tr></thead>
@@ -480,6 +507,8 @@
     </table>
   </div>
   <p class="table-note">Hinweis: Die Liste oben zeigt die Typen dieser Kategorie auf Lager; die vollständige Parametertabelle (Betriebsspannung, magnetische Eigenschaften, Ausgangsform, Temperaturklasse usw.) wird derzeit zusammengestellt - fragen Sie uns nach Datenblättern und Samples.</p>
+    </div>
+  </div>
 
   <div class="quick-pick">
     <div>
@@ -548,5 +577,8 @@ document.getElementById("seriesBar").addEventListener("click", function (e) {
 <script src="../js/i18n.js"></script>
 <script src="../js/app.js"></script>
 <script src="../js/nav.js"></script>
+
+<button type="button" class="cart-fab">Auswahlliste<span class="cart-n">0</span></button>
+<script src="../js/product-view.js" defer></script>
 </body>
 </html>

@@ -915,6 +915,7 @@ select:focus-visible, textarea:focus-visible, .subcat:focus-visible,
 .table-wrap {
   background: var(--surface); border: 1px solid var(--border);
   border-radius: var(--radius); overflow: auto; box-shadow: var(--shadow);
+  max-height: 74vh;   /* 型号过多时表体内部滚动 */
 }
 .product-table { width: 100%; border-collapse: collapse; min-width: 980px; }
 .product-table th {
@@ -922,6 +923,7 @@ select:focus-visible, textarea:focus-visible, .subcat:focus-visible,
   color: var(--ink-3); letter-spacing: .05em;
   padding: 13px 14px; border-bottom: 1px solid var(--border);
   background: var(--canvas); white-space: nowrap;
+  position: sticky; top: 0; z-index: 2;   /* 第一行属性名固定（滚动时常驻） */
 }
 .product-table td {
   padding: 12px 14px; border-bottom: 1px solid var(--border);
@@ -947,6 +949,67 @@ select:focus-visible, textarea:focus-visible, .subcat:focus-visible,
 .btn-add.added { background: var(--accent-tint); border-color: var(--accent); color: var(--accent); }
 
 .table-note { font-size: 12.5px; color: var(--ink-3); margin-top: 12px; }
+
+/* ---------------- 产品页 APP 化：视图切换 + 卡片网格 + 浮动清单 ---------------- */
+.pv-sec { margin-bottom: 4px; }
+.pv-bar { display: flex; align-items: center; gap: 14px; margin: 16px 0 14px; }
+.pv-toggle {
+  display: inline-flex; background: var(--surface);
+  border: 1px solid var(--border); border-radius: 8px; overflow: hidden;
+}
+.pv-btn {
+  font-family: var(--font); font-size: 13px; color: var(--ink-2);
+  background: var(--surface); border: none; padding: 8px 18px;
+  cursor: pointer; transition: color .15s, background .15s;
+}
+.pv-btn + .pv-btn { border-left: 1px solid var(--border); }
+.pv-btn:hover { color: var(--accent); }
+.pv-btn.on { background: var(--accent); color: #fff; font-weight: 600; }
+
+/* 默认卡片视图；切到列表时隐藏卡片、显示表格（两者 HTML 都在，GEO 不受影响） */
+.pv-sec .pv-list { display: none; }
+.pv-sec.pv-list-on .pv-card { display: none; }
+.pv-sec.pv-list-on .pv-list { display: block; }
+
+.pc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(258px, 1fr)); gap: 14px; }
+.pc-card {
+  display: flex; flex-direction: column; gap: 10px;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 16px 18px;
+  transition: transform .18s, border-color .18s, box-shadow .18s;
+}
+.pc-card:hover { border-color: var(--accent); box-shadow: var(--shadow); transform: translateY(-2px); }
+.pc-model { font-family: var(--mono); font-size: 14px; font-weight: 600; color: var(--ink); }
+.pc-feat { font-size: 12.8px; line-height: 1.6; color: var(--ink-2); }
+.pc-kvs { display: flex; flex-wrap: wrap; gap: 6px 14px; }
+.pc-kv { display: inline-flex; align-items: baseline; gap: 6px; font-size: 12.5px; color: var(--ink-2); }
+.pc-kv i { font-style: normal; font-size: 11.5px; color: var(--ink-3); }
+.pc-kv .empty-cell { color: var(--ink-3); }
+.pc-act { margin-top: auto; }
+.pc-act .btn-add { width: 100%; }
+.pc-common {
+  font-size: 11.8px; line-height: 1.55; color: var(--ink-3);
+  border-top: 1px solid var(--border); padding-top: 9px;
+}
+
+.cart-fab {
+  position: fixed; right: 22px; bottom: 22px; z-index: 95;
+  display: none; align-items: center; gap: 9px;
+  background: var(--accent); color: #fff; border: none; border-radius: 999px;
+  padding: 12px 20px; font-family: var(--font); font-size: 14px; font-weight: 600;
+  cursor: pointer; box-shadow: 0 4px 16px rgba(0, 27, 93, .22);
+  transition: transform .18s, background .18s;
+}
+.cart-fab.show { display: inline-flex; }
+.cart-fab:hover { background: #1A4085; transform: translateY(-2px); }
+.cart-fab .cart-n {
+  font-family: var(--mono); background: rgba(255, 255, 255, .22);
+  border-radius: 999px; padding: 1px 9px;
+}
+@media (max-width: 640px) {
+  .cart-fab { right: 14px; bottom: 14px; padding: 10px 16px; }
+  .pc-grid { grid-template-columns: 1fr; }
+}
 
 /* 空状态 */
 .empty-state {

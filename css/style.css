@@ -316,7 +316,7 @@ select:focus-visible, textarea:focus-visible, .subcat:focus-visible,
 .hero {
   position: relative;
   display: flex; flex-direction: column;
-  min-height: clamp(560px, 86vh, 780px);
+  min-height: clamp(520px, 78vh, 700px);
   background: var(--deep);
   overflow: hidden;
   isolation: isolate;
@@ -430,8 +430,8 @@ select:focus-visible, textarea:focus-visible, .subcat:focus-visible,
    列间竖线只在 ≥1201px 保留，窄屏塌成 2 列 / 1 列时自动撤掉。 */
 .hero-band {
   position: relative; z-index: 2;
-  border-top: 1px solid rgba(255, 255, 255, .14);
-  background: linear-gradient(180deg, rgba(0, 13, 40, 0), rgba(0, 13, 40, .58));
+  border-top: 1px solid rgba(255, 255, 255, .18);
+  background: rgba(0, 13, 40, .72);
 }
 .hero-band > .container { padding: 24px 0 30px; }
 /* 宽度预算（容器 1132px）：列宽 = (1132 − 4×16) / 5 = 213.6px，减去 16px 左内距
@@ -447,17 +447,17 @@ select:focus-visible, textarea:focus-visible, .subcat:focus-visible,
 .hb-item:first-child { padding-left: 0; border-left: 0; }
 .hb-title {
   display: block; position: relative; padding-top: 12px;
-  font-size: 13.5px; line-height: 1.5; font-weight: 600;
-  color: rgba(255, 255, 255, .92);
+  font-size: 15px; line-height: 1.45; font-weight: 700;
+  color: rgba(255, 255, 255, .96);
 }
 .hb-title::before {
   content: ''; position: absolute; left: 0; top: 0;
-  width: 16px; height: 2px; background: var(--accent-2);
+  width: 22px; height: 3px; background: var(--accent-2);
 }
 .hb-desc {
   display: block; margin-top: 6px;
-  font-size: 12.5px; line-height: 1.62; font-weight: 400;
-  color: rgba(255, 255, 255, .62);
+  font-size: 13.2px; line-height: 1.62; font-weight: 400;
+  color: rgba(255, 255, 255, .74);
 }
 
 /* Hero 入场：错落渐显（只动 opacity / transform） */
@@ -1326,7 +1326,7 @@ textarea.form-control { resize: vertical; min-height: 110px; }
    实测需约 1010px 才排得下，低于此宽度若不折叠就会把「首页」挤成两行。 */
 @media (max-width: 1200px) {
   /* 首屏：整屏覆盖的背景图不需要"掉到下面"，窄屏只收窄选型台与文案栏 */
-  .hero { min-height: clamp(520px, 80vh, 720px); }
+  .hero { min-height: clamp(500px, 76vh, 660px); }
   .hero-main { grid-template-columns: minmax(0, 1.12fr) minmax(0, .88fr); gap: 40px; }
   .hero-copy { max-width: 100%; }
   .hb-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 26px; }

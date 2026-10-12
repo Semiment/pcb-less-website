@@ -915,13 +915,15 @@ select:focus-visible, textarea:focus-visible, .subcat:focus-visible,
 .table-wrap {
   background: var(--surface); border: 1px solid var(--border);
   border-radius: var(--radius); overflow: auto; box-shadow: var(--shadow);
+  max-height: 74vh;
 }
-.product-table { width: 100%; border-collapse: collapse; min-width: 980px; }
+.product-table { width: 100%; border-collapse: separate; border-spacing: 0; min-width: 980px; }
 .product-table th {
   text-align: left; font-size: 12.5px; font-weight: 700;
   color: var(--ink-3); letter-spacing: .05em;
   padding: 13px 14px; border-bottom: 1px solid var(--border);
   background: var(--canvas); white-space: nowrap;
+  position: sticky; top: 0; z-index: 3;
 }
 .product-table td {
   padding: 12px 14px; border-bottom: 1px solid var(--border);
@@ -937,6 +939,17 @@ select:focus-visible, textarea:focus-visible, .subcat:focus-visible,
   white-space: normal; min-width: 150px; max-width: 230px;
   line-height: 1.5; color: var(--ink-2);
 }
+/* ---- 型号过多时：首行（属性名）纵向钉住 + 首列横向钉住 ---- */
+.product-table th:first-child,
+.product-table td:first-child { position: sticky; left: 0; }
+.product-table th:first-child { z-index: 4; }
+.product-table td:first-child { z-index: 2; background: var(--surface); }
+.product-table tbody tr:hover td:first-child { background: var(--accent-tint); }
+/* 钉列右侧 1px 分隔（功能线，滚动时恒可见；非装饰网格线） */
+.product-table th:first-child,
+.product-table td:first-child { box-shadow: 1px 0 0 var(--border); }
+/* colspan 合并行（更多型号 / 空态提示）不参与钉列 */
+.product-table tbody td[colspan] { position: static; }
 .btn-add {
   font-size: 12.5px; padding: 6px 13px; border-radius: 8px;
   border: 1px solid var(--border); background: var(--surface);

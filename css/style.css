@@ -946,13 +946,17 @@ select:focus-visible, textarea:focus-visible, .subcat:focus-visible,
 .product-table .num { font-family: var(--mono); }
 .product-table .empty-cell { color: var(--nt-text-faint); }
 .product-table td.feat {
-  /* 能排一排就排一排，最多两排。口径：中文中位 9em / p90 18.6em / 最长 31em，日文最长 38.2em。
-     min-width 150px→300px（≈19.4em 单行容量）：短句单行，最长两句止于两行（原 150px 会挤成两排且断在字中）。
+  /* 列宽贴近内容本身，不设固定下限（原 300px 下限会在最长文本右侧空出一截）。
+     中文：整串不折行 → 列宽＝该表最长的一条（中文各表最长 62/73/210/238/266/295/402/434px）。
+     日/英/德：特性是较长描述句，按标点折行，用 max-width 兜住、min-width 兜住下限。
      keep-all 禁止在词内断字（原「车规，耐高压，单 / 极」），只在「，」等标点处折行。 */
   white-space: normal; word-break: keep-all; overflow-wrap: break-word;
-  min-width: 300px; max-width: 360px;
-  line-height: 1.5; color: var(--nt-text);
+  max-width: 300px; line-height: 1.5; color: var(--nt-text);
 }
+html[lang="zh-CN"] .product-table td.feat { white-space: nowrap; max-width: none; }
+html[lang="ja"] .product-table td.feat,
+html[lang="en"] .product-table td.feat,
+html[lang="de"] .product-table td.feat { min-width: 220px; }
 /* ---- 型号过多时：首行（属性名）纵向钉住 + 首列横向钉住（保留） ---- */
 .product-table th:first-child,
 .product-table td:first-child { position: sticky; left: 0; }

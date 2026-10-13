@@ -917,46 +917,56 @@ select:focus-visible, textarea:focus-visible, .subcat:focus-visible,
   border-radius: var(--radius); overflow: auto; box-shadow: var(--shadow);
   max-height: 74vh;
 }
-.product-table { width: 100%; border-collapse: separate; border-spacing: 0; min-width: 980px; }
+.product-table {
+  /* Notion 风格作用域内令牌：仅影响产品表格，不动全站 --ink / --border 等 */
+  --nt-text: #37352F;              /* Notion 正文暖炭灰 */
+  --nt-text-soft: #787774;         /* Notion 次级 / 表头灰 = rgba(55,53,47,.65) */
+  --nt-text-faint: #9B9A97;        /* Notion 占位灰 */
+  --nt-border: rgba(55,53,47,.09); /* Notion 发丝分隔线 */
+  --nt-hover: rgba(55,53,47,.055); /* Notion 行悬停中性灰 */
+  --nt-head-bg: var(--surface);    /* 表头白底，靠文字色+下边框区分 */
+  --nt-link: #2383E2;              /* Notion 链接蓝 */
+  width: 100%; border-collapse: separate; border-spacing: 0; min-width: 980px;
+}
 .product-table th {
-  text-align: left; font-size: 12.5px; font-weight: 700;
-  color: var(--ink-3); letter-spacing: .05em;
-  padding: 13px 14px; border-bottom: 1px solid var(--border);
-  background: var(--canvas); white-space: nowrap;
+  text-align: left; font-size: 13.5px; font-weight: 600;
+  color: var(--nt-text-soft); letter-spacing: 0;
+  padding: 11px 14px; border-bottom: 1px solid var(--nt-border);
+  background: var(--nt-head-bg); white-space: nowrap;
   position: sticky; top: 0; z-index: 3;
 }
 .product-table td {
-  padding: 12px 14px; border-bottom: 1px solid var(--border);
-  font-size: 14px; color: var(--ink-2); white-space: nowrap;
+  padding: 11px 14px; border-bottom: 1px solid var(--nt-border);
+  font-size: 14px; color: var(--nt-text); line-height: 1.5; white-space: nowrap;
 }
 .product-table tr:last-child td { border-bottom: none; }
-.product-table tbody tr { transition: background .15s; }
-.product-table tbody tr:hover { background: var(--accent-tint); }
-.product-table .model { font-family: var(--mono); font-weight: 600; color: var(--ink); font-size: 13.5px; }
+.product-table tbody tr { transition: background .12s ease; }
+.product-table tbody tr:hover { background: var(--nt-hover); }
+.product-table .model { font-family: var(--mono); font-weight: 600; color: var(--nt-text); font-size: 14px; }
 .product-table .num { font-family: var(--mono); }
-.product-table .empty-cell { color: var(--ink-3); }
+.product-table .empty-cell { color: var(--nt-text-faint); }
 .product-table td.feat {
   white-space: normal; min-width: 150px; max-width: 230px;
-  line-height: 1.5; color: var(--ink-2);
+  line-height: 1.5; color: var(--nt-text);
 }
-/* ---- 型号过多时：首行（属性名）纵向钉住 + 首列横向钉住 ---- */
+/* ---- 型号过多时：首行（属性名）纵向钉住 + 首列横向钉住（保留） ---- */
 .product-table th:first-child,
 .product-table td:first-child { position: sticky; left: 0; }
 .product-table th:first-child { z-index: 4; }
-.product-table td:first-child { z-index: 2; background: var(--surface); }
-.product-table tbody tr:hover td:first-child { background: var(--accent-tint); }
+.product-table td:first-child { z-index: 2; background: var(--nt-head-bg); }
+.product-table tbody tr:hover td:first-child { background: var(--nt-hover); }
 /* 钉列右侧 1px 分隔（功能线，滚动时恒可见；非装饰网格线） */
 .product-table th:first-child,
-.product-table td:first-child { box-shadow: 1px 0 0 var(--border); }
+.product-table td:first-child { box-shadow: 1px 0 0 var(--nt-border); }
 /* colspan 合并行（更多型号 / 空态提示）不参与钉列 */
 .product-table tbody td[colspan] { position: static; }
 .btn-add {
-  font-size: 12.5px; padding: 6px 13px; border-radius: 8px;
-  border: 1px solid var(--border); background: var(--surface);
-  color: var(--ink-2); cursor: pointer; font-family: var(--font);
+  font-size: 12.5px; padding: 5px 12px; border-radius: 6px;
+  border: 1px solid var(--nt-border); background: var(--surface);
+  color: var(--nt-text-soft); cursor: pointer; font-family: var(--font);
   transition: all .15s;
 }
-.btn-add:hover { border-color: var(--accent); color: var(--accent); }
+.btn-add:hover { background: rgba(55,53,47,.04); color: var(--nt-text); border-color: rgba(55,53,47,.2); }
 .btn-add.added { background: var(--accent-tint); border-color: var(--accent); color: var(--accent); }
 
 .table-note { font-size: 12.5px; color: var(--ink-3); margin-top: 12px; }
@@ -1027,8 +1037,8 @@ select:focus-visible, textarea:focus-visible, .subcat:focus-visible,
   font-size: 13.5px; color: var(--ink-2);
 }
 .product-table .star { color: var(--accent-2-ink); font-weight: 700; margin-left: 2px; }
-.product-table .plink { color: var(--accent); text-decoration: none; border-bottom: 1px solid rgba(61,102,174,.35); }
-.product-table .plink:hover { border-bottom-color: var(--accent); }
+.product-table .plink { color: var(--nt-link); text-decoration: none; border-bottom: 1px solid rgba(35,131,226,.3); }
+.product-table .plink:hover { border-bottom-color: var(--nt-link); }
 .product-table tbody tr.row-more td { background: var(--canvas); }
 .product-table tbody tr.row-more:hover td { background: var(--accent-tint); }
 

@@ -946,7 +946,11 @@ select:focus-visible, textarea:focus-visible, .subcat:focus-visible,
 .product-table .num { font-family: var(--mono); }
 .product-table .empty-cell { color: var(--nt-text-faint); }
 .product-table td.feat {
-  white-space: normal; min-width: 150px; max-width: 230px;
+  /* 能排一排就排一排，最多两排。口径：中文中位 9em / p90 18.6em / 最长 31em，日文最长 38.2em。
+     min-width 150px→300px（≈19.4em 单行容量）：短句单行，最长两句止于两行（原 150px 会挤成两排且断在字中）。
+     keep-all 禁止在词内断字（原「车规，耐高压，单 / 极」），只在「，」等标点处折行。 */
+  white-space: normal; word-break: keep-all; overflow-wrap: break-word;
+  min-width: 300px; max-width: 360px;
   line-height: 1.5; color: var(--nt-text);
 }
 /* ---- 型号过多时：首行（属性名）纵向钉住 + 首列横向钉住（保留） ---- */

@@ -1,0 +1,19 @@
+# 行尾策略 —— 2026-10-23
+# 背景：build_i18n.py 在 Windows 上以 '\n' 写文件，而仓库既有文件为 CRLF，
+# 每次重建后 36 个中文页都会在 git status 里显示为「已修改」而实际内容一致，
+# 造成大量假变更、掩盖真正的内容改动。
+#
+# 做法：声明 text=auto 让 git 自行判断文本文件并在入库时归一化行尾，
+# 但**不强制 eol**（保持工作区原有行尾不动），避免一次性把全站文件
+# 改写成另一种行尾而产生上万行无意义 diff。
+#
+# 二进制资源不做任何转换。
+* text=auto
+
+*.jpg  binary
+*.jpeg binary
+*.png  binary
+*.gif  binary
+*.ico  binary
+*.woff binary
+*.woff2 binary

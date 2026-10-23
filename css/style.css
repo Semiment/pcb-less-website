@@ -37,8 +37,11 @@
 
   --radius: 8px;
   --shadow: 0 1px 2px rgba(34, 34, 34, .04), 0 8px 24px rgba(34, 34, 34, .07);
-  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
-  --mono: "Cascadia Code", "JetBrains Mono", Consolas, "SF Mono", monospace;
+  --font: "Space Grotesk", "Noto Sans SC", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  --font-display: "Space Grotesk", "Noto Sans SC", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --mono: "Space Grotesk", "Cascadia Code", "JetBrains Mono", Consolas, "SF Mono", monospace;
+  --focus: 0 0 0 3px rgba(0, 159, 227, .42);
+  --tech-line: rgba(0, 159, 227, .10);
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -55,7 +58,15 @@ body {
 }
 
 a { color: inherit; text-decoration: none; }
+
+/* 全站统一键盘焦点环（科技感 + 可访问性）：青蓝描边，键盘可达 */
+:focus-visible { outline: none; box-shadow: var(--focus); border-radius: 4px; }
+
 img { max-width: 100%; display: block; }
+
+/* 标题层级：几何展示字 + 收紧字距，建立科技 / 高级感排版骨架 */
+h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); font-weight: 700; letter-spacing: -.02em; line-height: 1.22; }
+h1 { font-weight: 900; }
 
 /* 内容宽度只受 width 约束，不用 padding 撑边距：
    内距写在 max-width 的盒子上会随视口变大而吃掉内容区（曾在 1440px 下把导航挤到换行）。
@@ -68,6 +79,7 @@ img { max-width: 100%; display: block; }
   background: rgba(255, 255, 255, .92);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
+  box-shadow: inset 0 -2px 0 var(--accent-2);
 }
 .header-inner {
   display: flex; align-items: center; justify-content: space-between;
@@ -320,6 +332,7 @@ select:focus-visible, textarea:focus-visible, .subcat:focus-visible,
   background: var(--deep);
   overflow: hidden;
   isolation: isolate;
+  box-shadow: inset 0 2px 0 rgba(0, 159, 227, .28);
 }
 .hero-bg { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
 .hero-bg img { width: 100%; height: 100%; object-fit: cover; object-position: 64% center; }
@@ -329,7 +342,8 @@ select:focus-visible, textarea:focus-visible, .subcat:focus-visible,
 .hero-bg::after {
   content: ''; position: absolute; inset: 0;
   background:
-    radial-gradient(118% 86% at 86% 40%, rgba(0, 159, 227, .17) 0, rgba(0, 159, 227, 0) 62%),
+    radial-gradient(118% 86% at 86% 38%, rgba(0, 159, 227, .26) 0, rgba(0, 159, 227, 0) 60%),
+    radial-gradient(120% 120% at 14% 8%, rgba(61, 102, 174, .22) 0, rgba(61, 102, 174, 0) 55%),
     linear-gradient(180deg, rgba(0, 12, 36, .60) 0, rgba(0, 12, 36, 0) 24%,
                             rgba(0, 14, 42, 0) 56%, rgba(0, 15, 45, .93) 100%),
     linear-gradient(90deg, rgba(0, 15, 45, .97) 0, rgba(0, 15, 45, .93) 36%,
@@ -383,8 +397,8 @@ select:focus-visible, textarea:focus-visible, .subcat:focus-visible,
 .hero h1 {
   color: #fff;
   font-size: clamp(34px, 3.9vw, 54px);
-  line-height: 1.1; letter-spacing: -.035em;
-  font-weight: 700; margin: 20px 0 22px;
+  line-height: 1.08; letter-spacing: -.04em;
+  font-weight: 800; margin: 20px 0 22px;
 }
 /* 第二行用品牌高光色 + 略小字号建立层次，而不是「细体 + 半透明白」那套廉价做法 */
 .hero h1 .h1-sub { display: block; color: var(--accent-2); font-size: .78em; margin-top: .1em; }
@@ -612,8 +626,28 @@ select:focus-visible, textarea:focus-visible, .subcat:focus-visible,
 /* ---------------- 通用区块 ---------------- */
 .section { padding: 88px 0; }
 .section.alt { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+/* 浅底区块极淡点阵，给大面留白一点科技纹理（几乎不可见，仅添质感） */
+.section.alt {
+  background-image: radial-gradient(rgba(61, 102, 174, .05) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
 /* 深色区块：在浅色页面中插入明暗节奏，同时是高光色的主场 */
-.section.dark { background: var(--deep); }
+.section.dark {
+  background: var(--deep);
+  position: relative; overflow: hidden;
+  box-shadow: inset 0 2px 0 rgba(0, 159, 227, .22);
+}
+/* 深色区块铺一层极淡工程网格，强化科技质感（克制，不喧宾夺主） */
+.section.dark::before {
+  content: ''; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background-image:
+    linear-gradient(var(--tech-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--tech-line) 1px, transparent 1px);
+  background-size: 46px 46px;
+  -webkit-mask-image: radial-gradient(120% 120% at 80% 0%, #000 0, transparent 70%);
+  mask-image: radial-gradient(120% 120% at 80% 0%, #000 0, transparent 70%);
+}
+.section.dark > .container { position: relative; z-index: 1; }
 .section.dark .section-head .kicker { color: var(--accent-2); }
 .section.dark .section-head h2 { color: #fff; }
 .section.dark .section-head p { color: rgba(255, 255, 255, .68); }
@@ -632,7 +666,7 @@ select:focus-visible, textarea:focus-visible, .subcat:focus-visible,
 }
 .section-head h2 {
   font-size: clamp(28px, 3vw, 40px); font-weight: 700;
-  letter-spacing: -0.01em; line-height: 1.3; margin-bottom: 12px;
+  letter-spacing: -.025em; line-height: 1.25; margin-bottom: 12px;
 }
 .section-head p { color: var(--ink-2); font-size: 16px; }
 
@@ -645,7 +679,7 @@ select:focus-visible, textarea:focus-visible, .subcat:focus-visible,
   transition: background .18s;
 }
 .pl-row:last-child { border-bottom: 1px solid var(--border); }
-.pl-row:hover { background: var(--accent-tint); }
+.pl-row:hover { background: var(--accent-tint); transform: translateY(-2px); }
 /* 01/02/03 与品类 chip（老板 2026-09-29 指令：用高光字颜色，并描边 + hover）
    配色纪律：纯高光色 --accent-2 (#009FE3) 压白底仅 2.97:1、压浅底 2.65:1 —— 13px 小字不达标，
    故文字改用同色相深一档的 --accent-2-ink（白底 5.17:1 / 浅底 4.60:1）；
@@ -687,7 +721,7 @@ select:focus-visible, textarea:focus-visible, .subcat:focus-visible,
   border-radius: var(--radius); padding: 28px;
   transition: border-color .18s, box-shadow .18s;
 }
-.svc-item:hover { border-color: var(--accent); box-shadow: var(--shadow); }
+.svc-item:hover { border-color: var(--accent-2); box-shadow: var(--shadow); }
 .svc-item:nth-child(2) { transform: translateY(20px); }
 .svc-item:nth-child(4) { transform: translateY(20px); }
 .svc-item .svc-no { font-family: var(--mono); font-size: 12.5px; color: var(--accent); font-weight: 700; letter-spacing: .1em; }
@@ -814,6 +848,11 @@ select:focus-visible, textarea:focus-visible, .subcat:focus-visible,
 .cta-banner {
   position: relative; overflow: hidden;
   background: var(--accent); border-radius: 8px;
+  box-shadow: inset 0 2px 0 rgba(0, 159, 227, .5);
+  background-image:
+    linear-gradient(rgba(255, 255, 255, .055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, .055) 1px, transparent 1px);
+  background-size: 42px 42px;
   padding: 52px 56px;
   display: flex; justify-content: space-between; align-items: center; gap: 40px;
   flex-wrap: wrap;
@@ -1492,4 +1531,15 @@ textarea.form-control { resize: vertical; min-height: 110px; }
   .cat-title a { gap: 6px; }
   .cat-title .go { font-size: 12px; }
   .cat-group a { gap: 6px; }
+}
+
+/* ---------------- 动效降级（无障碍 / 偏好减弱动效） ---------------- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .hero .rise { opacity: 1 !important; transform: none !important; }
 }

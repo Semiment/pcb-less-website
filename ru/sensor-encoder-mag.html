@@ -43,6 +43,78 @@
 <!-- /i18n:assets -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&family=Space+Grotesk:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="../css/style.css">
+<style>
+/* ===== 磁性编码器页 · 科技感增强（作用域 enc-，动效仅 transform/opacity）===== */
+.enc-hero { background: var(--deep); border-bottom: 1px solid var(--border); padding: 60px 0 54px; position: relative; overflow: hidden; }
+.enc-hero::before { content:''; position: absolute; inset: 0;
+  background-image: linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  -webkit-mask-image: radial-gradient(120% 90% at 82% 28%, #000 0%, transparent 70%);
+  mask-image: radial-gradient(120% 90% at 82% 28%, #000 0%, transparent 70%);
+  pointer-events: none; }
+.enc-hero-inner { position: relative; display: grid; grid-template-columns: minmax(0,1fr) minmax(0,430px); gap: 48px; align-items: center; }
+.enc-hero .eyebrow { color: var(--accent-2); letter-spacing: .12em; }
+.enc-hero .eyebrow::before { background: var(--accent-2); width: 26px; }
+.enc-hero h1 { color: #fff; font-size: clamp(30px,3.4vw,46px); line-height: 1.08; letter-spacing: -.03em; font-weight: 800; margin: 18px 0 16px; }
+.enc-hero p.lead { color: rgba(255,255,255,.82); font-size: 16px; line-height: 1.8; max-width: 46ch; margin-bottom: 24px; }
+.enc-tags { display: flex; flex-wrap: wrap; gap: 10px; }
+.enc-tag { display: inline-flex; align-items: center; font-size: 13px; font-weight: 600; color: #fff; padding: 7px 13px; border: 1px solid rgba(0,159,227,.45); border-radius: 999px; background: rgba(0,159,227,.08); }
+.enc-hero-visual { position: relative; }
+
+/* 旋转磁环（N/S 交替）+ Головка */
+.enc-ring-wrap { position: relative; width: 212px; height: 212px; margin: 0 auto; }
+.enc-ring { position: absolute; inset: 0; border-radius: 50%;
+  background: conic-gradient(#e5484d 0 30deg,#2f6df6 30deg 60deg,#e5484d 60deg 90deg,#2f6df6 90deg 120deg,#e5484d 120deg 150deg,#2f6df6 150deg 180deg,#e5484d 180deg 210deg,#2f6df6 210deg 240deg,#e5484d 240deg 270deg,#2f6df6 270deg 300deg,#e5484d 300deg 330deg,#2f6df6 330deg 360deg);
+  -webkit-mask: radial-gradient(circle, transparent 56px, #000 58px); mask: radial-gradient(circle, transparent 56px, #000 58px);
+  animation: encSpin 9s linear infinite; }
+.enc-hub { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 84px; height: 84px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center; background: var(--deep);
+  border: 1px solid rgba(255,255,255,.16); color: rgba(255,255,255,.72); font-size: 12px; font-weight: 600; letter-spacing: .03em; }
+.enc-readhead { position: absolute; right: -4px; top: 50%; transform: translateY(-50%); width: 13px; height: 50px; background: var(--accent-2); border-radius: 4px; box-shadow: 0 0 18px rgba(0,159,227,.55); }
+.enc-readhead::after { content: 'Головка'; position: absolute; right: 20px; top: 50%; transform: translateY(-50%); white-space: nowrap; color: rgba(255,255,255,.6); font-size: 11px; }
+
+/* ABZ 正交波形 */
+.enc-wave { width: 100%; height: auto; margin-top: 18px; display: block; }
+.enc-wave-g { animation: encScroll 3.2s linear infinite; }
+.enc-wlbl { fill: rgba(255,255,255,.6); font: 700 11px 'Space Grotesk', sans-serif; }
+.enc-wa { fill: none; stroke: #ffd166; stroke-width: 2.4; }
+.enc-wb { fill: none; stroke: #5ad1ff; stroke-width: 2.4; }
+.enc-wz { fill: none; stroke: #fff; stroke-width: 2.4; }
+
+@keyframes encSpin { to { transform: rotate(360deg); } }
+@keyframes encScroll { to { transform: translateX(-220px); } }
+
+/* 工作原理流 */
+.enc-flow { display: flex; align-items: stretch; gap: 0; flex-wrap: wrap; margin-top: 26px; }
+.enc-node { flex: 1 1 150px; min-width: 132px; border: 1px solid var(--border); border-radius: 12px; padding: 20px 16px; text-align: center; background: #fff; }
+.enc-node-no { width: 30px; height: 30px; border-radius: 50%; background: var(--primary); color: #fff; font-weight: 700; display: inline-flex; align-items: center; justify-content: center; margin-bottom: 10px; font-size: 14px; }
+.enc-node-t { font-weight: 700; font-size: 15px; }
+.enc-node-d { color: var(--ink-2); font-size: 12.5px; margin-top: 4px; line-height: 1.5; }
+.enc-arrow { align-self: center; color: var(--accent-2); font-size: 20px; padding: 0 6px; font-weight: 700; }
+
+/* 选型留资卡 */
+.enc-lead-card { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,420px); gap: 44px; align-items: center;
+  background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 36px 40px; }
+.enc-lead-copy h3 { font-size: 22px; font-weight: 700; margin-bottom: 12px; }
+.enc-lead-copy p.desc { color: var(--ink-2); font-size: 14.5px; line-height: 1.7; max-width: 46ch; }
+.enc-lead-copy .phone-line { margin-top: 18px; font-family: var(--mono); font-weight: 700; color: var(--primary); font-size: 15px; }
+.enc-form { display: flex; flex-direction: column; gap: 12px; }
+.enc-form input, .enc-form textarea { width: 100%; padding: 12px 14px; border: 1px solid var(--border); border-radius: 9px; font: inherit; font-size: 14px; background: #fff; color: var(--ink); }
+.enc-form input:focus, .enc-form textarea:focus { outline: none; border-color: var(--accent-2); box-shadow: 0 0 0 3px rgba(0,159,227,.18); }
+.enc-form textarea { min-height: 82px; resize: vertical; }
+.enc-form .btn-primary { background: var(--accent-2); color: var(--deep); border: none; padding: 13px 22px; font-weight: 700; font-size: 15px; border-radius: 9px; cursor: pointer; transition: filter .16s; }
+.enc-form .btn-primary:hover { filter: brightness(1.06); }
+.enc-form .enc-hint { font-size: 12px; color: var(--ink-2); }
+
+@media (max-width: 860px) {
+  .enc-hero-inner { grid-template-columns: 1fr; }
+  .enc-lead-card { grid-template-columns: 1fr; gap: 24px; }
+  .enc-arrow { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .enc-ring, .enc-wave-g { animation: none !important; }
+}
+</style>
 </head>
 <body>
 
@@ -446,11 +518,41 @@
 </header>
 <body>
 
-<section class="page-hero">
+<section class="page-hero enc-hero">
   <div class="container">
-    <div class="eyebrow">Product Center · Sensors · Кодирующее устройство</div>
-    <h1>Магнитный энкодер двигателя</h1>
-    <p>Non-contact magnetic encoding with ABZ / UVW / PWM / SIN-COS output — for motor commutation and closed-loop control.</p>
+    <div class="enc-hero-inner">
+      <div class="enc-hero-copy rise">
+        <div class="eyebrow">Центр продукции · Датчики · Энкодер</div>
+        <h1>Магнитный энкодер двигателя</h1>
+        <p class="lead">Магнитное бесконтактное кодирование с выходом ABZ / UVW / PWM / SIN-COS — для коммутации двигателя и замкнутого контура управления. 14bit высокая точность, компактный, автомобильный широкий температурный диапазон, на складе отгрузка в тот же день.</p>
+        <div class="enc-tags">
+          <span class="enc-tag">Автомобильный</span>
+          <span class="enc-tag">Высокая стойкость к напряжению</span>
+          <span class="enc-tag">Компактный</span>
+          <span class="enc-tag">14bit</span>
+          <span class="enc-tag">Высокая точность</span>
+          <span class="enc-tag">Высокое разрешение</span>
+          <span class="enc-tag">Низкая стоимость</span>
+        </div>
+      </div>
+            <div class="enc-hero-visual rise d2" aria-hidden="true">
+        <div class="enc-ring-wrap">
+          <div class="enc-ring"></div>
+          <div class="enc-hub">N/S</div>
+          <div class="enc-readhead"></div>
+        </div>
+<svg class="enc-wave" viewBox="0 0 440 108" role="img" aria-label="ABZ 正交脉冲波形">
+          <g class="enc-wave-g">
+            <text x="2" y="14" class="enc-wlbl">A</text>
+            <path class="enc-wa" d="M0 30 L0 16 L110 16 L110 30 L220 30 L220 16 L330 16 L330 30 L440 30 L440 16"/>
+            <text x="2" y="46" class="enc-wlbl">B</text>
+            <path class="enc-wb" d="M0 60 L0 46 L55 46 L55 60 L165 60 L165 46 L275 46 L275 60 L385 60 L385 46 L440 46"/>
+            <text x="2" y="78" class="enc-wlbl">Z</text>
+            <path class="enc-wz" d="M0 92 L0 86 L218 86 L218 78 L224 78 L224 86 L440 86 L440 92"/>
+          </g>
+        </svg>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -487,13 +589,42 @@
   </div>
   <p class="table-note">Note: the list above covers the in-stock part numbers for this category; the full parameter table (operating voltage, magnetic characteristics, output form, temperature grade, etc.) is being compiled - call us for datasheets and sample support.</p>
 
-  <div class="quick-pick">
-    <div>
-      <h3>Selection Support</h3>
-      <p class="desc">Tell us your motor type, magnetic field direction, output form and temperature requirements, and we will propose candidate part numbers, packages and sample support.</p>
-      <p class="phone-line">198 2141 1234 (г-н Ван)</p>
+    <section class="section">
+    <div class="section-head">
+      <div class="eyebrow">Принцип работы</div>
+      <h2>От магнитных полюсов к цифровым импульсам</h2>
     </div>
-  </div>
+    <div class="enc-flow">
+      <div class="enc-node"><div class="enc-node-no">1</div><div class="enc-node-t">Роторное магнитное кольцо</div><div class="enc-node-d">Поле N/S</div></div>
+      <span class="enc-arrow">→</span>
+      <div class="enc-node"><div class="enc-node-no">2</div><div class="enc-node-t">Воздушный зазор</div><div class="enc-node-d">Бесконтактное считывание</div></div>
+      <span class="enc-arrow">→</span>
+      <div class="enc-node"><div class="enc-node-no">3</div><div class="enc-node-t">Головка считывания</div><div class="enc-node-d">Холл / катушка</div></div>
+      <span class="enc-arrow">→</span>
+      <div class="enc-node"><div class="enc-node-no">4</div><div class="enc-node-t">Обработка сигнала</div><div class="enc-node-d">Усиление / интерполяция</div></div>
+      <span class="enc-arrow">→</span>
+      <div class="enc-node"><div class="enc-node-no">5</div><div class="enc-node-t">Выход ABZ</div><div class="enc-node-d">Квадратурные импульсы</div></div>
+      <span class="enc-arrow">→</span>
+      <div class="enc-node"><div class="enc-node-no">6</div><div class="enc-node-t">MCU</div><div class="enc-node-d">Коммутация / замкнутый контур</div></div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="enc-lead-card">
+      <div class="enc-lead-copy">
+        <h3>Поддержка подбора</h3>
+        <p class="desc">Сообщите тип двигателя, направление магнитного поля, форму выхода и температурные требования — мы предложим подходящие типы, корпуса и образцы.</p>
+        <p class="phone-line">198 2141 1234 (г-н Ван)</p>
+      </div>
+      <form class="enc-form" onsubmit="return encSubmit(this)">
+        <input type="text" name="name" placeholder="Имя *" autocomplete="name">
+        <input type="text" name="company" placeholder="Компания" autocomplete="organization">
+        <input type="text" name="contact" placeholder="Email или телефон *">
+        <textarea name="need" placeholder="Потребность (тип двигателя / направление поля / форма выхода / температурный класс)"></textarea>
+        <button type="submit" class="btn-primary">Отправить запрос</button>
+        <p class="enc-hint">Автоматически отправляется на нашу почту подбора; отвечаем в тот же день. Или звоните нам.</p>
+      </form>
+    </div>
+  </section>
 </div>
 
 
@@ -556,5 +687,19 @@ document.getElementById("seriesBar").addEventListener("click", function (e) {
 <script src="../js/i18n.js"></script>
 <script src="../js/app.js"></script>
 <script src="../js/nav.js"></script>
+<script>
+/* Encoder lead capture (Plan A: email to 2099166018@qq.com, same-day reply) */
+function encSubmit(f){
+  var name=f.name.value.trim(), company=f.company.value.trim(),
+      contact=f.contact.value.trim(), need=f.need.value.trim();
+  if(!name || !contact){ alert('Укажите имя и контакт, чтобы мы могли ответить.'); return false; }
+  var sub='Лид с сайта - Магнитный энкодер',
+      body='Тип：Магнитный энкодер двигателя\nИмя：'+name+'\nКомпания：'+company+
+            '\nКонтакт：'+contact+'\nПотребность：'+need;
+  /* Notion hook: replace the mailto below with a Notion form URL or POST to Notion API */
+  location.href='mailto:2099166018@qq.com?subject='+encodeURIComponent(sub)+'&body='+encodeURIComponent(body);
+  return false;
+}
+</script>
 </body>
 </html>

@@ -61,16 +61,39 @@
 .enc-tag { display: inline-flex; align-items: center; font-size: 13px; font-weight: 600; color: #fff; padding: 7px 13px; border: 1px solid rgba(0,159,227,.45); border-radius: 999px; background: rgba(0,159,227,.08); }
 .enc-hero-visual { position: relative; }
 
-/* 定子线圈（静止） + 转子线圈（旋转）差動検知 */
-.enc-coil-wrap { position: relative; width: 212px; height: 212px; margin: 0 auto; }
-.enc-coil-stator { position: absolute; inset: 0; border-radius: 50%; border: 3px dashed rgba(0,159,227,.55); }
-.enc-coil-rotor { position: absolute; inset: 30px; border-radius: 50%; border: 3px dashed rgba(255,255,255,.6); animation: encSpin 6s linear infinite; }
-.enc-coil-rotor::after { content:''; position:absolute; inset:14px; border-radius:50%; border:2px dashed rgba(255,255,255,.28); }
-.enc-hub { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 84px; height: 84px; border-radius: 50%;
-  display: flex; align-items: center; justify-content: center; background: var(--deep);
-  border: 1px solid rgba(255,255,255,.16); color: rgba(255,255,255,.72); font-size: 12px; font-weight: 600; letter-spacing: .03em; }
-.enc-coil-lbl { position: absolute; right: -4px; top: 50%; transform: translateY(-50%); width: 13px; height: 50px; background: var(--accent-2); border-radius: 4px; box-shadow: 0 0 18px rgba(0,159,227,.55); }
-.enc-coil-lbl::after { content: '差動検知'; position: absolute; right: 20px; top: 50%; transform: translateY(-50%); white-space: nowrap; color: rgba(255,255,255,.6); font-size: 11px; }
+/* 2.5D 立体：金色定子绕组盘 + 上方青色扇形转子（冷暖对撞） */
+.enc-coil-wrap { position: relative; width: 300px; height: 300px; margin: 0 auto; perspective: 900px; }
+.enc-iso { position: absolute; inset: 0; transform-style: preserve-3d; transform: rotateX(56deg); }
+.enc-stator { position: absolute; left: 50%; top: 50%; width: 230px; height: 230px; margin: -115px; border-radius: 50%;
+  background: radial-gradient(circle at 50% 40%, #16294d 0%, #0a1730 65%, #050e1f 100%);
+  border: 1px solid rgba(232,184,90,.55);
+  box-shadow: 0 15px 0 #04101f, 0 26px 30px rgba(0,0,0,.6); }
+.enc-stator::before { content: ''; position: absolute; inset: 15px; border-radius: 50%;
+  background: repeating-conic-gradient(from 0deg, #EAB95E 0deg 12.5deg, rgba(0,0,0,0) 12.5deg 15deg);
+  -webkit-mask: radial-gradient(circle, transparent 33%, #000 35%, #000 91%, transparent 93%);
+  mask: radial-gradient(circle, transparent 33%, #000 35%, #000 91%, transparent 93%); }
+.enc-stator::after { content: ''; position: absolute; left: 50%; top: 50%; width: 66px; height: 66px; margin: -33px; border-radius: 50%;
+  border: 2px solid rgba(232,184,90,.65);
+  background: radial-gradient(circle, rgba(232,184,90,.18), rgba(232,184,90,0) 72%); }
+.enc-rotor-shadow { position: absolute; left: 50%; top: 50%; width: 168px; height: 168px; margin: -84px; border-radius: 50%;
+  background: rgba(0,0,0,.38); filter: blur(7px); transform: translateZ(2px); }
+.enc-rotor { position: absolute; left: 50%; top: 50%; width: 168px; height: 168px; margin: -84px; border-radius: 50%;
+  transform: translateZ(52px);
+  background: conic-gradient(from 0deg,
+    rgba(34,211,255,.66) 0deg 30deg, rgba(34,211,255,.05) 30deg 60deg,
+    rgba(34,211,255,.66) 60deg 90deg, rgba(34,211,255,.05) 90deg 120deg,
+    rgba(34,211,255,.66) 120deg 150deg, rgba(34,211,255,.05) 150deg 180deg,
+    rgba(34,211,255,.66) 180deg 210deg, rgba(34,211,255,.05) 210deg 240deg,
+    rgba(34,211,255,.66) 240deg 270deg, rgba(34,211,255,.05) 270deg 300deg,
+    rgba(34,211,255,.66) 300deg 330deg, rgba(34,211,255,.05) 330deg 360deg);
+  border: 2px solid rgba(120,230,255,.95);
+  box-shadow: 0 0 30px rgba(34,211,255,.5), inset 0 0 22px rgba(34,211,255,.35);
+  -webkit-backdrop-filter: blur(.5px); backdrop-filter: blur(.5px);
+  animation: encRotorSpin 6s linear infinite; }
+.enc-rotor::before { content: ''; position: absolute; inset: 26px; border-radius: 50%;
+  border: 2px solid rgba(120,230,255,.55); background: rgba(7,22,40,.35); }
+.enc-cap { position: absolute; right: -6px; top: calc(50% - 11px); padding: 5px 10px; border-radius: 6px;
+  background: rgba(0,159,227,.16); border: 1px solid rgba(0,159,227,.45); color: rgba(255,255,255,.72); font-size: 11px; font-weight: 600; white-space: nowrap; }
 
 /* ABZ 正交波形 */
 .enc-wave { width: 100%; height: auto; margin-top: 18px; display: block; }
@@ -80,7 +103,7 @@
 .enc-wb { fill: none; stroke: #5ad1ff; stroke-width: 2.4; }
 .enc-wz { fill: none; stroke: #fff; stroke-width: 2.4; }
 
-@keyframes encSpin { to { transform: rotate(360deg); } }
+@keyframes encRotorSpin { to { transform: translateZ(52px) rotate(360deg); } }
 @keyframes encScroll { to { transform: translateX(-220px); } }
 
 /* 工作原理流 */
@@ -111,7 +134,7 @@
   .enc-arrow { display: none; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .enc-coil-rotor, .enc-wave-g { animation: none !important; }
+  .enc-rotor, .enc-wave-g { animation: none !important; }
 }
 </style>
 </head>
@@ -534,10 +557,12 @@
       </div>
             <div class="enc-hero-visual rise d2" aria-hidden="true">
         <div class="enc-coil-wrap">
-          <div class="enc-coil-stator"></div>
-          <div class="enc-coil-rotor"></div>
-          <div class="enc-hub">ステータ / ロータ</div>
-          <div class="enc-coil-lbl"></div>
+          <div class="enc-iso">
+            <div class="enc-stator"></div>
+            <div class="enc-rotor-shadow"></div>
+            <div class="enc-rotor"></div>
+          </div>
+          <div class="enc-cap">差動検知</div>
         </div>
 <svg class="enc-wave" viewBox="0 0 440 108" role="img" aria-label="ABZ 正交脉冲波形">
           <g class="enc-wave-g">
